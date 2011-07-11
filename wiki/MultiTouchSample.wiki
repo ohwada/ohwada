@@ -1,7 +1,5 @@
 #summary マルチタッチのサンプル
 
-http://ohwada.googlecode.com/files/device3.png
-
 = 概要 =
 
 マルチタッチのサンプル<br>
@@ -25,3 +23,17 @@ MultiTouchImageView 画像がタッチされたときの処理<br>
 = ソース =
 
 http://code.google.com/p/ohwada/source/browse/MultiTouchSample/
+
+= スクリーンショット =
+
+== ショット１ ==
+２つタッチしたところ。<br>
+１つ目は強く(黄色)、２つ目は弱く(薄い黄色)
+
+http://ohwada.googlecode.com/files/20110711two_down.png
+
+== ショット２ ==
+２つタッチした後で。<br>
+２つ目を画像から外した(白色)
+
+http://ohwada.googlecode.com/files/20110711down_out.png
