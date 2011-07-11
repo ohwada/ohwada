@@ -14,6 +14,12 @@
 (5) out 白色 画像からタッチが外れた状態<br>
 (6) in 灰色 画像にタッチが当たった状態<br>
 
+= クラスの説明 =
+
+MultiTouchEvent イベントのアクション名を取得する<br>
+MultiTouchView ビューがタッチされたを判定する<br>
+MultiTouchImageView 画像がタッチされたときの処理<br>
+
 = ソース =
 
 http://code.google.com/p/ohwada/source/browse/MultiTouchSample/
