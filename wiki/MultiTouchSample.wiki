@@ -1,5 +1,7 @@
 #summary マルチタッチのサンプル
 
+http://ohwada.googlecode.com/files/device3.png
+
 = 概要 =
 
 マルチタッチのサンプル<br>
