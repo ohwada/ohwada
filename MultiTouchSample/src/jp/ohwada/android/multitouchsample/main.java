@@ -6,11 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +25,9 @@ public class main extends Activity
 {
 	/** デバック・メッセージを表示する数 */
 	final private int MAX_MSG = 10;
+
+	/** 画面の大きさ */
+	private int displayWidthDiv = 0;
 
 	/* リソース */
 	private Resources resources;
@@ -42,11 +48,17 @@ public class main extends Activity
 	private MultiTouchImageView view3;
 	private MultiTouchImageView view4;
 
+	/* タッチイベントを処理するクラス */
+   	private MultiTouchEvent mEvent;
+
 	/** スクリーンの原点からのオフセット */
     private int	offsetX1 = 0;
     private int	offsetY1 = 0;
     private int	offsetX2 = 0;
     private int	offsetY2 = 0;
+
+	/** pinch の状態 */
+	private int	pinchStatus = -1;
 
 	/* アクション名称 (独自に命名) */
 	private String actionName = "";
@@ -64,6 +76,11 @@ public class main extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+		/* 画面の大きさを取得する */
+		WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+		Display display = wm.getDefaultDisplay();
+		displayWidthDiv = (int) ( display.getWidth() / 7 );
+
 		/* リソースを取得する */
 		resources = getResources();
 
@@ -77,6 +94,9 @@ public class main extends Activity
 		image3  = (ImageView) findViewById(R.id.image3);
 		image4  = (ImageView) findViewById(R.id.image4);
 		text1   = (TextView)  findViewById(R.id.text1);
+
+		/* タッチイベントを処理するクラス */
+    	mEvent = new MultiTouchEvent();
     }
 
     /**
@@ -90,9 +110,9 @@ public class main extends Activity
     	int action = event.getAction();
 
 		/* タッチイベントを処理するクラス */
-    	MultiTouchEvent mEvent = new MultiTouchEvent();
-   		actionName    = mEvent.getEventName( action );
-		boolean flag  = mEvent.ckeckEventPointer();
+   		actionName   = mEvent.getEventName( action );
+		boolean flag = mEvent.ckeckEventPointer();
+		               mEvent.checkPinch( event );
 
    		switch (action) 
 		{
@@ -181,11 +201,19 @@ public class main extends Activity
 		}
 
 		/* どの画像もタッチされなければ */
-		if (( flag == false ) && (actionName != "move")) {
-			String msg = actionName + " " + 
-				(int)event.getX() + " " +
-				(int)event.getY() ;
-			addMsg( msg );
+		if ( flag == false ) {
+
+			/* pinch であれば */
+			if ( checkPinch() ) {
+				execPinch();
+
+			/* move でなければ */
+			} else if (actionName != "move") {
+				String msg = actionName + " " + 
+					(int)event.getX() + " " +
+					(int)event.getY() ;
+				addMsg( msg );
+			}
 		}
 	}
 
@@ -197,7 +225,8 @@ public class main extends Activity
 	 */
     private MultiTouchImageView createView( ImageView image, int offsetX, int offsetY, String name ) 
 	{
-    	MultiTouchImageView view = new MultiTouchImageView( image, offsetX, offsetY );
+    	MultiTouchImageView view = new MultiTouchImageView();
+    	view.setImageView( image, offsetX, offsetY );
 		view.setViewName(  name );
 		view.setResources( resources );
 		view.setImageStrong( R.drawable.yellow );
@@ -206,6 +235,8 @@ public class main extends Activity
 		view.setImageOff(    R.drawable.green );
 		view.setImageIn(     R.drawable.gray );
 		view.setImageOut(    R.drawable.white );
+		view.setImagePinchOn(  R.drawable.orenge );
+		view.setImagePinchOff( R.drawable.blue );
 		return view;
 	}
 
@@ -221,6 +252,108 @@ public class main extends Activity
     	offsetY1 = viewTop  + layout1.getTop();
 		offsetX2 = viewLeft + layout2.getLeft();
     	offsetY2 = viewTop  + layout2.getTop();
+	}
+
+	/**
+	 * pinch 状態か判定する
+	 * @return 判定結果
+	 */
+    private boolean checkPinch() 
+	{
+		/* 画像にタッチしていれば */
+		if ( view1.checkImageStatusInTouch() ) {
+			return false;
+		}
+		if ( view2.checkImageStatusInTouch() ) {
+			return false;
+		}
+		if ( view3.checkImageStatusInTouch() ) {
+			return false;
+		}
+		if ( view4.checkImageStatusInTouch() ) {
+			return false;
+		}
+
+		/* pinch 状態でなければ */
+		if ( mEvent.checkPinchStatusNone() ) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * pinch を実行する
+	 */
+    private void execPinch() 
+	{
+		int dist   = mEvent.getPinchDist();
+		String msg = mEvent.getDebugMessage();
+
+		/* up イベントであれば */
+		if (  mEvent.checkPinchStatusUp() ) {
+
+			/* この状態(0)でなければ */
+			if ( pinchStatus != 0 ) {
+				pinchStatus = 0;
+				view1.setImageBitmapPinchOff();
+				view2.setImageBitmapPinchOff();
+				view3.setImageBitmapPinchOff();
+				view4.setImageBitmapPinchOff();
+				addMsg( msg + " 0" );
+			}
+
+		/* pinch の距離が 5/7 以上 */
+		} else if ( dist > 5*displayWidthDiv ) {
+
+			/* この状態(4)でなければ */
+			if ( pinchStatus != 4 ) {
+				pinchStatus = 4;
+				view1.setImageBitmapPinchOn();
+				view2.setImageBitmapPinchOn();
+				view3.setImageBitmapPinchOn();
+				view4.setImageBitmapPinchOn();
+				addMsg( msg + " 4" );
+			}
+
+		/* pinch の距離が 4/7 以上 */
+		} else if ( dist > 4*displayWidthDiv ) {
+
+			/* この状態(3)でなければ */
+			if ( pinchStatus != 3 ) {
+				pinchStatus = 3;
+				view1.setImageBitmapPinchOn();
+				view2.setImageBitmapPinchOn();
+				view3.setImageBitmapPinchOn();
+				view4.setImageBitmapPinchOff();
+				addMsg( msg + " 3" );
+			}
+
+		/* pinch の距離が 3/7 以上 */
+		} else if ( dist > 3*displayWidthDiv ) {
+
+			/* この状態(2)でなければ */
+			if ( pinchStatus != 2 ) {
+				pinchStatus = 2;
+				view1.setImageBitmapPinchOn();
+				view2.setImageBitmapPinchOn();
+				view3.setImageBitmapPinchOff();
+				view4.setImageBitmapPinchOff();
+				addMsg( msg + " 2" );
+			}
+
+		/* pinch の距離が 2/7 以上 */
+		} else if ( dist > 2*displayWidthDiv ) {
+
+			/* この状態(1)でなければ */
+			if ( pinchStatus != 1 ) {
+				pinchStatus = 1;
+				view1.setImageBitmapPinchOn();
+				view2.setImageBitmapPinchOff();
+				view3.setImageBitmapPinchOff();
+				view4.setImageBitmapPinchOff();
+				addMsg( msg + " 1" );
+			}
+		}
 	}
 
 	/**

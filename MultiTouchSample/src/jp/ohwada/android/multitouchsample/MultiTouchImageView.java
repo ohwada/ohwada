@@ -5,6 +5,7 @@ import jp.ohwada.android.multitouchsample.MultiTouchView;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
@@ -14,38 +15,50 @@ import android.widget.ImageView;
  */
 public class MultiTouchImageView extends MultiTouchView
 {
+	/** デバック用 */
+	static final protected boolean IMAGE_DEBUG = true;
+	static final String IMAGE_TAG = "MultiTouchImageView";
+
 	/** タッチの大きさの閾値 (実機に合わせて調整) */
-	final protected double MULTI_TOUCH_SIZE_BIG = 0.15;
+	final protected double IMAGE_SIZE_BIG = 0.15;
 
 	/* 画像のビュー */
-	private ImageView imageView;
+	protected ImageView imageView;
 
 	/* リソース */
-	private Resources resources;
+	protected Resources resources;
 
 	/* ビットマップ */
-	private Bitmap bitmapStrong;
-	private Bitmap bitmapWeak;
-	private Bitmap bitmapOn;
-	private Bitmap bitmapOff;
-	private Bitmap bitmapIn;
-	private Bitmap bitmapOut;
+	protected Bitmap bitmapStrong;
+	protected Bitmap bitmapWeak;
+	protected Bitmap bitmapOn;
+	protected Bitmap bitmapOff;
+	protected Bitmap bitmapIn;
+	protected Bitmap bitmapOut;
+	protected Bitmap bitmapPinchOn;
+	protected Bitmap bitmapPinchOff;
 
 	/** 青・赤どちらを表示しているかの状態 */
-    private boolean imageToggle = false;
-
-	/* デバック用メッセージ */
-	private String debugMessage = "";
+    protected boolean imageToggle = false;
 
 	/**
 	 * コンストラクタ
 	 * @param v ビュー
 	 * @param ox oy スクリーン座標とのオフセット
 	 */
-	public MultiTouchImageView( ImageView v, int ox, int oy ) 
+	public void MultiTouchImageView() 
+	{
+		super.MultiTouchView();
+	}
+
+	/**
+	 * ImageView を設定する
+	 * @param v ImageView
+	 * @param ox oy スクリーン座標とのオフセット
+	 */
+    public void setImageView( ImageView v, int ox, int oy ) 
 	{
 		imageView = v ;
-		super.MultiTouchView();
 		setView( v, ox, oy );
 	}
 
@@ -114,21 +127,30 @@ public class MultiTouchImageView extends MultiTouchView
 	}
 
 	/**
+	 * 画像の設定 (pinch on)
+	 * @param id リソースID
+	 */
+	public void setImagePinchOn( int id ) 
+	{
+		bitmapPinchOn = idToBitmap( id );
+	}
+
+	/**
+	 * 画像の設定 (pinch off)
+	 * @param id リソースID
+	 */
+	public void setImagePinchOff( int id ) 
+	{
+		bitmapPinchOff = idToBitmap( id );
+	}
+
+	/**
 	 * 青・赤どちらを表示しているかの状態を取得する
 	 * @return 状態
 	 */
     public boolean getImageToggle() 
 	{
 		return imageToggle;
-	}
-
-	/**
-	 * デバック用メッセージを取得する
-	 * @return メッセージ
-	 */
-	public String getDebugMessage() 
-	{
-		return debugMessage;
 	}
 
     /**
@@ -146,19 +168,19 @@ public class MultiTouchImageView extends MultiTouchView
 
 			switch ( touchStatus )
 			{
-			case MULTI_TOUCH_STATUS_UP:
+			case TOUCH_STATUS_UP:
 				execImageUp();
 				break;
 
-			case MULTI_TOUCH_STATUS_DOWN:
+			case TOUCH_STATUS_DOWN:
 				execImageDown();
 				break;
 
-			case MULTI_TOUCH_STATUS_IN:
+			case TOUCH_STATUS_IN:
 				execImageIn();
 				break;
 
-			case MULTI_TOUCH_STATUS_OUT:
+			case TOUCH_STATUS_OUT:
 				execImageOut();
 				break;
 			}
@@ -169,10 +191,25 @@ public class MultiTouchImageView extends MultiTouchView
 		return false;
 	}
 
+	/**
+	 * 画像にタッチしていいるかを判定する
+	 * @return 判定結果
+     */
+    public boolean checkImageStatusInTouch() 
+	{
+			switch ( touchStatus )
+			{
+			case TOUCH_STATUS_DOWN:
+			case TOUCH_STATUS_IN:
+				return true;
+			}
+			return false;
+	}
+
     /**
 	 * 画像の処理 (ダウン)
      */
-    private void execImageDown() 
+    protected void execImageDown() 
 	{
 		/**
 		 * pressure の値はさほど違いがなっかたので 
@@ -180,7 +217,7 @@ public class MultiTouchImageView extends MultiTouchView
 		 */
 
 		/* 強いとき */
-		if ( touchSize > MULTI_TOUCH_SIZE_BIG ) {
+		if ( touchSize > IMAGE_SIZE_BIG ) {
 			setImageBitmapStrong();
 
 		/* 弱いとき */
@@ -193,7 +230,7 @@ public class MultiTouchImageView extends MultiTouchView
 	 * 画像の処理 (アップ)
 	 * 画像を交互に表示する
      */
-    private void execImageUp() 
+    protected void execImageUp() 
 	{
 		/* オンのときは、オフ画像に */
 		if ( imageToggle ) {
@@ -208,7 +245,7 @@ public class MultiTouchImageView extends MultiTouchView
     /**
 	 * 画像の処理 (イン)
      */
-    private void execImageIn() 
+    protected void execImageIn() 
 	{
 		setImageBitmapIn();
 	}
@@ -216,7 +253,7 @@ public class MultiTouchImageView extends MultiTouchView
     /**
 	 * 画像の処理 (アウト)
      */
-    private void execImageOut() 
+    protected void execImageOut() 
 	{
 		setImageBitmapOut();
 	}
@@ -272,10 +309,26 @@ public class MultiTouchImageView extends MultiTouchView
 	}
 
     /**
+	 * 画像を変更する (pinch on)
+     */
+    public void setImageBitmapPinchOn() 
+	{
+		setImageBitmap( bitmapPinchOn );
+	}
+
+    /**
+	 * 画像を変更する (pinch on)
+     */
+    public void setImageBitmapPinchOff() 
+	{
+		setImageBitmap( bitmapPinchOff );
+	}
+
+    /**
 	 * 画像を設定する
 	 * @param  id  リソースID
      */
-    private void setImageBitmap( Bitmap m ) 
+    protected void setImageBitmap( Bitmap m ) 
 	{
 		imageView.setImageBitmap( m );
 	}
@@ -285,9 +338,18 @@ public class MultiTouchImageView extends MultiTouchView
 	 * @param  id  リソースID
 	 * @return ビットマップ
      */
-    private Bitmap idToBitmap( int id ) 
+    protected Bitmap idToBitmap( int id ) 
 	{
 		return BitmapFactory.decodeResource( resources, id );
 	}
 
+    /**
+	 * デバックログ
+     */
+    protected void logDebugImage( String msg )
+	{
+		if ( IMAGE_DEBUG ) {
+			Log.d(IMAGE_TAG, msg);
+		}
+	}
 }

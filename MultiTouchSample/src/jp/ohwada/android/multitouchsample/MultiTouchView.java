@@ -12,20 +12,21 @@ import android.view.View;
  */
 public class MultiTouchView extends MultiTouchEvent
 {
+	/** デバック用 */
+	static final protected boolean VIEW_DEBUG = true;
+	static final String VIEW_TAG = "MultiTouchView";
+
 	/** タッチ状態の定義 */
-	final protected int MULTI_TOUCH_STATUS_UP   = 0;
-	final protected int MULTI_TOUCH_STATUS_DOWN = 1;
-	final protected int MULTI_TOUCH_STATUS_IN   = 2; 
-	final protected int MULTI_TOUCH_STATUS_OUT  = 4;
+	static final protected int TOUCH_STATUS_UP   = 0;
+	static final protected int TOUCH_STATUS_DOWN = 1;
+	static final protected int TOUCH_STATUS_IN   = 2; 
+	static final protected int TOUCH_STATUS_OUT  = 4;
 
 	/** インデックスの初期値 */
-	final protected int MULTI_TOUCH_INDEX_NOT_SET = -1;
+	static final protected int POINTER_INDEX_NOT_SET = -1;
 
-	/** IDの初期値 */
-	final protected int MULTI_TOUCH_ID_NOT_SET = -1;
-
-	/** TAG (デバック用) */
-	private static final String TAG = "MultiTouchView";
+	/** POINTER_IDの初期値 */
+	static final protected int POINTER_ID_NOT_SET = -1;
 
 	/* ビューのスクリーン座標 */
 	protected int viewLeft   = 0;
@@ -51,16 +52,16 @@ public class MultiTouchView extends MultiTouchEvent
 	protected double touchSize = 0;
 
 	/* タッチされたインデックス */
-	protected int touchIndex = MULTI_TOUCH_INDEX_NOT_SET;
+	protected int pointerIndex = POINTER_INDEX_NOT_SET;
 
 	/* タッチされたID */
-	protected int touchId = MULTI_TOUCH_ID_NOT_SET;
+	protected int pointerId = POINTER_ID_NOT_SET;
 
 	/* ダウン状態になったときのID */
-	protected int touchIdDown = MULTI_TOUCH_ID_NOT_SET;
+	protected int pointerIdDown = POINTER_ID_NOT_SET;
 
 	/* タッチの状態 */
-	protected int touchStatus = MULTI_TOUCH_STATUS_UP;
+	protected int touchStatus = TOUCH_STATUS_UP;
 
 	/**
 	 * コンストラクタ
@@ -141,27 +142,27 @@ public class MultiTouchView extends MultiTouchEvent
 	 * マルチタッチのインデックスを取得する
 	 * @return インデックス
 	 */
-    public int getTouchIndex() 
+    public int getPointerIndex() 
 	{
-		return touchIndex;
+		return pointerIndex;
 	}
 
 	/**
 	 * マルチタッチのIDを取得する
 	 * @return ID
 	 */
-    public int getTouchId() 
+    public int getPointerId() 
 	{
-		return touchId;
+		return pointerId;
 	}
 
 	/**
 	 * ダウン状態のときIDを取得する
 	 * @return ID
 	 */
-    public int getTouchIdDown() 
+    public int getPointerIdDown() 
 	{
-		return touchIdDown;
+		return pointerIdDown;
 	}
 
 	/**
@@ -199,10 +200,13 @@ public class MultiTouchView extends MultiTouchEvent
     		break;
 
        	default:
-       		if ( pointerDown ) {
-       			execPointerDown( event, pointerIndex );
-       		} else if ( pointerUp ) {
-       			execPointerUp( event, pointerIndex );
+			/* ポインタ・ダウンなら */
+       		if ( eventPointerDown ) {
+       			execPointerDown( event, eventPointerIndex );
+
+			/* ポインタ・アップなら */
+       		} else if ( eventPointerUp ) {
+       			execPointerUp( event, eventPointerIndex );
        		}
         	break;
     	}
@@ -213,7 +217,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * １つ目のタッチダウンのときに通知される
 	 * @param  event MotionEvent
      */
-    private void execTouchDown( MotionEvent event )
+    protected void execTouchDown( MotionEvent event )
 	{
 		/* タッチされていれば */
 		if ( checkTouchScreen( event, 0 ) ) {
@@ -227,10 +231,10 @@ public class MultiTouchView extends MultiTouchEvent
 	 * 最後の１個がアップされたときに通知される
 	 * @param  event MotionEvent
      */
-    private void execTouchUp( MotionEvent event )
+    protected void execTouchUp( MotionEvent event )
 	{
 		/* アップ状態でなければ */
-		if ( touchStatus != MULTI_TOUCH_STATUS_UP ) {
+		if ( touchStatus != TOUCH_STATUS_UP ) {
 			saveTouchParam( event, 0 );
 			setTouchStatusUp();
 		}
@@ -242,7 +246,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * @param event MotionEvent
 	 * @param index ポインタインデックス
      */
-    private void execPointerDown( MotionEvent event, int index )
+    protected void execPointerDown( MotionEvent event, int index )
 	{
 	 	/* ポインタがなければ、何もしない (念のための検査)　*/
 		if ( ! checkPointerCount( event ) ) {
@@ -262,7 +266,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * @param event MotionEvent
 	 * @param index ポインタインデックス
      */
-    private void execPointerUp( MotionEvent event, int index )
+    protected void execPointerUp( MotionEvent event, int index )
 	{
 	 	/* ポインタがなければ、何もしない (念のための検査)　*/
 		if ( ! checkPointerCount( event ) ) {
@@ -270,8 +274,7 @@ public class MultiTouchView extends MultiTouchEvent
 		}
 
 		/* IDが一致すれば */
-		int id = (int)event.getPointerId(index); 
-		if ( id == touchIdDown ) {
+		if ( event.getPointerId(index) == pointerIdDown ) {
 			saveTouchParam( event, index );
 			setTouchStatusUp();
 		}
@@ -282,7 +285,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * 移動したときに通知される
 	 * @param event MotionEvent
      */
-	private void execTouchMove( MotionEvent event )
+	protected void execTouchMove( MotionEvent event )
 	{
 		int x = 0;
 		int y = 0;
@@ -293,7 +296,7 @@ public class MultiTouchView extends MultiTouchEvent
 		int size  = event.getHistorySize();
 
 	 	/* ポインタがなければ、何もしない (念のための検査)　*/
-		if ( ! checkPointerCount( count ) ) {
+		if ( ! checkPointerCount( count, 1 ) ) {
 			return;
 		}
 
@@ -303,8 +306,7 @@ public class MultiTouchView extends MultiTouchEvent
 		}
 
 		/* ログに */
-		msg = "move check " + viewName;
-		Log.d(TAG, msg);
+		logDebugView( "move check " + viewName );
 
 		/* 全てのポインターを調べる */
 		for (int i=0; i<count; i++)
@@ -328,35 +330,35 @@ public class MultiTouchView extends MultiTouchEvent
 				}
 
 				/* ログに */
-				Log.d(TAG, msg);
+				logDebugView( msg );
 			}
 		}
 
 		/* 前のタッチ状態により、次のタッチ状態が決まる */
 		switch ( touchStatus )
 		{
-		case MULTI_TOUCH_STATUS_UP:
+		case TOUCH_STATUS_UP:
 			/* アップ状態で、タッチされていれば */
 			if ( flag ) {
 				setTouchStatusIn();
 			}
 			break;
 
-		case MULTI_TOUCH_STATUS_DOWN:
+		case TOUCH_STATUS_DOWN:
 			/* ダウン状態で、タッチされていなければ */
 			if ( !flag ) {
 				setTouchStatusOut();
 			}
 			break;
 
-		case MULTI_TOUCH_STATUS_IN:
+		case TOUCH_STATUS_IN:
 			/* イン状態で、タッチされていなければ */
 			if ( !flag ) {
 				setTouchStatusOut();
 			}
 			break;
 
-		case MULTI_TOUCH_STATUS_OUT:
+		case TOUCH_STATUS_OUT:
 			/* アウト状態で、タッチされていれば */
 			if ( flag ) {
 				setTouchStatusIn();
@@ -365,75 +367,54 @@ public class MultiTouchView extends MultiTouchEvent
 		}
 	}
 
-    /**
-	 * ポインタがあるか判定する
-	 * @param event MotionEvent
-	 * @return 判定結果
-     */
-    private boolean checkPointerCount( MotionEvent event )
-	{
-		return checkPointerCount( 
-			event.getPointerCount() );
-	}
 
-    /**
-	 * ポインタがあるか判定する
-	 * @return 判定結果
-     */
-    private boolean checkPointerCount( int count )
-	{
-		if ( count > 0 ) {
-			return true;
-		}
-		return false;
-	}
 
     /**
 	 * タッチの状態をダウンに設定する
      */
-    private void setTouchStatusDown()
+    protected void setTouchStatusDown()
 	{
-		touchStatus = MULTI_TOUCH_STATUS_DOWN;
+		touchStatus = TOUCH_STATUS_DOWN;
 		touchValid  = true;
-		touchIdDown = touchId;
+		pointerIdDown = pointerId;
 	}
 
     /**
 	 * タッチの状態をアップに設定する
      */
-    private void setTouchStatusUp()
+    protected void setTouchStatusUp()
 	{
-		touchStatus = MULTI_TOUCH_STATUS_UP;
+		touchStatus = TOUCH_STATUS_UP;
 		touchValid  = true;
-		touchIdDown = MULTI_TOUCH_ID_NOT_SET;
+		pointerIdDown = POINTER_ID_NOT_SET;
 	}
 
     /**
 	 * タッチの状態をインに設定する
      */
-    private void setTouchStatusIn()
+    protected void setTouchStatusIn()
 	{
-		touchStatus = MULTI_TOUCH_STATUS_IN;
+		touchStatus = TOUCH_STATUS_IN;
 		touchValid  = true;
 	}
 
     /**
 	 * タッチの状態をアウトに設定する
      */
-    private void setTouchStatusOut()
+    protected void setTouchStatusOut()
 	{
-		touchStatus = MULTI_TOUCH_STATUS_OUT;
+		touchStatus = TOUCH_STATUS_OUT;
 		touchValid  = true;
 	}
 
 	/**
 	 * イベント変数の初期化
 	 */
-    private void clearTouchParam() 
+    protected void clearTouchParam() 
 	{
 		saveTouchParam( 
-			MULTI_TOUCH_INDEX_NOT_SET, 
-			MULTI_TOUCH_ID_NOT_SET,
+			POINTER_INDEX_NOT_SET, 
+			POINTER_ID_NOT_SET,
 			0, 0, 
 			0.0, 0.0, 
 			false );
@@ -446,7 +427,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * @param event MotionEvent
 	 * @param index ポインタインデックス
      */
-    private void saveTouchParam( MotionEvent event, int index )
+    protected void saveTouchParam( MotionEvent event, int index )
 	{
 		saveTouchParam( 
 			index,
@@ -468,10 +449,10 @@ public class MultiTouchView extends MultiTouchEvent
 	 * @param s     ポインタ大きさ
 	 * @param flag  ログを残すかのフラグ
      */
-    private void saveTouchParam( int index, int id, int x, int y, double p, double s, boolean flag )
+    protected void saveTouchParam( int index, int id, int x, int y, double p, double s, boolean flag )
 	{
-		touchIndex    = index;
-		touchId       = id;
+		pointerIndex  = index;
+		pointerId     = id;
 		touchX        = x;
 		touchY        = y;
 		touchPressure = p;
@@ -484,7 +465,7 @@ public class MultiTouchView extends MultiTouchEvent
 				+ Double.toString(p) + " "
 				+ Double.toString(s) + " "
 				+ id + " " + viewName ;
-			Log.d(TAG, msg);
+			logDebugView( msg );
 		}
 	}
 
@@ -494,7 +475,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * @param index ポインタインデックス
 	 * @return タッチされたかの判定結果
      */
-    private boolean checkTouchScreen( MotionEvent event, int index )
+    protected boolean checkTouchScreen( MotionEvent event, int index )
 	{
 		return checkTouchScreen( 
 			(int)event.getX(index), 
@@ -506,7 +487,7 @@ public class MultiTouchView extends MultiTouchEvent
 	 * @param  x, y タッチされたスクリーン座標
 	 * @return タッチされたかの判定結果
      */
-    private boolean checkTouchScreen( int x, int y )
+    protected boolean checkTouchScreen( int x, int y )
 	{
 		/* タッチされた座標はビューの内側か */
 		if ((x > viewLeft)&&(x < viewRight)&&(y > viewTop)&&(y < viewBottom)) {
@@ -515,4 +496,13 @@ public class MultiTouchView extends MultiTouchEvent
 		return false;
 	}
 
+    /**
+	 * デバックログ
+     */
+    protected void logDebugView( String msg )
+	{
+		if ( VIEW_DEBUG ) {
+			Log.d(VIEW_TAG, msg);
+		}
+	}
 }
