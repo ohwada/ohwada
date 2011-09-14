@@ -12,6 +12,17 @@ DevQuiz はプログラムで解答を出す形式ですが。<br>
 スライドパズルでありながら、駒はスライド操作できません。(^^; <br>
 移動させたい駒をクリックしてください。
 
+ゲームアプリでありながら、得点が記録できません。(^^;<br>
+指し手を記録したいときは、logcat を利用ください。
+
+= アプリ =
+
+http://code.google.com/p/ohwada/downloads/detail?name=SlidePuzzle.apk」
+
+= ソースコード =
+
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FSlidePuzzle
+
 = スクリーンショット =
 
 == 開始画面 ==
