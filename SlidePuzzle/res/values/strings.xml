@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Slide Puzzle</string>
+    <string name="button_prev">&lt;&lt; Prev</string>
+    <string name="button_next">Next >></string>
+    <string name="button_any">Start</string>
+    <string name="edit_any">Game number</string>
+</resources>
