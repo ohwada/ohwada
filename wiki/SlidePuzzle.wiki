@@ -2,7 +2,7 @@
 
 = 概要 =
 
-DevQuiz に出題されていたスライドパズルをアンドロイドのゲームにしてみました。
+[http://googledevjp.blogspot.com/2011/08/gdd-2011-devquiz.html DevQuiz] に出題されていたスライドパズルをアンドロイドのゲームにしてみました。
 
 DevQuiz はプログラムで解答を出す形式ですが。<br>
 このゲームは人手で解きます。<br>
