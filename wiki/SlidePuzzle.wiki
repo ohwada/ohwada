@@ -32,5 +32,5 @@ http://ohwada.googlecode.com/files/20110914slidepuzzle_start.jpg
 http://ohwada.googlecode.com/files/20110914slidepuzzle_goal.jpg
 
 = logcat =
-結果を記録したい人は、エクリプスを起動して、コピペしてね。
+指し手を記録したい人は、エクリプスを起動して、コピペしてね。
 http://ohwada.googlecode.com/files/20110914slidepuzzle_logcat.jpg
