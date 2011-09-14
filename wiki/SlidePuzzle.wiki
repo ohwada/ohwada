@@ -1,14 +1,20 @@
 #summary スライドパズル
 
-= 概要
+= 概要 =
 
 DevQuiz に出題されていたスライドパズルをアンドロイドのゲームにしてみました。
 
-DevQuiz はプログラムで解答を出す形式ですが。
-このゲームは人手で解きます。
-全5000問 です。
-君は何日で解けるか (笑い)
+DevQuiz はプログラムで解答を出す形式ですが。<br>
+このゲームは人手で解きます。<br>
+全5000問 です。<br>
+君は何日で解けるか (笑い)<br>
 
 = スクリーンショット =
 
-http://code.google.com/p/ohwada/downloads/detail?name=20110914slidepuzzle_start.jpg
+http://ohwada.googlecode.com/files/20110914slidepuzzle_start.jpg
+
+http://ohwada.googlecode.com/files/20110914slidepuzzle_goal.jpg
+
+= logcat =
+
+http://ohwada.googlecode.com/files/20110914slidepuzzle_logcat.jpg
