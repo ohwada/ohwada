@@ -17,7 +17,7 @@ DevQuiz はプログラムで解答を出す形式ですが。<br>
 
 = アプリ =
 
-http://code.google.com/p/ohwada/downloads/detail?name=SlidePuzzle.apk」
+http://code.google.com/p/ohwada/downloads/detail?name=SlidePuzzle.apk
 
 = ソースコード =
 
