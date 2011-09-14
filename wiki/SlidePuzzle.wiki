@@ -9,10 +9,15 @@ DevQuiz はプログラムで解答を出す形式ですが。<br>
 全5000問 です。<br>
 君は何日で解けるか (笑い)<br>
 
+スライドパズルでありながら、駒はスライド操作できません。(^^;
+移動させたい駒をクリックしてください。
+
 = スクリーンショット =
 
+== 開始画面 ==
 http://ohwada.googlecode.com/files/20110914slidepuzzle_start.jpg
 
+== ゴール画面 ==
 http://ohwada.googlecode.com/files/20110914slidepuzzle_goal.jpg
 
 = logcat =
