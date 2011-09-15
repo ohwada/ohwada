@@ -10,7 +10,6 @@ DevQuiz はプログラムで解答を出す形式ですが。<br>
 君は何日で解けるか (笑い)<br>
 
 == 今後の課題 ==
-
 (1) スライドパズルでありながら、駒はスライド操作できません。(^^; <br>
 移動させたい駒をクリックしてください。
 
@@ -19,10 +18,10 @@ DevQuiz はプログラムで解答を出す形式ですが。<br>
 
 = アプリ =
 
+== ダウンロード ==
 http://code.google.com/p/ohwada/downloads/detail?name=SlidePuzzle.apk
 
 == ソースコード ==
-
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FSlidePuzzle
 
 = スクリーンショット =
