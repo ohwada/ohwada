@@ -35,6 +35,9 @@ http://ohwada.googlecode.com/files/20110914slidepuzzle_start.jpg
 == ゴール画面 ==
 http://ohwada.googlecode.com/files/20110914slidepuzzle_goal.jpg
 
+== 成績一覧画面 ==
+http://ohwada.googlecode.com/files/20110920slidepuzzle_score.png
+
 = logcat =
 指し手を記録したい人は、エクリプスを起動して、コピペしてね。
 http://ohwada.googlecode.com/files/20110914slidepuzzle_logcat.jpg
