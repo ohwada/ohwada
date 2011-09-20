@@ -3,6 +3,14 @@
     <string name="app_name">Slide Puzzle</string>
     <string name="button_prev">&lt;&lt; Prev</string>
     <string name="button_next">Next >></string>
-    <string name="button_any">Start</string>
-    <string name="edit_any">Game number</string>
+    <string name="button_start">Start</string>
+    <string name="edit_start">Game number</string>
+    <string name="menu_list">Score List</string>
+    <string name="header_edit_start">Game number</string>
+    <string name="header_button_start">Get Score</string>
+    <string name="header_button_mail">Send All Scores</string>
+    <string name="header_text_game">Game</string>
+    <string name="header_text_time">Time</string>
+    <string name="header_text_move">Move</string>
+    <string name="header_text_date">Date</string>
 </resources>
