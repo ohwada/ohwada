@@ -16,3 +16,8 @@ SDKに入っている ホームアプリのサンプルコード の改良版。
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FHomeSample
 
 = スクリーンショット =
+== 最初の選択メニュー ==
+http://ohwada.googlecode.com/files/20110922home_menu.png
+
+== 壁紙の選択メニュー ==
+http://ohwada.googlecode.com/files/20110922home_popup_wallpaper.png
