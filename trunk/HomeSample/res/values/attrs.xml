@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- 2011-09-22 K.OHWADA -->  
+<!--
+/* Copyright 2007, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<resources>
+    <declare-styleable name="ApplicationsStackLayout">
+        <attr name="stackOrientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="marginLeft" format="dimension"  />
+        <attr name="marginTop" format="dimension"  />
+        <attr name="marginRight" format="dimension"  />
+        <attr name="marginBottom" format="dimension"  />
+    </declare-styleable>
+ 
+ <!-- added -->   
+    <!-- CellLayout specific attributes. These attributes are used to customize
+         a CellLayout view in XML files. -->
+    <declare-styleable name="CellLayout">
+        <!-- The width of a single cell -->
+        <attr name="cellWidth" format="dimension"  />
+        <!-- The height of a single cell -->
+        <attr name="cellHeight" format="dimension"  />
+        <!-- Padding to apply at the start of the long axis -->
+        <attr name="longAxisStartPadding" format="dimension"  />
+        <!-- Padding to apply at the end of the long axis -->
+        <attr name="longAxisEndPadding" format="dimension"  />
+        <!-- Padding to apply at the start of the short axis -->
+        <attr name="shortAxisStartPadding" format="dimension"  />
+        <!-- Padding to apply at the end of the short axis -->
+        <attr name="shortAxisEndPadding" format="dimension"  />
+        <!-- Number of cells on the short axis of the CellLayout -->
+        <attr name="shortAxisCells" format="integer" />
+        <!-- Number of cells on the long axis of the CellLayout -->
+        <attr name="longAxisCells" format="integer" />
+    </declare-styleable>
+ <!-- end -->  
+     
+</resources>
