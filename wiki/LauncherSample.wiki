@@ -1,9 +1,8 @@
 #summary com.android.launcher の移植版
 
 = 概要 ==
-donut(v1.6) の com.android.launcher の移植版。
-そのまま、コピーして、ユーザアプリとして、コンパイルを通るようにしたもの。
-
+donut(v1.6) の com.android.launcher の移植版。<br>
+そのまま、コピーして、ユーザアプリとして、コンパイルを通るようにしたもの。<br>
 ユーザアプリからアクセスできないシステム・プログラム・ファイルは、
 launcher と同じようにコピーしてコンパイルを通るようにした。
 
