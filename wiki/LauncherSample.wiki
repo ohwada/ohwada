@@ -35,3 +35,4 @@ http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FLauncherSample
 
 = スクリーンショット =
 == 壁紙の変更やウィジェットの配置ができる ==
+http://ohwada.googlecode.com/files/20110925launcher.png
