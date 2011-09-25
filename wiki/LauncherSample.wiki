@@ -1,0 +1,18 @@
+#summary com.android.launcher の移植版
+
+= 概要 ==
+donut(v1.6) の com.android.launcher の移植版。
+そのまま、コピーして、ユーザアプリとして、コンパイルを通るようにしたもの。
+
+ユーザアプリからアクセスできないシステム・プログラム・ファイルは、
+launcher と同じようにコピーしてコンパイルを通るようにした。
+
+== 今後の課題 ==
+下記については、コンパイルを通す手段が分からなかったので、ひとまずコメント化した。
+
+= ソースコード =
+
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FLauncherSample
+
+= スクリーンショット =
+== 壁紙の変更やウィジェットの配置ができる ==
