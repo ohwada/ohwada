@@ -1,0 +1,33 @@
+TODO list
+2011-09-23 K.OHWADA
+
+---------
+jp.ohwada.android.launcher
+---------
+(1) Launcher.java
+import android.app.ISearchManager;
+import android.app.IWallpaperService;
+import android.app.StatusBarManager;
+import android.os.ServiceManager;
+
+searchManagerService.stopSearch();
+DialogInterface.OnShowListener
+
+(2) LiveFolderAdapter
+Context mContext = context;
+
+(3) Search
+inputManager.showSoftInputUnchecked(0, null);
+
+(4) Workspace
+mScrollX = mScroller.getCurrX();
+
+---------
+core
+---------
+(5) android.os ServiceManagerNative
+String[] list = reply.readStringArray();
+
+(6) android.server.search SearchManagerService
+SearchableInfo.buildSearchableList(mContext);
+si = SearchableInfo.getDefaultSearchable();
