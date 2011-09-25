@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2011-09-23 K.OHWADA -->
+<!-- base com.android.internal.R.styleable -->
+
+<resources>
+
+     <!-- ***************************************************************** -->
+    <!-- Support for Searchable activities. -->
+    <!-- ***************************************************************** -->
+     <declare-styleable name="Searchable">
+        <attr name="android:icon" />
+        <attr name="android:hint" />
+        <attr name="android:label" />
+        <attr name="android:searchButtonText"/>
+        <attr name="android:inputType" />
+        <attr name="android:imeOptions" />
+        <attr name="android:searchMode" />
+        <attr name="android:voiceSearchMode" />
+        <attr name="android:voiceLanguageModel" />
+        <attr name="android:voicePromptText" />
+        <attr name="android:voiceLanguage" />
+        <attr name="android:voiceMaxResults" />
+        <attr name="android:searchSuggestAuthority" />
+        <attr name="android:searchSuggestPath" />
+        <attr name="android:searchSuggestSelection" />
+        <attr name="android:searchSuggestIntentAction" />
+        <attr name="android:searchSuggestIntentData" />
+        <attr name="android:searchSuggestThreshold" />
+        <attr name="android:includeInGlobalSearch" />
+        <attr name="android:queryAfterZeroResults" />
+        <attr name="android:searchSettingsDescription" />
+        <attr name="android:autoUrlDetect" />
+    </declare-styleable>
+
+    <declare-styleable name="SearchableActionKey">
+        <attr name="android:keycode" />
+        <attr name="android:queryActionMsg" />
+        <attr name="android:suggestActionMsg" />
+        <attr name="android:suggestActionMsgColumn" />
+    </declare-styleable>
+                      
+</resources>
