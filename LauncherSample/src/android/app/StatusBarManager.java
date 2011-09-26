@@ -25,8 +25,8 @@ package android.app;
 
 import android.content.Context;
 import android.os.Binder;
-import android.os.IBinder;
 import android.os.RemoteException;
+import android.os.IBinder;
 import android.os.ServiceManager;
 
 /**
@@ -63,14 +63,13 @@ public class StatusBarManager {
 
     StatusBarManager(Context context) {
         mContext = context;
-
-// === changed
+        
+     // === changed
 //      mService = IStatusBar.Stub.asInterface(
 //      ServiceManager.getService(Context.STATUS_BAR_SERVICE));
         final String STATUS_BAR_SERVICE = "statusbar";  // hide
         mService = IStatusBar.Stub.asInterface(
-                ServiceManager.getService(STATUS_BAR_SERVICE));
-
+                ServiceManager.getService(STATUS_BAR_SERVICE));        
     }
 
     /**

@@ -16,10 +16,26 @@
 
 package android.app;
 
+import android.app.ISearchManagerCallback;
 import android.content.ComponentName;
+import android.content.res.Configuration;
+import android.os.Bundle;
 import android.server.search.SearchableInfo;
 
 /** @hide */
 interface ISearchManager {
    SearchableInfo getSearchableInfo(in ComponentName launchActivity, boolean globalSearch);
+   List<SearchableInfo> getSearchablesInGlobalSearch();
+   List<SearchableInfo> getSearchablesForWebSearch();
+   SearchableInfo getDefaultSearchableForWebSearch();
+   void setDefaultWebSearch(in ComponentName component);
+   void startSearch(in String initialQuery,
+            boolean selectInitialQuery,
+            in ComponentName launchActivity,
+            in Bundle appSearchData,
+            boolean globalSearch,
+            ISearchManagerCallback searchManagerCallback,
+            int ident);
+    void stopSearch();
+    boolean isVisible();
 }
