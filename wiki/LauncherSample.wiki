@@ -6,31 +6,7 @@ donut(v1.6) の com.android.launcher の移植版。<br>
 ユーザアプリからアクセスできないシステム・プログラム・ファイルは、<br>
 launcher と同じようにコピーしてコンパイルを通るようにした。
 
-== 今後の課題 ==
-下記については、コンパイルを通す手段が分からなかったので、ひとまずコメント化した。
-
-(1) Launcher <br>
-searchManagerService.stopSearch();<br>
-DialogInterface.OnShowListener<br>
-
-(2) LiveFolderAdapter<br>
-Context mContext = context;<br>
-
-(3) Search<br>
-inputManager.showSoftInputUnchecked(0, null);<br>
-
-(4) Workspace<br>
-mScrollX = mScroller.getCurrX();<br>
-
-(5) android.os ServiceManagerNative<br>
-String[] list = reply.readStringArray();<br>
-
-(6) android.server.search SearchManagerService<br>
-SearchableInfo.buildSearchableList(mContext);<br>
-si = SearchableInfo.getDefaultSearchable();<br>
-
 = ソースコード =
-
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FLauncherSample
 
 = スクリーンショット =
