@@ -1,12 +1,10 @@
 //================================================
 // base android.app
+// String[] list = reply.readStringArray();
 // 2011-09-23 K.OHWADA
 //================================================
 
-// TODO
-// String[] list = reply.readStringArray();
-
- /*
+/*
  * Copyright (C) 2006 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -161,12 +159,33 @@ class ServiceManagerProxy implements IServiceManager {
         Parcel reply = Parcel.obtain();
         data.writeInterfaceToken(IServiceManager.descriptor);
         mRemote.transact(LIST_SERVICES_TRANSACTION, data, reply, 0);
-
-// === changed
-// type umatch : public final void readStringArray (String[] val)
-//        String[] list = reply.readStringArray();
-        String[] list = null;
         
+// === changed : readStringArray is hide
+//      String[] list = reply.readStringArray();
+//    public final String[] readStringArray() {
+//        String[] array = null;
+//        int length = readInt();
+//        if (length >= 0)
+//        {
+//            array = new String[length];
+//            for (int i = 0 ; i < length ; i++)
+//            {
+//                array[i] = readString();
+//            }
+//        }
+//        return array;
+//    }
+       String[] array = null;
+       int length = reply.readInt();
+       if (length >= 0)  {
+            array = new String[length];
+            for (int i = 0 ; i < length ; i++)  {
+                array[i] = reply.readString();
+            }
+		}
+        String[] list = array;
+// ===
+
         reply.recycle();
         data.recycle();
         return list;

@@ -46,7 +46,7 @@ import android.view.inputmethod.EditorInfo;
 import java.io.IOException;
 import java.util.HashMap;
 
-// === addded
+//=== addded
 import jp.ohwada.android.launcher.R;
 
 public final class SearchableInfo implements Parcelable {
@@ -289,15 +289,12 @@ public final class SearchableInfo implements Parcelable {
      * @param cName The component name of the searchable activity
      * @throws IllegalArgumentException if the searchability info is invalid or insufficient
      */
-    
-// === changed
-// com.android.internal.R.styleable.Searchable
-//   -> R.styleable.Searchable_android     
-   private SearchableInfo(Context activityContext, AttributeSet attr, final ComponentName cName) {
+    private SearchableInfo(Context activityContext, AttributeSet attr, final ComponentName cName) {
         mSearchActivity = cName;
+        
         TypedArray a = activityContext.obtainStyledAttributes(attr,
-                R.styleable.Searchable);
-        mSearchMode = a.getInt(R.styleable.Searchable_android_searchMode, 0 );
+                R.styleable.Searchable );
+        mSearchMode = a.getInt(R.styleable.Searchable_android_searchMode, 0);
         mLabelId = a.getResourceId(R.styleable.Searchable_android_label, 0);
         mHintId = a.getResourceId(R.styleable.Searchable_android_hint, 0);
         mIconId = a.getResourceId(R.styleable.Searchable_android_icon, 0);
@@ -343,10 +340,9 @@ public final class SearchableInfo implements Parcelable {
             a.getInt(R.styleable.Searchable_android_voiceMaxResults, 0);
 
         a.recycle();
-        
+
         // get package info for suggestions provider (if any)
         String suggestProviderPackage = null;
-
         if (mSuggestAuthority != null) {
             PackageManager pm = activityContext.getPackageManager();
             ProviderInfo pi = pm.resolveContentProvider(mSuggestAuthority, 0);
@@ -354,14 +350,12 @@ public final class SearchableInfo implements Parcelable {
                 suggestProviderPackage = pi.packageName;
             }
         }
-
         mSuggestProviderPackage = suggestProviderPackage;
 
-       // for now, implement some form of rules - minimal data
+        // for now, implement some form of rules - minimal data
         if (mLabelId == 0) {
             throw new IllegalArgumentException("Search label must be a resource reference.");
         }
-
     }
     
     /**
@@ -382,13 +376,9 @@ public final class SearchableInfo implements Parcelable {
          * construct the object.
          * @throws IllegalArgumentException if the action key configuration is invalid
          */
-         
-// === changed
-// com.android.internal.R.styleable.SearchableActionKey 
-//   -> R.styleable.SearchableActionKey_android       
         public ActionKeyInfo(Context activityContext, AttributeSet attr) {
             TypedArray a = activityContext.obtainStyledAttributes(attr,
-                    R.styleable.SearchableActionKey);
+                    R.styleable.SearchableActionKey );
 
             mKeyCode = a.getInt(
                     R.styleable.SearchableActionKey_android_keycode, 0);
@@ -408,7 +398,6 @@ public final class SearchableInfo implements Parcelable {
                     (mSuggestActionMsgColumn == null)) {
                 throw new IllegalArgumentException("No message information.");
             }
-
         }
 
         /**
@@ -533,7 +522,7 @@ public final class SearchableInfo implements Parcelable {
                     if (xml.getName().equals(MD_XML_ELEMENT_SEARCHABLE)) {
                         AttributeSet attr = Xml.asAttributeSet(xml);
                         if (attr != null) {
-                            try {                          	
+                            try {
                                 result = new SearchableInfo(activityContext, attr, cName);
                             } catch (IllegalArgumentException ex) {
                                 Log.w(LOG_TAG, "Invalid searchable metadata for " +
@@ -548,8 +537,8 @@ public final class SearchableInfo implements Parcelable {
                         }
                         AttributeSet attr = Xml.asAttributeSet(xml);
                         if (attr != null) {
-                            try {                           	
-                           		result.addActionKey(new ActionKeyInfo(activityContext, attr));                           
+                            try {
+                                result.addActionKey(new ActionKeyInfo(activityContext, attr));
                             } catch (IllegalArgumentException ex) {
                                 Log.w(LOG_TAG, "Invalid action key for " +
                                         cName.flattenToShortString() + ": " + ex.getMessage());

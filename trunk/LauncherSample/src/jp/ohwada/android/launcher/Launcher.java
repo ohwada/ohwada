@@ -12,7 +12,6 @@
 // import android.app.IWallpaperService;
 // import android.app.StatusBarManager;
 // import android.os.ServiceManager;
-// searchManagerService.stopSearch();
 // DialogInterface.OnShowListener
 
 /*
@@ -440,17 +439,13 @@ public final class Launcher extends Activity implements View.OnClickListener, On
             // itself again.
             mWorkspace.post(new Runnable() {
                 public void run() {
-
                 	ISearchManager searchManagerService = ISearchManager.Stub.asInterface(
-                            ServiceManager.getService(Context.SEARCH_SERVICE));
-
-// === removed : NOT find stopSearch               	
-//                    try {
-//                        searchManagerService.stopSearch();
-//                    } catch (RemoteException e) {
-//                        e(LOG_TAG, "error stopping search", e);
-//                    }    
-
+                            ServiceManager.getService(Context.SEARCH_SERVICE));              	
+                    try {
+                        searchManagerService.stopSearch();
+                    } catch (RemoteException e) {
+                        e(LOG_TAG, "error stopping search", e);
+                    }    
                 }
             });
         }
@@ -1812,12 +1807,18 @@ public final class Launcher extends Activity implements View.OnClickListener, On
         mFolderInfo = info;
         mWaitingForResult = true;
         showDialog(DIALOG_RENAME_FOLDER);
+        
+// === added        
+        mWorkspace.lock();
     }
 
     private void showAddDialog(CellLayout.CellInfo cellInfo) {
         mAddItemCellInfo = cellInfo;
         mWaitingForResult = true;
         showDialog(DIALOG_CREATE_SHORTCUT);
+        
+        // === added        
+        mWorkspace.lock();
     }
 
     private void pickShortcut(int requestCode, int title) {

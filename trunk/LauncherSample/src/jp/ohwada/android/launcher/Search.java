@@ -4,7 +4,6 @@
 //================================================
 
 // TODO
-// import android.server.search.SearchableInfo;
 // import android.server.search.Searchables;
 // inputManager.showSoftInputUnchecked(0, null);
 
@@ -55,10 +54,10 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.server.search.SearchableInfo;
 
-// === removed : NOT use 
-// import android.server.search.SearchableInfo;
-// import android.server.search.Searchables;
+//=== removed : NOT use 
+//import android.server.search.Searchables;
 
 public class Search extends LinearLayout 
         implements OnClickListener, OnKeyListener, OnLongClickListener {
@@ -211,9 +210,34 @@ public class Search extends LinearLayout
                 InputMethodManager inputManager = (InputMethodManager)
                         getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
 
-// removed : showSoftInputUnchecked is hide
+// changed : showSoftInputUnchecked is hide
+//---
+//    public void showSoftInputUnchecked(int flags, ResultReceiver resultReceiver) {
+//        try {
+//            mService.showSoftInput(mClient, flags, resultReceiver);
+//        } catch (RemoteException e) {
+//        }
+//    }
+//---
+//    public boolean showSoftInput(View view, int flags,
+//            ResultReceiver resultReceiver) {
+//        checkFocus();
+//        synchronized (mH) {
+//            if (mServedView != view && (mServedView == null
+//                    || !mServedView.checkInputConnectionProxy(view))) {
+//                return false;
+//            }
+//            try {
+//                return mService.showSoftInput(mClient, flags, resultReceiver);
+//            } catch (RemoteException e) {
+//            }            
+//            return false;
+//        }
+//    }
+//---
 //                inputManager.showSoftInputUnchecked(0, null);
-                    
+				inputManager.showSoftInput(this, 0, null);
+                     
             }
             
             // Start the animation, unless it has already started.

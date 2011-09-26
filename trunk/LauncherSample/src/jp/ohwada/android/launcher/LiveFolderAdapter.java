@@ -1,5 +1,6 @@
 //================================================
 // base com.android.launcher
+// Context mContext = (Context) mLauncher;
 // 2011-09-23 K.OHWADA
 //================================================
 
@@ -56,7 +57,10 @@ class LiveFolderAdapter extends CursorAdapter {
     private final Launcher mLauncher;
 
     LiveFolderAdapter(Launcher launcher, LiveFolderInfo info, Cursor cursor) {
+    
+// === CursorAdapter(Context context, Cursor c, boolean autoRequery)
         super(launcher, cursor, true);
+        
         mIsList = info.displayMode == LiveFolders.DISPLAY_MODE_LIST;
         mInflater = LayoutInflater.from(launcher);
         mLauncher = launcher;
@@ -138,7 +142,7 @@ class LiveFolderAdapter extends CursorAdapter {
     private Drawable loadIcon(Context context, Cursor cursor, ViewHolder holder) {
 
 // === added
-    	Context mContext = context;
+    	Context mContext = (Context) mLauncher;
     	
     	Drawable icon = null;
         byte[] data = null;

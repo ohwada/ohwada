@@ -1,11 +1,9 @@
 //================================================
 // base com.android.launcher
 // Context mContext = getContext();
+// scrollTo( mScroller.getCurrX(), mScroller.getCurrY() ); 
 // 2011-09-23 K.OHWADA
 //================================================
-
-// TODO
-// mScrollX = mScroller.getCurrX();
 
 /*
  * Copyright (C) 2008 The Android Open Source Project
@@ -470,9 +468,21 @@ public class Workspace extends ViewGroup implements DropTarget, DragSource, Drag
     public void computeScroll() {
         if (mScroller.computeScrollOffset()) {
 
-// === removed
+// === changed
 //            mScrollX = mScroller.getCurrX();
 //            mScrollY = mScroller.getCurrY();
+//
+//    public void scrollTo(int x, int y) {
+//        if (mScrollX != x || mScrollY != y) {
+//            int oldX = mScrollX;
+//            int oldY = mScrollY;
+//            mScrollX = x;
+//            mScrollY = y;
+//            onScrollChanged(mScrollX, mScrollY, oldX, oldY);
+//            invalidate();
+//        }
+//    }
+			scrollTo( mScroller.getCurrX(), mScroller.getCurrY() ); 
             
             postInvalidate();
         } else if (mNextScreen != INVALID_SCREEN) {
@@ -482,8 +492,8 @@ public class Workspace extends ViewGroup implements DropTarget, DragSource, Drag
             clearChildrenCache();
         }
     }
-
-// ****
+    
+// === remove : isOpaque is hide
 //    @Override
     
     public boolean isOpaque() {
