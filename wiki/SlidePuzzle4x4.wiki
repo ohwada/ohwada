@@ -6,8 +6,8 @@
 
 DevQuiz はプログラムで解答を出す形式ですが。<br>
 このゲームは人手で解きます。<br>
-DevQuiz では 5000問ありましたが。<br>
-4x4 3x4 4x3 の 200問を用意しました。<br>
+DevQuiz では 3x3 から 6x6 までのパターンで 5000問ありましたが。<br>
+4x4 3x4 4x3 の3パターンで 200問を用意しました。<br>
 
 5000問にチャレンジしたい人はこちらを。
 http://code.google.com/p/ohwada/wiki/SlidePuzzle
