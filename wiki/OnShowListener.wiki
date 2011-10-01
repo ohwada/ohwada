@@ -1,0 +1,14 @@
+#summary Dialog に OnShowListener を実装する
+
+= 概要 =
+Dialog に OnShowListener を実装する
+
+Dialog の OnShowListener は API 8 (v2.2) から公開されていますが。
+それ以前のバージョンでも @hide 属性でソースに入っています。
+Dialog のソースを見たところ、メッセージハンドラーで実現しています。
+v1.6 の Dialog に OnShowListener を実装してみました。
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FAlertDialogSample
+
+= スクリーンショット =
