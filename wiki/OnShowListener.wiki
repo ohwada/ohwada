@@ -12,5 +12,5 @@ v1.6 の Dialog に OnShowListener を実装してみました。<br>
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FAlertDialogSample
 
 = スクリーンショット =
-Dialog が表示されると、onShow という Toast を表示する。
+Dialog が表示されると、onShow という Toast を表示する。<br>
 http://ohwada.googlecode.com/files/20110927alertdialog.png
