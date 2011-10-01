@@ -3,7 +3,7 @@
 = 概要 =
 Dialog に OnShowListener を実装する<br>
 
-Dialog の [http://developer.android.com/intl/ja/reference/android/content/DialogInterface.OnShowListener.html:OnShowListener] は API 8 (v2.2) から公開されていますが。<br>
+Dialog の [http://developer.android.com/intl/ja/reference/android/content/DialogInterface.OnShowListener.html OnShowListener] は API 8 (v2.2) から公開されていますが。<br>
 それ以前のバージョンでも @hide 属性でソースに入っています。<br>
 Dialog のソースを見たところ、メッセージハンドラーで実現しています。<br>
 v1.6 の Dialog に OnShowListener を実装してみました。<br>
