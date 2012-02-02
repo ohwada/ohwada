@@ -8,5 +8,4 @@ donut(v1.6) の android.widget.DigitalClock の移植版。<br>
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FDigitalClockSample
 
 = スクリーンショット =
-== 壁紙の変更やウィジェットの配置ができる ==
 http://ohwada.googlecode.com/files/20120114_digital_clock.png
