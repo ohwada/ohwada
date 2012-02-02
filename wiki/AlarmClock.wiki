@@ -1,0 +1,15 @@
+#summary com.android.AlarmClock の移植版
+
+= 概要 ==
+donut(v1.6) の com.android.AlarmClock の移植版。<br>
+そのまま、コピーして、ユーザアプリとして、コンパイルを通るようにしたもの。<br>
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FAlarmClockSample
+
+= スクリーンショット =
+== activity ==
+http://ohwada.googlecode.com/files/20120114_alarm_clock.png
+
+== widget ==
+http://ohwada.googlecode.com/files/20120114_analog_clock_widget.png
