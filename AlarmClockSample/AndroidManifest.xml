@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2012-01-14 K.OHWADA -->
+<!-- com.android.alarmclock - jp.ohwada.android.alarmclocksample -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.ohwada.android.alarmclocksample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="4" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application android:label="@string/app_label"
+                 android:icon="@drawable/ic_launcher_alarmclock">
+
+        <provider android:name="AlarmProvider" android:authorities="jp.ohwada.android.alarmclocksample" />
+
+        <activity android:name="AlarmClock" android:label="@string/app_label">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="SettingsActivity" android:label="@string/settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="SetAlarm" android:label="@string/set_alarm" />
+
+        <activity android:name="AlarmAlert"
+                android:excludeFromRecents="true"
+                android:theme="@style/alarm_alert"
+                android:launchMode="singleTask"
+                android:taskAffinity=":AlarmAlert"
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"/>
+
+        <!-- This activity is basically the same as AlarmAlert but with a more
+             generic theme. It also shows as full screen (with status bar) but
+             with the wallpaper background. -->
+        <activity android:name="AlarmAlertFullScreen"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.NoTitleBar"
+                android:launchMode="singleTask"
+                android:taskAffinity=":AlarmAlert"
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"/>
+
+        <activity android:name="ClockPicker" />
+
+        <receiver android:name="AlarmReceiver">
+            <intent-filter>
+               <action android:name="jp.ohwada.android.alarmclocksample.ALARM_ALERT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="AlarmInitReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="AnalogAppWidgetProvider" android:label="@string/analog_gadget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/analog_appwidget" />
+        </receiver>
+    </application>
+
+</manifest>
