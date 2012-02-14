@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+<!-- http://blog.global-eng.co.jp/android/2011/05/13/xml%E3%81%A7%E6%9E%A0%E7%B7%9A%E3%82%92%E6%8F%8F%E7%94%BB%E3%81%99%E3%82%8B/ -->    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border1"
+        android:text="@string/border1"
+        />
+
+<!-- http://d.hatena.ne.jp/Korsakov/20100915/1284573613 -->
+<LinearLayout
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:padding="1dip"
+        >
+        
+<TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:background="#444444"
+        android:text="@string/border2"
+		/>
+
+</LinearLayout>
+        
+</LinearLayout>
