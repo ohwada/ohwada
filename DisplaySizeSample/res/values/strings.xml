@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Display Size Sample</string>
+    <string name="no_status">No Status Bar</string>
+    <string name="no_title">No Title Bar</string>
+    <string name="no_status_title">No Status and Title Bar</string>
+    <string name="back">Back</string>
+
+</resources>

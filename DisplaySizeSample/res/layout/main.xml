@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_main"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<!-- top -->
+<LinearLayout 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent"
+    android:layout_height="10dp"
+    android:layout_marginTop="1dp"
+    >
+
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+    <include layout="@layout/borber_horizontal_10" /> 
+                                                                      
+</LinearLayout>
+
+<LinearLayout 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<!-- left -->
+<LinearLayout 
+    android:orientation="vertical" 
+    android:layout_width="10dp"
+    android:layout_height="fill_parent"
+    >
+
+	<include layout="@layout/borber_vertical_9" /> 
+	<include layout="@layout/borber_vertical_10" />
+    <include layout="@layout/borber_vertical_10" />
+	<include layout="@layout/borber_vertical_10" />
+    <include layout="@layout/borber_vertical_10" />
+	<include layout="@layout/borber_vertical_10" />
+    <include layout="@layout/borber_vertical_10" />
+	<include layout="@layout/borber_vertical_10" />
+				      
+</LinearLayout>
+
+<!-- right -->
+<LinearLayout 
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="10dp"
+    >
+
+<!-- right text -->
+<ScrollView
+  android:layout_width="fill_parent"   
+  android:layout_height="wrap_content"
+  android:layout_weight="1"  >
+
+<LinearLayout 
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+                                  		
+     <TextView
+		android:id="@+id/textview_display"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+        />
+        
+     <TextView
+		android:id="@+id/textview_draw"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
+
+</ScrollView> 
+
+<!-- right bottom -->
+<LinearLayout 
+    android:id="@+id/linearlayout_next_buttons"
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    
+     <Button
+		android:id="@+id/button_no_status_title"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:text="@string/no_status_title"
+        />
+     
+     <Button
+		android:id="@+id/button_no_status"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:text="@string/no_status"
+        />
+            
+     <Button
+		android:id="@+id/button_no_title"
+		android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:text="@string/no_title"
+        />
+          
+</LinearLayout>
+
+	<Button
+		android:id="@+id/button_back"
+		android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/back"
+        />
+         
+</LinearLayout>
+        
+</LinearLayout>
+                
+</LinearLayout>

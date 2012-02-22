@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="10dp"
+    android:layout_height="100dp"
+    >
+ 
+ <!-- 1 -->   	
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 2 -->   
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 3 -->   	
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 4 -->    
+ 	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 5 -->    
+ 	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 6 -->   
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+ 
+  <!-- 7 -->   
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 8 -->   
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+
+ <!-- 9 -->   
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="@drawable/border1"
+        />
+ 
+  <!-- 10 -->   
+	<TextView
+		android:layout_width="10dp"
+	    android:layout_height="10dp"
+	    android:background="#ffffff"
+        />
+                      
+</LinearLayout>
