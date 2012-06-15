@@ -3,6 +3,9 @@
 = 概要 =
 PIC24FJ64GB002 のテストプログラム
 
+== ソースコード ==
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FPIC24FJ64GB002-LED
+
 == 機能 ==
 LED を約１秒間隔で点滅する。
 
