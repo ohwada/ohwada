@@ -1,0 +1,27 @@
+#summary PIC24FJ64GB002 の ADK プログラム
+
+= 概要 =
+PIC24FJ64GB002 の ADK プログラム
+
+== ソースコード ==
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FPIC24FJ64GB002-ADK
+
+== 機能 ==
+[http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1406&dDocName=en553673 PIC24F Accessory Development Starter Kit for Android] (PIC24FJ256GB110) の相当品を PIC24FJ64GB002 で実装する
+
+== ハードの準備 ==
+下記を接続する。
+LED ８個
+ボタンスイッチ ４個
+ポテンシャルメータ(可変抵抗) １個
+
+ピン配置
+http://ohwada.googlecode.com/files/20120610_PIC24FJ64GB002-ADK-Pin-Assignment.png
+
+== アンドロイド・アプリ ==
+BasicAccessoryDemo - Microchip Technology Inc
+https://play.google.com/store/apps/details?id=com.microchip.android.BasicAccessoryDemo
+
+== 開発環境 ==
+MPLAB X IDE v1.20 <br>
+MPLAB XC16 Compiler v1.00
