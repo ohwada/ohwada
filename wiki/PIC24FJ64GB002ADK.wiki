@@ -11,7 +11,7 @@ http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FPIC24FJ64GB002-ADK
 PIC24FJ64GB002 で実装する
 
 == ハードの準備 ==
-下記を接続する。<br>
+PIC24FJ64GB002 に下記を接続する。<br>
 LED 8個<br>
 プッシュボタン・スイッチ 4個<br>
 ポテンシャルメータ(可変抵抗) 1個 <br>
