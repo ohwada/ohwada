@@ -24,6 +24,8 @@ http://ohwada.googlecode.com/files/20120610_PIC24FJ64GB002-ADK-Pin-Assignment_2.
 BasicAccessoryDemo - Microchip Technology Inc <br>
 https://play.google.com/store/apps/details?id=com.microchip.android.BasicAccessoryDemo
 
+https://lh4.ggpht.com/gapCxRQf0o1mDkxqXMXw_huDXUr8IFNvb3y793zFzfdCjh933iZ43pLy9dAAjxuc2Iw
+
 == 開発環境 ==
 MPLAB X IDE v1.20 <br>
 MPLAB XC16 Compiler v1.00
