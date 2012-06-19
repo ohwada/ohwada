@@ -12,10 +12,10 @@ PIC24FJ64GB002 で実装する
 
 == ハードの準備 ==
 PIC24FJ64GB002 に下記を接続する。<br>
-USBコネクタ 1個<br>
-LED 8個<br>
-プッシュボタン・スイッチ 4個<br>
-ポテンシャルメータ(可変抵抗) 1個 <br>
+- USBコネクタ 1個<br>
+- LED 8個<br>
+- プッシュボタン・スイッチ 4個<br>
+- ポテンシャルメータ(可変抵抗) 1個 <br>
 
 ピン配置 <br>
 http://ohwada.googlecode.com/files/20120610_PIC24FJ64GB002-ADK-Pin-Assignment_2.png
