@@ -18,7 +18,7 @@ LED 8個<br>
 ポテンシャルメータ(可変抵抗) 1個 <br>
 
 ピン配置 <br>
-http://ohwada.googlecode.com/files/20120610_PIC24FJ64GB002-ADK-Pin-Assignment-2.png
+http://ohwada.googlecode.com/files/20120610_PIC24FJ64GB002-ADK-Pin-Assignment_2.png
 
 == アンドロイド・アプリ ==
 BasicAccessoryDemo - Microchip Technology Inc <br>
