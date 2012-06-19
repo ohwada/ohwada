@@ -197,7 +197,6 @@ ANDROID_ACCESSORY_INFORMATION myDeviceInfo =
     sizeof(serial)
 };
 
-
 /****************************************************************************
   Function:
     int main(void)
@@ -278,7 +277,7 @@ int main(void)
     LATBbits.LATB5 = 1;
 
     #endif
-
+	            
     USBInitialize(0);
     AndroidAppStart(&myDeviceInfo);
 
@@ -317,7 +316,8 @@ int main(void)
             if( errorCode != USB_SUCCESS)
             {
                 //Error
-                DEBUG_PrintString("Error trying to start read");
+// 2012-06-10                
+//                DEBUG_PrintString("Error trying to start read");
             }
             else
             {
@@ -680,6 +680,11 @@ static void InitPIC32(void)
   ***************************************************************************/
 static void SetLEDs(BYTE setting)
 {
+// 2012-06-10
+    DEBUG_PrintString( "SetLEDs " );
+    DEBUG_PrintHex( setting );
+    DEBUG_PrintString( "\r\n" );
+            
     if((setting & 0x01) == 0x01) { LED0_On(); } else { LED0_Off(); }
     if((setting & 0x02) == 0x02) { LED1_On(); } else { LED1_Off(); }
     if((setting & 0x04) == 0x04) { LED2_On(); } else { LED2_Off(); }
@@ -863,7 +868,7 @@ static BYTE ReadPOT(void)
 // PIC24FJ64GB002
 // same as PIC24F_STARTER_KIT
         #elif defined(PIC24FJ64GB002_PIM)
-            AD1CHS = 0x0;           //MUXA uses AN0
+            SelectPotCh();
 
             // Get an ADC sample
             AD1CON1bits.SAMP = 1;           //Start sampling

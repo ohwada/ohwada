@@ -41,11 +41,11 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/USB/usb_host.o ${OBJECTDIR}/USB/usb_host_android.o ${OBJECTDIR}/USB/usb_host_android_protocol_v1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/usb_config.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/USB/usb_host.o.d ${OBJECTDIR}/USB/usb_host_android.o.d ${OBJECTDIR}/USB/usb_host_android_protocol_v1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/usb_config.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Common/uart2.o ${OBJECTDIR}/USB/usb_host.o ${OBJECTDIR}/USB/usb_host_android.o ${OBJECTDIR}/USB/usb_host_android_protocol_v1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/usb_config.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Common/uart2.o.d ${OBJECTDIR}/USB/usb_host.o.d ${OBJECTDIR}/USB/usb_host_android.o.d ${OBJECTDIR}/USB/usb_host_android_protocol_v1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/usb_config.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/USB/usb_host.o ${OBJECTDIR}/USB/usb_host_android.o ${OBJECTDIR}/USB/usb_host_android_protocol_v1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/usb_config.o
+OBJECTFILES=${OBJECTDIR}/Common/uart2.o ${OBJECTDIR}/USB/usb_host.o ${OBJECTDIR}/USB/usb_host_android.o ${OBJECTDIR}/USB/usb_host_android_protocol_v1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/usb_config.o
 
 
 CFLAGS=
@@ -69,6 +69,12 @@ MP_LINKER_FILE_OPTION=,--script=p24FJ64GB002.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/Common/uart2.o: Common/uart2.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/Common 
+	@${RM} ${OBJECTDIR}/Common/uart2.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Common/uart2.c  -o ${OBJECTDIR}/Common/uart2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Common/uart2.o.d"    -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -omf=coff -O0 -I"/Users/ohwada/MPLABXProjects/PIC24FJ64GB002-ADK.X" -I"/Users/ohwada/MPLABXProjects/PIC24FJ64GB002-ADK.X/Common" -I"/Users/ohwada/MPLABXProjects/PIC24FJ64GB002-ADK.X/USB" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/Common/uart2.o.d" $(SILENT) 
+	
 ${OBJECTDIR}/USB/usb_host.o: USB/usb_host.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/USB 
 	@${RM} ${OBJECTDIR}/USB/usb_host.o.d 
@@ -100,6 +106,12 @@ ${OBJECTDIR}/usb_config.o: usb_config.c  nbproject/Makefile-${CND_CONF}.mk
 	@${FIXDEPS} "${OBJECTDIR}/usb_config.o.d" $(SILENT) 
 	
 else
+${OBJECTDIR}/Common/uart2.o: Common/uart2.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/Common 
+	@${RM} ${OBJECTDIR}/Common/uart2.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Common/uart2.c  -o ${OBJECTDIR}/Common/uart2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Common/uart2.o.d"    -g -omf=coff -O0 -I"/Users/ohwada/MPLABXProjects/PIC24FJ64GB002-ADK.X" -I"/Users/ohwada/MPLABXProjects/PIC24FJ64GB002-ADK.X/Common" -I"/Users/ohwada/MPLABXProjects/PIC24FJ64GB002-ADK.X/USB" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/Common/uart2.o.d" $(SILENT) 
+	
 ${OBJECTDIR}/USB/usb_host.o: USB/usb_host.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/USB 
 	@${RM} ${OBJECTDIR}/USB/usb_host.o.d 
