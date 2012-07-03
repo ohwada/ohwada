@@ -85,11 +85,42 @@ Change History
         
 // PIC24FJ64GB002        
     #elif defined(__PIC24FJ64GB002__)
-         _CONFIG1(WDTPS_PS1 & FWPSA_PR32 & WINDIS_OFF & FWDTEN_OFF & ICS_PGx1 & GWRP_OFF & GCP_OFF & JTAGEN_OFF)
-         _CONFIG2(POSCMOD_NONE & I2C1SEL_PRI & IOL1WAY_OFF & OSCIOFNC_ON & FCKSM_CSDCMD & FNOSC_FRCPLL & PLL96MHZ_ON & PLLDIV_NODIV & IESO_OFF)
-         _CONFIG3(WPFP_WPFP0 & SOSCSEL_IO & WUTSEL_LEG & WPDIS_WPDIS & WPCFG_WPCFGDIS & WPEND_WPENDMEM)
-         _CONFIG4(DSWDTPS_DSWDTPS3 & DSWDTOSC_LPRC & RTCOSC_SOSC & DSBOREN_OFF & DSWDTEN_OFF)
-           
+
+// WDTPS_PS1 :	Watchdog Timer Postscaler:	 1:1
+// FWPSA_PR32 :		WDT Prescaler: Prescaler ratio of 1:32
+// WINDIS_OFF :		Windowed WDT:	Standard Watchdog Timer enabled,(Windowed-mode is disabled)
+// ICS_PGx :	Emulator Pin Placement Select bits: Emulator functions are shared with PGEC1/PGED1
+// GWRP_OFF :	General Segment Write Protect: Writes to program memory are allowed
+// GCP_OFF :	General Segment Code Protect: Code protection is disabled
+// JTAGEN_OFF :		JTAG Port Enable:	JTAG port is disabled
+_CONFIG1(WDTPS_PS1 & FWPSA_PR32 & WINDIS_OFF & FWDTEN_OFF & ICS_PGx1 & GWRP_OFF & GCP_OFF & JTAGEN_OFF)
+
+// POSCMOD_NONE :	Primary Oscillator Select: Primary Oscillator disabled
+// I2C1SEL_PRI I2C1 :	Pin Select bit:	Use default SCL1/SDA1 pins for I2C1
+// IOL1WAY_OFF :	IOLOCK One-Way Set Enable: The IOLOCK bit can be set and cleared using the unlock sequence
+// OSCIOFNC_ON :	OSCO Pin Configuration:	 OSCO pin functions as port I/O (RA3)
+// FCKSM_CSDCMD :	Clock Switching and Fail-Safe Clock Monitor: Sw Disabled, Mon Disabled
+// FNOSC_FRCPLL :	Initial Oscillator Select: Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
+// PLL96MHZ_ON :	96MHz PLL Startup Select: 96 MHz PLL Startup is enabled automatically on start-up
+// PLLDIV_NODIV :		USB 96 MHz PLL Prescaler Select: Oscillator input used directly (4 MHz input)
+// IESO_OFF :		Internal External Switchover:	IESO mode (Two-Speed Start-up) disabled
+_CONFIG2(POSCMOD_NONE & I2C1SEL_PRI & IOL1WAY_OFF & OSCIOFNC_ON & FCKSM_CSDCMD & FNOSC_FRCPLL & PLL96MHZ_ON & PLLDIV_NODIV & IESO_OFF)
+
+// WPFP_WPFP0 :		Write Protection Flash Page Segment Boundary: Page 0 (0x0)
+// SOSCSEL_IO :	Secondary Oscillator Pin Mode Select: SOSC pins have digital I/O functions (RA4, RB4)
+// WUTSEL_LEG :		Voltage Regulator Wake-up Time Select: Default regulator start-up time used
+// WPDIS_WPDIS	:	Segment Write Protection Disable: Segmented code protection disabled
+// WPCFG_WPCFGDIS :		Write Protect Configuration Page Select: Last page and Flash Configuration words are unprotected
+// WPEND_WPENDMEM :		Segment Write Protection End Page Select: Write Protect from WPFP to the last page of memory
+_CONFIG3(WPFP_WPFP0 & SOSCSEL_IO & WUTSEL_LEG & WPDIS_WPDIS & WPCFG_WPCFGDIS & WPEND_WPENDMEM)
+
+// DSWDTPS_DSWDTPS3 :		DSWDT Postscale Select: 1:128 (132 ms)
+// DSWDTOSC_LPRC : 	Deep Sleep Watchdog Timer Oscillator Select: DSWDT uses Low Power RC Oscillator (LPRC)
+// RTCOSC_SOSC	:	RTCC Reference Oscillator Select: RTCC uses Secondary Oscillator (SOSC)
+// DSBOREN_OFF :	Deep Sleep BOR Enable bit: BOR disabled in Deep Sleep
+// DSWDTEN_OFF :		Deep Sleep Watchdog Timer:	DSWDT disabled
+_CONFIG4(DSWDTPS_DSWDTPS3 & DSWDTOSC_LPRC & RTCOSC_SOSC & DSBOREN_OFF & DSWDTEN_OFF)
+          
     #endif
 #elif defined( __PIC32MX__ )
     #pragma config UPLLEN   = ON            // USB PLL Enabled
@@ -277,7 +308,20 @@ int main(void)
     LATBbits.LATB5 = 1;
 
     #endif
-	            
+		
+// PIC24FJ64GB002        
+    #if defined(__PIC24FJ64GB002__)
+        // initial value :  0x3100
+ 		// set value :      0x0100
+     	// ROI : Interrupts have no effect on the DOZEN bit
+    	// DOZE : CPU Peripheral Clock Ratio Select bits 1:1 
+    	// DOZEN  : CPU peripheral clock ratio is set to 1:1
+    	// RCVDIV : FRC Postscaler Select bits 4 MHz (divide-by-2) 
+    	// CPDIV : USB System Clock Select bits (postscaler select from 32 MHz clock branch) 32 MHz (1:1)
+    	// PLLEN : 96 MHz PLL Enable bit Disable PLL
+		CLKDIV = 0x0100;	
+    #endif
+    		            
     USBInitialize(0);
     AndroidAppStart(&myDeviceInfo);
 
@@ -285,7 +329,7 @@ int main(void)
     mInitPOT();
 
     DEBUG_Init(0);
-
+	
     while(1)
     {
         //Keep the USB stack running
