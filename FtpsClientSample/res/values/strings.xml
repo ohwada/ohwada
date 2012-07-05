@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ftps Client Sample</string>
+    <string name="upload">Upload</string> 
+    <string name="download">Download</string>
+    <string name="config_notice">Please describe your server information in Constant.java</string> 
+    <string name="upload_notice">Please make directry photos in server</string> 
+    <string name="download_notice">Please upload sample.jpg beforehand in photos directory</string>        
+</resources>
