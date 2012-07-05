@@ -1,4 +1,3 @@
-FTPSClientSample
 #summary FTPS Client Sample
 
 = 概要 ==
