@@ -3,7 +3,10 @@ package jp.ohwada.android.calllogcalls;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.provider.CallLog;
+import android.provider.ContactsContract;
 
 /**
  * Call Log Record
@@ -43,7 +46,7 @@ public class CallLogRecord {
 	}
 
 	/**
-	 * get formated Type 
+	 * get formated type 
 	 * @param none
 	 * @return String type
 	 */	
@@ -60,6 +63,33 @@ public class CallLogRecord {
 				s = "miss";
 				break;
 		}					
+		return s;
+	}
+	
+	/**
+	 * get formated New 
+	 * @param none
+	 * @return String new
+	 */	
+	public String getNewString() {
+		String s = "";
+		if ( call_new == 1 ) {
+			s = "New";		
+		}					
+		return s;
+	}
+	
+	/**
+	 * get formated cachedNumberType 
+	 * @param none
+	 * @return String cachedNumberType
+	 */	
+	public String getCachedNumberTypeString( Context context ) {	
+		// API 5
+		int id = ContactsContract.CommonDataKinds.Phone.getTypeLabelResource( cachedNumberType );
+
+		Resources r = context.getResources();
+		String s = r.getString( id );				
 		return s;
 	}
 }
