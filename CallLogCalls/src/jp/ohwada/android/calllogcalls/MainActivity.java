@@ -118,14 +118,14 @@ public class MainActivity extends ListActivity
 	private void showDialog( CallLogRecord record ) {
 		String title = "Call Log";
 		String msg = "";
-		msg += "Date : " + record.getDateString() + LF;
+		msg += "Date : " + record.getDateString() + " (" + record.date + ")" + LF;
 		msg += "Number : " + record.number + LF;
-		msg += "Type : " + record.getTypeString() + LF;
+		msg += "Type : " + record.getTypeString() + " (" + record.type+ ")" + LF;
 		msg += "Duration : " + record.duration + LF;
-		msg += "New : " + record.call_new + LF;
+		msg += "New : " + record.getNewString() + " (" + record.call_new+ ")" + LF;
 		msg += "Cached Name : " + record.cachedName + LF;
 		msg += "Cached Number Label : " + record.cachedNumberLabel + LF;
-		msg += "Cached Number Type : " + record.cachedNumberType + LF;
+		msg += "Cached Number Type : " + record.getCachedNumberTypeString(this) + " (" + record.cachedNumberType+ ")" + LF;
 
 		AlertDialog.Builder builder = new AlertDialog.Builder( this );
         builder.setTitle( title );
