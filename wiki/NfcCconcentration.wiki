@@ -1,0 +1,11 @@
+#summary NFC 神経衰弱
+
+= 概要 ==
+Android 端末と NFC タグを使ったゲームです。
+ルールはトランプと神経衰弱と同じです。
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FNfcCconcentration
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20120817nfc_cconcentration_match.png
