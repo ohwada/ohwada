@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+	<TextView
+		android:id="@+id/textview_title" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:textSize="20sp"
+		android:text="@string/setting_title"
+		/>
+
+<!-- LinearLayou button -->
+	<LinearLayout
+		android:id="@+id/linearlayout_buttons" 
+		android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+		>
+
+<!-- button 1 -->
+		<LinearLayout
+			android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+			>
+
+			<Button
+    			android:id="@+id/button_bulk"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content"
+				android:layout_weight="1" 
+    			android:text="@string/setting_bulk"
+    			/>
+    			
+			<Button
+    			android:id="@+id/button_each"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1"
+    			android:text="@string/setting_each"
+    			/>
+    		   				
+		</LinearLayout> 
+<!-- button 1 end -->
+
+		<TextView
+			android:id="@+id/textview_menu" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:textSize="20sp"
+			android:text="@string/setting_menu"
+			/>
+
+<!-- button 2 -->
+		<LinearLayout 
+			android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+			>
+
+			<Button
+    			android:id="@+id/button_dir"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1"
+    			android:text="@string/setting_dir"
+    			/>
+
+			<Button
+    			android:id="@+id/button_num"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1"
+    			android:text="@string/setting_num"
+    			/>
+
+			<Button
+    			android:id="@+id/button_list"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1"
+    			android:text="@string/setting_list"
+    			/>
+
+			<Button
+    			android:id="@+id/button_video"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1"
+    			android:text="@string/setting_video"
+    			/>
+    		    				
+		</LinearLayout> 
+<!-- button 2 end -->
+
+	</LinearLayout> 
+<!-- LinearLayou button end -->
+		
+	<LinearLayout 
+		android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+		>
+		
+		<ImageView 
+			android:id="@+id/imageview_main"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			/>
+
+	</LinearLayout>			
+
+</LinearLayout>
