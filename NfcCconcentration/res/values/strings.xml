@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">NFC Cconcentration</string>
+    
+<!-- setting -->
+    <string name="setting_title">Add Card</string>
+    <string name="setting_menu">Other Menu</string>
+    <string name="setting_each">One by one</string>
+    <string name="setting_bulk">Bulk</string>
+    <string name="setting_video">Video</string>
+    <string name="setting_list">Card List</string>
+    <string name="setting_dir">Select Directory</string>
+    <string name="setting_num">Card Num</string>
+          
+<!-- list -->    
+    <string name="create">Create</string>
+    <string name="read">Read</string>
+    <string name="update">Update</string>
+	<string name="delete">Delete</string>
+
+	<string name="item_image">Image</string>	
+	<string name="item_id">ID</string>	
+	<string name="item_tag">Tag</string>
+	<string name="item_num">Num</string>
+	<string name="item_set">Set</string>
+	
+	<string name="back">Back</string>
+
+<!-- menu -->
+    <string name="menu_restart">Restart Game</string>
+	<string name="menu_finish">Finish Game</string>    
+    <string name="menu_setting">Setting</string>
+	                 
+</resources>

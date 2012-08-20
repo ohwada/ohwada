@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+<!-- tag -->
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+
+		<TextView
+    		android:layout_width="100dp" 
+    		android:layout_height="wrap_content"
+    		android:text="@string/item_tag" />
+       
+		<EditText
+    		android:id="@+id/rec_edittext_tag"
+    		android:layout_width="0dp" 
+    		android:layout_height="wrap_content" 
+    		android:layout_weight="1"
+    		android:inputType="text" />
+    		
+	</LinearLayout> 
+
+<!-- num -->
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+
+		<TextView
+    		android:layout_width="100dp" 
+    		android:layout_height="wrap_content"
+    		android:text="@string/item_num" />
+       
+		<EditText
+    		android:id="@+id/rec_edittext_num"
+    		android:layout_width="0dp" 
+    		android:layout_height="wrap_content" 
+    		android:layout_weight="1"
+    		android:inputType="number" />
+    		
+	</LinearLayout>
+
+<!-- set -->
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+
+		<TextView
+    		android:layout_width="100dp" 
+    		android:layout_height="wrap_content"
+    		android:text="@string/item_set" />
+       
+		<EditText
+    		android:id="@+id/rec_edittext_set"
+    		android:layout_width="0dp" 
+    		android:layout_height="wrap_content" 
+    		android:layout_weight="1" 
+    		android:inputType="number" />
+    		
+	</LinearLayout>
+
+	<ImageView 
+		android:id="@+id/rec_imageview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		/>
+			
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+		<Button
+			android:id="@+id/rec_button_create"
+    		android:layout_width="0dp" 
+    		android:layout_height="wrap_content" 
+    		android:layout_weight="1"
+    		android:text="@string/create" />
+
+		<Button
+    		android:id="@+id/rec_button_update"
+    		android:layout_width="0dp" 
+    		android:layout_height="wrap_content" 
+    		android:layout_weight="1" 
+    		android:text="@string/update" />
+
+		<Button
+    		android:id="@+id/rec_button_delete"
+    		android:layout_width="0dp" 
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"  
+    		android:text="@string/delete" />
+
+	</LinearLayout>
+
+	<Button
+    	android:id="@+id/rec_button_back"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="@string/back" />
+        
+</LinearLayout>
