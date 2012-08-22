@@ -10,6 +10,8 @@ http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FPIC24FJ64GB002-ADK
 [http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1406&dDocName=en553673 PIC24F Accessory Development Starter Kit for Android] (PIC24FJ256GB110) の相当品を<br>
 PIC24FJ64GB002 で実装する
 
+http://ohwada.googlecode.com/files/20120611pic_adk_1.png
+
 == ハードの準備 ==
 PIC24FJ64GB002 に下記を接続する。<br>
 - USBコネクタ 1個<br>
