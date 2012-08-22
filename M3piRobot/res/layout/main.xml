@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_vertical"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<!-- LEDx8 -->
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    
+    <ImageView 
+		android:id="@+id/image_led_1"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginLeft="5dp" 
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_2"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+		
+	<ImageView 
+		android:id="@+id/image_led_3"
+		android:layout_width="30dp" 
+		android:layout_height="50dp" 
+		android:layout_marginLeft="5dp"
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_4"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+    
+    <ImageView 
+		android:id="@+id/image_led_5"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_6"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_7"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_8"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>		
+				
+</LinearLayout>
+<!-- LEDx8 end -->
+
+<!-- button forward -->		
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+   	android:layout_marginLeft="5dp"
+   	android:layout_marginRight="5dp"
+    >
+
+	<TextView 
+		android:layout_width="90dp"
+		android:layout_height="wrap_content"
+		/>
+		    
+    <ImageView 
+		android:id="@+id/image_forward"
+		android:layout_width="100dp" 
+		android:layout_height="75dp"
+		android:layout_marginLeft="10dp"
+   		android:layout_marginRight="10dp"
+		android:src="@drawable/robot_forward"
+		/>
+
+	<TextView 
+		android:layout_width="90dp"
+		android:layout_height="wrap_content"
+		/>
+
+</LinearLayout>
+<!-- button forward end -->	
+
+<!-- button left & right -->	
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+   	android:layout_marginRight="5dp"
+    >
+
+    <ImageView 
+		android:id="@+id/image_left"
+		android:layout_width="90dp" 
+		android:layout_height="75dp"
+		android:src="@drawable/robot_left"
+		/>
+
+    <ImageView 
+		android:id="@+id/image_stop"
+		android:layout_width="100dp" 
+		android:layout_height="75dp"
+		android:layout_marginLeft="10dp"
+   		android:layout_marginRight="10dp"
+		android:src="@drawable/robot_stop"
+		/>
+
+    <ImageView 
+		android:id="@+id/image_right"
+		android:layout_width="90dp" 
+		android:layout_height="75dp"
+		android:src="@drawable/robot_right"
+		/>
+
+</LinearLayout>
+<!-- button left & right end -->	
+
+<!-- button backward -->		
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+   	android:layout_marginRight="5dp"
+    >
+    		
+	<TextView 
+		android:layout_width="90dp"
+		android:layout_height="wrap_content"
+		/>
+
+   <ImageView 
+		android:id="@+id/image_backward"
+		android:layout_width="100dp" 
+		android:layout_height="75dp"
+		android:layout_marginLeft="10dp"
+   		android:layout_marginRight="10dp"
+		android:src="@drawable/robot_backward"
+		/>
+
+   <ImageView 
+		android:id="@+id/image_pin"
+		android:layout_width="30dp" 
+		android:layout_height="30dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginLeft="20dp"
+		android:src="@drawable/pin_white"
+		/>
+
+</LinearLayout>				
+<!-- button backward end -->
+
+	<Button 
+		android:id="@+id/button_connect"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:text="@string/connect"
+		/>
+		
+	<TextView 
+		android:id="@+id/text_msg"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		/>
+
+<!-- button other activity -->
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+   	android:layout_marginRight="5dp"
+    >
+    
+    <Button 
+		android:id="@+id/button_go_lcd"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="@string/go_lcd"/>
+		
+	<Button 
+		android:id="@+id/button_go_report"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:text="@string/go_report"/>
+		
+</LinearLayout>		
+<!-- button other activity end -->
+    
+</LinearLayout>

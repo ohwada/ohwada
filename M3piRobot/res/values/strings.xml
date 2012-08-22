@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">m3pi Robot</string>
+
+    <!--  Main Activity -->
+    <string name="connect">Connect</string>
+    <string name="led1">led 1</string>
+    <string name="forward">forward</string>
+    <string name="backward">backward</string>
+    <string name="left">left</string>
+    <string name="right">right</string>
+    <string name="stop">stop</string>
+    <string name="go_lcd">Go LCD</string>
+    <string name="go_report">Go Report</string>
+         
+     <!--  LCD Activity -->
+    <string name="enter">Enter</string>
+    <string name="back">BACK</string>
+  
+     <!--  Report Activity -->
+    <string name="voltage">Pot Voltage: </string>
+    <string name="battery">Battery: </string>
+    <string name="measure">Measure</string>
+                              
+    <!--  BluetoothService -->
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_not_connected">not connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+</resources>

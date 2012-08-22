@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<!-- LEDx8 -->
+<!--	
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+   		
+	<ImageView 
+		android:id="@+id/image_led_1"
+		android:layout_width="30dp" 
+		android:layout_height="50dp" 
+		android:layout_marginLeft="5dp"
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_2"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+    		
+	<ImageView 
+		android:id="@+id/image_led_3"
+		android:layout_width="30dp" 
+		android:layout_height="50dp" 
+		android:layout_marginLeft="5dp"
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_4"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+    
+    <ImageView 
+		android:id="@+id/image_led_5"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_6"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_7"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>
+
+    <ImageView 
+		android:id="@+id/image_led_8"
+		android:layout_width="30dp" 
+		android:layout_height="50dp"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="5dp"  
+		android:src="@drawable/led_white" 
+		/>		
+				
+</LinearLayout>
+-->
+<!-- LEDx8 end -->
+
+    <EditText 
+		android:id="@+id/edit_lcd"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		/>
+		
+	<Button 
+		android:id="@+id/button_enter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/enter"
+		/>
+
+	<Button 
+		android:id="@+id/button_connect"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:text="@string/connect"/>
+		
+	<TextView 
+		android:id="@+id/text_msg"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+    <TextView 
+		android:id="@+id/text_spacer"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		/>
+		
+	<Button 
+		android:id="@+id/button_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/back"
+		/>
+		
+</LinearLayout>
