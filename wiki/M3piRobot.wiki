@@ -1,0 +1,10 @@
+#summary m3pi robot
+
+= 概要 ==
+アンドロイド から m3pi を操縦する
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FM3piRobot
+
+= 写真 =
+http://ohwada.googlecode.com/files/20120303m3pi.png
