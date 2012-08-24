@@ -3,6 +3,9 @@
 = 概要 ==
 アンドロイド から m3pi を操縦する
 
+関連するブログ <br>
+http://android.ohwada.jp/archives/1758
+
 = ソースコード =
 Android側 (Java SVN) <br>
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FM3piRobot
