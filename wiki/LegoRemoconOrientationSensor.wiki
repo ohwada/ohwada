@@ -1,0 +1,14 @@
+#summary LEGO Remocon with OrientationSensor
+
+= 概要 ==
+アンドロイド から LEGO MindStroms を操縦する
+
+= アプリ =
+http://ohwada.googlecode.com/files/LegoRemoconOrientationSensor.apk
+
+= ソースコード =
+Android (App Inventor Project File) <br>
+http://ohwada.googlecode.com/files/LegoRemoconOrientationSensor.zip
+
+= 写真 =
+http://ohwada.googlecode.com/files/20111211_lego_remocon_orientation_sensor.jpeg
