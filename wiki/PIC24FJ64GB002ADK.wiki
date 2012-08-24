@@ -3,6 +3,9 @@
 = 概要 =
 PIC24FJ64GB002 の ADK プログラム
 
+関連するブログ <br>
+http://android.ohwada.jp/archives/1524
+
 == ソースコード ==
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FPIC24FJ64GB002-ADK
 
