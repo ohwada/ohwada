@@ -3,7 +3,7 @@
 = 概要 ==
 アンドロイド から LEGO MindStroms を操縦する
 
-関連するブログ
+関連するブログ<br>
 http://android.ohwada.jp/archives/1165
 
 = アプリ =
