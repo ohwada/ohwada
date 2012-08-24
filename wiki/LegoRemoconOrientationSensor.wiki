@@ -3,6 +3,9 @@
 = 概要 ==
 アンドロイド から LEGO MindStroms を操縦する
 
+関連するブログ
+http://android.ohwada.jp/archives/1165
+
 = アプリ =
 http://code.google.com/p/ohwada/downloads/detail?name=LegoRemoconOrientationSensor.apk
 
