@@ -4,7 +4,7 @@
 アンドロイド から LEGO MindStroms を操縦する
 
 = アプリ =
-http://ohwada.googlecode.com/files/LegoRemoconOrientationSensor.apk
+http://code.google.com/p/ohwada/downloads/detail?name=LegoRemoconOrientationSensor.apk
 
 = ソースコード =
 Android (App Inventor Project File) <br>
