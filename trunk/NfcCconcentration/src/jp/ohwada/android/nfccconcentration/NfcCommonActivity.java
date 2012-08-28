@@ -7,6 +7,8 @@ import android.content.IntentFilter;
 import android.content.IntentFilter.MalformedMimeTypeException;
 import android.nfc.NfcAdapter;
 import android.nfc.tech.NfcA;
+import android.nfc.tech.NfcB;
+import android.nfc.tech.NfcF;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -56,8 +58,11 @@ public class NfcCommonActivity extends Activity {
 			e.printStackTrace();
         }
         mFilters = new IntentFilter[] { ndef, };
-        // Setup a tech list for all NfcA tags
-        mTechLists = new String[][] { new String[] { NfcA.class.getName() } };
+        // Setup a tech list for Type-A Type-B Type-F tags
+ 		mTechLists = new String[][] { 
+			new String[] { NfcA.class.getName() } , 
+			new String[] { NfcB.class.getName() } , 
+			new String[] { NfcF.class.getName() } };
     }
 
 // === onResume ===
