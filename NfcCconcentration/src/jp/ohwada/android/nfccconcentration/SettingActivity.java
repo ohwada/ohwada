@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spanned;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -189,7 +190,8 @@ public class SettingActivity extends NfcCommonActivity {
 			}
 		} else {
 			if ( mMode == MODE_BULK ) {
-				showAlready( record );
+//				showAlready( record );
+				showDialogAleady( record );
 			} else {
 				startUpdateActivity( record.id );
 			}
@@ -230,19 +232,7 @@ public class SettingActivity extends NfcCommonActivity {
 		}
 		return 0;
 	}
-		
-	/**
-	 * showAlready
-	 * @param CardRecord record
-	 */	
-    private void showAlready( CardRecord record ) {
-		String tag_id = record.tag;
-		int num = record.num;
-		mTextViewTitle.setText( "Aleady Card: " + tag_id );
-		mTextViewTitle.setTextColor( Color.RED );
-		mImageUtility.showImageByNum( mImageViewMain, num ); 
-	}
-
+               
 	/**
 	 * === onPause ===
 	 */
@@ -335,5 +325,40 @@ public class SettingActivity extends NfcCommonActivity {
            	})
 			.create();
 		dialog.show();
-	}	
+	}
+	
+	/**
+	 * showDialog : startUpdateActivity
+	 * @param CallLogRecord record
+	 * @return void	 
+	 */	
+	private void showDialogAleady( CardRecord record  ) {
+		final int id = record.id;
+		String tag_id = record.tag;
+		int num = record.num;
+		String title = "Aleady Card";
+		String msg = "tag = " + tag_id + "<br><br>";
+		Spanned spanned = mImageUtility.getHtmlImage( msg, num );
+
+		AlertDialog dialog = new AlertDialog.Builder( this )
+			.setTitle( title )
+			.setMessage( spanned )
+			.setCancelable( true )		               
+			.setNegativeButton( "Close",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which ) {
+						// close
+                    }
+                })
+			.setPositiveButton( "Edit",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which ) {
+						startUpdateActivity( id );
+                    }
+                })
+			.create();
+        dialog.show();
+    }	
 }
