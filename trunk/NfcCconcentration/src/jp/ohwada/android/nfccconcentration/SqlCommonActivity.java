@@ -7,7 +7,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 /**
  * SQLite Common Activity
@@ -160,6 +159,6 @@ public class SqlCommonActivity extends Activity {
 	 * @param String msg
 	 */ 
 	protected void toast_short( String msg ) {
-		Toast.makeText (this, msg, Toast.LENGTH_SHORT ).show();
+		ToastMaster.showShort( this, msg );
 	}
 }

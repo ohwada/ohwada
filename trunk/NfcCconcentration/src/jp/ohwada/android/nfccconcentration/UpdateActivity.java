@@ -82,7 +82,7 @@ public class UpdateActivity extends SqlCommonActivity {
 			getEditTextNum(), 
 			getEditTextSet() ) ;
         int ret = mHelper.update( r );         
-        // messvalue
+        // message
         String msg = "Update Failed";
         if ( ret > 0 ) {
 	    	msg = "Update Successful";       		
@@ -96,12 +96,13 @@ public class UpdateActivity extends SqlCommonActivity {
     private void deleteRecord() {   
     	// delete from DB
         int ret = mHelper.delete( mId ); 
-        // messvalue        
-        String msg = "Delete Failed";
-        if ( ret > 0 ) {
-	    	msg = "Delete Successful";       		
+        // message        
+        if ( ret == 0 ) {
+			toast_short( "Delete Failed" ); 
+			return; 		
 	    }
-		toast_short( msg );    	   
+		toast_short( "Delete Successful" ); 
+		finish();      	   
 	}
 
 	/**

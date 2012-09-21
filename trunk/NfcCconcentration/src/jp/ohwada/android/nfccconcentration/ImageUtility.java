@@ -6,7 +6,11 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Environment;
+import android.text.Html;
+import android.text.Html.ImageGetter;
+import android.text.Spanned;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.ImageView;
@@ -25,6 +29,8 @@ public class ImageUtility  {
 	private final static String IMAGE_PREFIX = Constant.IMAGE_PREFIX ; 
 	private final static String IMAGE_EXT = Constant.IMAGE_EXT ;
 
+	private final static int DRAWABLE_COFF = 2 ;
+	
 	private PreferenceUtility mPreference;
 	private String mMainPath = "";
 	private String mSubPath = "";
@@ -93,7 +99,7 @@ public class ImageUtility  {
 	 * @param int num
 	 */		
 	public void showImageByNum( ImageView view, int num ) {
-		String file = IMAGE_PREFIX + num + "." + IMAGE_EXT ;
+		String file = getNameByNum( num );
 		showImage( view, file );
 		log_d( "showImageByNum: " + num + " " + file );
 	}
@@ -130,7 +136,52 @@ public class ImageUtility  {
 		log_d("getPath " + path );
 		return path;
 	}
-			           
+
+	/**
+	 * getImagePath
+	 * @param int num
+	 * @return String
+	 */		
+	public String getPathByNum( int num ) {
+		return getPath( getNameByNum( num ) );
+	}
+	
+	/**
+	 * get Name
+	 * @param int num
+	 * @return String
+	 */		
+	public String getNameByNum( int num ) {
+		String name = IMAGE_PREFIX + num + "." + IMAGE_EXT ;
+		return name;
+	}
+
+	/**
+	 * show dialog
+	 * @param CallLogRecord record
+	 * @return void	 
+	 */	
+	public Spanned getHtmlImage( String msg, int num ) {
+		ImageGetter imageGetter = new ImageGetter() { 
+			@Override 
+			public Drawable getDrawable( String source ) {
+				log_d( "getHtmlImage source: " + source ); 
+				Drawable d = Drawable.createFromPath( source );
+				int w = DRAWABLE_COFF * d.getIntrinsicWidth();
+				int h = DRAWABLE_COFF * d.getIntrinsicHeight();
+				log_d( "getHtmlImage size " + w + " x "+ h );  
+				d.setBounds( 0, 0, w, h ); 
+				return d; 
+			} 
+		}; 
+
+		String path = getPathByNum( num );
+        String html = msg + "<img src=\"" + path + "\">";
+		Spanned spanned = Html.fromHtml( html, imageGetter, null );
+		log_d( "getHtmlImage spanned: " + spanned );
+		return spanned;
+	}
+					           
 	/**
 	 * write log
 	 * @param String msg

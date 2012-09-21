@@ -185,15 +185,21 @@ public class MainActivity extends NfcCommonActivity {
     public void onNewIntent( Intent intent ) {
 		// noting to do if not start
 		if (( mStatus == STATUS_STOP )||( mStatus == STATUS_COMPLETE )) {
+			log_d( "onNewIntent: invalid status: " + mStatus );
 			return;
 		}
 
+		// get tag, noting to do if invalid tag
 		String tag = intentToTagID( intent );
-		CardRecord record = mHelper.getRecordByTag( tag );
+		if ( tag == null ) {
+			log_d( "onNewIntent: tag is null" );
+			return;
+		}
 
-		// warning if not card
+		// read card, warning if invalid card
+		CardRecord record = mHelper.getRecordByTag( tag );
 		if ( record == null ) {
-			toast_short( "Not Card " + tag );
+			toast_short( "Joker: " + tag );
 			return;
 		}
 
