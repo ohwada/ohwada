@@ -1,11 +1,11 @@
 #summary TextView に画像を表示する
 
 = 概要 ==
-TextView に画像を表示するには、下記の４つの方法がある。
-1. TextView#setCompoundDrawablesWithIntrinsicBounds( Resource ID )
-2. TextView#setCompoundDrawablesWithIntrinsicBounds( Drawable )
-3. TextView#setCompoundDrawables( Drawable )
-4. TextView#setText( Spanned )
+TextView に画像を表示するには、下記の４つの方法がある。 <br>
+1. TextView#setCompoundDrawablesWithIntrinsicBounds( Resource ID ) <br>
+2. TextView#setCompoundDrawablesWithIntrinsicBounds( Drawable ) <br>
+3. TextView#setCompoundDrawables( Drawable ) <br>
+4. TextView#setText( Spanned ) <br>
 
 関連するブログ <br>
 http://android.ohwada.jp/archives/
