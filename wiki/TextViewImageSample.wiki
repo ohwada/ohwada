@@ -8,7 +8,7 @@ TextView に画像を表示するには、下記の４つの方法がある。 <
 4. TextView#setText( Spanned ) <br>
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/1792
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FTextViewImageSample
