@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    >
+
+<!-- Sample 1 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_1"
+		/>
+		 
+    <TextView
+		android:id="@+id/textview_sample_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		 />
+
+<!-- Sample 2 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_2"
+		/>
+		
+    <TextView
+		android:id="@+id/textview_sample_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		/>
+
+<!-- Sample 3 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_3"
+		/>
+		
+    <TextView
+		android:id="@+id/textview_sample_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		 />
+
+<!-- Sample 3 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_4"
+		/>
+		
+    <TextView
+		android:id="@+id/textview_sample_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		 />
+		 		 
+</LinearLayout>
