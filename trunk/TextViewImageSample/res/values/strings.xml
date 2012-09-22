@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">TextView Image Sample</string>
+    <string name="title_1">Sample 1 : setCompoundDrawablesWithIntrinsicBounds( Resource ID )</string>
+	<string name="title_2">Sample 2 : setCompoundDrawablesWithIntrinsicBounds( Drawable )</string>
+	<string name="title_3">Sample 3 : setCompoundDrawables( Drawable )</string>
+	<string name="title_4">Sample 4 : setText( Spanned )</string>
+	<string name="hello_world">Hello world!</string>
+
+</resources>
