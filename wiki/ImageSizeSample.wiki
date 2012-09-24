@@ -1,0 +1,15 @@
+#summary bitmap 画像の大きさを調整する
+
+= 概要 ==
+同じ画像ファイルを res/drawable に置いた場合と、assets に置いた場合で、表示される画像の大きさが異なります。
+density (ピクセル密度) を設定することで、同じ大きさで表示されます。
+[java]
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FImageSizeSample
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20120917_image_size.png
