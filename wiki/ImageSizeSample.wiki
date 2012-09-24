@@ -12,4 +12,4 @@ http://android.ohwada.jp/archives/
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FImageSizeSample
 
 = スクリーンショット =
-http://ohwada.googlecode.com/files/20120917_image_size.png
+http://ohwada.googlecode.com/files/20120918_image_size.png
