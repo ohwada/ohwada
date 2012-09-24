@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://blog.global-eng.co.jp/android/2011/05/13/xml%E3%81%A7%E6%9E%A0%E7%B7%9A%E3%82%92%E6%8F%8F%E7%94%BB%E3%81%99%E3%82%8B/ -->
+<shape 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke 
+    	android:width="1px" 
+    	android:color="#ffffff" 
+    	/>
+</shape>
