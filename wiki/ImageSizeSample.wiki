@@ -5,7 +5,7 @@
 density (ピクセル密度) を設定することで、同じ大きさで表示されます。
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/1799
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FImageSizeSample
