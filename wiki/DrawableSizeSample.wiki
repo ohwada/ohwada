@@ -5,7 +5,7 @@
 density (ピクセル密度) で画像の比率を変換することで、同じ大きさで表示されます。
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/1806
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FDrawableSizeSample
