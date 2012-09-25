@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Drawable Size Sample</string>
+    <string name="title_1">Sample 1 : res/drawable</string>
+    <string name="title_2">Sample 2 : assets orignal</string>
+    <string name="title_3">Sample 3 : assets bitmap</string>
+    <string name="title_4">Sample 4 : assets adjust</string>
+        
+</resources>
