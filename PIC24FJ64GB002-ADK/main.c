@@ -1,4 +1,6 @@
 // 2012-06-10 PIC24FJ64GB002
+// 2012-10-01 for Android 4.1
+// http://www.microchip.com/forums/m665986.aspx
 
 /*******************************************************************************
 
@@ -619,6 +621,12 @@ BOOL USB_ApplicationEventHandler( BYTE address, USB_EVENT event, void *data, DWO
         case EVENT_DETACH:                   // USB cable has been detached (data: BYTE, address of device)
         case EVENT_ANDROID_DETACH:
             device_attached = FALSE;
+
+// 2012-10-01            
+			// Reinit the device if a detach is detected
+			USBInitialize(0);
+			AndroidAppStart(&myDeviceInfo);            
+            
             return TRUE;
             break;
 

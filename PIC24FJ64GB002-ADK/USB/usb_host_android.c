@@ -1,3 +1,6 @@
+// 2012-10-01 for Android 4.1
+// http://www.microchip.com/forums/m665986.aspx
+				
 /******************************************************************************
 
     USB Host Client Driver for Android(tm) Devices
@@ -21,8 +24,8 @@ talk to that interface
 Software License Agreement
 
 The software supplied herewith by Microchip Technology Incorporated
-(the “Company”) for its PICmicro® Microcontroller is intended and
-supplied to you, the Company’s customer, for use solely and
+(the ?Company?) for its PICmicro? Microcontroller is intended and
+supplied to you, the Company?s customer, for use solely and
 exclusively on Microchip PICmicro Microcontroller products. The
 software is owned by the Company and/or its supplier, and is
 protected under applicable copyright laws. All rights are reserved.
@@ -31,7 +34,7 @@ user to criminal sanctions under applicable laws, as well as to
 civil liability for the breach of the terms and conditions of this
 license.
 
-THIS SOFTWARE IS PROVIDED IN AN “AS IS” CONDITION. NO WARRANTIES,
+THIS SOFTWARE IS PROVIDED IN AN ?AS IS? CONDITION. NO WARRANTIES,
 WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED
 TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
 PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. THE COMPANY SHALL NOT,
@@ -41,7 +44,7 @@ CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
 Change History:
   Rev         Description
   ----------  ----------------------------------------------------------
-  2.9         Initial release
+  2.9			Initial release
 
 *******************************************************************************/
 
@@ -118,6 +121,9 @@ ANDROID_ACCESSORY_INFORMATION *accessoryInfo;
 // Internal variables
 //************************************************************
 static ANDROID_DEVICE_DATA devices[NUM_ANDROID_DEVICES_SUPPORTED];
+
+// 2012-10-01
+// add protocol version 2
 static ANDROID_PROTOCOL_VERSION protocolVersions[] = 
 {
     {
@@ -130,7 +136,18 @@ static ANDROID_PROTOCOL_VERSION protocolVersions[] =
         AndroidTasks_Pv1,
         AndroidAppEventHandler_Pv1,
         AndroidAppDataEventHandler_Pv1
-    }
+    },
+	{
+		2,
+		AndroidAppWrite_Pv1,
+		AndroidAppIsWriteComplete_Pv1,
+		AndroidAppRead_Pv1,
+		AndroidAppIsReadComplete_Pv1,
+		AndroidInitialize_Pv1,
+		AndroidTasks_Pv1,
+		AndroidAppEventHandler_Pv1,
+		AndroidAppDataEventHandler_Pv1
+	}        
 };
 
 
@@ -805,6 +822,11 @@ BOOL AndroidAppEventHandler( BYTE address, USB_EVENT event, void *data, DWORD si
                     if(j >= (sizeof(protocolVersions)/sizeof(ANDROID_PROTOCOL_VERSION)))
                     {
                         //If we don't support that protocol version, use the next best version
+                        
+						// 2012-10-01                    
+                    	// Override the protocol version specified by the device 
+						devices[i].protocol = protocolVersions[j-1].versionNumber; 
+
                         devices[i].state = READY;
                         devices[i].protocolHandle = protocolVersions[j-1].init(devices[i].address, devices[i].flags, devices[i].clientDriverID);
                     }
