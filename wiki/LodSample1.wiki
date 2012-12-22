@@ -1,0 +1,15 @@
+#summary LOD サンプル１
+
+= 概要 ==
+LOD (Linked Open Data) のサンプルコードです。
+ヨコハマ・アート・LOD http://fp.yafjp.org/yokohama_art_lod を使用して、
+今月のイベントの一覧を取得する。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FLodSample1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20121222_lod_sample_1.png
