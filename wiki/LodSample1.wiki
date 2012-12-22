@@ -1,8 +1,8 @@
 #summary LOD サンプル１
 
 = 概要 ==
-LOD (Linked Open Data) のサンプルコードです。
-ヨコハマ・アート・LOD http://fp.yafjp.org/yokohama_art_lod を使用して、
+LOD (Linked Open Data) のサンプルコードです。<br>
+ヨコハマ・アート・LOD http://fp.yafjp.org/yokohama_art_lod を使用して、<br>
 今月のイベントの一覧を取得する。
 
 関連するブログ <br>
