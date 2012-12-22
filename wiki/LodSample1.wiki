@@ -6,7 +6,7 @@ LOD (Linked Open Data) のサンプルコードです。<br>
 今月のイベントの一覧を取得する。
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/2147
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FLodSample1
