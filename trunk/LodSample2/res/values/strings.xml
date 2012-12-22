@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LOD Sample 2</string>
+
+	<string name="loading">Loading…</string>
+	<string name="button_event">Event</string>
+	<string name="button_place">Place</string>
+	<string name="button_map">Map</string>
+	<string name="button_close">Close</string>		
+</resources>
