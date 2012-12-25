@@ -43,6 +43,11 @@ public class EventParser {
 			e.printStackTrace();
 		}
 
+		// can not parse
+		if (( bindings == null )||( bindings.length() == 0 )) {
+			return null;
+		}	
+		
 		// each binding
 		for ( int i=0; i<bindings.length(); i++ ) {
 		
@@ -93,7 +98,7 @@ public class EventParser {
 	 * @return String
 	 */   
 	private String getString( JSONObject obj, String name ) {
-		String str = null;
+		String str = "";
 		// parse name:value
 		try {
 			JSONObject obj_name = obj.getJSONObject( name );
