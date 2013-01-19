@@ -1,0 +1,13 @@
+#summary ヨコハマ・アート・ガイド
+
+= 概要 ==
+「ヨコハマ・アート・ガイド」は、横浜で開催されるアート関係のイベントを紹介するアプリケーションです。
+
+関連するブログ <br>
+http://android.ohwada.jp/apr/yag
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2FYag1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130119_yag1_shot2.png
