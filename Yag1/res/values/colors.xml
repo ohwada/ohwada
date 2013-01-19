@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- white  -->    
+	<color name="dialog_about_text">#FFFFFF</color>
+	<!-- white  -->    
+	<color name="dialog_marker_text">#FFFFFF</color>
+	<!-- gray transparent -->    
+	<color name="dialog_marker_background">#C0808080</color>
+</resources>

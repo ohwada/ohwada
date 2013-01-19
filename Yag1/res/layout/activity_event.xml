@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    >
+
+	<include layout="@layout/button_menu" /> 
+	<include layout="@layout/progressbar_loading" /> 
+
+    <TextView 
+    	android:id="@+id/textview_error"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		/>
+									
+	<TextView android:id="@+id/event_textview_event"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:textSize="20sp"
+		/>
+					
+	<ScrollView  
+		android:id="@+id/scrollview"  
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"  
+		android:layout_weight="1"  
+		>
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+
+		<TextView android:id="@+id/event_textview_place"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			/>
+						
+		<LinearLayout
+			android:layout_width="fill_parent"
+ 			android:layout_height="wrap_content"
+ 			android:layout_marginTop="4dp"
+			android:orientation="horizontal"
+ 			>
+							
+			<TextView android:id="@+id/event_textview_start"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				/>
+
+			<TextView android:id="@+id/event_textview_bar"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_marginLeft="4dp"
+				android:layout_marginRight="4dp"
+				/>
+
+			<TextView android:id="@+id/event_textview_end"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				/>
+
+		</LinearLayout>
+		
+		<ImageView android:id="@+id/event_imageview_event"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="4dp"
+			/>
+
+    	<TextView android:id="@+id/event_textview_category"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+						   	
+    	<TextView android:id="@+id/event_textview_abstract"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+
+		<TextView android:id="@+id/event_textview_participant"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+			
+    	<TextView android:id="@+id/event_textview_schedule"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+			
+		<TextView android:id="@+id/event_textview_fee"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+
+		<TextView android:id="@+id/event_textview_care"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+			
+		<TextView android:id="@+id/event_textview_apinfo"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+ 			
+		<TextView android:id="@+id/event_textview_apstart"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+			
+		<TextView android:id="@+id/event_textview_apend"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+												
+		<TextView android:id="@+id/event_textview_status"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+			
+		<TextView android:id="@+id/event_textview_contact"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+
+		<TextView android:id="@+id/event_textview_phone"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			/>
+						 									
+	</LinearLayout>
+	</ScrollView>	
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:orientation="horizontal"
+ 		>
+
+		<Button android:id="@+id/event_button_place"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" 
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+			android:text="@string/button_place"
+			/>
+
+		<Button android:id="@+id/event_button_map"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"  
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+			android:text="@string/button_map"
+			/>
+				
+ 		<Button android:id="@+id/event_button_homepage" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+ 			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="8sp"
+ 			android:text="@string/button_homepage" />
+ 			
+ 		<Button android:id="@+id/event_button_apinfo" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+ 			android:text="@string/button_apinfo" />
+ 			
+ 		<Button android:id="@+id/event_button_phone" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+			android:text="@string/button_phone" />
+ 		 		
+		</LinearLayout>
+		 		                        
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yokohama Art Guide</string>
+
+<!-- button_menu -->
+	<string name="button_menu_event">Event List</string>
+	<string name="button_menu_place">Place List</string>
+	<string name="button_menu_map">Map List</string>
+
+<!-- progressbar_wait -->
+	<string name="loading">Downloading …</string>
+		
+<!-- MainActivity -->
+	<string name="button_date">Date</string>
+	<string name="event_list">Event List</string>
+	<string name="events">events</string>
+
+<!-- PlaceListActivity -->
+	<string name="place_list">Place List</string>
+	<string name="places">places</string>
+		
+<!-- MapListActivity -->
+	<string name="button_move">Move</string>
+	<string name="searching">Searching...</string>	
+	<string name="search_found">Found location</string>
+	<string name="search_not_found">NOT found location</string>
+	<string name="gps_no_manager">NO GPS manager</string>
+	<string name="gps_not_found">NOT found GPS position</string>
+
+<!-- EventActivity -->
+	<string name="button_homepage">Homepage</string>	
+	<string name="button_apinfo">apinfo</string>	
+	<string name="button_place">Place</string>
+	<string name="button_map">Map</string>
+	<string name="event_schedule">schedule</string>
+	<string name="event_fee">fee</string>	
+	<string name="event_care">care</string>	
+	<string name="event_apinfo">apinfo</string>	
+	<string name="event_apstart">apstart</string>	
+	<string name="event_apend">apend</string>
+	<string name="event_status">status</string>
+	<string name="event_participant">participant</string>
+	<string name="event_contact">contact</string>
+	<string name="event_phone">phone</string>
+	<string name="event_homepage">Homepage</string>	
+					
+<!-- PlaceActivity -->
+	<string name="related_event">Related event</string>
+	<string name="button_wiki">Wikipedia</string>
+
+<!-- dialog marker -->
+	<string name="dialog_button_place">Place</string>
+	<string name="dialog_button_close">Close</string>
+
+<!-- dialog map list  -->
+	<string name="dialog_edit_address">Address</string>
+	<string name="dialog_button_search">Search</string>
+	<string name="dialog_button_default">Default</string>
+	<string name="dialog_button_gps">GPS</string>
+
+<!-- dialog map place -->
+	<string name="dialog_button_marker">Marker</string>
+	<string name="dialog_button_map">MAP List</string>
+	
+<!-- dialog about -->
+ 	<string name="dialog_about_title">About</string>   
+	<string name="dialog_about_main">This application is a guidebook of the art events held in Yokohama. \n\nYokohama Art LOD, whitch is manageds by Yokohama Arts Foundation, is used for acquisition of event informations.\nThis application is an application work of Linked Open Data Challenge Japan 2012.</string>
+	<string name="dialog_about_yan">Yokohama Art LOD by Yokohama Arts Foundation</string>
+	<string name="dialog_about_lod">Linked Open Data Challenge Japan 2012</string>
+	<string name="dialog_about_credit">Author: Kenichi Ohwada</string>
+				
+<!-- error -->
+	<string name="error_not_get_place">can NOT get place data</string>
+	<string name="error_not_get_event">can NOT get event data</string>			
+	<string name="error_no_place_data">There are NO place data</string>	
+	<string name="error_no_event_data">There are NO event data</string>	
+	<string name="error_not_specify_place">NOT specify place page</string>	
+	<string name="error_not_specify_event">NOT specify event page</string>
+	<string name="dialog_error_caution">Caution</string>
+	<string name="dialog_button_retry">Retry</string>
+
+ <!-- menu -->
+  	<string name="menu_about">About</string>     
+	<string name="menu_clear">Clear Cache</string>
+					
+</resources>
