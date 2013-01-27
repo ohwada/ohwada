@@ -7,7 +7,7 @@
 http://android.ohwada.jp/apr/yag
 
 = ソースコード =
-Apacheライセンスで公開しています。
+Apacheライセンスで公開しています。<br>
 http://code.google.com/p/ohwada/source/browse/#svn%2FYag1
 
 = スクリーンショット =
