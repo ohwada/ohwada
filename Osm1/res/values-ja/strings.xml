@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OSM Node Viewer</string>
+		
+<!-- MainActivity -->
+	<string name="button_option">オプション</string>
+	<string name="button_get">情報を取得する</string>
+	<string name="loading">ダウンロード中…</string>
+	<string name="searching">検索中...</string>	
+	<string name="search_found">場所が見つかりました</string>
+	<string name="search_not_found">指定された住所が見つかりません</string>
+	<string name="gps_no_manager">GPSが有効になっていません</string>
+	<string name="gps_not_found">GPSの場所が見つかりません</string>
+	<string name="error_not_get_node">データが取得できません</string>
+
+<!-- dialog marker -->
+	<string name="dialog_button_close">閉じる</string>
+
+<!-- dialog option  -->
+	<string name="dialog_edit_address">住所</string>
+	<string name="dialog_button_search">検索</string>
+	<string name="dialog_button_default">関内へ</string>
+	<string name="dialog_button_gps">GPSへ</string>
+			
+<!-- dialog about -->
+ 	<string name="dialog_about_title">このアプリについて</string>   
+	<string name="dialog_about_main">「OSM Node Viewer」は、 Open Street Map に登録されているノードの情報を地図に表示するアプリケーションです。\n地図の中心から1km以内のノードを表示します。\n\nノード情報の取得には、 Linked Geo Data を利用しました。\nこのアプリは、LOD チャレンジ の応募作品です。</string>
+	<string name="dialog_about_osm">Open Street Map</string>
+	<string name="dialog_about_lgd">Linked Geo Data</string>
+	<string name="dialog_about_lod">LOD (Linked Open Data) チャレンジ Japan 2012</string>
+	<string name="dialog_about_credit">制作者: 大和田健一</string>
+	
+ <!-- menu -->  
+ 	<string name="menu_about">このアプリについて</string>     
+	<string name="menu_clear">キャッシュを削除する</string>
+					
+</resources>
