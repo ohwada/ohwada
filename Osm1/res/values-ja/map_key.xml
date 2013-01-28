@@ -2,6 +2,6 @@
 <resources>
 
 <!-- https://developers.google.com/maps/documentation/android/v1/maps-api-signup -->
-    <string name="map_api_key">0qcpfaB19ze1JxW9TxZk1UeV2hc42uZ9T0a9-Pg</string>
+    <string name="map_api_key"></string>
 
 </resources>
