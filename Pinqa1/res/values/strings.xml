@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pinqa Reader</string>
+
+<!-- MainActivity -->
+	<string name="button_option">Option</string>
+	<string name="button_get">Get New Point</string>
+	<string name="loading">Downloading…</string>
+	<string name="searching">Searching...</string>	
+	<string name="search_found">Found location</string>
+	<string name="search_not_found">NOT found location</string>
+	<string name="gps_no_manager">NO GPS manager</string>
+	<string name="gps_not_found">NOT found GPS position</string>
+	<string name="error_not_get_article">NOT get article data</string>
+	
+<!-- ArticleActivity -->
+	<string name="button_source">PinQA</string>
+	<string name="button_back">Back</string>
+	<string name="error_not_specify_article">NOT specify article</string>	
+			
+	<!-- dialog marker -->
+	<string name="dialog_button_detail">Detail</string>
+	<string name="dialog_button_close">Close</string>
+	
+	<!-- dialog option  -->
+	<string name="dialog_edit_address">Address</string>
+	<string name="dialog_button_search">Search</string>
+	<string name="dialog_button_default">Default</string>
+	<string name="dialog_button_gps">GPS</string>
+
+<!-- dialog about -->
+ 	<string name="dialog_about_title">About</string>   
+	<string name="dialog_about_main">This application is showing the articles in PinQA. \nShow the articles which are less than 1km from the specified place.\n\nThis application is an application work of Linked Open Data Challenge Japan 2012.</string>
+	<string name="dialog_about_pinqa">PinQA</string>
+	<string name="dialog_about_lod">Linked Open Data Challenge Japan 2012</string>
+	<string name="dialog_about_credit">Author: Kenichi Ohwada</string>
+
+ <!-- menu -->
+  	<string name="menu_about">About</string>     
+	<string name="menu_clear">Clear Cache</string>
+		
+</resources>

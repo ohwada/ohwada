@@ -1,0 +1,83 @@
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/scrollview"  
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"  
+	>
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		>
+				
+    	<TextView android:id="@+id/dialog_about_textview_main"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/dialog_about_main"
+			android:textColor="@color/dialog_about_text"
+			/>
+ 
+ 		<LinearLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			>
+
+    		<ImageView android:id="@+id/dialog_about_imageview_pinqa"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_margin="4dp"
+				android:src="@drawable/about_pinqa"
+				/>
+
+    		<TextView android:id="@+id/dialog_about_textview_pinqa"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:text="@string/dialog_about_pinqa"
+				android:textColor="@color/dialog_about_text"
+				/>
+
+		</LinearLayout>
+		                           
+		<LinearLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			>
+
+    		<ImageView android:id="@+id/dialog_about_imageview_lod"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_margin="4dp"
+				android:src="@drawable/about_lod"
+				/>
+
+			<TextView android:id="@+id/dialog_about_textview_lod"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:text="@string/dialog_about_lod"
+				android:textColor="@color/dialog_about_text"
+				/>
+
+		</LinearLayout>
+
+    	<TextView android:id="@+id/dialog_about_textview_credit"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:layout_marginBottom="8dp"
+			android:text="@string/dialog_about_credit"
+			android:textColor="@color/dialog_about_text"
+			/>
+		
+ 		<Button android:id="@+id/dialog_button_close" 
+ 			android:layout_width="fill_parent" 
+ 			android:layout_height="wrap_content"
+ 			android:layout_gravity="center" 
+ 			android:layout_marginLeft="8dp"
+ 			android:layout_marginRight="8dp"
+ 			android:background="@android:drawable/btn_default_small"
+ 			android:text="@string/dialog_button_close" />
+
+	</LinearLayout> 
+</ScrollView>		
