@@ -1,0 +1,14 @@
+#summary どこでもPinQA
+
+= 概要 ==
+「どこでもPinQA」は、 PinQA に登録されている情報を地図に表示するアプリケーションです。
+
+関連するブログ <br>
+http://android.ohwada.jp/pinqa1
+
+= ソースコード =
+Apacheライセンスで公開しています。<br>
+http://code.google.com/p/ohwada/source/browse/#svn%2FPinqa1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130203_pinqa1_shot.png
