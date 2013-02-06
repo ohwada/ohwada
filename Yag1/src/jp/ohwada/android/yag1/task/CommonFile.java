@@ -21,10 +21,11 @@ public class CommonFile  {
     private final static boolean D = Constant.DEBUG; 
 	
 	// constant
-	protected final static long TIME_MSEC_ONE_DAY = DateUtility.TIME_MSEC_ONE_DAY; 
+	protected final static long TIME_MSEC_ONE_DAY = Constant.TIME_MSEC_ONE_DAY; 
 	protected final static String LF = Constant.LF ;
 	private final static String DIR_NAME = Constant.DIR_NAME;
-		
+	private final static String EXT_TXT = "txt";
+			
 	// object
 	protected DateUtility mDateUtility;
    	    
@@ -36,41 +37,15 @@ public class CommonFile  {
     }
 
 	/**
-	 * --- init  ---
-	 * @param none
-	 * @return void
-	 */ 
-	public void init() {
-		// make dir if not exists
-		File dir = new File( getDir() );
-		if ( !dir.exists() ) { 
-			dir.mkdir();
-		}
-	}
-
-	/**
-	 * --- clearCache ---
-	 */
-	public void clearCache() {
-		File dir = new File( getDir() );
-		File[] files = dir.listFiles();
-		for ( int i=0; i<files.length; i++ ) {
-			File f = files[ i ];
-			if ( f != null ) {
-				f.delete();
-			}
-		}
-	}
-	    
-	/**
 	 * getFile
 	 * @param String name
 	 * @return File
 	 */
-	protected File getFileWithTxt( String name ) {
-		return getFileFromName( name + ".txt" );
+	protected String getFilenameWithTxt( String name ) {
+		String filename = name + "." + EXT_TXT;	
+		return filename;
 	}
-
+	
 	/**
 	 * getFile
 	 * @param String name

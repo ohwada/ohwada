@@ -52,7 +52,7 @@ public class PlaceListEventFile {
 	 * @return Map<String, Boolean>
 	 */ 
 	private Map<String, Boolean> getEventHash( Date date ) {  
-		File file = mEventFile.getFile( date );
+		File file = mEventFile.getFileForList( date );
 		EventList list = mEventFile.read( file );
 		return list.getHashPlaceUrl();
 	}

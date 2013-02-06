@@ -28,7 +28,7 @@
  				android:layout_height="wrap_content"
  				android:layout_weight="1"
  				android:background="@android:drawable/btn_default_small"
- 				android:text="@string/dialog_button_default" />
+ 				android:text="@string/geo_name" />
  				
  			<Button android:id="@+id/dialog_map_place_button_gps" 
  				android:layout_width="0dp" 
@@ -59,6 +59,13 @@
  				android:background="@android:drawable/btn_default_small"
  				android:text="@string/dialog_button_map" />
 
+ 			<Button android:id="@+id/dialog_map_place_button_app" 
+ 				android:layout_width="0dp" 
+ 				android:layout_height="wrap_content"
+ 				android:layout_weight="1"
+ 				android:background="@android:drawable/btn_default_small"
+ 				android:text="@string/dialog_button_app" />
+ 				
  			<Button android:id="@+id/dialog_button_close" 
  				android:layout_width="0dp" 
  				android:layout_height="wrap_content"

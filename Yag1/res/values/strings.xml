@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Yokohama Art Guide</string>
 
@@ -6,9 +5,6 @@
 	<string name="button_menu_event">Event List</string>
 	<string name="button_menu_place">Place List</string>
 	<string name="button_menu_map">Map List</string>
-
-<!-- progressbar_wait -->
-	<string name="loading">Downloading …</string>
 		
 <!-- MainActivity -->
 	<string name="button_date">Date</string>
@@ -20,10 +16,7 @@
 	<string name="places">places</string>
 		
 <!-- MapListActivity -->
-	<string name="button_move">Move</string>
-	<string name="searching">Searching...</string>	
-	<string name="search_found">Found location</string>
-	<string name="search_not_found">NOT found location</string>
+	<string name="button_option">Option</string>
 	<string name="gps_no_manager">NO GPS manager</string>
 	<string name="gps_not_found">NOT found GPS position</string>
 
@@ -48,20 +41,34 @@
 	<string name="related_event">Related event</string>
 	<string name="button_wiki">Wikipedia</string>
 
+<!-- MapSettingActivity -->
+	<string name="geo_name">Kannai</string>
+	<string name="edit_address">Address</string>
+	<string name="button_search">Search</string>
+	<string name="button_location_set">Set</string>
+	<string name="search_please_address">Please enter address</string>
+	<string name="search_please_name">Please enter label</string>
+	<string name="search_found">Found location</string>
+	<string name="search_not_found">NOT found location</string>
+	
 <!-- dialog marker -->
 	<string name="dialog_button_place">Place</string>
 	<string name="dialog_button_close">Close</string>
-
+		
 <!-- dialog map list  -->
-	<string name="dialog_edit_address">Address</string>
-	<string name="dialog_button_search">Search</string>
-	<string name="dialog_button_default">Default</string>
 	<string name="dialog_button_gps">GPS</string>
 
 <!-- dialog map place -->
 	<string name="dialog_button_marker">Marker</string>
 	<string name="dialog_button_map">MAP List</string>
-	
+	<string name="dialog_button_app">APP</string>
+
+<!-- dialog loading -->
+	<string name="dialog_loading">Downloading …</string>
+
+<!-- dialog searching -->
+	<string name="dialog_searching">Searching...</string>	
+				
 <!-- dialog about -->
  	<string name="dialog_about_title">About</string>   
 	<string name="dialog_about_main">This application is a guidebook of the art events held in Yokohama. \n\nYokohama Art LOD, whitch is manageds by Yokohama Arts Foundation, is used for acquisition of event informations.\nThis application is an application work of Linked Open Data Challenge Japan 2012.</string>
@@ -80,7 +87,9 @@
 	<string name="dialog_button_retry">Retry</string>
 
  <!-- menu -->
-  	<string name="menu_about">About</string>     
+  	<string name="menu_about">About</string>  
+  	<string name="menu_usage">Usage</string>  
+  	<string name="menu_map_setting">Map Setting</string>   
 	<string name="menu_clear">Clear Cache</string>
-					
+
 </resources>

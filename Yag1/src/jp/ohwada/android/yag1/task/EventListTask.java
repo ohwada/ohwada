@@ -12,17 +12,19 @@ import android.os.Handler;
  * EventListTask
  */
 public class EventListTask extends CommonTask {  
-
-	private static final int DAY_ADD = 2;	// 2 days	
-    	
+   	
 	// object    
    	private EventListAsync mAsync;
 	private EventListParser mParser;
    	private EventListFile mFileClass; 	
-
+   	private DateUtility mDateUtility;
+   	
 	// variable
 	private EventList mList = null;
-	    	 			
+
+    // variable
+    protected File mFileTarget = null;
+    
 	/**
 	 * === constarctor ===
 	 * @param Handler handler
@@ -31,7 +33,8 @@ public class EventListTask extends CommonTask {
         super( handler, Constant.MSG_WHAT_TASK_EVENT_LIST );
 		TAG_SUB = "EventListTask";		
 		mParser = new EventListParser();
-		mFileClass = new EventListFile();
+		mFileClass = new EventListFile();		
+		mDateUtility = new DateUtility();
     }
 
 	/**
@@ -40,8 +43,8 @@ public class EventListTask extends CommonTask {
 	 * @return boolean
 	 */ 
     public boolean execute( Date date ) {
-		Date end = mDateUtility.addDay( date, DAY_ADD );
-		File file = mFileClass.getFile( date );
+		Date end = mDateUtility.addDay( date, Constant.EVENT_DAYS );
+		File file = mFileClass.getFileForList( date );
 		return execute( file, date, end );
     }
     
@@ -84,6 +87,13 @@ public class EventListTask extends CommonTask {
 			mAsync.cancel( true );
 			mAsync.shutdown();
 		}
+	}
+
+	/**
+	 * execPost
+	 */ 
+	protected void execPost() {
+		execPostFile();
 	}
 
 	/**

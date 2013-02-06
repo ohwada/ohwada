@@ -74,24 +74,6 @@ public class MenuView {
 			}
 		});
 	}
-
-	/**
-	 * hideBottons
-	 */ 
-	public void hideBottons() {
-		mButtonMenuEvent.setVisibility( View.INVISIBLE );
-		mButtonMenuPlace.setVisibility( View.INVISIBLE );
-		mButtonMenuMap.setVisibility( View.INVISIBLE );
-	}
-
-	/**
-	 * showBottons
-	 */ 
-	public void showBottons() {
-		mButtonMenuEvent.setVisibility( View.VISIBLE );
-		mButtonMenuPlace.setVisibility( View.VISIBLE );
-		mButtonMenuMap.setVisibility( View.VISIBLE );
-	}		
 					
     /**
      * finishEvent

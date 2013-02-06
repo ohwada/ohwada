@@ -38,24 +38,24 @@ public class PlaceListParser extends CommonParser {
 		for ( int i=0; i<bindings.length(); i++ ) {
 
 			// parse binding
-			JSONObject obj = getBinding( bindings, i );		
+			JSONObject obj = getObjectFromArray( bindings, i );		
 			if ( obj != null ) {
 				PlaceRecord r = new PlaceRecord();				
-				String url =  getString1( obj, "place" );
+				String url =  getStringValue( obj, "place" );
 				
 				// check double url
 				if ( !map.containsKey( url ) ) {
 					map.put( url, true );
 					r.url = url;
-					r.label = getString1( obj, "label" );
-					r.reading = getString1( obj, "hrkt" );
-					r.address = getString1( obj, "address" );
-					r.telephone = getString1( obj, "telephone" );								
-					r.homepage = getString1( obj, "homepage" );
-					r.dbpedia = getString1( obj, "same_as" );
-					r.is_part_of = getString1( obj, "is_part_of" );
-					r.lat = getString1( obj, "lat" );
-					r.lng = getString1( obj, "long" );				
+					r.label = getStringValue( obj, "label" );
+					r.reading = getStringValue( obj, "hrkt" );
+					r.address = getStringValue( obj, "address" );
+					r.telephone = getStringValue( obj, "telephone" );			
+					r.homepage = getStringValue( obj, "homepage" );
+					r.dbpedia = getStringValue( obj, "same_as" );
+					r.is_part_of = getStringValue( obj, "is_part_of" );
+					r.lat = getStringValue( obj, "lat" );
+					r.lng = getStringValue( obj, "long" );				
 					list.add( r );
 				}
 			}

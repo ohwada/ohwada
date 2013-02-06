@@ -40,14 +40,6 @@ public class ErrorView  {
 	}
 
 	/**
-	 * showTitleNoEvent
-	 */ 
-	public void showTitleNoEvent() {
-		String msg = getString( R.string.error_no_event_data );
-		setText( msg );
-	}
-
-	/**
 	 * showRetryNotGetPlace
 	 */ 
 	public void showRetryNotGetPlace() {

@@ -1,15 +1,14 @@
 package jp.ohwada.android.yag1.task;
 
-import java.io.File;
-
 import jp.ohwada.android.yag1.Constant;
+
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
 /**
- * Common Task
+ * Common Task with Timer Handler & Message Handler
  */
 public class CommonTask {  
 
@@ -17,23 +16,23 @@ public class CommonTask {
 	private static final String TAG = Constant.TAG;
 	private static final boolean D = Constant.DEBUG;
 	protected String TAG_SUB = "Task";
-
+	
+	// time
+	protected final static long TIME_MSEC_ONE_DAY = Constant.TIME_MSEC_ONE_DAY;
+	
 	// timer
     private static final int TIMER_MSG_WHAT = 100;
     private static final int TIMER_INTERVAL = 500;  // 0.5 sec
-
-	protected static final long TIME_MSEC_ONE_DAY = DateUtility.TIME_MSEC_ONE_DAY; 
 	
 	//  constarctor  
    	private Handler msgHandler;
-   	protected DateUtility mDateUtility;
 	protected int MSG_WHAT = Constant.MSG_WHAT_NONE;
-		
+    protected int MSG_ARG1 = 0;
+    protected int MSG_ARG2 = 0;   
+    		
 	// timer
     private boolean isStart = false;
     private boolean isRunning = false;
-    // variable
-    protected File mFileTarget = null;
 			    	 			
 	/**
 	 * === constarctor ===
@@ -42,7 +41,6 @@ public class CommonTask {
     public CommonTask( Handler handler, int msg ) {
  		msgHandler = handler;
  		MSG_WHAT = msg;
- 		mDateUtility = new DateUtility();
     }
     				    
 // -- handler ---
@@ -112,16 +110,22 @@ public class CommonTask {
 	 * execPost
 	 */ 
 	protected void execPost() {
+		// dummy	
+	}
+
+	/**
+	 * execPost for file
+	 */ 
+	protected void execPostFile() {
 		stopHandler();	
 		int arg1 = saveFile();
-		int arg2 = 0;
 		if ( arg1 != Constant.MSG_ARG1_TASK_SUCCESS ) {
 			boolean ret = readFile();
 			if ( ret ) {
 				arg1 = Constant.MSG_ARG1_TASK_CACHE;
 			}
 		}
-		sendMessage( MSG_WHAT, arg1, arg2 );		
+		sendMessage( MSG_WHAT, arg1, MSG_ARG2 );		
 	}
 	
 	/**
@@ -142,11 +146,18 @@ public class CommonTask {
 				
 	/**
 	 * sendMessage
+	 */	
+    protected void sendMessage() {
+    	sendMessage( MSG_WHAT, MSG_ARG1, MSG_ARG2 );
+    }
+
+	/**
+	 * sendMessage
 	 * @param int what
 	 * @param int arg1
 	 * @param int arg2
-	 */	
-    protected void sendMessage( int what, int arg1, int arg2 ) {
+	 */	    
+	protected void sendMessage( int what, int arg1, int arg2 ) {
     	Message msg = msgHandler.obtainMessage( what, arg1, arg2 );	        
     	msgHandler.sendMessage( msg );
     }

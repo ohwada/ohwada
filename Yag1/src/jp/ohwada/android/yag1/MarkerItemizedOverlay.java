@@ -22,7 +22,6 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
         
 	// list of OverlayItem
     private List<MarkerOverlayItem> items = new ArrayList<MarkerOverlayItem>();    
-    private MarkerOverlayItem mItem = null;
 		
 	/**
 	 * === Constructor ===
@@ -40,8 +39,9 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 	 * @param int : The number of a point 
 	 */
 	@Override
-    protected MarkerOverlayItem createItem( int i ) {
-    	MarkerOverlayItem item = items.get( i );
+    protected MarkerOverlayItem createItem( int index ) {
+        if (( index < 0 )||( index >= items.size() )) return null;
+    	MarkerOverlayItem item = items.get( index );
         return new MarkerOverlayItem( item.getPoint(), item.getTitle(), item.getSnippet(), item.getUrl() );
     }
 
@@ -61,11 +61,12 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 	 */
 	@Override
 	protected boolean onTap( int index ) {
-		mItem = items.get( index );
+	    if (( index < 0 )||( index >= items.size() )) return true;
+		MarkerOverlayItem item = items.get( index );
 		MarkerDialog dialog = new MarkerDialog( mActivity );		
-		dialog.setCustomTitle( mItem.getTitle() );
-		dialog.setMessage( mItem.getSnippet()  );
-		dialog.setUrl( mItem.getUrl()  );
+		dialog.setCustomTitle( item.getTitle() );
+		dialog.setMessage( item.getSnippet()  );
+		dialog.setUrl( item.getUrl()  );
 		dialog.create();
 		dialog.show();
     	return true;

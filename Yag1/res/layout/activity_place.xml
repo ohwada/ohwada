@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -6,39 +5,13 @@
     android:padding="4dp"
     >
 
-	<include layout="@layout/button_menu" /> 			
-	<include layout="@layout/progressbar_loading" /> 
+	<include layout="@layout/button_menu" /> 	
 						
 	<TextView android:id="@+id/place_textview_label"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_margin="4dp"
 		android:textSize="20sp"
-		/>
-
-	<TextView android:id="@+id/place_textview_sub"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		/>
-		
-	<TextView android:id="@+id/place_textview_address"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		/>
-			   	
-    <TextView android:id="@+id/place_textview_telephone"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		/>
-
-    <TextView 
-    	android:id="@+id/place_textview_count"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
 		/>
 		
     <TextView 

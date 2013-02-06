@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- white  -->    
 	<color name="dialog_about_text">#FFFFFF</color>
@@ -6,4 +5,8 @@
 	<color name="dialog_marker_text">#FFFFFF</color>
 	<!-- gray transparent -->    
 	<color name="dialog_marker_background">#C0808080</color>
+	<!-- white  -->
+	<color name="dialog_loading_background">#FFFFFF</color>
+	<!-- black  -->    
+	<color name="dialog_loading_text">#000000</color>
 </resources>

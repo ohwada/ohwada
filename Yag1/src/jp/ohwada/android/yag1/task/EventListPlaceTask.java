@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import jp.ohwada.android.yag1.Constant;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
 
@@ -13,29 +14,34 @@ import android.os.Handler;
  */
 public class EventListPlaceTask extends CommonTask {  
 
-	private static final int MONTH_ADD = 12;		// 1 year	
-	private static final String FILE_PREFIX ="events_";
-
-	// object      
+	// object 
+   	private Context mContext; 
    	private EventListPlaceAsync mAsync;
 	private EventListParser mParser;
    	private EventListFile mFileClass;
- 
+
+   	private DateUtility mDateUtility;
+   	
  	// variable
  	private Date mDateStart = null;
  	private EventList mList = null;
  	private EventList mListAsync = null;
  	private List<String> mListUrl = null;
- 	
+
+    // variable
+    protected File mFileTarget = null;
+    
 	/**
 	 * === constarctor ===
 	 * @param Handler handler
 	 */ 
-    public EventListPlaceTask( Handler handler ) {
+    public EventListPlaceTask( Context context, Handler handler ) {
         super( handler, Constant.MSG_WHAT_TASK_EVENT_LIST_PLACE );
+        mContext = context; 
 		TAG_SUB = "EventListPlaceListTask";			
 		mParser = new EventListParser();
 		mFileClass = new EventListFile(); 
+		mDateUtility = new DateUtility();
     }
 
 	/**
@@ -44,12 +50,12 @@ public class EventListPlaceTask extends CommonTask {
 	 * @return boolean
 	 */ 
     public boolean execute( PlaceRecord record ) {
-        String place_name = record.getPlaceName( record.url );
-		String name = FILE_PREFIX + place_name;	  	
-		File file = mFileClass.getFileWithTxt( name );
+        // http://yan.yafjp.org/place-info/place_xxx -> place_xxx
+        String place_name = record.getPlaceName( record.url );  	
+		File file = mFileClass.getFileForPlace( place_name );
 		List<String> list = record.getListChildUrls();
 	  	Date today = mDateUtility.getDateToday();	
-	  	Date end = mDateUtility.addMonth( today, MONTH_ADD );		
+	  	Date end = mDateUtility.addMonth( today, Constant.EVENT_LIST_PLACE_MONTHS );		
 		return execute( file, list, today, end );
     }
     
@@ -68,7 +74,7 @@ public class EventListPlaceTask extends CommonTask {
     	// get from server if expired
 		if ( mFileClass.isExpired( file ) ) {	
 			// create async task each time
-		    mAsync = new EventListPlaceAsync();							
+		    mAsync = new EventListPlaceAsync( mContext );							
 			mAsync.setListDate( list, start, end );
 			mAsync.execute();
 			startHandler();
@@ -107,7 +113,7 @@ public class EventListPlaceTask extends CommonTask {
 		
 		// sometime zero event result, although there must be event data
 		// substitute today event list
-		File file = mFileClass.getFile( mDateStart );
+		File file = mFileClass.getFileForList( mDateStart );
 		EventList event_list = mFileClass.read( file );
 		List<EventRecord> list_event = event_list.getListPlaceUrlList( mListUrl ); 
 		if (( list_event != null )&&( list_event.size()> 0 )) {

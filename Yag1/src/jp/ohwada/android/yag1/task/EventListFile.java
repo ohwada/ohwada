@@ -4,12 +4,14 @@ import java.io.File;
 import java.util.Date;
 import java.util.List;
 
+import jp.ohwada.android.yag1.Constant;
+
 /**
  * EventList file 
  */
 public class EventListFile extends CommonFile { 
 
-	private static final long EXPIRE_EVENT = 2L * TIME_MSEC_ONE_DAY;  // 2 day
+	private static final long TIME_EXPIRE = Constant.EXPIRE_DAYS_EVENT_LIST * TIME_MSEC_ONE_DAY; 
     	
 	/**
 	 * === constractor ===
@@ -23,18 +25,48 @@ public class EventListFile extends CommonFile {
 	 * @param Date date
 	 * @return File
 	 */
-    public File getFile( Date date ) {
-		String name = mDateUtility.formatLabel( date );		
-		return getFileWithTxt( name );
+    public File getFileForList( Date date ) {
+		String name = getFilenameForList( date );
+		return getFileFromName( name );
 	}
-		
+
+	/**
+	 * getFile
+	 * @param String place_name
+	 * @return File
+	 */
+    public File getFileForPlace( String place_name ) {
+		String name = getFilenameForPlace( place_name );
+		return getFileFromName( name );
+	}
+
+	/**
+	 * getFilename
+	 * @param Date date
+	 * @return String
+	 */
+    public String getFilenameForList( Date date ) {
+		String name = Constant.FILE_PREFIX_EVENT_LIST + "_" + mDateUtility.formatLabel( date );		
+		return getFilenameWithTxt( name );
+	}
+
+	/**
+	 * getFilename
+	 * @param String place_name : place_xxx
+	 * @return String
+	 */
+    public String getFilenameForPlace( String place_name ) {
+		String name = Constant.FILE_PREFIX_EVENT_LIST_PLACE + "_" + place_name;
+		return getFilenameWithTxt( name );
+	}
+				
 	/**
 	 * isExpired Event
 	 * @param File file
 	 * @return boolean
 	 */
     public boolean isExpired( File file ) {
-		return isExpiredFile( file, EXPIRE_EVENT );
+		return isExpiredFile( file, TIME_EXPIRE );
 	}
 
 	/**

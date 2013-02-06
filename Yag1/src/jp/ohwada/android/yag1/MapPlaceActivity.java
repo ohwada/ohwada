@@ -20,7 +20,7 @@ public class MapPlaceActivity extends MapCommonActivity {
 	// view conponent
 	private TextView mTextViewTitle;
 	private MarkerItemizedOverlay mMarkerOverlay;
-					
+						
 	/*
 	 * === onCreate ===
 	 * @param Bundle savedInstanceState
@@ -36,7 +36,8 @@ public class MapPlaceActivity extends MapCommonActivity {
 		createMap();
 		mMenuView.enableEvent();
 		mMenuView.enablePlace();
-			
+		TAG_SUB = "MapPlaceActivity";
+					
 		// view conponent
 		mTextViewTitle = (TextView) findViewById( R.id.map_textview_title );
             	
@@ -80,14 +81,23 @@ public class MapPlaceActivity extends MapCommonActivity {
     	setCenter( ｍGeoPointPlace );
         mMarkerOverlay.addPoint( record );
 	}
-	
+
 // --- Dialog ---
-	protected void showDialog() {
+	protected void showOptionDialog() {
 		MapPlaceDialog dialog = new MapPlaceDialog( this );
 		dialog.setHandler( msgHandler );
-		dialog.create();
+		dialog.create( mGeoName );
 		dialog.show();
 	}
 // --- Dialog end ---
 
+// --- Message Handler ---  
+	/**
+	 * execHandlerMapApp
+	 */
+	protected void execHandlerMapApp() {
+	 	startMapApp( ｍGeoPointPlace );
+	}  
+// --- Message Handler end ---
+	
 }

@@ -1,13 +1,17 @@
 package jp.ohwada.android.yag1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,6 +27,11 @@ import com.google.android.maps.MapView;
 public class MapCommonActivity extends MapActivity 
 	implements LocationListener {
 
+	// debug
+	private static final String TAG = Constant.TAG;
+	private static final boolean D = Constant.DEBUG;
+	protected String TAG_SUB = "MapCommonActivity";
+	
 	// gps
     private static final long LOCATION_MIN_TIME = 0L; 
     private static final float LOCATION_MIN_DISTANCE = 0f;
@@ -39,8 +48,10 @@ public class MapCommonActivity extends MapActivity
     protected ErrorView mErrorView;
 
 	// variable
+	private GeoPoint ｍGeoPointDefault = null; 
     protected GeoPoint ｍGeoPointPlace = null; 
-   
+	protected String mGeoName = "";
+	   
 	/*
 	 * createMenu
 	 * @param View view
@@ -54,14 +65,24 @@ public class MapCommonActivity extends MapActivity
 	 * createMap()
 	 */
 	protected void createMap() {				
-		Button btnMove = (Button) findViewById( R.id.map_button_move );
-		btnMove.setOnClickListener( new View.OnClickListener() {
+		Button btnOption = (Button) findViewById( R.id.map_button_option );
+		btnOption.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
-				showDialog();
+				showOptionDialog();
 			}
 		});
-		
+
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences( this );
+    	mGeoName = pref.getString( 
+    		Constant.PREF_NAME_GEO_NAME, 
+    		getResources().getString( R.string.geo_name ) );
+    	int lat = pref.getInt( 
+    		Constant.PREF_NAME_GEO_LAT, Constant.GEO_LAT );
+    	int lng = pref.getInt( 
+    		Constant.PREF_NAME_GEO_LONG, Constant.GEO_LONG ); 
+		ｍGeoPointDefault = new GeoPoint( lat, lng );
+		    				
     	// map
 		mMapView = (MapView) findViewById( R.id.mapview );
     	mMapView.setClickable( true );
@@ -74,7 +95,7 @@ public class MapCommonActivity extends MapActivity
     	mMapView.getOverlays().add( mGpsOverlay );
      	// default
 		mMapController.setZoom( Constant.GEO_ZOOM );
-		setCenter( new GeoPoint( Constant.GEO_LAT, Constant.GEO_LONG ) ) ; 
+		setCenter( ｍGeoPointDefault ) ; 
 				   	
 		mLocationManager = (LocationManager) getSystemService( LOCATION_SERVICE );
 	}
@@ -105,7 +126,7 @@ public class MapCommonActivity extends MapActivity
 			showGps( getLastLocation() );    
         } else {
         	// if NOT acquire GPS manager
-        	Toast.makeText( this, R.string.gps_no_manager, Toast.LENGTH_SHORT ).show();
+        	toast_show( R.string.gps_no_manager );
 		}
         super.onResume();
     }
@@ -215,7 +236,7 @@ public class MapCommonActivity extends MapActivity
     private void moveGps() {
     	Location location = getLastLocation();
     	if ( location == null ) {
-			Toast.makeText( this,  R.string.gps_not_found, Toast.LENGTH_SHORT ).show();
+			toast_show( R.string.gps_not_found );
     		return ;
     	}	
     	GeoPoint point = new GeoPoint( 
@@ -224,23 +245,13 @@ public class MapCommonActivity extends MapActivity
 		setCenter( point );
 		showGps( location );
     }
-
-	/**
-	 * convert real number to integer
-	 * @param Double : location( floating point format )
-	 * @return int : location( E6 format )
-	 */
-    protected int doubleToE6( Double d1 ) {
-		Double d2 = d1 * 1E6;
-		return d2.intValue();
-	}
 // --- GPS end ---
 
 // --- Dialog ---
 	/**
-	 * showDialog
+	 * showOptionDialog
      */
-	protected void showDialog() {
+	protected void showOptionDialog() {
 		// dummy
 	}
 // --- Dialog end ---
@@ -263,19 +274,22 @@ public class MapCommonActivity extends MapActivity
 	private void execHandler( Message msg ) {
     	switch ( msg.what ) {
             case Constant.MSG_WHAT_DIALOG_MAP:
-            	execHandlerMove( msg );
+            	execHandlerOption( msg );
+                break;
+            case Constant.MSG_WHAT_TASK_GEOCODER:
+            	execHandlerGeocoder();
                 break;
         }
 	}
 
 	/**
-	 * execHandlerMove
+	 * execHandlerOption
 	 * @param Message msg
 	 */
-	private void execHandlerMove( Message msg ) {
+	private void execHandlerOption( Message msg ) {
     	switch ( msg.arg1 ) {
             case Constant.MSG_ARG1_DIALOG_MAP_DEFAULT:
-				setCenter( new GeoPoint( Constant.GEO_LAT, Constant.GEO_LONG ) );
+				setCenter( ｍGeoPointDefault );
                 break;
             case Constant.MSG_ARG1_DIALOG_MAP_GPS:
 				moveGps();
@@ -285,22 +299,75 @@ public class MapCommonActivity extends MapActivity
 					setCenter( ｍGeoPointPlace );
 				}
                 break;
-            case Constant.MSG_ARG1_DIALOG_MAP_SEARCH:
-            	String location = msg.getData().getString( Constant.BUNDLE_DIALOG_MAP_LOCATION );
-				serachLocation( location );
-                break;
             case Constant.MSG_ARG1_DIALOG_MAP_MAP:
 				mMenuView.forcedFinishMap();
+                break;
+             case Constant.MSG_ARG1_DIALOG_MAP_APP:
+				execHandlerMapApp();
                 break;
         }
 	}
 
 	/**
-	 * serachLocation
-	 * @param String location
+	 * execHandlerGeocoder
 	 */
-	protected void 	serachLocation( String location ) {
+    protected void execHandlerGeocoder() {
+    	// dummy
+    }
+
+	/**
+	 * startMapApp
+	 */
+	protected void execHandlerMapApp() {
 		// dummy
 	}
+	
+	/**
+	 * startMapApp
+	 * @param GeoPoint point
+	 */
+	protected void startMapApp( GeoPoint point ) {
+		String lat = e6ToStr( point.getLatitudeE6() );
+		String lng = e6ToStr( point.getLongitudeE6() );		
+		String uri = "geo:" + lat + "," + lng ;		
+		Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( uri ) );
+		startActivity( intent );
+	}
 
+// --- utility ---
+	/**
+	 * convert real number to integer
+	 * @param Double : location( floating point format )
+	 * @return int : location( E6 format )
+	 */
+    protected int doubleToE6( Double d1 ) {
+		Double d2 = d1 * 1E6;
+		return d2.intValue();
+	}
+
+	/**
+	 * convert  integer to string
+	 * @param integer : location( E6 format )
+	 * @return String : location( floating point format )
+	 */	
+	protected String e6ToStr( int e6 ) {
+		Double d = (double)e6 / 1E6;
+		return Double.toString( d );
+	}
+	
+	/**
+	 * toast_show
+	 * @param int id
+     */
+	protected void toast_show( int id ) {
+		Toast.makeText( this, id, Toast.LENGTH_SHORT ).show();
+	}	
+	
+	/**
+	 * write log
+	 * @param String msg
+	 */ 
+	protected void log_d( String msg ) {
+	    if (D) Log.d( TAG, TAG_SUB + " " + msg );
+	}
 }

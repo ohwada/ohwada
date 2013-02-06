@@ -1,6 +1,5 @@
 package jp.ohwada.android.yag1.task;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -21,36 +20,30 @@ public class EventParser extends CommonParser {
 	 * @return String str
 	 */     
 	public EventRecord parse( String url, String str ) {
-		JSONObject obj_root = null;
-		JSONObject obj = null;
-		try {
-			obj_root = new JSONObject( str );
-			if ( obj_root != null ) {
-				obj = obj_root.getJSONObject( url );
-			}	
-		} catch ( JSONException e ) {
-			e.printStackTrace();
-		}
+		JSONObject obj_root = getObjectFromString( str );
+		if ( obj_root == null ) return null;
+		JSONObject obj = getObjectFromObject( obj_root, url );
 		if ( obj == null ) return null;
+									
 		EventRecord r = new EventRecord();
 		r.event_url = url;
-		r.event_label = getString2( obj, "http://www.w3.org/2000/01/rdf-schema#label" );
-		r.place_label = getString2( obj, "http://www.w3.org/2002/12/cal/icaltzd#location" );
-		r.place_url = getString2( obj, "http://fp.yafjp.org/terms/event#location" );
-		r.created = getString2( obj, "http://purl.org/dc/terms/created" );
-		r.modified = getString2( obj, "http://purl.org/dc/terms/modified" );
-		r.dtstart = getString2( obj, "http://www.w3.org/2002/12/cal/icaltzd#dtstart" );
-		r.dtend = getString2( obj, "http://www.w3.org/2002/12/cal/icaltzd#dtend" );
-		r.event_abstract = getString2( obj, "http://purl.org/dc/elements/1.1/abstract" );
-		r.category = getString2( obj, "http://www.w3.org/2002/12/cal/icaltzd#categories" );
-		r.schedule = getString2( obj, "http://fp.yafjp.org/terms/event#scheduleNote" );
-		r.fee = getString2( obj, "http://fp.yafjp.org/terms/event#fee" );		
-		r.care = getString2( obj, "http://fp.yafjp.org/terms/event#day-care" );
-		r.apinfo = getString2( obj, "http://fp.yafjp.org/terms/event#apinfo" );
-		r.apstart = getString2( obj, "http://fp.yafjp.org/terms/event#apstart" );
-		r.apend = getString2( obj, "http://fp.yafjp.org/terms/event#apend" );	
-		r.homepage = getString2( obj, "http://fp.yafjp.org/terms/event#homepage" );
-		r.image_url = getString2( obj, "http://fp.yafjp.org/terms/event#stillImage" );
+		r.event_label = getStringZeroValue( obj, "http://www.w3.org/2000/01/rdf-schema#label" );
+		r.place_label = getStringZeroValue( obj, "http://www.w3.org/2002/12/cal/icaltzd#location" );
+		r.place_url = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#location" );
+		r.created = getStringZeroValue( obj, "http://purl.org/dc/terms/created" );
+		r.modified = getStringZeroValue( obj, "http://purl.org/dc/terms/modified" );
+		r.dtstart = getStringZeroValue( obj, "http://www.w3.org/2002/12/cal/icaltzd#dtstart" );
+		r.dtend = getStringZeroValue( obj, "http://www.w3.org/2002/12/cal/icaltzd#dtend" );
+		r.event_abstract = getStringZeroValue( obj, "http://purl.org/dc/elements/1.1/abstract" );
+		r.category = getStringZeroValue( obj, "http://www.w3.org/2002/12/cal/icaltzd#categories" );
+		r.schedule = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#scheduleNote" );
+		r.fee = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#fee" );		
+		r.care = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#day-care" );
+		r.apinfo = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#apinfo" );
+		r.apstart = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#apstart" );
+		r.apend = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#apend" );	
+		r.homepage = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#homepage" );
+		r.image_url = getStringZeroValue( obj, "http://fp.yafjp.org/terms/event#stillImage" );
 		r.participant = parseEventParticipant( obj_root, obj );
 		r.status = parseEventStatus( obj_root, obj );		
 		EventContact contact = parseEventContact( obj_root, obj );
@@ -71,8 +64,8 @@ public class EventParser extends CommonParser {
 		JSONObject obj_bnode = parseBnode( obj_root, obj, "http://fp.yafjp.org/terms/event#contact" );
 		if ( obj_bnode == null )  return null;
 		EventContact r = new EventContact();			
-		r.name = getString2( obj_bnode, "http://xmlns.com/foaf/0.1/name" );
-		r.phone = getString2( obj_bnode, "http://xmlns.com/foaf/0.1/phone" );	
+		r.name = getStringZeroValue( obj_bnode, "http://xmlns.com/foaf/0.1/name" );
+		r.phone = getStringZeroValue( obj_bnode, "http://xmlns.com/foaf/0.1/phone" );	
 		return r;
 	}
 
@@ -108,5 +101,6 @@ public class EventParser extends CommonParser {
     private class EventContact {
 		public String name = "";
 		public String phone = "";
-	}; 			
+	}; 
+			
 }

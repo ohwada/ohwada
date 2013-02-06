@@ -3,21 +3,31 @@ package jp.ohwada.android.yag1.task;
 import java.util.Date;
 import java.util.List;
 
+import android.content.Context;
+
+import jp.ohwada.android.yag1.Constant;
+
 /**
  * EventList in PlaceList Async Task
  */
 public class EventListPlaceAsync extends CommonAsyncTask {
 
+	// object
+	private Context mContext;
+		
+	// local variable	
 	private List<String> mList = null;
-
+	private Date mDateStart = null;
+	private Date mDateEnd = null;
+	
 	/**
 	 * === constructor ===
 	 */			 
-    public EventListPlaceAsync() {
+    public EventListPlaceAsync( Context context ) {
         super();
-        TAG_SUB = "EventListPlaceAsync";
+        mContext = context;
     }
-
+	
 	/**
 	 * setUrlDate
 	 * @param List<String> list
@@ -29,23 +39,38 @@ public class EventListPlaceAsync extends CommonAsyncTask {
 		mDateStart = start;
 		mDateEnd = end;
 	}
-	
+
+	/**
+	 * execPreExecute()
+	 */	
+    protected void execPreExecute() {
+		showDialog( mContext );
+    	mResult = null;
+    }
+    
 	/**
 	 * execBackground
-	 */  	
+	 */	
 	protected void execBackground() {
-		mResult = getHttp( mList, mDateStart, mDateEnd );
+		mResult = mClient.executeQuery( getQuery() );
 	}
+
+	/**
+	 * execPostExecute
+	 */	 
+    protected void execPostExecute() {
+		hideDialog();
+    }
 	
     /**
-	 * get PlaceEventList
+	 * getQuery
 	 * @param List<String> list
 	 * @param Date first
 	 * @param Date last
 	 * @return String
 	 */  
-	private String getHttp( List<String> list, Date first, Date last ) {
-		if (( list == null )||( list.size() == 0 )) return "";		
+	private String getQuery() {
+		if (( mList == null )||( mList.size() == 0 )) return "";		
 		String query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 		query += "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
 		query += "PREFIX cal: <http://www.w3.org/2002/12/cal/icaltzd#> ";
@@ -59,12 +84,12 @@ public class EventListPlaceAsync extends CommonAsyncTask {
 		query += "cal:location ?place_label ; ";
 		query += "cal:dtstart ?dtstart ; ";
 		query += "cal:dtend ?dtend . ";
-		query += getFilterDate( first, last );
-		query += getFilterPlaceList( list );
+		query += getFilterDate( mDateStart, mDateEnd );
+		query += getFilterPlaceList( mList );
 		query += "} ";
 		query += "ORDER BY ASC(?dtstart) ";
-		query += "LIMIT " + LIMIT_EVENT;
-		return getResult( query );	
+		query += "LIMIT " + Constant.LIMIT_EVENT_LIST_PLACE;
+		return query;	
 	}	
 
     /**

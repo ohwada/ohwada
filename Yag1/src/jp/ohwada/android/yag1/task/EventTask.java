@@ -3,6 +3,7 @@ package jp.ohwada.android.yag1.task;
 import java.io.File;
 
 import jp.ohwada.android.yag1.Constant;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
 
@@ -11,7 +12,8 @@ import android.os.Handler;
  */
 public class EventTask extends CommonTask {  
 	
-	// object        
+	// object 
+   	private Context mContext; 
    	private EventAsync mAsync;
 	private EventParser mParser;
    	private EventFile mFileClass;
@@ -19,13 +21,17 @@ public class EventTask extends CommonTask {
 	// variable
 	private EventRecord mEventRecord = null;	
 	private String mUrl = null;
-	
+
+    // variable
+    protected File mFileTarget = null;
+    
 	/**
 	 * === constarctor ===
 	 * @param Handler handler
 	 */ 
-    public EventTask( Handler handler ) {
+    public EventTask( Context context, Handler handler ) {
         super( handler, Constant.MSG_WHAT_TASK_EVENT );
+        mContext = context; 
         TAG_SUB = "EventTask";			
 		mParser = new EventParser();
 		mFileClass = new EventFile(); 
@@ -38,9 +44,7 @@ public class EventTask extends CommonTask {
 	 * @return boolean
 	 */
     public boolean execute( String url ) {
-    	EventRecord record = new EventRecord();
-    	String name = record.getEventName( url );
-        File file = mFileClass.getFileWithTxt( name );
+        File file = mFileClass.getFile( url );
 		return execute( file, url );
     }
     	 
@@ -55,7 +59,7 @@ public class EventTask extends CommonTask {
     	mUrl = url;
 		if ( mFileClass.isExpired( file ) ) {
 			// create async task each time	
-		    mAsync = new EventAsync();							
+		    mAsync = new EventAsync( mContext );							
 			mAsync.setUrl( url );
 			mAsync.execute();
 			startHandler();
@@ -84,6 +88,13 @@ public class EventTask extends CommonTask {
 		}
 	}
 
+	/**
+	 * execPost
+	 */ 
+	protected void execPost() {
+		execPostFile();
+	}
+	
 	/**
 	 * saveFile
 	 * @return int

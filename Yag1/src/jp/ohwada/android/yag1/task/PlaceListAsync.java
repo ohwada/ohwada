@@ -4,26 +4,26 @@ package jp.ohwada.android.yag1.task;
  * PlaceList Async Task
  */
 public class PlaceListAsync extends CommonAsyncTask {
-
+		
 	/**
 	 * === constructor ===
 	 */			 
     public PlaceListAsync() {
         super();
-        TAG_SUB = "PlaceListAsync";
     }
 
 	/**
 	 * execBackground
-	 */  	
+	 */	
 	protected void execBackground() {
-		mResult = getHttp();
+		mResult = mClient.executeQuery( getQuery() );
 	}
-	
+
 	/**
-	 * getPlaceList
+	 * getQuery
+	 * @return String
 	 */  	
-	private String getHttp() {
+	private String getQuery() {
 		String query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 		query += "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
 		query += "PREFIX schema: <http://schema.org/> ";
@@ -48,6 +48,6 @@ public class PlaceListAsync extends CommonAsyncTask {
 		query += "FILTER (lang(?hrkt) =\"ja-hrkt\" ) ";
 		query += "} ";
 		query += "ORDER BY ASC(?hrkt) ";
-		return getResult( query );	
+		return query;	
 	}	    		   
 }

@@ -227,6 +227,7 @@ public class PlaceRecord {
 	 * @return String 
 	 */
     protected String getPlaceName( String url ) {
+    	// http://yan.yafjp.org/place-info/place_xxx -> place_xxx
 		return url.replaceFirst( HTTP_PLACE, "" );
     }
     

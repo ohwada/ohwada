@@ -5,7 +5,6 @@ import com.google.android.maps.OverlayItem;
 
 /**
  * set up the marker of a map
- * https://developers.google.com/maps/documentation/android/v1/reference/com/google/android/maps/OverlayItem
  */
 public class MarkerOverlayItem extends OverlayItem {
 

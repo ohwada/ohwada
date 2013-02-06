@@ -14,10 +14,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -32,15 +34,14 @@ public class PlaceActivity extends ListActivity
    	private PlaceListFile mPlaceFile;
 	private EventListPlaceTask mEventTask;
     private MenuView mMenuView;
-    private LoadingView mLoadingView;
     private ErrorView mErrorView;
 	           					   	
 	// view conponent
 	private TextView mTextViewLabel;
-	private TextView mTextViewSub;
-	private TextView mTextViewAddress;
-	private TextView mTextViewTelephone;
-	private TextView mTextViewCount;
+	private TextView mTextViewHeaderSub;
+	private TextView mTextViewHeaderAddress;
+	private TextView mTextViewHeaderTelephone;
+	private TextView mTextViewHeaderCount;
 	private Button mButtonHomepage;
 	private Button mButtonWiki;
 	private Button mButtonMap;
@@ -62,20 +63,18 @@ public class PlaceActivity extends ListActivity
 		setContentView( view ); 
 
 		// view object
-		mLoadingView = new LoadingView( view );
 		mErrorView = new ErrorView( this, view );
 		mMenuView = new MenuView( this, view );
 		mMenuView.enableEvent();
 		mMenuView.enablePlace();
 		mMenuView.enableMap();
-		mMenuView.hideBottons() ;
 								
 		// view conponent
 		mTextViewLabel = (TextView) findViewById( R.id.place_textview_label );
-		mTextViewSub = (TextView) findViewById( R.id.place_textview_sub );
-		mTextViewAddress = (TextView) findViewById( R.id.place_textview_address );
-		mTextViewTelephone = (TextView) findViewById( R.id.place_textview_telephone );
-		mTextViewCount = (TextView) findViewById( R.id.place_textview_count );
+//		mTextViewSub = (TextView) findViewById( R.id.place_textview_sub );
+//		mTextViewAddress = (TextView) findViewById( R.id.place_textview_address );
+//		mTextViewTelephone = (TextView) findViewById( R.id.place_textview_telephone );
+//		mTextViewCount = (TextView) findViewById( R.id.place_textview_count );
 				
 		mButtonHomepage = (Button) findViewById( R.id.place_button_homepage );
 		mButtonHomepage.setOnClickListener( new View.OnClickListener() {
@@ -109,20 +108,20 @@ public class PlaceActivity extends ListActivity
 			}
 		});
 		
-		// hide button
-		mButtonHomepage.setVisibility( View.INVISIBLE );
-		mButtonWiki.setVisibility( View.INVISIBLE );
-		mButtonMap.setVisibility( View.INVISIBLE );
-		mButtonPhone.setVisibility( View.INVISIBLE );
-		
 		// object
 		mPlaceFile = new PlaceListFile();
-		mEventTask = new EventListPlaceTask( msgHandler );
+		mEventTask = new EventListPlaceTask( this, msgHandler );
 		
 		// set list view			
 		mListShow = new ArrayList<EventRecord>();
 		mAdapter = new EventAdapter( this, R.layout.event_row, mListShow );
 		mListView = getListView();
+		
+// NOTE: Call this before calling setAdapter. 
+// This is so ListView can wrap the supplied cursor with one 
+// that will also account for header and footer views.
+		mListView.addHeaderView( getHeaderView(), null, false ); 
+		
 		mListView.setAdapter( mAdapter );
 		mListView.setOnItemClickListener( this );
 		
@@ -145,48 +144,68 @@ public class PlaceActivity extends ListActivity
 			showPlace( mPlaceRecordParent, list_event );
 		}						
 	}
+
+    /**
+	 * getHeaderView
+	 * @return LinearLayout
+	 */     
+	private LinearLayout getHeaderView() {
+        LayoutInflater inflater = getLayoutInflater();
+        LinearLayout view = (LinearLayout) inflater.inflate( R.layout.place_header, null );
+        mTextViewHeaderSub = (TextView) view.findViewById( R.id.place_header_textview_sub );
+		mTextViewHeaderAddress = (TextView) view.findViewById( R.id.place_header_textview_address );
+		mTextViewHeaderTelephone = (TextView) view.findViewById( R.id.place_header_textview_telephone );
+		mTextViewHeaderCount = (TextView) view.findViewById( R.id.place_header_textview_count );
+		return view;
+	}
 							
     /**
 	 * showPlace
 	 */     
 	private void showPlace( PlaceRecord record, List<EventRecord> list ) {		
-		// hide ProgressBar
-		mLoadingView.hideProgressBar();
-		mLoadingView.hideImage();
-		// show buton
-		mMenuView.showBottons();
 						
 		// no data
 		if ( record == null ) {
 			mErrorView.showNoPlace();
+			// hide button
+			mButtonHomepage.setVisibility( View.INVISIBLE );
+			mButtonWiki.setVisibility( View.INVISIBLE );
+			mButtonMap.setVisibility( View.INVISIBLE );
+			mButtonPhone.setVisibility( View.INVISIBLE );
 			return;
 		}
 
-		// show buton
-		mButtonHomepage.setVisibility( View.VISIBLE );
-		mButtonWiki.setVisibility( View.VISIBLE );
-		mButtonMap.setVisibility( View.VISIBLE );
-		mButtonPhone.setVisibility( View.VISIBLE );
-
-		mTextViewLabel.setText( record.label );
-		mTextViewAddress.setText( record.address );		
-
+		mErrorView.hideText();	
+		mTextViewLabel.setText( record.label );	
+		
+		// --- header ---
+		mTextViewHeaderAddress.setText( record.address );
+		mTextViewHeaderCount.setText( getCount( list ) );	
+						
 		// NOT show if same as orignal
 		if ( record.url.equals( mPlaceRecordOrig.url ) ) {
-			mTextViewSub.setVisibility( View.GONE );
+			mTextViewHeaderSub.setVisibility( View.GONE );
 		} else {
 			// show original title if different
-			mTextViewSub.setText( mPlaceRecordOrig.label );
+			mTextViewHeaderSub.setText( mPlaceRecordOrig.label );
 		}
-		
+
 		// hide if empty
 		if ( "".equals( record.telephone ) ) {
-			mTextViewTelephone.setVisibility( View.GONE );
+			mTextViewHeaderTelephone.setVisibility( View.GONE );
 		} else {
-			mTextViewTelephone.setText( record.telephone ) ;
+			mTextViewHeaderTelephone.setText( record.telephone ) ;
 		}
-		
-		// disable button if not have homepage 		
+
+		// --- list ---			
+		mListShow.clear();			
+		if (( list != null )&&( list.size() > 0 )) {
+			mListShow.addAll( list );
+		}			
+        mAdapter.notifyDataSetChanged();	
+        
+        // --- button ---
+        // disable button if not have homepage 		
 		if ( "".equals( record.homepage ) ) {
 			mButtonHomepage.setEnabled( false );
 		}
@@ -195,31 +214,28 @@ public class PlaceActivity extends ListActivity
 		if ( "".equals( record.wiki ) ) {
 			mButtonWiki.setEnabled( false );
 		}
-
-		// disable button if not have phone
-		if ( "".equals( record.telephone) ) {
-			mButtonPhone.setEnabled( false );
-		} 
-
-		// no evnent list				
-		if (( list == null )||( list.size() == 0 )) {
-			mErrorView.showTitleNoEvent();		
-			return;
-		}	
-
-		// show count
-		String count = getString( R.string.related_event ) ;
-		count += " ( " + list.size() + " " ;
-		count += getString( R.string.events ) + " )";
-		mTextViewCount.setText( count );
-				
-		// set events 	
-		mErrorView.hideText();		
-		mListShow.clear();
-		mListShow.addAll( list );
-        mAdapter.notifyDataSetChanged();				
+		
     }
-	
+
+    /**
+     * getCount
+     * @param List<EventRecord> list
+     * @return String
+     */
+	private String getCount( List<EventRecord> list ) {
+		String count = "";			
+		if (( list != null )&&( list.size() > 0 )) {
+			count = getString( R.string.related_event ) ;
+			count += " ( " + list.size() + " " ;
+			count += getString( R.string.events ) + " )";
+
+		} else {
+			// no evnent list
+			count = getString( R.string.error_no_event_data );
+		}
+		return count;
+	}
+			
     /**
      * startEvent
      * @param String url

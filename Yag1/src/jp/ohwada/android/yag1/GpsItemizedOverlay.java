@@ -28,7 +28,7 @@ public class GpsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     private final static int COLOR_STROKE = Color.argb( 0xAA, 0x00, 0x66, 0xFF );
 
 	// variable
-	private Location mLocation;
+	private Location mLocation = null;
 	private int mAccuracy = 0;
 		
 	/**
@@ -45,7 +45,7 @@ public class GpsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 	 * @param int : The number of a point_loc 
 	 */
 	@Override
-	protected OverlayItem createItem( int i ) {
+	protected OverlayItem createItem( int index ) {
 		GeoPoint point = new GeoPoint( 
 			doubleToE6( mLocation.getLatitude() ), 
 			doubleToE6( mLocation.getLongitude() ) );

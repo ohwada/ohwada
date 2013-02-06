@@ -7,12 +7,15 @@ import java.util.Date;
  */
 public class EventListAsync extends CommonAsyncTask {
 	
+	// local variable
+	private Date mDateStart = null;
+	private Date mDateEnd = null;
+	
 	/**
 	 * === constructor ===
 	 */			 
     public EventListAsync() {
         super();
-        TAG_SUB = "EventListAsync";
     }
 
 	/**
@@ -23,21 +26,19 @@ public class EventListAsync extends CommonAsyncTask {
 		mDateStart = start;
 		mDateEnd = end;
 	}
-		
+
 	/**
-	 * getEventList
-	 */  	
+	 * execBackground
+	 */	
 	protected void execBackground() {
-		mResult = getHttp( mDateStart, mDateEnd );
+		mResult = mClient.executeQuery( getQuery() );
 	}
 	
 	/**
-	 * get EventList
-	 * @param Date first
-	 * @param Date last
+	 * getQuery
 	 * @return String
 	 */     
-	private String getHttp( Date first, Date last ) {					
+	private String getQuery() {					
 		String query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 		query += "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
 		query += "PREFIX cal: <http://www.w3.org/2002/12/cal/icaltzd#> ";
@@ -50,9 +51,10 @@ public class EventListAsync extends CommonAsyncTask {
 		query += "event:location ?place_url ; ";
 		query += "cal:dtstart ?dtstart ; ";
 		query += "cal:dtend ?dtend . ";
-		query += getFilterDate( first, last );
+		query += getFilterDate( mDateStart, mDateEnd );
 		query += "} ";
 		query += "ORDER BY ASC(?dtstart) ";
-		return getResult( query );
-	}  
+		return query;
+	}
+	  
 }

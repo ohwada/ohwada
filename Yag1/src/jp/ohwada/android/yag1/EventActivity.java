@@ -26,7 +26,6 @@ public class EventActivity extends Activity {
    	private EventTask mEventTask;
    	private ImageTask mImageTask;
     private MenuView mMenuView;
-    private LoadingView mLoadingView;
     private ErrorView mErrorView;
 	           	   					   	
 	// view conponent
@@ -67,13 +66,11 @@ public class EventActivity extends Activity {
 		setContentView( view ); 
 
 		// view obect
-		mLoadingView = new LoadingView( view );
 		mErrorView = new ErrorView( this, view );
 		mMenuView = new MenuView( this, view );
 		mMenuView.enableEvent();
 		mMenuView.enablePlace();
 		mMenuView.enableMap();
-		mMenuView.hideBottons() ;
 								
 		// view conponent
 		mTextViewEvent = (TextView) findViewById( R.id.event_textview_event );
@@ -134,16 +131,9 @@ public class EventActivity extends Activity {
 				startMap( mEventRecord.place_url );
 			}
 		});
-
-		// hide button
-		mButtonPlace.setVisibility( View.INVISIBLE );
-		mButtonMap.setVisibility( View.INVISIBLE );
-		mButtonApinfo.setVisibility( View.INVISIBLE );			
-		mButtonHomepage.setVisibility( View.INVISIBLE );
-		mButtonPhone.setVisibility( View.INVISIBLE );
 						
 		// object
-		mEventTask = new EventTask( msgHandler );
+		mEventTask = new EventTask( this, msgHandler );
 		mImageTask = new ImageTask( msgHandler );
 		
 		// get record
@@ -168,24 +158,18 @@ public class EventActivity extends Activity {
 	 * @param EventRecord r
 	 */     
 	private void showEvent( EventRecord r ) {
-		// hide ProgressBar
-		mLoadingView.hideProgressBar();
-		mLoadingView.hideImage();
-		// show buton
-		mMenuView.showBottons();
 						
 		// no data
 		if ( r == null ) {
 			mErrorView.showNotGetEvent();
+			// hide button
+			mButtonPlace.setVisibility( View.INVISIBLE );
+			mButtonMap.setVisibility( View.INVISIBLE );
+			mButtonApinfo.setVisibility( View.INVISIBLE );			
+			mButtonHomepage.setVisibility( View.INVISIBLE );
+			mButtonPhone.setVisibility( View.INVISIBLE );
 			return;
 		}
-
-		// show buton
-		mButtonPlace.setVisibility( View.VISIBLE );
-		mButtonMap.setVisibility( View.VISIBLE );
-		mButtonApinfo.setVisibility( View.VISIBLE );
-		mButtonHomepage.setVisibility( View.VISIBLE );
-		mButtonPhone.setVisibility( View.VISIBLE );
 
 		// hide image
 		mImageViewEvent.setVisibility( View.GONE );

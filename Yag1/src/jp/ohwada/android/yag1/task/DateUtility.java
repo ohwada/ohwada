@@ -4,12 +4,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import jp.ohwada.android.yag1.Constant;
+
 /**
  * DateUtility
  */
 public class DateUtility {
 
-	public static final long TIME_MSEC_ONE_DAY = 24 * 60 * 60 * 1000; // 1 day
+	private static final long TIME_MSEC_ONE_DAY = Constant.TIME_MSEC_ONE_DAY; 
 	private static final long TIME_MSEC_ONE_MONTH = 30 * TIME_MSEC_ONE_DAY ;
 	
 	private SimpleDateFormat mSdfDate = null;

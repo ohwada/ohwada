@@ -38,20 +38,20 @@ public class EventListParser extends CommonParser {
 		for ( int i=0; i<bindings.length(); i++ ) {
 		
 			// parse binding
-			JSONObject obj = getBinding( bindings, i );
+			JSONObject obj = getObjectFromArray( bindings, i );
 			if ( obj != null ) {
 				EventRecord r = new EventRecord();				
-				String url =  getString1( obj, "event" );
+				String url =  getStringValue( obj, "event" );
 				
 				// check double url
 				if ( !map.containsKey( url ) ) {
 					map.put( url, true );
 					r.event_url = url;
-					r.event_label = getString1( obj, "event_label" );
-					r.place_url = getString1( obj, "place_url" );
-					r.place_label = getString1( obj, "place_label" );
-					r.dtstart = getString1( obj, "dtstart" );
-					r.dtend = getString1( obj, "dtend" );				
+					r.event_label = getStringValue( obj, "event_label" );
+					r.place_url = getStringValue( obj, "place_url" );
+					r.place_label = getStringValue( obj, "place_label" );
+					r.dtstart = getStringValue( obj, "dtstart" );
+					r.dtend = getStringValue( obj, "dtend" );				
 					list.add( r );
 				}
 			}

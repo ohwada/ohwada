@@ -5,17 +5,21 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import jp.ohwada.android.yag1.task.CommonFile;
 import jp.ohwada.android.yag1.task.DateUtility;
 import jp.ohwada.android.yag1.task.EventListTask;
 import jp.ohwada.android.yag1.task.EventRecord;
+import jp.ohwada.android.yag1.task.LoadingDialog;
+import jp.ohwada.android.yag1.task.ManageFile;
 import jp.ohwada.android.yag1.task.PlaceListTask;
 import android.app.DatePickerDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -33,13 +37,14 @@ import android.widget.TextView;
 public class MainActivity extends ListActivity 
 	implements OnItemClickListener {  
   
+	public final static String URL_USAGE = "http://android.ohwada.jp/apr/yag";
+  
 	// object
    	private EventListTask mEventTask;
    	private PlaceListTask mPlaceTask;
 	private EventAdapter mAdapter;
-   	private CommonFile mFile;
+   	private ManageFile mFile;
    	private DateUtility mDateUtility;
-    private LoadingView mLoadingView;
     private ErrorView mErrorView;
         		   	   	   	   					   	
 	// view conponent
@@ -51,7 +56,8 @@ public class MainActivity extends ListActivity
 	private TextView mTextViewDate;
 	private TextView mTextViewCount;
 	private ListView mListView;
-		
+	private LoadingDialog mLoadingDialog = null;
+
 	// variable
 	private List<EventRecord> mListShow = null;
 	private List<EventRecord> mListEvent = null;		
@@ -70,7 +76,6 @@ public class MainActivity extends ListActivity
 		setContentView( view ); 
 
 		// view object
-		mLoadingView = new LoadingView( view );
 		mErrorView = new ErrorView( this, view );
 		mErrorView.setHandler( msgHandler );
 				
@@ -99,7 +104,7 @@ public class MainActivity extends ListActivity
 		mButtonDate.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
-				selectDate();
+				showDatePickerDialog();
 			}
 		});
 					
@@ -107,9 +112,12 @@ public class MainActivity extends ListActivity
 		mEventTask = new EventListTask( msgHandler );
 		mPlaceTask = new PlaceListTask( msgHandler );
 		mDateUtility = new DateUtility();
-		mFile = new CommonFile();
+
+		// file
+		mFile = new ManageFile();
 		mFile.init();
- 
+ 		mFile.clearOldCache();
+ 		
 		// set list view			
 		mListShow = new ArrayList<EventRecord>();
 		mAdapter = new EventAdapter( this, R.layout.event_row, mListShow );
@@ -129,17 +137,6 @@ public class MainActivity extends ListActivity
 	 */  						
 	private void execDateTask( Date date ) {
 		mDateStart = date;
-		// show waiting
-		mLoadingView.show();	
-		// hide view
-		mButtonMenuPlace.setVisibility( View.INVISIBLE );
-		mButtonMenuMap.setVisibility( View.INVISIBLE );
-		mButtonDate.setVisibility( View.INVISIBLE );
-		mTextViewTitle.setText( "" );
-		mTextViewDate.setText( "" );
-		mTextViewCount.setText( "" );
-		mListShow.clear();
-		mErrorView.hideText();	
 			
 		// get events & places
 		isEventFinish = mEventTask.execute( date );
@@ -148,8 +145,14 @@ public class MainActivity extends ListActivity
 		if ( isEventFinish ) {
 			mListEvent = mEventTask.getList();
 			if ( isPlaceFinish ) {
+				// show list if Event & Place are finished
 				showEventList();
 			}
+		}
+
+		// show dialog if Event or Place is not finished		
+		if ( !isEventFinish || !isPlaceFinish ) {
+			showLoadingDialog();
 		}
     }
 	
@@ -158,19 +161,14 @@ public class MainActivity extends ListActivity
 	 */     
 	private void showEventList() {	
 		// hide ProgressBar
-		mLoadingView.hideProgressBar();
-		mLoadingView.hideImage();		
-		// show buton
-		mButtonMenuPlace.setVisibility( View.VISIBLE );
-		mButtonMenuMap.setVisibility( View.VISIBLE );		
-		mButtonDate.setVisibility( View.VISIBLE );
+		hideLoadingDialog();
 				
 		// title
 		String title = getString( R.string.event_list ) ;
 		mTextViewTitle.setText( title );
 		String date = mDateUtility.formatDate( mDateStart );
 		mTextViewDate.setText( date );
-		
+
 		// no data
 		if ( !mPlaceTask.existsFile() ) {
 			mErrorView.showRetryNotGetPlace();
@@ -209,7 +207,7 @@ public class MainActivity extends ListActivity
 		Intent intent = new Intent( this, MapListActivity.class );
 		startActivityForResult( intent, Constant.REQUEST_MENU_MAP );
 	}
-
+	
     /**
      * startEvent
      * @param String url
@@ -222,27 +220,24 @@ public class MainActivity extends ListActivity
 	}
 
     /**
-     * selectDate
+     * startMapSetting
      */
-	private void selectDate() {
-        Calendar calendar = Calendar.getInstance();
-       	int cal_year = calendar.get( Calendar.YEAR );
-        int cal_month = calendar.get( Calendar.MONTH );
-        int cal_day = calendar.get( Calendar.DAY_OF_MONTH );
-		// DatePickerDialog
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-            this,
-            new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet( DatePicker view, int year, int month, int day ) {
-					Date date = mDateUtility.createDate( year, month, day );
-					execDateTask( date );
-                }
-            },
-            cal_year,  cal_month,  cal_day );
-        datePickerDialog.show();
-	}			
-											
+	private void startMapSetting( ) {
+		Intent intent = new Intent( this, MapSettingActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_MAP_SETTING );
+	}
+	
+    /**
+     * startBrawser
+     * @param String url
+     */
+	private void startBrawser( String url ) {
+		if (( url == null )|| url.equals("") ) return;
+		Uri uri = Uri.parse( url );
+		Intent intent = new Intent( Intent.ACTION_VIEW, uri );
+		startActivity( intent );
+	}
+
 	/**
 	 * === onResume ===
 	 */
@@ -280,10 +275,17 @@ public class MainActivity extends ListActivity
     @Override
     public void onDestroy() {
         super.onDestroy();
+        cancelTask();
+	}
+
+	/**
+	 * cancelTask
+	 */
+    private void cancelTask() {
         mEventTask.cancel();
         mPlaceTask.cancel();
 	}
-
+	
 	/**
 	 * === onCreateOptionsMenu ===
 	 */
@@ -302,11 +304,16 @@ public class MainActivity extends ListActivity
     public boolean onOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
 			case R.id.menu_about:
-				AboutDialog dialog = new AboutDialog( this );
-				dialog.show();
+				showAboutDialog();
+				return true;
+			case R.id.menu_usage:
+				startBrawser( URL_USAGE );
+				return true;
+			case R.id.menu_map_setting:
+				startMapSetting();
 				return true;
 			case R.id.menu_clear:
-				mFile.clearCache();
+				mFile.clearAllCache();
 				return true;
         }
         return super.onOptionsItemSelected( item );
@@ -341,6 +348,73 @@ public class MainActivity extends ListActivity
 		}
     }
 
+// --- Dialog ---
+	/**
+	 * show Dialog
+	 */
+	private void showLoadingDialog() {
+		mLoadingDialog = new LoadingDialog( this );
+		mLoadingDialog.setCancelable( false ); 
+
+		mLoadingDialog.setOnCancelListener( new DialogInterface.OnCancelListener() {  
+			public void onCancel( DialogInterface dialog ) {
+				mLoadingDialog.dismiss();
+				cancelTask();
+      		}  
+		});  
+ 
+		mLoadingDialog.setOnKeyListener( new DialogInterface.OnKeyListener() {
+			public boolean onKey( DialogInterface dialog, int id, KeyEvent key) {
+				mLoadingDialog.dismiss();
+				cancelTask();
+				return true; 
+			}  
+		});  
+
+		mLoadingDialog.show();
+	}
+		
+	/**
+	 * hide Progress Dialog
+	 */
+	private void hideLoadingDialog() {
+		if ( mLoadingDialog != null ) {
+			mLoadingDialog.dismiss();
+		}
+		mLoadingDialog = null;
+	}
+
+    /**
+     * showDatePickerDialog
+     */
+	private void showDatePickerDialog() {
+        Calendar calendar = Calendar.getInstance();
+       	int cal_year = calendar.get( Calendar.YEAR );
+        int cal_month = calendar.get( Calendar.MONTH );
+        int cal_day = calendar.get( Calendar.DAY_OF_MONTH );
+		// DatePickerDialog
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+            this,
+            new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet( DatePicker view, int year, int month, int day ) {
+					Date date = mDateUtility.createDate( year, month, day );
+					execDateTask( date );
+                }
+            },
+            cal_year,  cal_month,  cal_day );
+        datePickerDialog.show();
+	}
+
+    /**
+     * showAboutDialog
+     */
+	private void showAboutDialog() {
+		AboutDialog dialog = new AboutDialog( this );
+		dialog.show();
+	}
+// --- Dialog end ---
+					
 // --- Message Handler ---
 	/**
 	 * Message Handler

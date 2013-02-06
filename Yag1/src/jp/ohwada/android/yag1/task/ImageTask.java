@@ -11,7 +11,7 @@ import android.os.Handler;
  */
 public class ImageTask extends CommonTask {  
 
-    private static final long EXPIRE_IMAGE = 30 * TIME_MSEC_ONE_DAY;  // 30 day
+    private static final long EXPIRE_IMAGE = Constant.EXPIRE_DAYS_IMAGE * TIME_MSEC_ONE_DAY;  // 30 day
     private static final String PREFIX_TMP = "tmp_";
 	
 	// object        
@@ -81,6 +81,7 @@ public class ImageTask extends CommonTask {
 			mAsync.cancel( true );
 			mAsync.shutdown();
 		}
+		stopHandler();	
 	}
 
 	/**

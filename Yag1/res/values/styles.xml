@@ -32,5 +32,13 @@
     	<item name="android:windowNoTitle">true</item>
     	<item name="android:windowBackground">@android:color/transparent</item>  
  	</style>
-  
+
+<!-- LoadingDialog -->
+	<style
+    	name="Theme.LoadingDialog"
+    	parent="android:style/Theme.Dialog">   
+    	<item name="android:windowNoTitle">true</item>
+    	<item name="android:windowBackground">@color/dialog_loading_background</item>  
+ 	</style>
+ 	  
 </resources>

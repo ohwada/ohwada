@@ -4,14 +4,15 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+import jp.ohwada.android.yag1.Constant;
+
 /**
  * PlaceList file
  */
 public class PlaceListFile extends CommonFile { 
 
 	// constant
-	private final static String FILE_NAME = "places.txt";
-    private static final long EXPIRE_PLACE = 30L * TIME_MSEC_ONE_DAY;  // 30 day
+    private static final long TIME_EXPIRE = Constant.EXPIRE_DAYS_PLACE_LIST * TIME_MSEC_ONE_DAY; 
 
 	// varibale
 	private File mFileTarget;
@@ -20,7 +21,7 @@ public class PlaceListFile extends CommonFile {
 	 * === constractor ===
 	 */
     public PlaceListFile() {
-        mFileTarget = getFileFromName( FILE_NAME );
+        mFileTarget = getFileFromName( Constant.FILE_NAME_PLACE_LIST );
     }
 
 	/**
@@ -36,7 +37,7 @@ public class PlaceListFile extends CommonFile {
 	 * @return boolean
 	 */
     public boolean isExpiredList() {
-		return isExpiredFile( mFileTarget, EXPIRE_PLACE );
+		return isExpiredFile( mFileTarget, TIME_EXPIRE );
 	}
 
 	/**

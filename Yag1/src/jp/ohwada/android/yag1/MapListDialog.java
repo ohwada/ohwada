@@ -1,25 +1,26 @@
 package jp.ohwada.android.yag1;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+
+import com.google.android.maps.GeoPoint;
 
 /**
  * MapList Dialog
  */
 public class MapListDialog extends CommonDialog {
 
-	// view
-	private EditText mEditAddress;
-	
+	// Search
+	private SearchTask mSearchTask; 
+
 	/**
 	 * === Constructor ===
 	 * @param Context context
 	 */ 	
 	public MapListDialog( Context context ) {
 		super( context, R.style.Theme_MapDialog );
+
 	}
 
 	/**
@@ -30,27 +31,23 @@ public class MapListDialog extends CommonDialog {
 	public MapListDialog( Context context, int theme ) {
 		super( context, theme ); 
 	}
-			
+				
 	/**
 	 * create
+	 * @param String name 
 	 */ 	
-	public void create() {
-		setContentView( R.layout.dialog_map_list );
+	public void create( String name ) {
+	    View view = getLayoutInflater().inflate( R.layout.dialog_map_list, null );
+		setContentView( view );
 		createButtonClose() ;
 		setLayout();	
-		setGravity();
-
-		mEditAddress = (EditText) findViewById( R.id.dialog_map_list_edittext_address );
-
-		Button btnSearch = (Button) findViewById( R.id.dialog_map_list_button_search );
-		btnSearch.setOnClickListener( new View.OnClickListener() {
-			@Override
-			public void onClick( View view ) {
-				searchLocation();
-			}
-		});
+		setGravityTop();
+    		
+		mSearchTask = new SearchTask( mContext, view, msgHandler );
+		mSearchTask.create();
 						
 		Button btnDefault = (Button) findViewById( R.id.dialog_map_list_button_default );
+		btnDefault.setText( name );
 		btnDefault.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
@@ -65,20 +62,23 @@ public class MapListDialog extends CommonDialog {
 				sendMessage( Constant.MSG_ARG1_DIALOG_MAP_GPS );
 			}
 		});
-		
+
+		Button btnApp = (Button) findViewById( R.id.dialog_map_list_button_app );
+		btnApp.setOnClickListener( new View.OnClickListener() {
+			@Override
+			public void onClick( View v) {
+				sendMessage( Constant.MSG_ARG1_DIALOG_MAP_APP );
+			}
+		});
+				
 	}
 
 	/**
-	 * searchLocation
+	 * getPoint
+	 * @return GeoPoint
 	 */
-	private void searchLocation() {
-		String location = mEditAddress.getText().toString();
-		// nothig if no input
-		if ( location.length() == 0 ) return;
-		if ( location.equals("") ) return;
-		Bundle bundle = new Bundle();
-        bundle.putString( Constant.BUNDLE_DIALOG_MAP_LOCATION, location );
-        sendMessage( Constant.MSG_ARG1_DIALOG_MAP_SEARCH, bundle );	        
+	public GeoPoint getPoint() {	
+		return mSearchTask.getPoint();
 	}
-		
+			
 }

@@ -23,15 +23,17 @@ public class CommonDialog extends Dialog {
 	private final static int MSG_ARG2 = 0;
 	
 	// object
-	protected Activity mActivity;
-	private Handler msgHandler;
-	
+	protected Context mContext;
+	protected Handler msgHandler;
+	protected Activity mActivity = null;
+		
 	/**
 	 * === Constructor ===
 	 * @param Context context
 	 */ 	
 	public CommonDialog( Context context ) {
 		super( context );
+		mContext = context;
 	}
 
 	/**
@@ -41,6 +43,7 @@ public class CommonDialog extends Dialog {
 	 */ 
 	public CommonDialog( Context context, int theme ) {
 		super( context, theme ); 
+		mContext = context;
 	}
 
 	/**
@@ -82,11 +85,19 @@ public class CommonDialog extends Dialog {
 		// Display#getWidth() This method was deprecated in API level 13
 		return display.getWidth();
 	}
-		
+
 	/**
 	 * setGravity
 	 */ 
-	protected void setGravity() {
+	protected void setGravityTop() {
+		// show on the top of screen. 
+		getWindow().getAttributes().gravity = Gravity.TOP;
+	}
+			
+	/**
+	 * setGravity
+	 */ 
+	protected void setGravityBottom() {
 		// show on the lower of screen. 
 		getWindow().getAttributes().gravity = Gravity.BOTTOM;
 	}

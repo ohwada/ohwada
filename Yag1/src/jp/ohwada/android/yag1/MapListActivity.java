@@ -6,17 +6,12 @@ import java.util.List;
 import jp.ohwada.android.yag1.task.DateUtility;
 import jp.ohwada.android.yag1.task.PlaceListEventFile;
 import jp.ohwada.android.yag1.task.PlaceRecord;
+
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.location.Address;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Toast;
 
 import com.google.android.maps.GeoPoint;
 
@@ -24,25 +19,16 @@ import com.google.android.maps.GeoPoint;
  * Map List Activity
  */
 public class MapListActivity extends MapCommonActivity { 
-
-	// debug
-	private static final String TAG = Constant.TAG;
-	private static final boolean D = Constant.DEBUG;
-	private static final String TAG_SUB = "MapListActivity";
 	
 	// constant
     private static final int DELAY_TIME = 100; 	// 0.1 sec
-
-	// Geocoder
-	private MapGeocoder mGeocoder;
-	private InputMethodManager mInputManager;
- 	
+	 	
 	// view conponent	
 	private View mView;
-	private ProgressDialog mProgressDialog;
 	private MarkerItemizedOverlay mEventOverlay;
 	private MarkerItemizedOverlay mOtherOverlay;
-			
+	private MapListDialog mOptionDialog;
+				
 	/*
 	 * === onCreate ===
 	 * @param Bundle savedInstanceState
@@ -58,14 +44,8 @@ public class MapListActivity extends MapCommonActivity {
 		createMap();
 		mMenuView.enableEvent();
 		mMenuView.enablePlace();
+		TAG_SUB = "MapListActivity";
 		
-		// view conponent						
-		mProgressDialog = new ProgressDialog( this );
-
-    	// Geocoder
-		mGeocoder = new MapGeocoder( this );
-        mInputManager = (InputMethodManager) getSystemService( Context.INPUT_METHOD_SERVICE );
-
     	// marker
        	Activity activty = this;
        	Drawable marker_other = getResources().getDrawable( R.drawable.marker_yellow );
@@ -86,7 +66,6 @@ public class MapListActivity extends MapCommonActivity {
      * This process is slow, it takes about 7 seconds in Android 1.6 emulator
      */	
 	private void showMarker() {
-		log_d( "showMarker end" );	
 		List<PlaceRecord> list = getPlaceList();
 		// no marker
 		if (( list == null )||( list.size() == 0 )) {
@@ -94,6 +73,7 @@ public class MapListActivity extends MapCommonActivity {
 			return;
 		}
 		// show marker
+		log_d( "showMarker start " + list.size() );	
 		mErrorView.hideText();
         for ( int i=0; i<list.size(); i++ ) {
         	PlaceRecord r = list.get( i );
@@ -120,76 +100,31 @@ public class MapListActivity extends MapCommonActivity {
 	}		
 // --- Main end ---
 
-// --- Search ---
+// --- Search --
 	/**
-	 * searchLocation
-	 * @param String location
+	 * showLocation
+	 * @param GeoPoint point
 	 */
-	protected void 	serachLocation( String location ) {
-		// nothig if no input
-		if ( location.length() == 0 ) return;
-		if ( location.equals("") ) return;
-		
-		// search location
-		hideInputMethod( mView );
-		showProgress();
-		List<Address> list = mGeocoder.getAddressListRetry( location );
-		hideProgress();
-		
+	private void showLocation( GeoPoint point ) {		
 		// if NOT found
-		if (( list == null ) || list.isEmpty() ) {
-			Toast.makeText ( this, R.string.search_not_found, Toast.LENGTH_SHORT ).show();
+		if ( point == null ) {
+			toast_show( R.string.search_not_found );
 			return;
 		}
 											 	
-		// get point
-		Address addr = list.get( 0 );
-		int lat = doubleToE6( addr.getLatitude() ); 
-		int lng = doubleToE6( addr.getLongitude() );
-		GeoPoint point = new GeoPoint( lat, lng );
-
 		// set center of map
 		setCenter( point );
 		mMapController.setZoom( Constant.GEO_ZOOM );
-
-		Toast.makeText( this, R.string.search_found, Toast.LENGTH_SHORT ).show();
-	}
-	 	
-	/**
-	 * <pre>
-	 * show Progress Dialog
-	 * It seems not to show,
-	 * becuase the response of geocoder is earlier 	 		/* 
-	 * </pre>
-	 */
-	private void showProgress() {
-		String msg = getResources().getString( R.string.searching );
-        mProgressDialog.setMessage( msg );
-        mProgressDialog.show();
-	}
-
-	/**
-	 * hide Progress Dialog
-	 */
-	private void hideProgress() {
-        mProgressDialog.dismiss();
-	}
-	
-	/**
-	 * hide software keyboard
-	 * @param View view
-	 */
-	private void hideInputMethod( View view ) {
-        mInputManager.hideSoftInputFromWindow( view.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY ); 
+		toast_show( R.string.search_found );
 	}
 // --- Search end ---
 
 // --- Dialog ---
-	protected void showDialog() {
-		MapListDialog dialog = new MapListDialog( this );
-		dialog.setHandler( msgHandler );
-		dialog.create();
-		dialog.show();
+	protected void showOptionDialog() {
+		mOptionDialog = new MapListDialog( this );
+		mOptionDialog.setHandler( msgHandler );
+		mOptionDialog.create( mGeoName );
+		mOptionDialog.show();
 	}
 // --- Dialog end ---
 		
@@ -204,11 +139,19 @@ public class MapListActivity extends MapCommonActivity {
     	}
 	};
 
+// --- Message Handler ---
+    protected void execHandlerGeocoder() {
+    	if ( mOptionDialog != null ) {
+    		showLocation( mOptionDialog.getPoint() );
+    	}
+    }
+    
 	/**
-	 * write log
-	 * @param String msg
-	 */ 
-	private void log_d( String msg ) {
-	    if (D) Log.d( TAG, TAG_SUB + " " + msg );
+	 * execHandlerMapApp
+	 */
+	protected void execHandlerMapApp() {
+	 	startMapApp( mMapView.getMapCenter() );
 	}
+// --- Message Handler end ---
+
 }

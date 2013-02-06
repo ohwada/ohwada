@@ -1,6 +1,9 @@
 package jp.ohwada.android.yag1.task;
 
+import java.io.File;
+
 import jp.ohwada.android.yag1.Constant;
+
 import android.os.AsyncTask;
 import android.os.Handler;
 
@@ -16,7 +19,10 @@ public class PlaceListTask extends CommonTask {
 
 	// variable
 	private PlaceList mList = null;
-	    	 			
+
+    // variable
+    protected File mFileTarget = null;
+    
 	/**
 	 * === constarctor ===
 	 * @param Handler handler
@@ -71,7 +77,13 @@ public class PlaceListTask extends CommonTask {
 			mAsync.shutdown();
 		}	
 	}
-	
+
+	/**
+	 * execPost
+	 */ 
+	protected void execPost() {
+		execPostFile();
+	}	
 
 	/**
 	 * saveFile

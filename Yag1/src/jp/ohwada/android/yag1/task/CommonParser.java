@@ -1,10 +1,12 @@
 package jp.ohwada.android.yag1.task;
 
+import jp.ohwada.android.yag1.Constant;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import jp.ohwada.android.yag1.Constant;
+import android.util.Log;
 
 /**
  * Common JSON Parser
@@ -13,6 +15,8 @@ public class CommonParser {
 
 	// dubug
     private final static boolean D = Constant.DEBUG; 
+	private static final String TAG = Constant.TAG;
+	protected String TAG_SUB = "Parser";
 	    		
     /**
 	 * === constarctor ===
@@ -27,80 +31,47 @@ public class CommonParser {
 	 * @return JSONArray
 	 */     
 	protected JSONArray getBindings( String str ) {
-		// parse bindings		
-		JSONArray bindings = null;
-		try {
-			JSONObject obj_root = new JSONObject( str );
-			if ( obj_root != null ) {
-				JSONObject obj_results = obj_root.getJSONObject( "results" );
-				if ( obj_results != null ) {
-					bindings = obj_results.getJSONArray("bindings");
-				}	
-			}	
-		} catch (JSONException e) {
-			if (D) e.printStackTrace();
+		JSONObject obj_root = getObjectFromString( str );
+		if ( obj_root == null ) {
+			log_d( "can not parse " + str );
+			return null;
 		}
+		JSONObject obj_results = getObjectFromObject( obj_root, "results" );
+		if ( obj_results == null ) {
+			log_d( "can not parse " + str );
+			return null;
+		}								
+		JSONArray bindings = getArrayFromObject( obj_results, "bindings" );
+		if (( bindings == null )||( bindings.length() == 0 )) {
+			log_d( "can not parse " + str );
+			return null;
+		}		
 		return bindings;
 	}
 
-    /**
-	 * get Binding
-	 * @param JSONArray bindings
-	 * @param int i 
-	 * @return JSONObject
-	 */ 
-	protected JSONObject getBinding( JSONArray bindings, int i ) {
-		// parse binding
-		JSONObject obj = null;
-		try {
-			obj = bindings.getJSONObject( i );
-		} catch (JSONException e) {
-			if (D) e.printStackTrace();
-		}
-		return obj;
-	}
-					
     /**
 	 * get String from json object
 	 * @param JSONObject obj
 	 * @param String name
 	 * @return String
 	 */   
-	protected String getString1( JSONObject obj, String name ) {
-		String str = "";
-		try {
-			JSONObject obj_name = obj.getJSONObject( name );
-			if ( obj_name != null ) {
-				str = obj_name.getString( "value" );
-				str = str.trim();
-			}
-		} catch ( JSONException e ) {
-			if (D) e.printStackTrace();
-		}
-		return str;
+	protected String getStringValue( JSONObject obj, String name ) {
+		JSONObject obj_name = getObjectFromObject( obj, name );
+		if ( obj_name == null ) return "";
+		return getStringFromObject( obj_name, "value" );
 	}
 
     /**
-	 * get String from index of json array
+	 * get String from json object
 	 * @param JSONObject obj
 	 * @param String name
 	 * @return String
 	 */ 
-	protected String getString2( JSONObject obj, String name ) {
-		String str = "";
-		try {
-			JSONArray obj_names = obj.getJSONArray( name );
-			if (( obj_names != null )&&( obj_names.length() > 0 )) {
-				JSONObject obj2 = obj_names.getJSONObject( 0 );
-				if ( obj2 != null ) {
-					str = obj2.getString( "value" );
-					str = str.trim();
-				}
-			}
-		} catch ( JSONException e ) {
-			if (D) e.printStackTrace();
-		}
-		return str;
+	protected String getStringZeroValue( JSONObject obj, String name ) {
+		JSONArray obj_names = getArrayFromObject( obj, name );
+		if (( obj_names == null )||( obj_names.length() == 0 )) return "";
+		JSONObject obj_zero = getObjectFromArray( obj_names, 0 );
+		return getStringFromObject( obj_zero, "value" );
 	}
 
     /**
@@ -114,7 +85,7 @@ public class CommonParser {
 	protected String parseBnodeString( JSONObject obj_root, JSONObject obj, String bnode, String name ) {
 		JSONObject obj_bnode = parseBnode( obj_root, obj, bnode );
 		if ( obj_bnode == null )  return "";
-		return getString2( obj_bnode, name );			
+		return getStringZeroValue( obj_bnode, name );			
 	}
 	
     /**
@@ -125,15 +96,97 @@ public class CommonParser {
 	 * @return JSONObject
 	 */ 
 	protected JSONObject parseBnode( JSONObject obj_root, JSONObject obj, String name ) {
-		String node = getString2( obj, name );
+		String node = getStringZeroValue( obj, name );
 		if (( node == null ) || node.equals("") ) return null;
-		JSONObject obj_node = null;
+		return getObjectFromObject( obj_root, node );
+	}
+	
+    /**
+	 * get Object From String
+	 * @param String str
+	 * @return JSONObject
+	 */  
+	protected JSONObject getObjectFromString( String str ) {	
+		JSONObject obj = null;
 		try {
-			obj_node = obj_root.getJSONObject( node );
-		} catch ( JSONException e ) {
+			obj = new JSONObject( str );
+		} catch (JSONException e) {
 			if (D) e.printStackTrace();
 		}
-		return obj_node;
+		return obj;
 	}
+
+    /**
+	 * get Object From Object
+	 * @param JSONObject obj
+	 * @param String str
+	 * @return JSONObject
+	 */  
+	protected JSONObject getObjectFromObject( JSONObject obj, String str ) {
+		JSONObject obj_str = null;
+		try {
+			obj_str = obj.getJSONObject( str );
+		} catch (JSONException e) {
+			if (D) e.printStackTrace();
+		}
+		return obj_str;
+	}
+
+    /**
+	 * get Object From Array
+	 * @param JSONArray obj_array
+	 * @param int i 
+	 * @return JSONObject
+	 */ 
+	protected JSONObject getObjectFromArray( JSONArray obj_array, int i ) {
+		JSONObject obj = null;
+		try {
+			obj = obj_array.getJSONObject( i );
+		} catch (JSONException e) {
+			if (D) e.printStackTrace();
+		}
+		return obj;
+	}
+		
+	/**
+	 * get Array From Object
+	 * @param JSONObject obj
+	 * @param String str
+	 * @return JSONArray
+	 */ 	
+	protected JSONArray getArrayFromObject( JSONObject obj, String str ) {
+		JSONArray array = null;
+		try {
+			array = obj.getJSONArray( str );
+		} catch (JSONException e) {
+			if (D) e.printStackTrace();
+		}
+		return array;
+	}
+
+    /**
+	 * get String from json object
+	 * @param JSONObject obj
+	 * @param String name
+	 * @return String
+	 */ 
+	protected String getStringFromObject( JSONObject obj, String name ) {
+		String str = "";
+		try {
+			str = obj.getString( name );
+			str = str.trim();
+		} catch (JSONException e) {
+			if (D) e.printStackTrace();
+		}
+		return str;
+	}
+
+ 	/**
+	 * write log
+	 * @param String msg
+	 */ 
+	protected void log_d( String msg ) {
+	    if (D) Log.d( TAG, TAG_SUB + " " + msg );
+	} 		
   			
 }

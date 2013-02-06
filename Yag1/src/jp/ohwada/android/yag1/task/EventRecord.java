@@ -167,6 +167,7 @@ public class EventRecord {
 	 * @return String 
 	 */
     public String getEventName( String url ) {
+    	// http://yan.yafjp.org/event/event_xxx -> event_xxx
 		String name = url.replaceFirst( HTTP_EVENT, "" );
     	return name;
     }
@@ -179,7 +180,7 @@ public class EventRecord {
 	 */
 	private String parseImageName( String name, String image_url ) {
 		String ext = parseExt( image_url );
-		String str = "image_" + name + "." + ext ;
+		String str = Constant.FILE_PREFIX_EVENT_IMAGE + "_" + name + "." + ext ;
 		return str;
 	}
 	    
