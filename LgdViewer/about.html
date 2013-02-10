@@ -1,0 +1,120 @@
+<html>
+<head>
+<!-- $Id: $ -->
+<meta charset="utf-8">
+<title>LGD Viewer</title>
+</head>
+<body>
+[<a href="index.php">HOME</a>] [About] <br><br>
+<h1>About - LGD Viewer</h1>
+
+<h2>1. 概要</h2>
+<b>LGD Viewer</b> は、 <a href="http://openstreetmap.jp" target="_blank">Open Street Map</a> に登録されているノードの情報を取得するWEBアプリケーションです。<br>
+<br>
+指定された緯度経度から1km以内のノードを取得します。<br>
+HTML形式で表示する他に、JSON形式で情報を返送するAPIを持っています。<br>
+ スマートフォンのアプリケーションが利用することを想定しています。<br>
+Androidアプリ <a href="https://play.google.com/store/apps/details?id=jp.ohwada.android.osm1 " target="_blank">OSM Node Viewer</a> にて利用しています。<br>
+<br>
+ノード情報の取得には、 <a href="http://linkedgeodata.org/" target="_blank">Linked Geo Data</a> を利用しました。<br>
+このアプリは、<a href="http://lod.sfc.keio.ac.jp/challenge2012/" target="_blank">Linked Open Data チャレンジ Japan 2012</a> の 応募作品です。<br>
+
+<h2>2.使い方</h2>
+<h3>2-1. HTML形式</h3>
+<a href="http://lgd.ohwada.jp/">http://lgd.ohwada.jp/</a><br>
+上記のアクセスすると、緯度と経度を入力するフォーム画面が表示される。<br>
+緯度と経度を入力すると、1km以内のノードの情報が表示される。<br>
+<br>
+<h3>2-2. JSON形式のAPI</h3>
+<h4>(1) ノードの一覧を取得する</h4>
+問い合わせの形式<br>
+<pre>
+http://lgd.ohwada.jp/api.php?type=list&lat=緯度&long=経度
+</pre>
+<br>
+responseの例
+<pre>
+{"status":0},
+{"nodes":[
+  {"status":0,
+  "lgdo:Node":"http:¥/¥/linkedgeodata.org¥/triplify¥/node264810180",
+  "rdf:label":"¥u95a2¥u5185(Kannai)",
+  "lgdo:directType":"http:¥/¥/linkedgeodata.org¥/ontology¥/RailwayStation",
+  "geo:lat":"35.444103",
+  "geo:long":"139.636106"
+  ]}
+</pre>
+<br>
+<b>status</b><br>
+0: 詳細情報なし<br>
+必ず含まれる情報は上記の５つです<br>
+１日に１回、情報が更新されます。<br>
+<br>
+1: 詳細情報あり<br>
+含まれる情報はノードにより異なります<br>
+30日に１回、情報が更新されます。30日間は、同じ情報を配信します。<br>
+<br>
+<h4>(2) ノードの詳細情報を取得する</h4>
+問い合わせの形式<br>
+<pre>
+http://lgd.ohwada.jp/api.php?type=node&node=ノード番号
+</pre>
+ノードのURLが http://linkedgeodata.org/triplify/node264810180 ならば、<br>
+ノード番号は 264810180 です。<br>
+<br>
+responseの例
+<pre>
+{"status":1},
+{"node":[
+  {"status":1,
+  "lgdo:Node":"http:¥/¥/linkedgeodata.org¥/triplify¥/node264810180",
+  "rdf:label":"¥u95a2¥u5185(Kannai)",
+  "lgdo:directType":"http:¥/¥/linkedgeodata.org¥/ontology¥/RailwayStation",
+  "geo:lat":"35.444103",
+  "geo:long":"139.636106",
+  ...
+  "rdf:label:ja":"¥u6238¥u585a",
+  "lgdo:directType:label_ja":"¥u9244¥u9053¥u99c5",
+  "lgdp:note":"National-Land Numerical Information (Railway) 2007, MLIT Japan",
+  ...
+  ]}
+</pre>
+<br> 
+status は常に 1 (詳細情報あり) です。<br>
+含まれる情報はノードにより異なります。<br>
+<br> 
+
+<h4>(3) スキーマー</h4>
+rdf: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; <br> 
+geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt; <br> 
+lgdo: &lt;http://linkedgeodata.org/ontology/&gt; <br> 
+lgdp: &lt;http://linkedgeodata.org/property/&gt; <br> 
+<br>  
+
+<h2>3. 動作の概要</h2>
+(1) 最初に取得するときは、このWEBアプリはLGDに問合せを行い、ノードの概略情報を取得します。<br> 
+概略情報の一覧を返送します。<br> 
+(2) 自動的に１日に１回、LGDに問合せを行い、ノードの詳細情報を取得します。<br> 
+(3) ２日目以降に取得するときは、詳細情報の一覧を返送します。<br> 
+<br> 
+
+<h2>4. ライセンス</h2>
+<a href="http://www.openstreetmap.org/">Open Street Map</a> および <a href="http://linkedgeodata.org/" target="_blank">Linked Geo Data</a> に準拠します。<br>
+このWEBアプリの利用には、<a href="http://creativecommons.org/licenses/by-nc-sa/2.1/jp/" target="_blank">CC-BY-NC-SA</a> が適用されます。 <br>
+地理データの利用には <a href="http://www.openstreetmap.org/copyright/en" target="_blank">Open Database License (ODbL) </a> が適用されます。<br>
+<br>
+ソーソコードを code googl にて公開しています。<br>
+Apahce ライセンスです。
+<br>
+<h2>5. 注意事項</h2>
+(1) ベータ版です。<br> 
+予告なく仕様が変更になることがあります。<br> 
+<br>
+(2) LGDから取得した情報を内部でキャッシュしています。<br> 
+データ量が膨大なため、キャッシュする量に制限があります。参照が古い情報から削除しています。<br> 
+
+<h2>6. 制作者</h2>
+<a href="http://android.ohwada.jp/">K.OHWADA</a><br>
+<br><br>
+</body>
+</html>
