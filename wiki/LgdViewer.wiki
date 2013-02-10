@@ -1,0 +1,14 @@
+#summary LGD Viewer
+
+= 概要 ==
+「LGD Viewer」は、 OpenStreetMap に登録されているノード情報を地図に表示するアプリケーションです。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/2426
+
+= ソースコード =
+Apacheライセンスで公開しています。<br>
+http://code.google.com/p/ohwada/source/browse/#svn%2FLgdViewer
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130210_lgd_shot.png
