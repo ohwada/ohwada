@@ -2,29 +2,26 @@ package jp.ohwada.android.osm1;
 
 import java.util.List;
 
+import jp.ohwada.android.osm1.task.ManageFile;
 import jp.ohwada.android.osm1.task.NodeList;
-import jp.ohwada.android.osm1.task.NodeListFile;
 import jp.ohwada.android.osm1.task.NodeListTask;
 import jp.ohwada.android.osm1.task.NodeRecord;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.location.Address;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -43,7 +40,9 @@ public class MainActivity extends MapActivity
 	private static final String TAG = Constant.TAG;
 	private static final boolean D = Constant.DEBUG;
 	private static final String TAG_SUB = "MainActivity";
-	
+
+	private final static String URL_USAGE = "http://android.ohwada.jp/apr/osm1";
+		
 	// gps
     private static final long LOCATION_MIN_TIME = 0L; 
     private static final float LOCATION_MIN_DISTANCE = 0f;
@@ -62,22 +61,21 @@ public class MainActivity extends MapActivity
 	private MapController mMapController;
 	private MarkerItemizedOverlay mNodeOverlay;
     private GpsItemizedOverlay mGpsOverlay;
-	private ProgressDialog mProgressDialog;
-	
-	// Geocoder
-	private MapGeocoder mGeocoder;
-	private InputMethodManager mInputManager;
-
-   	private NodeListFile mFile;
-   	
-	// task
-	private boolean isNodeFinish = false;
+    private OptionDialog mOptionDialog = null;
+    
+    // object
+   	private ManageFile mManageFile;
 		
 	// variable
 	private NodeList mNodeList = null;
+ 	private GeoPoint mGeoPointDefault = null;
+ 	private String mGeoName = "";
 	private int mLat = 0;
 	private int mLong = 0;
-		
+ 	
+	// task
+	private boolean isNodeFinish = false;
+	    			
 	/*
 	 * === onCreate ===
 	 * @param Bundle savedInstanceState
@@ -93,7 +91,7 @@ public class MainActivity extends MapActivity
 		btnOption.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
-				showMenuDialog();
+				showOptionDialog();
 			}
 		});
 
@@ -105,7 +103,17 @@ public class MainActivity extends MapActivity
 				getNewPoint();
 			}
 		});
-		
+
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences( this );
+    	mGeoName = pref.getString( 
+    		Constant.PREF_NAME_GEO_NAME, 
+    		getResources().getString( R.string.geo_name ) );
+    	mLat = pref.getInt( 
+    		Constant.PREF_NAME_GEO_LAT, Constant.GEO_LAT );
+    	mLong = pref.getInt( 
+    		Constant.PREF_NAME_GEO_LONG, Constant.GEO_LONG );   
+		mGeoPointDefault = new GeoPoint( mLat, mLong );
+		    				
     	// map
 		mMapView = (MapView) findViewById( R.id.mapview );
     	mMapView.setClickable( true );
@@ -124,24 +132,19 @@ public class MainActivity extends MapActivity
     	mMapView.getOverlays().add( mGpsOverlay );
 
      	// default
-     	mLat = Constant.GEO_LAT;
-		mLong = Constant.GEO_LONG;
 		mMapController.setZoom( Constant.GEO_ZOOM );
-		setCenter( new GeoPoint( mLat, mLong) ) ; 
-		
-		// location	   	
-		mLocationManager = (LocationManager) getSystemService( LOCATION_SERVICE );
-		
-    	// Geocoder
-		mGeocoder = new MapGeocoder( this );
-        mInputManager = (InputMethodManager) getSystemService( Context.INPUT_METHOD_SERVICE );
+		setCenter( mGeoPointDefault ) ; 
 
 		// file initial
-		mFile = new NodeListFile();
-		mFile.init();
+		mManageFile = new ManageFile();
+		mManageFile.init();
+		mManageFile.clearOldCache();
+				
+		// location	   	
+		mLocationManager = (LocationManager) getSystemService( LOCATION_SERVICE );
 
-		// task		
-		mNodeTask = new NodeListTask( msgHandler );		
+		// task	
+		mNodeTask = new NodeListTask( this, msgHandler );		
     	execTaskFromIntent( getIntent() );
 	}
 
@@ -150,10 +153,13 @@ public class MainActivity extends MapActivity
 	 */
     @Override
     public void onNewIntent( Intent intent ) {
-        log_d("onNewIntent");
     	execTaskFromIntent( intent );
     }
 
+	/**
+	 * execTaskFromIntent
+	 * @param Intent intent
+	 */
     private void execTaskFromIntent( Intent intent ) {
 		// get record
 		if ( intent != null ) {
@@ -172,8 +178,6 @@ public class MainActivity extends MapActivity
 	 * execTask
 	 */  						
 	private void execTask() {
-		// show waiting
-		showProgress( R.string.loading );
 		// get nodes
 		isNodeFinish = mNodeTask.execute( mLat, mLong );
 		if ( isNodeFinish ) {
@@ -221,15 +225,9 @@ public class MainActivity extends MapActivity
     @Override
     public void onDestroy() {
         super.onDestroy();
-        cancelTask();
-	}
-
-	/**
-	 * cancelTask
-	 */
-    private void  cancelTask() {
         mNodeTask.cancel();
-    } 
+        cancelOptionDialog();
+	}
 	
 	/*
 	 * === isRouteDisplayed ===
@@ -312,16 +310,40 @@ public class MainActivity extends MapActivity
     public boolean onOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
 			case R.id.menu_about:
-				AboutDialog dialog = new AboutDialog( this );
-				dialog.show();
+				showAboutDialog();
+				return true;
+			case R.id.menu_usage:
+				startBrawser( URL_USAGE );
+				return true;
+			case R.id.menu_map_setting:
+				startMapSetting();
 				return true;
 			case R.id.menu_clear:
-				mFile.clearCache();
+				mManageFile.clearAllCache();
 				return true;
         }
         return super.onOptionsItemSelected( item );
     }
 
+    /**
+     * startMapSetting
+     */
+	private void startMapSetting( ) {
+		Intent intent = new Intent( this, MapSettingActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_MAP_SETTING );
+	}
+	
+    /**
+     * startBrawser
+     * @param String url
+     */
+	private void startBrawser( String url ) {
+		if (( url == null )|| url.equals("") ) return;
+		Uri uri = Uri.parse( url );
+		Intent intent = new Intent( Intent.ACTION_VIEW, uri );
+		startActivity( intent );
+	}
+	
 // --- main ---
 	/**
 	 * setCenter
@@ -336,26 +358,22 @@ public class MainActivity extends MapActivity
      * showMarker
      * This process is slow, it takes about 7 seconds in Android 1.6 emulator
      */	
-	private void showMarker() {
-		// hide ProgressBar
-		hideProgress();
-		
+	private void showMarker() {		
+		// no marker
 		if ( mNodeList == null ) {
 			toast_show( R.string.error_not_get_node );
-			log_d( "NodeList is null" );	
 			return;
 		}
 		
-		List<NodeRecord> list = mNodeList.getList();
+		List<NodeRecord> list = mNodeList.getListRecord();
 		// no marker
 		if (( list == null )||( list.size() == 0 )) {
 			toast_show( R.string.error_not_get_node );
-			log_d( "showMarker no place" );	
 			return;
 		}
 
 		// show marker
-		log_d( "showMarker start" );	
+		log_d( "showMarker start " + list.size() );	
 		mNodeOverlay.clearPoints();
         for ( int i=0; i<list.size(); i++ ) {
 			mNodeOverlay.addPoint( list.get( i ) );		
@@ -429,104 +447,45 @@ public class MainActivity extends MapActivity
 				
 // --- Search ---
 	/**
-	 * searchLocation
-	 * @param String location
+	 * showLocation
+	 * @param GeoPoint point
 	 */
-	private void serachLocation( String location ) {
-		// nothig if no input
-		if ( location.length() == 0 ) return;
-		if ( location.equals("") ) return;
-		
-		// search location
-		hideInputMethod();
-		showProgress( R.string.searching );
-		List<Address> list = mGeocoder.getAddressListRetry( location );
-		hideProgress();
-		
+	private void showLocation( GeoPoint point ) {		
 		// if NOT found
-		if (( list == null ) || list.isEmpty() ) {
+		if ( point == null ) {
 			toast_show( R.string.search_not_found );
 			return;
 		}
-											 	
-		// get point
-		Address addr = list.get( 0 );
-		int lat = doubleToE6( addr.getLatitude() ); 
-		int lng = doubleToE6( addr.getLongitude() );
-		GeoPoint point = new GeoPoint( lat, lng );
 
 		// set center of map
 		setCenter( point );
 		mMapController.setZoom( Constant.GEO_ZOOM );
-
 		toast_show( R.string.search_found );
-	}
-	
-	/**
-	 * hide software keyboard
-	 * @param View view
-	 */
-	private void hideInputMethod() {
-        mInputManager.hideSoftInputFromWindow( mView.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY ); 
 	}
 // --- Search end ---
 
-// --- Progress Dialog ---	 	
-	/**
-	 * <pre>
-	 * show Progress Dialog
-	 * It seems not to show,
-	 * becuase the response of geocoder is earlier 	 		/* 
-	 * </pre>
-	 */
-	private void showProgress( int id ) {
-		mProgressDialog = new ProgressDialog( this ); 
-		mProgressDialog.setCancelable( false ); 
-
-		mProgressDialog.setOnCancelListener( new DialogInterface.OnCancelListener() {  
-			public void onCancel( DialogInterface dialog ) {
-				log_d("onCancel"); 
-				cancelProgress();
-      		}  
-		});  
- 
-		mProgressDialog.setOnKeyListener( new DialogInterface.OnKeyListener() {
-			public boolean onKey( DialogInterface dialog, int id, KeyEvent key) {
-				log_d("OnKey");
-				cancelProgress();
-				return true; 
-			}  
-		});  
-
-		String msg = getResources().getString( id );		    
-        mProgressDialog.setMessage( msg );
-        mProgressDialog.show();
+// --- Dialog ---
+	private void showOptionDialog() {
+		mOptionDialog = new OptionDialog( this );
+		mOptionDialog.setHandler( msgHandler );
+		mOptionDialog.create( mGeoName );
+		mOptionDialog.show();
 	}
-	      			
+
 	/**
-	 * hide Progress Dialog
+	 * cancelOptionDialog
 	 */
-	private void hideProgress() {
-		if ( mProgressDialog != null ) {
-        	mProgressDialog.dismiss();
-        	mProgressDialog = null;
+    public void cancelOptionDialog() {
+        if ( mOptionDialog != null ) {
+        	mOptionDialog.cancel();
         }
 	}
-	
+			
 	/**
-	 * hide Progress Dialog & cancel task
-	 */
-	private void cancelProgress() {
-		hideProgress(); 
-      	cancelTask(); 
-	}
-// --- Progress Dialog end ---
-
-// --- Menu Dialog ---
-	private void showMenuDialog() {
-		MenuDialog dialog = new MenuDialog( this );
-		dialog.setHandler( msgHandler );
-		dialog.create();
+     * showAboutDialog
+     */
+	private void showAboutDialog() {
+		AboutDialog dialog = new AboutDialog( this );
 		dialog.show();
 	}
 // --- Dialog end ---
@@ -558,33 +517,32 @@ public class MainActivity extends MapActivity
 	 * @param Message msg
 	 */
 	private void execHandler( Message msg ) {
-		    switch ( msg.what ) {
+		switch ( msg.what ) {
             case Constant.MSG_WHAT_DIALOG_MAP:
-            	execHandlerMove( msg );
+            	execHandlerOption( msg );
                 break;
             case Constant.MSG_WHAT_TASK_NODE_LIST:
             	isNodeFinish = true;
                 mNodeList= mNodeTask.getList();
     			showMarker();
-                break;                
+                break;  
+			case Constant.MSG_WHAT_TASK_GEOCODER:
+    			showLocation( mOptionDialog.getPoint() );
+                break;              
         }
 	}
 
 	/**
-	 * execHandlerMove
+	 * execHandlerOption
 	 * @param Message msg
 	 */
-	private void execHandlerMove( Message msg ) {
+	private void execHandlerOption( Message msg ) {
     	switch ( msg.arg1 ) {
             case Constant.MSG_ARG1_DIALOG_MAP_DEFAULT:
-				setCenter( new GeoPoint( Constant.GEO_LAT, Constant.GEO_LONG ) );
+				setCenter( mGeoPointDefault );
                 break;
             case Constant.MSG_ARG1_DIALOG_MAP_GPS:
 				moveGps();
-                break;
-            case Constant.MSG_ARG1_DIALOG_MAP_SEARCH:
-            	String location = msg.getData().getString( Constant.BUNDLE_DIALOG_MAP_LOCATION );
-				serachLocation( location );
                 break;
         }
 	}

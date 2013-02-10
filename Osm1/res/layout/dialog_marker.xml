@@ -9,6 +9,8 @@
     <TextView android:id="@+id/dialog_marker_textview_title"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
 		android:textColor="@color/dialog_marker_text"
 		android:textSize="20sp"
 		/>
@@ -16,6 +18,8 @@
     <TextView android:id="@+id/dialog_marker_textview_message"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
 		android:layout_marginTop="4dp"
 		android:textColor="@color/dialog_marker_text"
 		/>
@@ -26,15 +30,13 @@
 		android:layout_marginTop="4dp"
 		android:orientation="horizontal">
 
-<!--
- 		<Button android:id="@+id/dialog_marker_button_place" 
+ 		<Button android:id="@+id/dialog_marker_button_detail" 
  			android:layout_width="0dp" 
  			android:layout_height="wrap_content"
  			android:layout_weight="1"
  			android:background="@android:drawable/btn_default_small"
- 			android:text="@string/dialog_button_place" />
--->
- 				
+ 			android:text="@string/dialog_button_detail" />
+
  		<Button android:id="@+id/dialog_button_close" 
  			android:layout_width="0dp" 
  			android:layout_height="wrap_content"

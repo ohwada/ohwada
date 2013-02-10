@@ -19,12 +19,15 @@ import android.widget.Button;
 public class CommonDialog extends Dialog {
 
 	// constant
-	private final static float WIDTH_RATIO = 0.95f;
+	private final static float WIDTH_RATIO_FULL = 0.95f;
+	private final static float WIDTH_RATIO_HALF = 0.5f;
 	private final static int MSG_ARG2 = 0;
 	
 	// object
+	protected Context mContext;
 	protected Activity mActivity;
-	private Handler msgHandler;
+	protected Handler msgHandler;
+	protected View mView = null;
 	
 	/**
 	 * === Constructor ===
@@ -32,6 +35,7 @@ public class CommonDialog extends Dialog {
 	 */ 	
 	public CommonDialog( Context context ) {
 		super( context );
+		mContext = context;
 	}
 
 	/**
@@ -41,6 +45,7 @@ public class CommonDialog extends Dialog {
 	 */ 
 	public CommonDialog( Context context, int theme ) {
 		super( context, theme ); 
+		mContext = context;
 	}
 
 	/**
@@ -67,16 +72,45 @@ public class CommonDialog extends Dialog {
 	/**
 	 * setLayout
 	 */ 
-	protected void setLayout() {
-		int width = (int)( getWidth() * WIDTH_RATIO );
-		getWindow().setLayout( width, ViewGroup.LayoutParams.WRAP_CONTENT );
+	protected void setLayoutFull() {
+		setLayout( getWidthFull() );
 	}
 
 	/**
 	 * setLayout
 	 */ 
+	protected void setLayoutHalf() {
+		setLayout( getWidthHalf() );
+	}
+	
+	/**
+	 * setLayout
+	 */ 
+	protected void setLayout( int width ) {
+		getWindow().setLayout( width, ViewGroup.LayoutParams.WRAP_CONTENT );
+	}
+
+	/**
+	 * getWidth
+	 */ 
+	protected int getWidthFull() {
+		int width = (int)( getWindowWidth() * WIDTH_RATIO_FULL );
+		return width;
+	}	 
+
+	/**
+	 * getWidth
+	 */ 
+	protected int getWidthHalf() {
+		int width = (int)( getWindowWidth() * WIDTH_RATIO_HALF );
+		return width;
+	}	
+		 	
+	/**
+	 * getWindowWidth
+	 */ 
 	@SuppressWarnings("deprecation")
-	private int getWidth() {
+	protected int getWindowWidth() {
 		WindowManager wm = (WindowManager) getContext().getSystemService( Context.WINDOW_SERVICE );
 		Display display = wm.getDefaultDisplay();
 		// Display#getWidth() This method was deprecated in API level 13
@@ -86,11 +120,19 @@ public class CommonDialog extends Dialog {
 	/**
 	 * setGravity
 	 */ 
-	protected void setGravity() {
+	protected void setGravityTop() {
+		// show on the top of screen. 
+		getWindow().getAttributes().gravity = Gravity.TOP;
+	}
+
+	/**
+	 * setGravity
+	 */ 
+	protected void setGravityBottom() {
 		// show on the lower of screen. 
 		getWindow().getAttributes().gravity = Gravity.BOTTOM;
 	}
-	    	
+		    	
 	/**
 	 * sendMessage
 	 * @param int arg1

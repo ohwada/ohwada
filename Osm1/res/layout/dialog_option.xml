@@ -22,17 +22,17 @@
 			android:layout_height="wrap_content"
 			android:orientation="horizontal">
 
-			<EditText android:id="@+id/dialog_map_list_edittext_address"
+			<EditText android:id="@+id/search_edittext_address"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
-				android:hint="@string/dialog_edit_address" 
+				android:hint="@string/edit_address" 
 				android:singleLine = "true" />
 
-			<Button android:id="@+id/dialog_map_list_button_search"
+			<Button android:id="@+id/search_button_search"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="@string/dialog_button_search"/>
+				android:text="@string/button_search"/>
 
 		</LinearLayout>
 
@@ -47,7 +47,7 @@
  				android:layout_height="wrap_content"
  				android:layout_weight="1"
  				android:background="@android:drawable/btn_default_small"
- 				android:text="@string/dialog_button_default" />
+ 				android:text="@string/geo_name" />
  				
  			<Button android:id="@+id/dialog_map_list_button_gps" 
  				android:layout_width="0dp" 

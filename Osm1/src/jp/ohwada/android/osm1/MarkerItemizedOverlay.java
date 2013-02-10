@@ -13,33 +13,36 @@ import android.graphics.drawable.Drawable;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
-import com.google.android.maps.OverlayItem;
 
 /**
  * set up the marker list of a map 
- * https://developers.google.com/maps/documentation/android/v1/reference/com/google/android/maps/ItemizedOverlay
  */
-public class MarkerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
+public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 	
 	// object
 	private Activity mActivity;
 	private Context mContext;
 	private Resources mResources;
         
-	// list of OverlayItem
-    private List<OverlayItem> items = new ArrayList<OverlayItem>();    
-    private OverlayItem mItem = null;
+	// list of MarkerOverlayItem
+    private List<MarkerOverlayItem> items = new ArrayList<MarkerOverlayItem>();    
 
 	// variable
 	private Map<String, Drawable> mHashMarker = null;
 	private Drawable mMarkerAqua = null;
+	private Drawable mMarkerBlack = null;
 	private Drawable mMarkerBlue = null;
+	private Drawable mMarkerFuchsia = null;
 	private Drawable mMarkerGray = null;
 	private Drawable mMarkerGreen = null;
+	private Drawable mMarkerLime = null;
 	private Drawable mMarkerMaroon = null;
-	private Drawable mMarkerPink = null;
+	private Drawable mMarkerNavy = null;
+	private Drawable mMarkerOlive = null;
 	private Drawable mMarkerPurple = null;
 	private Drawable mMarkerRed = null;
+	private Drawable mMarkerSilver = null;
+	private Drawable mMarkerTeal = null;
 	private Drawable mMarkerWhite = null;
 	private Drawable mMarkerYellow = null;
 		
@@ -62,25 +65,37 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 	 */
 	private void initMarker() {
        	mMarkerAqua = createMarker( R.drawable.marker_aqua );
+       	mMarkerBlack = createMarker( R.drawable.marker_black );
        	mMarkerBlue = createMarker( R.drawable.marker_blue );
+       	mMarkerFuchsia = createMarker( R.drawable.marker_fuchsia );
        	mMarkerGray = createMarker( R.drawable.marker_gray );
        	mMarkerGreen = createMarker( R.drawable.marker_green );
+       	mMarkerLime = createMarker( R.drawable.marker_lime );
        	mMarkerMaroon = createMarker( R.drawable.marker_maroon );
-       	mMarkerPink = createMarker( R.drawable.marker_pink );
+       	mMarkerNavy = createMarker( R.drawable.marker_navy );
+       	mMarkerOlive = createMarker( R.drawable.marker_olive );
        	mMarkerPurple = createMarker( R.drawable.marker_purple );
        	mMarkerRed = createMarker( R.drawable.marker_red );
+       	mMarkerSilver = createMarker( R.drawable.marker_silver );
+       	mMarkerTeal = createMarker( R.drawable.marker_teal ); 
        	mMarkerWhite = createMarker( R.drawable.marker_white );
        	mMarkerYellow = createMarker( R.drawable.marker_yellow );
 
 		Map<String, Drawable> hash = new HashMap<String, Drawable>();
 		hash.put( "aqua", mMarkerAqua );
+		hash.put( "black", mMarkerBlack );
 		hash.put( "blue", mMarkerBlue );
+		hash.put( "fuchsia", mMarkerFuchsia );
 		hash.put( "gray", mMarkerGray );
 		hash.put( "green", mMarkerGreen );
+		hash.put( "lime", mMarkerLime );
 		hash.put( "maroon", mMarkerMaroon );
-		hash.put( "pink", mMarkerPink );
+		hash.put( "navy", mMarkerNavy );
+		hash.put( "olive", mMarkerOlive );
 		hash.put( "purple", mMarkerPurple );
 		hash.put( "red", mMarkerRed );
+		hash.put( "silver", mMarkerSilver );
+		hash.put( "teal", mMarkerTeal );
 		hash.put( "white", mMarkerWhite );
 		hash.put( "yellow", mMarkerYellow );
 		mHashMarker = hash;
@@ -100,7 +115,7 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 	 * @param int : The number of a point 
 	 */
 	@Override
-    protected OverlayItem createItem( int index ) {
+    protected MarkerOverlayItem createItem( int index ) {
     	if (( index < 0 )||( index >= items.size() )) return null;
     	return items.get( index );
     }
@@ -122,10 +137,11 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 	@Override
 	protected boolean onTap( int index ) {
 		if (( index < 0 )||( index >= items.size() )) return true;
-		mItem = items.get( index );
+		MarkerOverlayItem item = items.get( index );
 		MarkerDialog dialog = new MarkerDialog( mActivity );		
-		dialog.setCustomTitle( mItem.getTitle() );
-		dialog.setMessage( mItem.getSnippet()  );
+		dialog.setCustomTitle( item.getTitle() );
+		dialog.setMessage( item.getSnippet()  );
+		dialog.setUrl( item.getUrl() );
 		dialog.create();
 		dialog.show();
     	return true;
@@ -141,9 +157,9 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     
 	/**
 	 * add point
-	 * @param OverlayItem item
+	 * @param MarkerOverlayItem item
 	 */
-    public void addPoint( OverlayItem item ) {
+    public void addPoint( MarkerOverlayItem item ) {
 		items.add( item );
         populate();
     }
@@ -151,28 +167,29 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 	/**
 	 * getMarker
 	 * @param NodeRecord r
-	 * @return OverlayItem item
+	 * @return MarkerOverlayItem item
 	 */
-	private OverlayItem getMarker( NodeRecord r ) {
+	private MarkerOverlayItem getMarker( NodeRecord r ) {
 		// get marker from color	
 		Drawable marker = mMarkerWhite;
         if ( mHashMarker.containsKey( r.map_color ) ) {
         	marker = mHashMarker.get( r.map_color );
         }
-		// create OverlayItem
+		// create MarkerOverlayItem
 		GeoPoint point = new GeoPoint( r.map_lat, r.map_lng );
 		String label_ja = r.getLabeleJa();
-		String direct_label_ja = r.getDirectLabeleJa();
-    	OverlayItem item = new OverlayItem( point, label_ja, direct_label_ja );
+		String snippet = r.getMarkerSnippet();
+    	MarkerOverlayItem item = new MarkerOverlayItem( point, label_ja, snippet );
     	item.setMarker( marker );
+    	item.setUrl( r.node );
     	return item;
 	}
-    
+	    
 	/**
 	 * clear all points
 	 */
     public void clearPoints() {
-		items = new ArrayList<OverlayItem>();
+		items = new ArrayList<MarkerOverlayItem>();
         populate();
     }
 

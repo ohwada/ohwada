@@ -16,76 +16,82 @@ public class NodeList {
 	private final static String LF = Constant.LF;
 	private final static String COLOR_DEFAULT = "white";
 	
-	// variable
-	private List<NodeRecord> mList = null;
-	private Map<String, String> mHashMarkerColor = null;
+	// public variable
+	public int status = 0;
 	
-	/**
-	 * === constarctor ===
-	 * @param List<NodeRecord> list
-	 */ 
-    public NodeList( List<NodeRecord> list ) {
-		setNodeList( list );
-		initHashMarkerColor();
-    }
+	// variable
+	private List<NodeRecord> mListRecord = null;
+	private List<NodeHash> mListHash = null;
+	private Map<String, String> mHashMarkerColor = null;
 
 	/**
 	 * === constarctor ===
 	 */ 
     public NodeList() {
-		mList = new ArrayList<NodeRecord>();
+    	mListHash = new ArrayList<NodeHash>();
+		mListRecord = new ArrayList<NodeRecord>();
 		initHashMarkerColor();
-    }
-
-	/**
-	 * setNodeList
-	 * @param List<NodeRecord> list
-	 */ 
-    private void setNodeList( List<NodeRecord> list ) {
-		mList = list;
     }
   	    
 	/**
 	 * getList
 	 * @return List<NodeRecord>
 	 */ 
-	public List<NodeRecord> getList() {	
-		return mList;
+	public List<NodeRecord> getListRecord() {	
+		return mListRecord;
+	}
+
+	/**
+	 * getListHash
+	 * @return List<NodeHash>
+	 */ 
+	public List<NodeHash> getListHash() {	
+		return mListHash;
 	}
 
 	/**
 	 * add
-	 * @param NodeRecord record
+	 * @param NodeHash hash
 	 */	
-    public void add( NodeRecord record ) {
-		mList.add( record );
+    public void addHash( NodeHash hash ) {
+		mListHash.add( hash );
+		mListRecord.add( hash.record );
     }
-
+    
 	/**
 	 * add
 	 * @param NodeRecord record
 	 */	
     public void addWithMapColor( NodeRecord record ) {
     	record.map_color = getMarkerColor( record.direct_label );
-		mList.add( record );
+		mListRecord.add( record );
     }
-    
+
 	/**
 	 * size
 	 * @param int
 	 */
-	public int size() {
-		return mList.size();
+	public int sizeHash() {
+		return mListHash.size();
 	}
-	
+
+	/**
+	 * hasDetail
+	 * @return boolean
+	 */
+	public boolean hasDetail() {
+		if ( status == NodeHash.STATUS_DETAIL ) return true;
+		return false;
+	}
+			
 	/**
 	 * build WriteData
 	 * @return String
 	 */ 
 	public String buildWriteData() {	
 		String data = "";		
-		for ( int i=0; i<mList.size(); i++ ) {
-			NodeRecord record = mList.get( i );
+		for ( int i=0; i<mListRecord.size(); i++ ) {
+			NodeRecord record = mListRecord.get( i );
 			data += record.getFileData() + LF;	
 		}
 		return data;		
