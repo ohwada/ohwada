@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OSM Node Viewer 2</string>
+
+<!-- MainActivity -->
+	<string name="button_option">Option</string>
+	<string name="button_get">Get New Point</string>
+	<string name="gps_no_manager">NO GPS manager</string>
+	<string name="gps_not_found">NOT found GPS position</string>
+	<string name="error_not_get_node">NOT get node data</string>
+
+<!-- NodeActivity -->
+	<string name="button_source">LinkedGeoData</string>
+	<string name="button_phone">Phone</string>
+	<string name="button_back">Back</string>
+	<string name="error_not_specify_node">NOT specify node</string>
+
+<!-- MapSettingActivity -->
+	<string name="geo_name">Kannai</string>
+	<string name="edit_address">Address</string>
+	<string name="button_search">Search</string>
+	<string name="button_location_set">Set</string>
+	<string name="search_please_address">Please enter address</string>
+	<string name="search_please_name">Plaese enter label</string>
+	<string name="search_found">Found location</string>
+	<string name="search_not_found">NOT found location</string>
+				
+<!-- dialog marker -->
+	<string name="dialog_button_detail">Detail</string>
+	<string name="dialog_button_close">Close</string>
+	
+<!-- dialog option  -->
+	<string name="dialog_button_gps">GPS</string>
+
+<!-- dialog loading -->
+	<string name="dialog_loading">Downloading…</string>
+
+<!-- dialog searching -->
+	<string name="dialog_searching">Searching...</string>	
+	
+<!-- dialog about -->
+ 	<string name="dialog_about_title">About</string>   
+	<string name="dialog_about_main">This application is showing the nodes registered into Open Street Map. \n\nShow the nodes which are less than 1km from the specified place.\nThis application is an application work of Linked Open Data Challenge Japan 2012.</string>
+	<string name="dialog_about_osm">Open Street Map</string>
+	<string name="dialog_about_lgd">Linked Geo Data</string>
+	<string name="dialog_about_lod">Linked Open Data Challenge Japan 2012</string>
+	<string name="dialog_about_credit">Author: Kenichi Ohwada</string>
+
+ <!-- menu -->
+  	<string name="menu_about">About</string>
+  	<string name="menu_usage">Usage</string>     
+	<string name="menu_setting">Setting</string>  
+	<string name="menu_map_setting">Map Setting</string>         
+	<string name="menu_clear">Clear Cache</string>
+
+     <string name="preference_map_kind_title">Map Select</string>
+     <string name="preference_map_kind_summary">Open Street Map</string>
+     <string name="preference_map_kind_dialog_title">Map List</string>
+     <string name="preference_map_kind_default_value">osm</string>
+     
+     <string name="preference_map_kind_name_1">Open Street Map</string>
+     <string name="preference_map_kind_name_2">Yahoo Map</string>
+     <string name="preference_map_kind_name_3">Google Map</string>
+
+     <string name="preference_map_kind_value_1">osm</string>
+     <string name="preference_map_kind_value_2">yahoo</string>
+     <string name="preference_map_kind_value_3">google</string>
+		
+</resources>

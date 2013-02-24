@@ -1,0 +1,5 @@
+更新情報
+
+V1.0 2013-02-22
+初版
+「OSM Node View」をベースに、従来の Google Map に加えて、Yahoo Map と OpenStreetMap を追加した。
