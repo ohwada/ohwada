@@ -87,6 +87,7 @@ public class GeocoderTask extends CommonTask {
 		}
 		stopHandler();	
 	}
+
 	/**
 	 * getStatus
 	 * @return AsyncTask.Status

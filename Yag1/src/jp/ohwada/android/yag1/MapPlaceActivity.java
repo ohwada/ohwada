@@ -1,13 +1,15 @@
 package jp.ohwada.android.yag1;
 
+import jp.ohwada.android.yag1.task.PlaceList;
 import jp.ohwada.android.yag1.task.PlaceListFile;
 import jp.ohwada.android.yag1.task.PlaceRecord;
-import jp.ohwada.android.yag1.task.PlaceList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.maps.GeoPoint;
@@ -28,19 +30,18 @@ public class MapPlaceActivity extends MapCommonActivity {
 	@Override 
 	public void onCreate( Bundle savedInstanceState ) {
     	super.onCreate( savedInstanceState );
-    	View view = getLayoutInflater().inflate( R.layout.activity_place_map, null );
-		setContentView( view ); 
 
-		// view object
-		createMenu( view );
-		createMap();
-		mMenuView.enableEvent();
-		mMenuView.enablePlace();
+		// main view
+		LinearLayout ll_root = createViewRoot(); 
+		View view_header = createViewHeader( R.layout.map_place_header ); 
+		mTextViewTitle = (TextView) view_header.findViewById( R.id.map_textview_title );
+		ll_root.addView( view_header );
+		createViewMap();
+		ll_root.addView( mMapView );
+		setContentView( ll_root );
+		createObject();
 		TAG_SUB = "MapPlaceActivity";
-					
-		// view conponent
-		mTextViewTitle = (TextView) findViewById( R.id.map_textview_title );
-            	
+
 		// get record
 		Intent intent = getIntent();
 		String url = intent.getStringExtra( Constant.EXTRA_PLACE_URL );
@@ -73,12 +74,12 @@ public class MapPlaceActivity extends MapCommonActivity {
 		} 
 
 		// title
+		ｍPlaceRecord = record;
 		mErrorView.hideText();
 		mTextViewTitle.setText( record.label );
   			
 		// map
-		ｍGeoPointPlace = new GeoPoint( record.map_lat, record.map_lng );
-    	setCenter( ｍGeoPointPlace );
+    	setCenter( new GeoPoint( record.map_lat, record.map_lng ) );
         mMarkerOverlay.addPoint( record );
 	}
 
@@ -86,7 +87,7 @@ public class MapPlaceActivity extends MapCommonActivity {
 	protected void showOptionDialog() {
 		MapPlaceDialog dialog = new MapPlaceDialog( this );
 		dialog.setHandler( msgHandler );
-		dialog.create( mGeoName );
+		dialog.create();
 		dialog.show();
 	}
 // --- Dialog end ---
@@ -96,8 +97,15 @@ public class MapPlaceActivity extends MapCommonActivity {
 	 * execHandlerMapApp
 	 */
 	protected void execHandlerMapApp() {
-	 	startMapApp( ｍGeoPointPlace );
-	}  
+	 	startMapApp( ｍPlaceRecord );
+	} 
+	
+	/**
+	 * execHandlerMapNavicon
+	 */
+	protected void execHandlerMapNavicon() {
+	 	startMapNavicon( ｍPlaceRecord );
+	} 
 // --- Message Handler end ---
 	
 }

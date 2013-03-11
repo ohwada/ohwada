@@ -28,16 +28,16 @@ public class MapPlaceDialog extends CommonDialog {
 				
 	/**
 	 * create
-	 * @param String name 
 	 */ 	
-	public void create( String name ) {
+	public void create() {
 		setContentView( R.layout.dialog_map_place );
+
 		createButtonClose() ;
-		setLayout();	
+		setLayoutFull();	
 		setGravityBottom();
 						
 		Button btnDefault = (Button) findViewById( R.id.dialog_map_place_button_default );
-		btnDefault.setText( name );
+		btnDefault.setText( getGeoName() );
 		btnDefault.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
@@ -76,7 +76,22 @@ public class MapPlaceDialog extends CommonDialog {
 				sendMessage( Constant.MSG_ARG1_DIALOG_MAP_APP );
 			}
 		});
-						
+
+		Button btnNavicon = (Button) findViewById( R.id.dialog_map_place_button_navicon );
+		btnNavicon.setOnClickListener( new View.OnClickListener() {
+			@Override
+			public void onClick( View v) {
+				sendMessage( Constant.MSG_ARG1_DIALOG_MAP_NAVICON );
+			}
+		});
+								
 	}
 
+	/**
+	 * sendMessage
+	 * @param int arg1
+	 */	
+	private void sendMessage( int arg1 ) {
+    	sendMessage( Constant.MSG_WHAT_DIALOG_MAP_PLACE, arg1 );
+    }
 }

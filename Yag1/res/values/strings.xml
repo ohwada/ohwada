@@ -40,7 +40,7 @@
 <!-- PlaceActivity -->
 	<string name="related_event">Related event</string>
 	<string name="button_wiki">Wikipedia</string>
-
+	
 <!-- MapSettingActivity -->
 	<string name="geo_name">Kannai</string>
 	<string name="edit_address">Address</string>
@@ -54,15 +54,18 @@
 <!-- dialog marker -->
 	<string name="dialog_button_place">Place</string>
 	<string name="dialog_button_close">Close</string>
-		
+	<string name="dialog_button_app">APP</string>
+	<string name="dialog_button_navicon">NaviCon</string>
+	<string name="navicon_please_install">Please install NaviCon</string>
+	<string name="market_please_install">Please install GooglePlay</string>
+				
 <!-- dialog map list  -->
 	<string name="dialog_button_gps">GPS</string>
 
 <!-- dialog map place -->
 	<string name="dialog_button_marker">Marker</string>
 	<string name="dialog_button_map">MAP List</string>
-	<string name="dialog_button_app">APP</string>
-
+	
 <!-- dialog loading -->
 	<string name="dialog_loading">Downloading …</string>
 

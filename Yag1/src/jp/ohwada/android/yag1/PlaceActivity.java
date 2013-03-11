@@ -8,6 +8,7 @@ import jp.ohwada.android.yag1.task.EventRecord;
 import jp.ohwada.android.yag1.task.PlaceList;
 import jp.ohwada.android.yag1.task.PlaceListFile;
 import jp.ohwada.android.yag1.task.PlaceRecord;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
@@ -71,10 +72,6 @@ public class PlaceActivity extends ListActivity
 								
 		// view conponent
 		mTextViewLabel = (TextView) findViewById( R.id.place_textview_label );
-//		mTextViewSub = (TextView) findViewById( R.id.place_textview_sub );
-//		mTextViewAddress = (TextView) findViewById( R.id.place_textview_address );
-//		mTextViewTelephone = (TextView) findViewById( R.id.place_textview_telephone );
-//		mTextViewCount = (TextView) findViewById( R.id.place_textview_count );
 				
 		mButtonHomepage = (Button) findViewById( R.id.place_button_homepage );
 		mButtonHomepage.setOnClickListener( new View.OnClickListener() {

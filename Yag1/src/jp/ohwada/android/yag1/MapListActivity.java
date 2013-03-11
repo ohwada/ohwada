@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.google.android.maps.GeoPoint;
 
@@ -24,10 +25,9 @@ public class MapListActivity extends MapCommonActivity {
     private static final int DELAY_TIME = 100; 	// 0.1 sec
 	 	
 	// view conponent	
-	private View mView;
 	private MarkerItemizedOverlay mEventOverlay;
 	private MarkerItemizedOverlay mOtherOverlay;
-	private MapListDialog mOptionDialog;
+	private MapListDialog mOptionDialog = null;
 				
 	/*
 	 * === onCreate ===
@@ -36,14 +36,15 @@ public class MapListActivity extends MapCommonActivity {
 	@Override 
 	public void onCreate( Bundle savedInstanceState ) {
     	super.onCreate( savedInstanceState );
-        mView = getLayoutInflater().inflate( R.layout.activity_list_map, null );
-		setContentView( mView ); 
 
-		// view object
-		createMenu( mView );
-		createMap();
-		mMenuView.enableEvent();
-		mMenuView.enablePlace();
+		// main view
+		LinearLayout ll_root = createViewRoot(); 
+		View view_header = createViewHeader( R.layout.map_list_header ); 
+		ll_root.addView( view_header );
+		createViewMap();
+		ll_root.addView( mMapView );
+		setContentView( ll_root );
+		createObject();
 		TAG_SUB = "MapListActivity";
 		
     	// marker
@@ -60,6 +61,15 @@ public class MapListActivity extends MapCommonActivity {
    		delayHandler.postDelayed( delayRunnable, DELAY_TIME ); 
 	}
 
+	/**
+	 * === onDestroy ===
+	 */
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        cancelOptionDialog();
+	}
+	
 // --- Main ---	
     /**
      * showMarker
@@ -120,11 +130,23 @@ public class MapListActivity extends MapCommonActivity {
 // --- Search end ---
 
 // --- Dialog ---
+	/**
+	 * showOptionDialog
+	 */
 	protected void showOptionDialog() {
 		mOptionDialog = new MapListDialog( this );
 		mOptionDialog.setHandler( msgHandler );
-		mOptionDialog.create( mGeoName );
+		mOptionDialog.create();
 		mOptionDialog.show();
+	}
+	
+	/**
+	 * cancelOptionDialog
+	 */	
+	private void cancelOptionDialog() {
+		if ( mOptionDialog != null ) {
+			mOptionDialog.cancelDialog();
+		}
 	}
 // --- Dialog end ---
 		

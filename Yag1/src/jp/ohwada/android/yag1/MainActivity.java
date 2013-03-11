@@ -11,6 +11,7 @@ import jp.ohwada.android.yag1.task.EventRecord;
 import jp.ohwada.android.yag1.task.LoadingDialog;
 import jp.ohwada.android.yag1.task.ManageFile;
 import jp.ohwada.android.yag1.task.PlaceListTask;
+
 import android.app.DatePickerDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;

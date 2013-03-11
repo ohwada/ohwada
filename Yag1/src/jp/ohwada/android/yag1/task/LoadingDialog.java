@@ -1,6 +1,7 @@
 package jp.ohwada.android.yag1.task;
 
 import jp.ohwada.android.yag1.R;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ public class LoadingDialog extends Dialog {
 	/**
 	 * create
 	 */ 	
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	private void create() {
 		setContentView( R.layout.dialog_loading );		
 		// FILL_PARENT : This value is deprecated starting in API Level 8

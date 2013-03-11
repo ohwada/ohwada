@@ -7,6 +7,7 @@ import java.util.List;
 import jp.ohwada.android.yag1.task.DateUtility;
 import jp.ohwada.android.yag1.task.PlaceListEventFile;
 import jp.ohwada.android.yag1.task.PlaceRecord;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;

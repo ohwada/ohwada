@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import jp.ohwada.android.yag1.Constant;
+
 import android.os.AsyncTask;
 import android.os.Handler;
 
@@ -75,7 +76,8 @@ public class EventListTask extends CommonTask {
 	 * getList
 	 * @return List<EventRecord>
 	 */ 
-	public List<EventRecord> getList() {	
+	public List<EventRecord> getList() {
+		if ( mList == null ) return null;
 		return mList.getList();
 	}
 

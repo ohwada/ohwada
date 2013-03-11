@@ -52,8 +52,9 @@ public class Constant {
 	public static final int MSG_WHAT_TASK_IMAGE = 5;
 	public static final int MSG_WHAT_TASK_GEOCODER = 6;
 	public static final int MSG_WHAT_ERROR_RETRY = 7;
-	public static final int MSG_WHAT_DIALOG_MAP = 8;
-		
+	public static final int MSG_WHAT_DIALOG_MAP_LIST = 8;
+	public static final int MSG_WHAT_DIALOG_MAP_PLACE = 9;
+				
 	// massage handler		
 	public static final int MSG_ARG1_NONE = 0;
 	public static final int MSG_ARG1_TASK_SUCCESS = 1;
@@ -65,7 +66,8 @@ public class Constant {
 	public static final int MSG_ARG1_DIALOG_MAP_MARKER = 13;
 	public static final int MSG_ARG1_DIALOG_MAP_MAP = 14;
 	public static final int MSG_ARG1_DIALOG_MAP_APP = 15;
-	
+	public static final int MSG_ARG1_DIALOG_MAP_NAVICON = 16;
+
 	// file name
 	public static final String FILE_NAME_PLACE_LIST = "places.txt";
 	// events + 20130201

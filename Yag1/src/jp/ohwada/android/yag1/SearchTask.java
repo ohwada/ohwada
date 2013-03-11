@@ -2,7 +2,9 @@ package jp.ohwada.android.yag1;
 
 import jp.ohwada.android.yag1.task.GeocoderTask;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,9 +38,9 @@ public class SearchTask {
 	/**
 	 * create
 	 */ 	
-	public void create() {
+	public void create() {	    		
 		mEditAddress = (EditText) mView.findViewById( R.id.search_edittext_address );
-		
+				
 		Button btnSearch = (Button) mView.findViewById( R.id.search_button_search );
 		btnSearch.setOnClickListener( new View.OnClickListener() {
 			@Override
@@ -50,13 +52,16 @@ public class SearchTask {
 	}
 
 	/**
-	 * setAddressText
-	 * @param String str
+	 * setGeoName
 	 */ 	
-	public void setAddressText( String str ) {
-		mEditAddress.setText( str );
+	public void setGeoName() {
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences( mContext );
+    	String name = pref.getString( 
+    		Constant.PREF_NAME_GEO_NAME, 
+    		mContext.getResources().getString( R.string.geo_name ) );
+		mEditAddress.setText( name );
 	}
-
+	
 	/**
 	 * getAddressEdit
 	 * @return String 
@@ -84,5 +89,12 @@ public class SearchTask {
 			return;
 		} 
 		mGeocoderTask.execute( address );        
+	}
+
+	/**
+	 * cancel
+	 */
+	public void cancel() {
+		mGeocoderTask.cancel();
 	}		
 }

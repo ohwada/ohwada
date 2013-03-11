@@ -41,7 +41,7 @@
 <!-- PlaceActivity -->
 	<string name="related_event">関連するイベント</string>
 	<string name="button_wiki">Wiki</string>
-
+		
 <!-- MapSettingActivity -->
 	<string name="geo_name">関内</string>
 	<string name="edit_address">住所</string>
@@ -55,15 +55,18 @@
 <!-- dialog marker -->
 	<string name="dialog_button_place">場所</string>
 	<string name="dialog_button_close">閉じる</string>
-	
+	<string name="dialog_button_app">アプリ連携</string>
+	<string name="dialog_button_navicon">NaviCon連携</string>
+	<string name="navicon_please_install">NaviCon をインストールしてください</string>
+	<string name="market_please_install">GooglePlay をインストールしてください</string>
+				
 <!-- dialog map list  -->
 	<string name="dialog_button_gps">GPS</string>
 
 <!-- dialog map place -->
 	<string name="dialog_button_marker">マーカー</string>
 	<string name="dialog_button_map">一覧MAP</string>
-	<string name="dialog_button_app">アプリ連携</string>
-
+			
 <!-- dialog loading -->
 	<string name="dialog_loading">ダウンロード中 …</string>
 

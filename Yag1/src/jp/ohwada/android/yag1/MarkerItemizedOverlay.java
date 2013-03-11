@@ -13,7 +13,6 @@ import jp.ohwada.android.yag1.task.PlaceRecord;
 
 /**
  * set up the marker list of a map 
- * https://developers.google.com/maps/documentation/android/v1/reference/com/google/android/maps/ItemizedOverlay
  */
 public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 
@@ -42,7 +41,8 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
     protected MarkerOverlayItem createItem( int index ) {
         if (( index < 0 )||( index >= items.size() )) return null;
     	MarkerOverlayItem item = items.get( index );
-        return new MarkerOverlayItem( item.getPoint(), item.getTitle(), item.getSnippet(), item.getUrl() );
+        return new MarkerOverlayItem( 
+        	item.getPoint(), item.getTitle(), item.getSnippet(), item.getRecord() );
     }
 
 	/**
@@ -65,8 +65,8 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 		MarkerOverlayItem item = items.get( index );
 		MarkerDialog dialog = new MarkerDialog( mActivity );		
 		dialog.setCustomTitle( item.getTitle() );
-		dialog.setMessage( item.getSnippet()  );
-		dialog.setUrl( item.getUrl()  );
+		dialog.setMessage( item.getSnippet() );
+		dialog.setRecord( item.getRecord() );
 		dialog.create();
 		dialog.show();
     	return true;
@@ -78,17 +78,7 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 	 */
     public void addPoint( PlaceRecord r ) {
 		GeoPoint point = new GeoPoint( r.map_lat, r.map_lng );
-		addPoint( new MarkerOverlayItem( point, r.label, r.address, r.url ) );
-    }
-
-	/**
-	 * add point
-	 * @param GeoPoint point
-	 * @param String title
-	 * @param String snippet
-	 */
-    public void addPoint( GeoPoint point, String title, String snippet, String url ) {
-		addPoint( new MarkerOverlayItem( point, title, snippet, url ) );
+		addPoint( new MarkerOverlayItem( point, r.label, r.address, r ) );
     }
 
 	/**

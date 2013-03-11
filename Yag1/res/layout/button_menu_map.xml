@@ -2,9 +2,9 @@
 	android:layout_width="fill_parent"
  	android:layout_height="wrap_content"
 	android:orientation="horizontal"
-	android:layout_margin="4dp"
+	android:paddingTop="4dp"
  	>
- 		
+
  	<Button android:id="@+id/button_menu_event" 
  		android:layout_width="0dp" 
  		android:layout_height="wrap_content"

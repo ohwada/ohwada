@@ -1,12 +1,13 @@
 package jp.ohwada.android.yag1;
 
+import jp.ohwada.android.yag1.task.PlaceRecord;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +15,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.maps.GeoPoint;
@@ -36,11 +38,12 @@ public class MapCommonActivity extends MapActivity
     private static final long LOCATION_MIN_TIME = 0L; 
     private static final float LOCATION_MIN_DISTANCE = 0f;
     private static final int DEFAULT_ACCURACY = 300;	// 300 m
-    
-	// gps
+	    
+	// object
 	private LocationManager mLocationManager;
- 	
-	// view conponent	
+	private ActivityUtility mActivityUtility;
+	 	
+	// view conponent
 	protected MapView mMapView;
 	protected MapController mMapController;
     protected GpsItemizedOverlay mGpsOverlay;
@@ -48,24 +51,35 @@ public class MapCommonActivity extends MapActivity
     protected ErrorView mErrorView;
 
 	// variable
+    protected PlaceRecord ｍPlaceRecord = null; 
 	private GeoPoint ｍGeoPointDefault = null; 
-    protected GeoPoint ｍGeoPointPlace = null; 
-	protected String mGeoName = "";
-	   
+
 	/*
-	 * createMenu
-	 * @param View view
+	 * createView
+	 * @return LinearLayout
 	 */
-	protected void createMenu( View view ) {	
-		mMenuView = new MenuView( this, view );
-		mErrorView = new ErrorView( this, view );
+	protected LinearLayout createViewRoot() {
+		// main view
+        LinearLayout ll = new LinearLayout( this );
+        ll.setOrientation( LinearLayout.VERTICAL );
+        return ll;
 	}
-			
+
 	/*
-	 * createMap()
+	 * createView
+	 * @param int id
+	 * @return View
 	 */
-	protected void createMap() {				
-		Button btnOption = (Button) findViewById( R.id.map_button_option );
+	protected View createViewHeader( int id ) {	        
+        View view = getLayoutInflater().inflate( id, null ); 
+
+		mMenuView = new MenuView( this, view );
+		mMenuView.enableEvent();
+		mMenuView.enablePlace();
+		
+		mErrorView = new ErrorView( this, view );
+
+		Button btnOption = (Button) view.findViewById( R.id.map_button_option );
 		btnOption.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
@@ -73,10 +87,14 @@ public class MapCommonActivity extends MapActivity
 			}
 		});
 
+		return view;
+	}
+
+	/*
+	 * createView
+	 */
+	protected void createViewMap() {	 	
 		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences( this );
-    	mGeoName = pref.getString( 
-    		Constant.PREF_NAME_GEO_NAME, 
-    		getResources().getString( R.string.geo_name ) );
     	int lat = pref.getInt( 
     		Constant.PREF_NAME_GEO_LAT, Constant.GEO_LAT );
     	int lng = pref.getInt( 
@@ -84,20 +102,26 @@ public class MapCommonActivity extends MapActivity
 		ｍGeoPointDefault = new GeoPoint( lat, lng );
 		    				
     	// map
-		mMapView = (MapView) findViewById( R.id.mapview );
+		mMapView = new MapView( this, ApiKey.GOOGLE_MAP_API_KEY );
     	mMapView.setClickable( true );
 		mMapView.setBuiltInZoomControls( true ); 
 		mMapController = mMapView.getController();
+		mMapController.setZoom( Constant.GEO_ZOOM );
+		mMapController.setCenter( ｍGeoPointDefault ) ; 
+
     	// gps
     	Drawable gps_marker = getResources().getDrawable( R.drawable.gps_blue_dot );
     	mGpsOverlay = new GpsItemizedOverlay( gps_marker );
     	mGpsOverlay.setDefaultAccuracy( DEFAULT_ACCURACY );
     	mMapView.getOverlays().add( mGpsOverlay );
-     	// default
-		mMapController.setZoom( Constant.GEO_ZOOM );
-		setCenter( ｍGeoPointDefault ) ; 
-				   	
+	}
+	
+	/*
+	 * createObject
+	 */
+	protected void createObject() {
 		mLocationManager = (LocationManager) getSystemService( LOCATION_SERVICE );
+		mActivityUtility = new ActivityUtility( this );
 	}
 
 	/**
@@ -107,8 +131,9 @@ public class MapCommonActivity extends MapActivity
 	protected void setCenter( GeoPoint point ) {
 		if ( point == null ) return; 
 		mMapController.setCenter( point );
+		mMapView.invalidate(); 
 	}
-							
+						
 	/*
 	 * === onResume ===
 	 */
@@ -273,7 +298,8 @@ public class MapCommonActivity extends MapActivity
 	 */
 	private void execHandler( Message msg ) {
     	switch ( msg.what ) {
-            case Constant.MSG_WHAT_DIALOG_MAP:
+            case Constant.MSG_WHAT_DIALOG_MAP_LIST:
+            case Constant.MSG_WHAT_DIALOG_MAP_PLACE:
             	execHandlerOption( msg );
                 break;
             case Constant.MSG_WHAT_TASK_GEOCODER:
@@ -295,8 +321,8 @@ public class MapCommonActivity extends MapActivity
 				moveGps();
                 break;
             case Constant.MSG_ARG1_DIALOG_MAP_MARKER:
-            	if ( ｍGeoPointPlace != null ) {
-					setCenter( ｍGeoPointPlace );
+            	if ( ｍPlaceRecord != null ) {
+					setCenter( new GeoPoint( ｍPlaceRecord.map_lat, ｍPlaceRecord.map_lng ) );
 				}
                 break;
             case Constant.MSG_ARG1_DIALOG_MAP_MAP:
@@ -304,6 +330,9 @@ public class MapCommonActivity extends MapActivity
                 break;
              case Constant.MSG_ARG1_DIALOG_MAP_APP:
 				execHandlerMapApp();
+                break;
+             case Constant.MSG_ARG1_DIALOG_MAP_NAVICON:
+				execHandlerMapNavicon();
                 break;
         }
 	}
@@ -321,17 +350,36 @@ public class MapCommonActivity extends MapActivity
 	protected void execHandlerMapApp() {
 		// dummy
 	}
-	
+
+	/**
+	 * startMapNavicon
+	 */
+	protected void execHandlerMapNavicon() {
+		// dummy
+	}
+		
 	/**
 	 * startMapApp
 	 * @param GeoPoint point
 	 */
 	protected void startMapApp( GeoPoint point ) {
-		String lat = e6ToStr( point.getLatitudeE6() );
-		String lng = e6ToStr( point.getLongitudeE6() );		
-		String uri = "geo:" + lat + "," + lng ;		
-		Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( uri ) );
-		startActivity( intent );
+		mActivityUtility.startApp( point );
+	}
+
+	/**
+	 * startMapApp
+	 * @param PlaceRecord record
+	 */
+	protected void startMapApp( PlaceRecord record ) {
+		mActivityUtility.startApp( record );
+	}
+
+	/**
+	 * startMapNavicon
+	 * @param PlaceRecord record
+	 */
+	protected void startMapNavicon( PlaceRecord record ) {
+		mActivityUtility.startNavicon( record );	
 	}
 
 // --- utility ---
@@ -344,16 +392,6 @@ public class MapCommonActivity extends MapActivity
 		Double d2 = d1 * 1E6;
 		return d2.intValue();
 	}
-
-	/**
-	 * convert  integer to string
-	 * @param integer : location( E6 format )
-	 * @return String : location( floating point format )
-	 */	
-	protected String e6ToStr( int e6 ) {
-		Double d = (double)e6 / 1E6;
-		return Double.toString( d );
-	}
 	
 	/**
 	 * toast_show
@@ -362,7 +400,7 @@ public class MapCommonActivity extends MapActivity
 	protected void toast_show( int id ) {
 		Toast.makeText( this, id, Toast.LENGTH_SHORT ).show();
 	}	
-	
+		
 	/**
 	 * write log
 	 * @param String msg

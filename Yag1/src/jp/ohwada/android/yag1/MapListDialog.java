@@ -20,7 +20,6 @@ public class MapListDialog extends CommonDialog {
 	 */ 	
 	public MapListDialog( Context context ) {
 		super( context, R.style.Theme_MapDialog );
-
 	}
 
 	/**
@@ -34,20 +33,20 @@ public class MapListDialog extends CommonDialog {
 				
 	/**
 	 * create
-	 * @param String name 
 	 */ 	
-	public void create( String name ) {
+	public void create() {
 	    View view = getLayoutInflater().inflate( R.layout.dialog_map_list, null );
 		setContentView( view );
+		
 		createButtonClose() ;
-		setLayout();	
+		setLayoutFull();	
 		setGravityTop();
     		
-		mSearchTask = new SearchTask( mContext, view, msgHandler );
+		mSearchTask = new SearchTask( getContext(), view, msgHandler );
 		mSearchTask.create();
-						
+
 		Button btnDefault = (Button) findViewById( R.id.dialog_map_list_button_default );
-		btnDefault.setText( name );
+		btnDefault.setText( getGeoName() );
 		btnDefault.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
@@ -80,5 +79,23 @@ public class MapListDialog extends CommonDialog {
 	public GeoPoint getPoint() {	
 		return mSearchTask.getPoint();
 	}
+
+	/**
+	 * cancel
+	 */
+	public void cancelDialog() {
+		if ( mSearchTask != null ) {
+			mSearchTask.cancel();
+		}
+		cancel();
+	}
+
+	/**
+	 * sendMessage
+	 * @param int arg1
+	 */	
+	private void sendMessage( int arg1 ) {
+    	sendMessage( Constant.MSG_WHAT_DIALOG_MAP_LIST, arg1 );
+    }
 			
 }

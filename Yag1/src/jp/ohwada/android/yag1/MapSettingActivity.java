@@ -10,6 +10,7 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.maps.GeoPoint;
@@ -33,7 +34,6 @@ public class MapSettingActivity extends MapActivity
 	private SharedPreferences mPreferences;
 		
 	// view 
-	private View mView;		
 	private MapView mMapView;
 	
 	// delay timer
@@ -46,44 +46,44 @@ public class MapSettingActivity extends MapActivity
 	@Override 
 	public void onCreate( Bundle savedInstanceState ) {
     	super.onCreate( savedInstanceState );
-    	mView = getLayoutInflater().inflate( R.layout.activity_map_setting, null );
-		setContentView( mView ); 
 
-		mPreferences = PreferenceManager.getDefaultSharedPreferences( this );
-    	String name = mPreferences.getString( 
-    		Constant.PREF_NAME_GEO_NAME, 
-    		getResources().getString( R.string.geo_name ) );
-    	int lat = mPreferences.getInt( 
-    		Constant.PREF_NAME_GEO_LAT, Constant.GEO_LAT );
-    	int lng = mPreferences.getInt( 
-    		Constant.PREF_NAME_GEO_LONG, Constant.GEO_LONG );    
+		// main view
+        LinearLayout ll_root = new LinearLayout( this );
+        ll_root.setOrientation( LinearLayout.VERTICAL );
 
-		// search
-		mSearchTask = new SearchTask( this, mView, msgHandler );
+		// header view
+        View view_header = getLayoutInflater().inflate( R.layout.map_setting_header, null ); 
+
+		mSearchTask = new SearchTask( this, view_header, msgHandler );
 		mSearchTask.create();
-		mSearchTask.setAddressText( name );
+		mSearchTask.setGeoName();
 
-		Button btnSet = (Button) mView.findViewById( R.id.map_setting_button_set );
+		Button btnSet = (Button) view_header.findViewById( R.id.map_setting_button_set );
 		btnSet.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View view ) {
 				setLocation();
 			}
 		});
-		        
-        // scroll & zoom
-		mMapView = (MapView) findViewById( R.id.mapview );
+
+		mPreferences = PreferenceManager.getDefaultSharedPreferences( this );
+    	int lat = mPreferences.getInt( 
+    		Constant.PREF_NAME_GEO_LAT, Constant.GEO_LAT );
+    	int lng = mPreferences.getInt( 
+    		Constant.PREF_NAME_GEO_LONG, Constant.GEO_LONG );    
+    				        
+        // map
+		mMapView = new MapView( this, ApiKey.GOOGLE_MAP_API_KEY );
     	mMapView.setClickable( true );
 		mMapView.setBuiltInZoomControls( true );
-       	
-    	// Akashi Municipal Planetarium
-    	// http://homepage2.nifty.com/yamakatsu/keiido_shigosen.html
-    	GeoPoint point = new GeoPoint( lat, lng );
-    			
-		// set center
-		mMapController = mMapView.getController();
-    	mMapController.setCenter( point );
+ 		mMapController = mMapView.getController();
+    	mMapController.setCenter( new GeoPoint( lat, lng ) );
     	mMapController.setZoom( Constant.GEO_ZOOM );
+
+		// main view
+        ll_root.addView( view_header );
+    	ll_root.addView( mMapView );
+        setContentView( ll_root );
     	
     	// marker
     	Drawable marker = getResources().getDrawable( R.drawable.marker_cross );
@@ -218,6 +218,7 @@ public class MapSettingActivity extends MapActivity
 		// set center of map
 		mMapController.setCenter( point );
 		mMapController.setZoom( Constant.GEO_ZOOM );
+		mMapView.invalidate();  
 		toast_show( R.string.search_found );
 	}
 // --- Message Handler end ---
