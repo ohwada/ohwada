@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import jp.ohwada.android.pinqa1.task.ArticleRecord;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -16,7 +17,6 @@ import com.google.android.maps.ItemizedOverlay;
 
 /**
  * set up the marker list of a map 
- * https://developers.google.com/maps/documentation/android/v1/reference/com/google/android/maps/ItemizedOverlay
  */
 public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 		
@@ -141,9 +141,8 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 		MarkerOverlayItem item = items.get( index );
 		MarkerDialog dialog = new MarkerDialog( mActivity );		
 		dialog.setCustomTitle( item.getTitle() );
-		dialog.setMessage( item.getSnippet()  );
-		dialog.setUrl( item.getUrl() );
-		dialog.setId( item.getId() );
+		dialog.setMessage( item.getSnippet() );
+		dialog.setRecord( item.getRecord() );
 		dialog.create();
 		dialog.show();
     	return true;
@@ -181,8 +180,7 @@ public class MarkerItemizedOverlay extends ItemizedOverlay<MarkerOverlayItem> {
 		GeoPoint point = new GeoPoint( r.map_lat, r.map_lng );		
     	MarkerOverlayItem item = new MarkerOverlayItem( point, r.article_label, r.topic_label );    	
     	item.setMarker( marker );
-    	item.setUrl( r.article_url );
-    	item.setId( r.article_id );
+    	item.setRecord( r );
     	return item;
 	}
     

@@ -98,7 +98,8 @@ public class GeocoderAsync extends CommonAsyncTask {
 	private void hideInputMethod() {
         InputMethodManager imm = (InputMethodManager)
         	mContext.getSystemService( Context.INPUT_METHOD_SERVICE );
-        imm.hideSoftInputFromWindow( mView.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY ); 
+        // dont work InputMethodManager.HIDE_IMPLICIT_ONLY 
+        imm.hideSoftInputFromWindow( mView.getWindowToken(), 0 ); 
 	}
 
 	/**

@@ -44,7 +44,7 @@ public class AboutDialog extends CommonDialog {
 	private void create() {
 		setContentView( R.layout.dialog_about );
 		createButtonClose() ;
-		setLayout();	
+		setLayoutFull();	
 		setTitle( R.string.dialog_about_title );
 	
 		TextView tvPinqa = (TextView) findViewById( R.id.dialog_about_textview_pinqa );

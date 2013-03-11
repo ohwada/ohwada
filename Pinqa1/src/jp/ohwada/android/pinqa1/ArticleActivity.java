@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 import jp.ohwada.android.pinqa1.task.ArticleRecord;
 import jp.ohwada.android.pinqa1.task.ArticleTask;
 import jp.ohwada.android.pinqa1.task.ImageTask;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;

@@ -1,7 +1,6 @@
 package jp.ohwada.android.pinqa1.task;
 
 import jp.ohwada.android.pinqa1.Constant;
-// import android.util.Log;
 
 /**
  * Article Record

@@ -3,11 +3,14 @@ package jp.ohwada.android.pinqa1.task;
 import java.util.List;
 
 import jp.ohwada.android.pinqa1.Constant;
+
 import android.content.Context;
 import android.location.Address;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.view.View;
+
+import com.google.android.maps.GeoPoint;
 
 /**
  * Geocoder Task
@@ -20,7 +23,7 @@ public class GeocoderTask extends CommonTask {
 	private GeocoderAsync mAsync;
 
 	// result
-	private List<Address> mList = null;
+	private List<Address> mResultList = null;
        	    	 			
 	/**
 	 * === constarctor ===
@@ -50,7 +53,7 @@ public class GeocoderTask extends CommonTask {
 	 */ 
 	protected void execPost() {
 		stopHandler();	
-		mList = mAsync.getResult();
+		mResultList = mAsync.getResult();
 		sendMessage();		
 	}
 
@@ -59,7 +62,20 @@ public class GeocoderTask extends CommonTask {
 	 * @return List<Address>
 	 */ 
 	public List<Address> getList() {	
-		return mList;
+		return mResultList;
+	}
+
+	/**
+	 * get Result
+	 * @return GeoPoint
+	 */  	
+	public GeoPoint getResultPoint() {
+		if (( mResultList == null )|| mResultList.isEmpty() ) return null;
+		Address addr = mResultList.get( 0 );
+		int lat = doubleToE6( addr.getLatitude() ); 
+		int lng = doubleToE6( addr.getLongitude() );
+		GeoPoint point = new GeoPoint( lat, lng );
+		return point;
 	}
 
 	/**
@@ -71,6 +87,7 @@ public class GeocoderTask extends CommonTask {
 		}
 		stopHandler();	
 	}
+
 	/**
 	 * getStatus
 	 * @return AsyncTask.Status
@@ -82,4 +99,14 @@ public class GeocoderTask extends CommonTask {
     	return AsyncTask.Status.RUNNING;	
     }
 
+	/**
+	* convert real number to integer
+	* @param Double : location( floating point format )
+	* @return int : location( E6 format )
+	*/
+	private int doubleToE6( Double d1 ) {
+		Double d2 = d1 * 1E6;
+		return d2.intValue();
+	}
+	
 }

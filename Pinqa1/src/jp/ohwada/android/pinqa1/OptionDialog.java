@@ -1,18 +1,20 @@
 package jp.ohwada.android.pinqa1;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+
+import com.google.android.maps.GeoPoint;
 
 /**
  * Option Dialog
  */
 public class OptionDialog extends CommonDialog {
 
-	// view
-	private EditText mEditAddress;
+	// Search
+	private SearchTask mSearchTask; 
 	
 	/**
 	 * === Constructor ===
@@ -35,22 +37,23 @@ public class OptionDialog extends CommonDialog {
 	 * create
 	 */ 	
 	public void create() {
-		setContentView( R.layout.dialog_option );
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences( getContext() );
+    	String name = pref.getString( 
+    		Constant.PREF_NAME_GEO_NAME, 
+    		getContext().getResources().getString( R.string.geo_name ) );
+    		
+	    View view = getLayoutInflater().inflate( R.layout.dialog_option, null );
+		setContentView( view );
+
 		createButtonClose() ;
-		setLayout();	
+		setLayoutFull();	
 		setGravityTop();
 
-		mEditAddress = (EditText) findViewById( R.id.dialog_map_list_edittext_address );
-
-		Button btnSearch = (Button) findViewById( R.id.dialog_map_list_button_search );
-		btnSearch.setOnClickListener( new View.OnClickListener() {
-			@Override
-			public void onClick( View view ) {
-				searchLocation();
-			}
-		});
+		mSearchTask = new SearchTask( getContext(), view, msgHandler );
+		mSearchTask.create();
 						
 		Button btnDefault = (Button) findViewById( R.id.dialog_map_list_button_default );
+		btnDefault.setText( name );
 		btnDefault.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
@@ -69,16 +72,29 @@ public class OptionDialog extends CommonDialog {
 	}
 
 	/**
-	 * searchLocation
+	 * getPoint
+	 * @return GeoPoint
 	 */
-	private void searchLocation() {
-		String location = mEditAddress.getText().toString();
-		// nothig if no input
-		if ( location.length() == 0 ) return;
-		if ( location.equals("") ) return;
-		Bundle bundle = new Bundle();
-        bundle.putString( Constant.BUNDLE_DIALOG_OPTION_LOCATION, location );
-        sendMessage( Constant.MSG_ARG1_DIALOG_OPTION_SEARCH, bundle );	        
+	public GeoPoint getPoint() {	
+		return mSearchTask.getPoint();
 	}
-		
+
+	/**
+	 * cancel
+	 */
+	public void cancelDialog() {
+		if ( mSearchTask != null ) {
+			mSearchTask.cancel();
+		}
+		cancel();
+	}
+	
+	/**
+	 * sendMessage
+	 * @param int arg1
+	 */	
+	private void sendMessage( int arg1 ) {
+    	sendMessage( Constant.MSG_WHAT_DIALOG_OPTION, arg1 );
+    }
+	
 }

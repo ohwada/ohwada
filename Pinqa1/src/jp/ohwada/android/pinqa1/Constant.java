@@ -14,8 +14,11 @@ public class Constant {
 	public final static String LF = "\n";
 	public final static String TAB = "\t";	
 
-	// activity request
+	// Intent result codes
 	public static final int REQUEST_ARTICLE = 1;
+	public static final int REQUEST_MAP_SETTING = 2;
+
+	// Intent bundle codes
 	public static final String EXTRA_ARTICLE_URL = "article";
 	
 	// message what
@@ -55,7 +58,12 @@ public class Constant {
 	// one month
 	public static final int EXPIRE_DAYS_ARTICLE = 30;
 	public static final int EXPIRE_DAYS_IMAGE = 30;
-		
+
+	// Preferences
+	public static final String PREF_NAME_GEO_NAME = "geo_name";
+	public static final String PREF_NAME_GEO_LAT = "geo_lat";
+	public static final String PREF_NAME_GEO_LONG = "geo_long";	
+			
 	// kannai station
 	public final static int GEO_LAT = 35443233;
 	public final static int GEO_LONG = 139637134;

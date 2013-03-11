@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import jp.ohwada.android.pinqa1.Constant;
-import jp.ohwada.android.pinqa1.Username;
+import jp.ohwada.android.pinqa1.ApiKey;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -71,7 +71,8 @@ public class PinqaHttpClient {
 	 * setCredentials
 	 */  
     private void setCredentials() {
- 		UsernamePasswordCredentials credentials = new UsernamePasswordCredentials( Username.USERNAME, Username.PASSWORD );
+ 		UsernamePasswordCredentials credentials = new UsernamePasswordCredentials( 
+ 			ApiKey.PINQA_USERNAME, ApiKey.PINQA_PASSWORD );
 		AuthScope scope = new AuthScope( AUTHORITY, PORT );
 		mClient.getCredentialsProvider().setCredentials( scope, credentials );
     }

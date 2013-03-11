@@ -1,7 +1,8 @@
 package jp.ohwada.android.pinqa1;
 
+import jp.ohwada.android.pinqa1.task.ArticleRecord;
+
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.Button;
@@ -12,17 +13,16 @@ import android.widget.TextView;
  * Marker Dialog
  */
 public class MarkerDialog extends CommonDialog {
-
-	private static final float DISPLAY_RATIO = 0.5f;
 	
 	// object
+	private ActivityUtility mActivityUtility;
 	private BitmapUtility mBitmapUtility;
 	
 	// variable
 	private String mTitle = "";
 	private String mMessage = "";
-	private String mUrl = "";
-	private int mId = 0;
+	private ArticleRecord mArticleRecord = null;
+	private View mView = null;
 						
 	/**
 	 * === Constructor ===
@@ -31,7 +31,6 @@ public class MarkerDialog extends CommonDialog {
 	public MarkerDialog( Activity activity ) {
 		super( activity, R.style.Theme_MarkerDialog );
 		initDialod( activity );
-		create();
 	}
 
 	/**
@@ -42,8 +41,21 @@ public class MarkerDialog extends CommonDialog {
 	public MarkerDialog( Activity activity, int theme ) {
 		super( activity, theme );
 		initDialod( activity );
-		create(); 
 	}
+
+	/**
+	 * === onWindowFocusChanged ===
+	 */ 
+    @Override
+    public void onWindowFocusChanged( boolean hasFocus ) {
+        super.onWindowFocusChanged( hasFocus );
+        if ( mView == null ) return;
+
+        // enlarge width, if screen is small			
+		if ( mView.getWidth() < getWidthHalf() ) {
+			setLayoutHalf();
+		}
+    }
 
 	/*
 	 * initDialod
@@ -51,6 +63,7 @@ public class MarkerDialog extends CommonDialog {
 	 */
 	private void initDialod( Activity activity ) {
 		mActivity = activity;
+		mActivityUtility = new ActivityUtility( activity );
 		mBitmapUtility = new BitmapUtility( activity );
 	}
 
@@ -71,26 +84,20 @@ public class MarkerDialog extends CommonDialog {
 	}
 
 	/**
-	 * setUrl
-	 * @param String url
+	 * setRecord
+	 * @param ArticleRecord record
 	 */ 
-	public void setUrl( String url ) {
-		mUrl = url ;
-	}
-	
-	/**
-	 * setId
-	 * @param int id 
-	 */ 
-	public void setId( int id ) {
-		mId = id ;
+	public void setRecord( ArticleRecord record ) {
+		mArticleRecord = record ;
 	}
 							
 	/**
 	 * create
 	 */ 	
 	public void create() {
-		setContentView( R.layout.dialog_marker );
+		mView = getLayoutInflater().inflate( R.layout.dialog_marker, null );
+		setContentView( mView ); 
+
 		createButtonClose() ;
 
 		TextView tvTitle = (TextView) findViewById( R.id.dialog_marker_textview_title );
@@ -113,9 +120,26 @@ public class MarkerDialog extends CommonDialog {
 		btnDetail.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
-				startArticle();
+				mActivityUtility.startArticle( mArticleRecord );
 			}
 		});		
+
+		Button btnApp = (Button) findViewById( R.id.dialog_marker_button_app );
+		btnApp.setOnClickListener( new View.OnClickListener() {
+			@Override
+			public void onClick( View v ) {
+				mActivityUtility.startApp( mArticleRecord );
+			}
+		});
+
+		Button btnNavicon = (Button) findViewById( R.id.dialog_marker_button_navicon );
+		btnNavicon.setOnClickListener( new View.OnClickListener() {
+			@Override
+			public void onClick( View v ) {
+				mActivityUtility.startNavicon( mArticleRecord );
+			}
+		});
+
 	}
 
 	/**
@@ -123,18 +147,10 @@ public class MarkerDialog extends CommonDialog {
 	 * @return Bitmap
 	 */ 	
 	private Bitmap getBitmap() {
-		if ( mId == 0 ) return null;
-		return mBitmapUtility.getBitmap( mId, DISPLAY_RATIO );
+		if ( mArticleRecord == null ) return null;
+		int id = mArticleRecord.article_id;
+		if ( id == 0 ) return null;
+		return mBitmapUtility.getBitmap( id, WIDTH_RATIO_HALF );
 	}
-		
-	/**
-	 * startPlace
-	 */
-    private void startArticle() {
-    	if (( mUrl == null )|| "".equals( mUrl ) ) return;
-		Intent intent = new Intent( mActivity, ArticleActivity.class );
-		intent.putExtra( Constant.EXTRA_ARTICLE_URL, mUrl );
-		mActivity.startActivityForResult( intent, Constant.REQUEST_ARTICLE );    
-	}	
 		
 }

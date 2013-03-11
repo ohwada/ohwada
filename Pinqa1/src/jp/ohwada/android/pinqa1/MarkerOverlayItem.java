@@ -1,18 +1,18 @@
 package jp.ohwada.android.pinqa1;
 
+import jp.ohwada.android.pinqa1.task.ArticleRecord;
+
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.OverlayItem;
 
 /**
  * set up the marker of a map
- * https://developers.google.com/maps/documentation/android/v1/reference/com/google/android/maps/OverlayItem
  */
 public class MarkerOverlayItem extends OverlayItem {
 
 	// variable
-	private String mUrl = "";
-	private int mId = 0;
-	
+	private ArticleRecord mArticleRecord = null;
+		
 	/**
 	 * === Constructor ===
 	 * @param GeoPoint point
@@ -24,34 +24,19 @@ public class MarkerOverlayItem extends OverlayItem {
     }
 
 	/**
-	 * setUrl
-	 * @return String
+	 * setRecord
+	 * @param ArticleRecord
 	 */    
-	public void setUrl( String url ) {
-		mUrl = url;
+	public void setRecord( ArticleRecord record ) {
+		mArticleRecord = record;
 	}
 	
 	/**
-	 * getUrl
-	 * @return String
+	 * getRecord
+	 * @return ArticleRecord
 	 */    
-	public String getUrl() {
-		return mUrl;
+	public ArticleRecord getRecord() {
+		return mArticleRecord;
 	}
-	
-		/**
-	 * setUrl
-	 * @return String
-	 */    
-	public void setId( int id ) {
-		mId = id;
-	}
-	
-	/**
-	 * getUrl
-	 * @return String
-	 */    
-	public int getId() {
-		return mId;
-	}
+
 }

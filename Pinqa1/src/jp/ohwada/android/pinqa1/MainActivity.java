@@ -5,24 +5,26 @@ import java.util.List;
 import jp.ohwada.android.pinqa1.task.ArticleList;
 import jp.ohwada.android.pinqa1.task.ArticleListTask;
 import jp.ohwada.android.pinqa1.task.ArticleRecord;
-import jp.ohwada.android.pinqa1.task.GeocoderTask;
 import jp.ohwada.android.pinqa1.task.ManageFile;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.location.Address;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.maps.GeoPoint;
@@ -40,7 +42,9 @@ public class MainActivity extends MapActivity
 	private static final String TAG = Constant.TAG;
 	private static final boolean D = Constant.DEBUG;
 	private static final String TAG_SUB = "MainActivity";
-	
+
+	public final static String URL_USAGE = "http://android.ohwada.jp/pinqa1";
+		
 	// gps
     private static final long LOCATION_MIN_TIME = 0L; 
     private static final float LOCATION_MIN_DISTANCE = 0f;
@@ -53,15 +57,14 @@ public class MainActivity extends MapActivity
 	private LocationManager mLocationManager;
    	private ArticleListTask mArticleTask;
    	private ManageFile mManageFile;
-	private GeocoderTask mGeocoderTask = null;
 	   	   	 	
 	// view conponent
-	private View mView;
 	private MapView mMapView;
 	private MapController mMapController;
 	private MarkerItemizedOverlay mArticleOverlay;
     private GpsItemizedOverlay mGpsOverlay;
-   	   	
+	private OptionDialog mOptionDialog = null;
+	   	   	
 	// task
 	private boolean isArticleFinish = false;
 		
@@ -69,7 +72,8 @@ public class MainActivity extends MapActivity
 	private ArticleList mArticleList = null;
 	private int mLat = 0;
 	private int mLong = 0;
-		
+	private GeoPoint mGeoPointDefault = null; 
+
 	/*
 	 * === onCreate ===
 	 * @param Bundle savedInstanceState
@@ -77,11 +81,15 @@ public class MainActivity extends MapActivity
 	@Override 
 	public void onCreate( Bundle savedInstanceState ) {
     	super.onCreate( savedInstanceState );
-    	mView = getLayoutInflater().inflate( R.layout.activity_main, null );
-		setContentView( mView ); 
-		
+
+		// main view
+        LinearLayout ll_root = new LinearLayout( this );
+        ll_root.setOrientation( LinearLayout.VERTICAL );
+        View view_header = getLayoutInflater().inflate( R.layout.main_header, null ); 
+        ll_root.addView( view_header );
+        		
 		// button option
-		Button btnOption = (Button) findViewById( R.id.main_button_option );
+		Button btnOption = (Button) view_header.findViewById( R.id.main_button_option );
 		btnOption.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
@@ -90,20 +98,33 @@ public class MainActivity extends MapActivity
 		});
 
 		// button get
-		Button btnGet = (Button) findViewById( R.id.main_button_get );
+		Button btnGet = (Button) view_header.findViewById( R.id.main_button_get );
 		btnGet.setOnClickListener( new View.OnClickListener() {
 			@Override
 			public void onClick( View v) {
 				getNewPoint();
 			}
 		});
-		
+
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences( this );
+    	mLat = pref.getInt( 
+    		Constant.PREF_NAME_GEO_LAT, Constant.GEO_LAT );
+    	mLong = pref.getInt( 
+    		Constant.PREF_NAME_GEO_LONG, Constant.GEO_LONG ); 
+		mGeoPointDefault = new GeoPoint( mLat, mLong );
+				
     	// map
-		mMapView = (MapView) findViewById( R.id.mapview );
+		mMapView = new MapView( this, ApiKey.GOOGLE_MAP_API_KEY );
     	mMapView.setClickable( true );
 		mMapView.setBuiltInZoomControls( true ); 
 		mMapController = mMapView.getController();
+		mMapController.setZoom( Constant.GEO_ZOOM );
+		mMapController.setCenter( mGeoPointDefault ) ; 
 
+		// main view
+        ll_root.addView( mMapView );
+        setContentView( ll_root );
+        
     	// marker
     	Drawable node_marker = getResources().getDrawable( R.drawable.marker_red );
     	mArticleOverlay = new MarkerItemizedOverlay( this, node_marker );
@@ -114,13 +135,7 @@ public class MainActivity extends MapActivity
     	mGpsOverlay = new GpsItemizedOverlay( gps_marker );
     	mGpsOverlay.setDefaultAccuracy( DEFAULT_ACCURACY );
     	mMapView.getOverlays().add( mGpsOverlay );
-
-     	// default
-     	mLat = Constant.GEO_LAT;
-		mLong = Constant.GEO_LONG;
-		mMapController.setZoom( Constant.GEO_ZOOM );
-		setCenter( new GeoPoint( mLat, mLong) ) ; 
-		
+        		
 		// location	   	
 		mLocationManager = (LocationManager) getSystemService( LOCATION_SERVICE );
 		
@@ -131,7 +146,6 @@ public class MainActivity extends MapActivity
 
 		// task		
 		mArticleTask = new ArticleListTask( this, msgHandler );	
-		mGeocoderTask = new GeocoderTask( this, mView, msgHandler );	
     	execTaskFromIntent( getIntent() );
 	}
 
@@ -181,6 +195,7 @@ public class MainActivity extends MapActivity
 	 */
     @Override
     protected void onResume() {
+        super.onResume();
         if ( mLocationManager != null ) {
         	// update GPS manager
             mLocationManager.requestLocationUpdates(
@@ -194,7 +209,6 @@ public class MainActivity extends MapActivity
         	// if NOT acquire GPS manager
         	Toast.makeText( this, R.string.gps_no_manager, Toast.LENGTH_SHORT ).show();
 		}
-        super.onResume();
     }
 
 	/*
@@ -215,7 +229,7 @@ public class MainActivity extends MapActivity
     public void onDestroy() {
         super.onDestroy();
         mArticleTask.cancel();
-        mGeocoderTask.cancel();
+        cancelOptionDialog();
 	}
 	
 	/*
@@ -302,12 +316,37 @@ public class MainActivity extends MapActivity
 				AboutDialog dialog = new AboutDialog( this );
 				dialog.show();
 				return true;
+			case R.id.menu_usage:
+				startBrawser( URL_USAGE );
+				return true;
+			case R.id.menu_map_setting:
+				startMapSetting();
+				return true;
 			case R.id.menu_clear:
 				mManageFile.clearAllCache();
 				return true;
         }
         return super.onOptionsItemSelected( item );
     }
+
+    /**
+     * startBrawser
+     * @param String url
+     */
+	private void startBrawser( String url ) {
+		if (( url == null )|| url.equals("") ) return;
+		Uri uri = Uri.parse( url );
+		Intent intent = new Intent( Intent.ACTION_VIEW, uri );
+		startActivity( intent );
+	}
+
+    /**
+     * startMapSetting
+     */
+	private void startMapSetting( ) {
+		Intent intent = new Intent( this, MapSettingActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_MAP_SETTING );
+	}
 
 // --- main ---
 	/**
@@ -317,6 +356,7 @@ public class MainActivity extends MapActivity
 	private void setCenter( GeoPoint point ) {
 		if ( point == null ) return; 
 		mMapController.setCenter( point );
+		mMapView.invalidate(); 
 	}
 	
     /**
@@ -324,9 +364,6 @@ public class MainActivity extends MapActivity
      * This process is slow, it takes about 7 seconds in Android 1.6 emulator
      */	
 	private void showMarker() {
-		// hide ProgressBar
-//		mProgressDialog.hide();
-
 		// if data is null				
 		if ( mArticleList == null ) {
 			toast_show( R.string.error_not_get_article );
@@ -415,62 +452,40 @@ public class MainActivity extends MapActivity
 				
 // --- Search ---
 	/**
-	 * searchLocation
-	 * @param String location
+	 * showLocation
+	 * @param GeoPoint point
 	 */
-	private void serachLocation( String location ) {
-		// nothig if no input
-		if ( location.length() == 0 ) return;
-		if ( location.equals("") ) return;
-		
-		// search location
-//		hideInputMethod();
-//		mProgressDialog.show( 
-//			Constant.MSG_ARG1_DIALOG_PROGRESS_SEARCHING, 
-//			R.string.searching );	
-
-//		mGeocoderTask.setLocation( location );
-		mGeocoderTask.execute( location );
-	}
-
-	private void showLocation( List<Address> list ) {					
-//		List<Address> list = mGeocoder.getAddressListRetry( location );
-//		mProgressDialog.hide(); 
-				
+	private void showLocation( GeoPoint point ) {									
 		// if NOT found
-		if (( list == null ) || list.isEmpty() ) {
+		if ( point == null ) {
 			toast_show( R.string.search_not_found );
 			return;
 		}
-											 	
-		// get point
-		Address addr = list.get( 0 );
-		int lat = doubleToE6( addr.getLatitude() ); 
-		int lng = doubleToE6( addr.getLongitude() );
-		GeoPoint point = new GeoPoint( lat, lng );
-
 		// set center of map
 		setCenter( point );
 		mMapController.setZoom( Constant.GEO_ZOOM );
-
 		toast_show( R.string.search_found );
 	}
-	
-	/**
-	 * hide software keyboard
-	 * @param View view
-	 */
-//	private void hideInputMethod() {
-//        mInputManager.hideSoftInputFromWindow( mView.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY ); 
-//	}
 // --- Search end ---
 
-// --- Menu Dialog ---
+// --- Dialog ---
+	/**
+	 * showOptionDialog
+	 */
 	private void showOptionDialog() {
-		OptionDialog dialog = new OptionDialog( this );
-		dialog.setHandler( msgHandler, Constant.MSG_WHAT_DIALOG_OPTION );
-		dialog.create();
-		dialog.show();
+		mOptionDialog = new OptionDialog( this );
+		mOptionDialog.setHandler( msgHandler );
+		mOptionDialog.create();
+		mOptionDialog.show();
+	}
+
+	/**
+	 * cancelOptionDialog
+	 */	
+	private void cancelOptionDialog() {
+		if ( mOptionDialog != null ) {
+			mOptionDialog.cancelDialog();
+		}
 	}
 // --- Dialog end ---
         					
@@ -510,11 +525,9 @@ public class MainActivity extends MapActivity
                 mArticleList= mArticleTask.getList();
     			showMarker();
                 break;                
-//            case Constant.MSG_WHAT_DIALOG_PROGRESS:
-//            	cancelTask();
-//                break; 
             case Constant.MSG_WHAT_TASK_GEOCODER:
-            	showLocation( mGeocoderTask.getList() );
+//            	showLocation( mGeocoderTask.getList() );
+				showLocation( mOptionDialog.getPoint() );
                 break; 
         }
 	}
@@ -526,14 +539,10 @@ public class MainActivity extends MapActivity
 	private void execHandlerMove( Message msg ) {
     	switch ( msg.arg1 ) {
             case Constant.MSG_ARG1_DIALOG_OPTION_DEFAULT:
-				setCenter( new GeoPoint( Constant.GEO_LAT, Constant.GEO_LONG ) );
+				setCenter( mGeoPointDefault );
                 break;
             case Constant.MSG_ARG1_DIALOG_OPTION_GPS:
 				moveGps();
-                break;
-            case Constant.MSG_ARG1_DIALOG_OPTION_SEARCH:
-            	String location = msg.getData().getString( Constant.BUNDLE_DIALOG_OPTION_LOCATION );
-				serachLocation( location );
                 break;
         }
 	}

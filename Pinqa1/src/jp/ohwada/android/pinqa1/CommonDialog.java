@@ -3,7 +3,6 @@ package jp.ohwada.android.pinqa1;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Display;
@@ -19,13 +18,13 @@ import android.widget.Button;
 public class CommonDialog extends Dialog {
 	
 	// constant
-	private final static float WIDTH_RATIO = 0.95f;
+	private final static float WIDTH_RATIO_FULL = 0.95f;
+	protected final static float WIDTH_RATIO_HALF = 0.5f;
 	private final static int MSG_ARG2 = 0;
 	
 	// object
 	protected Activity mActivity;
-	private Handler msgHandler;
-	protected int MSG_WHAT = 0;
+	protected Handler msgHandler;
 	
 	/**
 	 * === Constructor ===
@@ -48,9 +47,8 @@ public class CommonDialog extends Dialog {
 	 * setHandler
 	 * @param Handler handler
 	 */ 
-	public void setHandler( Handler handler, int what ) {
+	public void setHandler( Handler handler ) {
 		msgHandler = handler ;
-		MSG_WHAT = what;
 	}
 
 	/**
@@ -65,20 +63,53 @@ public class CommonDialog extends Dialog {
 			}
 		});
 	}
-		
+
 	/**
 	 * setLayout
 	 */ 
-	protected void setLayout() {
-		int width = (int)( getWidth() * WIDTH_RATIO );
-		getWindow().setLayout( width, ViewGroup.LayoutParams.WRAP_CONTENT );
+	protected void setLayoutFull() {
+		setLayout( getWidthFull() );
 	}
 
 	/**
 	 * setLayout
 	 */ 
-	@SuppressWarnings("deprecation")
-	private int getWidth() {
+	protected void setLayoutHalf() {
+		setLayout( getWidthHalf() );
+	}
+	
+	/**
+	 * setLayout
+	 * @param  int width
+	 */ 
+	protected void setLayout( int width ) {
+		getWindow().setLayout( width, ViewGroup.LayoutParams.WRAP_CONTENT );
+	}
+
+	/**
+	 * getWidth
+	 * @return int
+	 */ 
+	protected int getWidthFull() {
+		int width = (int)( getWindowWidth() * WIDTH_RATIO_FULL );
+		return width;
+	}	 
+
+	/**
+	 * getWidth
+	 * @return int
+	 */ 
+	protected int getWidthHalf() {
+		int width = (int)( getWindowWidth() * WIDTH_RATIO_HALF );
+		return width;
+	}
+
+	/**
+	 * getWindowWidth
+	 * @return int
+	 */ 
+//	@SuppressWarnings("deprecation")
+	private int getWindowWidth() {
 		WindowManager wm = (WindowManager) getContext().getSystemService( Context.WINDOW_SERVICE );
 		Display display = wm.getDefaultDisplay();
 		// Display#getWidth() This method was deprecated in API level 13
@@ -92,24 +123,14 @@ public class CommonDialog extends Dialog {
 		// show on the top of screen. 
 		getWindow().getAttributes().gravity = Gravity.TOP;
 	}
-	    	
+
 	/**
 	 * sendMessage
 	 * @param int arg1
 	 */	
-    protected void sendMessage( int arg1 ) {
-    	Message msg = msgHandler.obtainMessage( MSG_WHAT, arg1, MSG_ARG2 );	        
+    protected void sendMessage( int what, int arg1 ) {
+    	Message msg = msgHandler.obtainMessage( what, arg1, MSG_ARG2 );	        
     	msgHandler.sendMessage( msg );
     }
-    
-    /**
-	 * sendMessage
-	 * @param int arg1
-	 * @param Bundle bundle
-	 */
-	protected void sendMessage( int arg1, Bundle bundle ) { 	
-		Message msg = msgHandler.obtainMessage( MSG_WHAT, arg1, MSG_ARG2 );
-        msg.setData( bundle );	        
-    	msgHandler.sendMessage( msg );
-	}		
+		
 }

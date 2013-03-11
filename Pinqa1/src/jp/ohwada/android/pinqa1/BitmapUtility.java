@@ -107,7 +107,7 @@ public class BitmapUtility {
 	/**
 	 * getDisplayParam
 	 */ 	
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	private void getDisplayParam() {
 		WindowManager wm = (WindowManager) mContext.getSystemService( Context.WINDOW_SERVICE );
 		Display display = wm.getDefaultDisplay();
