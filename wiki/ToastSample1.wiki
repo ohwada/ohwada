@@ -1,0 +1,11 @@
+#summary android/widget/Toast.java の移植版
+
+= 概要 ==
+donut(v1.6) の android/widget/Toast.java の移植版。<br>
+そのまま、コピーして、ユーザアプリとして、コンパイルを通るようにしたもの。<br>
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FToastSample1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130310toast.png
