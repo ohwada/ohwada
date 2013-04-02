@@ -1,0 +1,11 @@
+#summary Toast が固まるのを回避する
+
+= 概要 ==
+Toast が固まるのを回避する。 <br>
+AlarmClock の ToastMaster.java をコピーしたもの。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/2614
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FToastSample2
