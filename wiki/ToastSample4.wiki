@@ -1,0 +1,11 @@
+#summary Toast の表示時間を変更する
+
+= 概要 ==
+Toast の表示時間を変更するには、
+NotificationManagerService#enqueueToast に相当するクラスを作ることで対応できます。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/2610
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FToastSample4
