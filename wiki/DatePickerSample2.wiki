@@ -5,7 +5,7 @@ donut(v1.6) の android/widget/DatePicker.java の移植版。<br>
 DatePicker の文字を大きくする。
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/2740
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FDatePickerSample2
