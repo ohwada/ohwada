@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTimePicker">
+        <attr name="timepicker_is24Hour" format="boolean" />
+        <attr name="timepicker_numberWidth" format="dimension" />
+        <attr name="timepicker_textSize" format="dimension" />
+        <attr name="timepicker_visibilitySecond" format="boolean" />        
+    </declare-styleable>
+</resources>
