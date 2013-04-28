@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyDatePicker">
+        <!-- The first year (inclusive) i.e. 1940 -->
+        <attr name="datepicker_startYear" format="integer" />
+        <!-- The last year (inclusive) i.e. 2010 -->
+        <attr name="datepicker_endYear" format="integer" />
+        <!-- layout -->
+        <attr name="datepicker_yearWidth" format="dimension" />
+        <attr name="datepicker_monthWidth" format="dimension" />
+        <attr name="datepicker_dayWidth" format="dimension" />
+        <attr name="datepicker_textSize" format="dimension" />
+        <attr name="datepicker_monthTwoDigit" format="boolean" />
+    </declare-styleable>
+</resources>

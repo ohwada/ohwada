@@ -1,0 +1,26 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+    <jp.ohwada.android.datepickersample2.MyDatePicker
+    	android:id="@+id/DatePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		/>
+
+    <jp.ohwada.android.datepickersample2.MyDatePicker
+        xmlns:custom="http://schemas.android.com/apk/res/jp.ohwada.android.datepickersample2"
+    	android:id="@+id/DatePicker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        custom:datepicker_monthTwoDigit="true"
+        custom:datepicker_textSize="48sp"       
+        custom:datepicker_yearWidth="140dp"
+        custom:datepicker_monthWidth="120dp"        
+        custom:datepicker_dayWidth="120dp" />
+
+</LinearLayout>
