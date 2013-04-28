@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="DatePicker">
+        <!-- The first year (inclusive) i.e. 1940 -->
+        <attr name="startYear" format="integer" />
+        <!-- The last year (inclusive) i.e. 2010 -->
+        <attr name="endYear" format="integer" />
+    </declare-styleable>
+</resources>    
