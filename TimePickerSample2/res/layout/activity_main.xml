@@ -1,0 +1,26 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+    <jp.ohwada.android.timepickersample2.MyTimePicker
+    	android:id="@+id/TimePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		/>
+
+    <jp.ohwada.android.timepickersample2.MyTimePicker
+        xmlns:custom="http://schemas.android.com/apk/res/jp.ohwada.android.timepickersample2"
+    	android:id="@+id/TimePicker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:timepicker_textSize="60px"
+        custom:timepicker_numberWidth="150px"
+        custom:timepicker_visibilitySecond="true"   
+        custom:timepicker_is24Hour="true"               
+		/>
+
+</LinearLayout>
