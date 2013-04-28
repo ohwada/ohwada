@@ -1,4 +1,4 @@
-#summary com/android/internal/widget/TimePicker.java の移植版
+#summary android/widget/TimePicker.java の移植版
 
 = 概要 ==
 donut(v1.6) の com/android/internal/widget/TimePicker.java の移植版。<br>
