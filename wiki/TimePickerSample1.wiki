@@ -11,4 +11,4 @@ http://android.ohwada.jp/archives/
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FTimePickerSample1
 
 = スクリーンショット =
-http://ohwada.googlecode.com/files/201302011TimePickerSample1.png
+https://ohwada.googlecode.com/files/20130211TimePickerSample1.png
