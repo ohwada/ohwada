@@ -5,7 +5,7 @@ Android 端末と NFC タグを使ったゲームです。<br>
 ルールはトランプと神経衰弱と同じです。
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/1634
+http://android.ohwada.jp/nfc_concentration
 
 = ゲームの説明 ==
 遊び方
@@ -18,4 +18,4 @@ http://android.ohwada.jp/archives/1660
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FNfcCconcentration
 
 = スクリーンショット =
-http://ohwada.googlecode.com/files/20120817nfc_concentration_match.png
+http://ohwada.googlecode.com/files/20130501nfc_concentration_match.png
