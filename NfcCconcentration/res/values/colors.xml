@@ -1,0 +1,4 @@
+<resources>
+	<!-- white  -->    
+	<color name="dialog_about_text">#FFFFFF</color>
+</resources>

@@ -5,33 +5,22 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.os.Environment;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.text.Spanned;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.widget.ImageView;
 
 /*
  * Image Utility
  */
 public class ImageUtility  {
-
-	// dubug
-	private String TAG_SUB = "ImageUtility : ";
-	private final static String TAG = Constant.TAG;
-	private final static boolean D = Constant.DEBUG; 
-
-	private final static String DIR_MAIN = Constant.DIR_MAIN;
-	private final static String IMAGE_PREFIX = Constant.IMAGE_PREFIX ; 
-	private final static String IMAGE_EXT = Constant.IMAGE_EXT ;
-
+	// customize 
+	private boolean isUseAssetsFile = Constant.USE_ASSETS_FILE; 
+	
 	private final static int DRAWABLE_COFF = 2 ;
 	
 	private PreferenceUtility mPreference;
+	private FileUtility mFileUtility;
 	private String mMainPath = "";
 	private String mSubPath = "";
 		
@@ -41,8 +30,8 @@ public class ImageUtility  {
 	 */	
 	public ImageUtility( Context context ) {
 		mPreference = new PreferenceUtility( context );
-		String sd = Environment.getExternalStorageDirectory().getPath();
-		mMainPath = sd + "/" + DIR_MAIN ;
+		mFileUtility = new FileUtility( context );
+		mMainPath = mFileUtility.getMainPath();
 		restart();
 	}
 
@@ -51,6 +40,14 @@ public class ImageUtility  {
 	 */	
 	public void restart() {
 		mSubPath = mMainPath + "/" + mPreference.getDir() ;
+	}
+
+	/**
+	 * isDefualtDir
+	 * @return boolean
+	 */	
+	public boolean isDefualtDir() {
+		return mPreference.isDefualtDir();
 	}
 
 	/**
@@ -85,45 +82,41 @@ public class ImageUtility  {
 	
 	/**
 	 * existsFile
-	 * @param String file
+	 * @param String name 
 	 * @return boolean
 	 */	
-	public boolean existsFile( String filename ) {
-		File file = new File( getPath( filename )  );
-		return file.exists();
+	public boolean existsFile( String name ) {
+		boolean ret = false;
+		if ( isUseAssetsFile && isDefualtDir() ) {
+			ret = mFileUtility.existsAssetsFile( name );
+		} else {
+			ret = mFileUtility.existsFile( getPath( name ) );
+		}
+		return ret;
 	}
 
 	/**
-	 * show Image 
-	 * @param ImageView view
-	 * @param int num
-	 */		
-	public void showImageByNum( ImageView view, int num ) {
-		String file = getNameByNum( num );
-		showImage( view, file );
-		log_d( "showImageByNum: " + num + " " + file );
-	}
-		
-	/**
-	 * show Image 
-	 * @param ImageView view
-	 * @param String file
-	 */	
-	public void showImage( ImageView view, String file ) {
-		view.setImageBitmap( getBitmap( file ) );
-	}
-
-	/**
-	 * getBitmap
-	 * @param String file
+	 * getBitmap 
+	 * @param String name
 	 * @return Bitmap
 	 */	
-	private Bitmap getBitmap( String file ) {
-		Bitmap bitmap = BitmapFactory.decodeFile( getPath( file ) );
-		if ( bitmap != null ) {
-			bitmap.setDensity( DisplayMetrics.DENSITY_MEDIUM );
+	public Bitmap getBitmap( String name ) {
+		Bitmap bitmap = null;
+		if ( isUseAssetsFile && isDefualtDir() ) {
+			bitmap = mFileUtility.getAssetsBitmap( name );
+		} else {
+			bitmap = mFileUtility.getBitmap( getPath( name ) );
 		}
 		return bitmap;
+	}
+
+	/**
+	 * getBitmapByNum
+	 * @param int num
+	 * @return Bitmap
+	 */		
+	public Bitmap getBitmapByNum( int num ) {
+		return getBitmap( getNameByNum( num ) );
 	}
 
 	/**
@@ -133,7 +126,6 @@ public class ImageUtility  {
 	 */	
 	public String getPath( String file ) {
 		String path = mSubPath  + "/" + file ;
-		log_d("getPath " + path );
 		return path;
 	}
 
@@ -152,8 +144,7 @@ public class ImageUtility  {
 	 * @return String
 	 */		
 	public String getNameByNum( int num ) {
-		String name = IMAGE_PREFIX + num + "." + IMAGE_EXT ;
-		return name;
+		return mFileUtility.getNameByNum( num );
 	}
 
 	/**
@@ -165,11 +156,9 @@ public class ImageUtility  {
 		ImageGetter imageGetter = new ImageGetter() { 
 			@Override 
 			public Drawable getDrawable( String source ) {
-				log_d( "getHtmlImage source: " + source ); 
 				Drawable d = Drawable.createFromPath( source );
 				int w = DRAWABLE_COFF * d.getIntrinsicWidth();
 				int h = DRAWABLE_COFF * d.getIntrinsicHeight();
-				log_d( "getHtmlImage size " + w + " x "+ h );  
 				d.setBounds( 0, 0, w, h ); 
 				return d; 
 			} 
@@ -178,15 +167,7 @@ public class ImageUtility  {
 		String path = getPathByNum( num );
         String html = msg + "<img src=\"" + path + "\">";
 		Spanned spanned = Html.fromHtml( html, imageGetter, null );
-		log_d( "getHtmlImage spanned: " + spanned );
 		return spanned;
 	}
-					           
-	/**
-	 * write log
-	 * @param String msg
-	 */ 
-	private void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + msg );
-	} 
+
 }

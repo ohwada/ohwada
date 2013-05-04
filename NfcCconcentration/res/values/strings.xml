@@ -1,34 +1,90 @@
 <resources>
 
     <string name="app_name">NFC Cconcentration</string>
-    
-<!-- setting -->
-    <string name="setting_title">Add Card</string>
-    <string name="setting_menu">Other Menu</string>
-    <string name="setting_each">One by one</string>
-    <string name="setting_bulk">Bulk</string>
-    <string name="setting_video">Video</string>
-    <string name="setting_list">Card List</string>
-    <string name="setting_dir">Select Directory</string>
-    <string name="setting_num">Card Num</string>
-          
-<!-- list -->    
-    <string name="create">Create</string>
-    <string name="read">Read</string>
-    <string name="update">Update</string>
-	<string name="delete">Delete</string>
 
+<!-- main -->
+    <string name="please_scan">Please scan card</string>
+     <string name="please_register">Please register cards</string>
+    <string name="geme_complete">Complete</string>  
+    <string name="first_card">First Card:</string>
+    <string name="second_card">Second Card:</string>
+    <string name="pieces_match">Match!</string>
+    <string name="pieces_unmatch">Unmatch</string>
+    <string name="same_card">Same card</string>
+    <string name="not_registered">This card is not registered</string>
+
+<!-- setting -->
+    <string name="label_registration">Registration of cards</string>
+    <string name="label_other">Other Menu</string>
+    <string name="button_each">One by one</string>
+    <string name="button_bulk">Bulk</string>
+    <string name="button_clear">Clear All Cards</string>
+    <string name="button_dir">Select Directory</string>
+    <string name="button_num">Number of Cards</string>
+    <string name="button_list">Card List</string>
+    <string name="button_video">Video</string>
+    <string name="button_close">Close</string> 
+    <string name="button_cancel">Cancel</string> 
+    <string name="button_edit">Edit</string> 
+    <string name="button_set">Set</string> 
+    <string name="button_start">Start game</string> 
+        
+    <string name="num_two">Two pieces</string> 
+    <string name="num_four">Four pieces</string> 
+    <string name="num_six">Six pieces</string> 
+    <string name="num_eight">Eight pieces</string> 
+    <string name="num_ten">Ten pieces</string> 
+    <string name="num_exceed">Exceed ten pieces</string> 
+     
+    <string name="msg_please">Please_scan_card:</string>
+    <string name="msg_all_already">All cards are registered</string>  
+    <string name="msg_already">This card is registered</string> 
+    <string name="msg_full">Cards are full</string> 
+    <string name="msg_registered">Rregistered card:</string> 
+    <string name="msg_card_in" formatted="false">( Registered %1$d / %2$d )</string>
+    <string name="msg_manual">Please set up from "Number of card" when exceed ten pieces</string>  
+    <string name="msg_finish">This is last card</string>
+    <string name="msg_add_fail">Add Card Failed</string>
+ 
+    <string name="dialog_dir">Diectory:</string> 
+    <string name="dialog_num">Number of Cards</string>
+ 
+<!-- list -->    
+    <string name="button_create">Create</string>
+    <string name="button_update">Update</string>
+	<string name="button_delete">Delete</string>
+	<string name="button_back">Back</string>
+	
 	<string name="item_image">Image</string>	
 	<string name="item_id">ID</string>	
 	<string name="item_tag">Tag</string>
 	<string name="item_num">Num</string>
 	<string name="item_set">Set</string>
-	
-	<string name="back">Back</string>
 
+	<string name="msg_info">Information of item</string>
+	
+<!-- create --> 
+	<string name="create_please_entry">Please entry tag</string>
+	<string name="create_success">Create Successful</string>
+	<string name="create_fail">Create Failed</string>
+
+<!-- update --> 
+	<string name="update_success">Update Successful</string>
+	<string name="update_fail">Update Failed</string>
+	<string name="delete_success">Delete Successful</string>
+	<string name="delete_fail">Delete Failed</string>
+
+<!-- dialog about -->
+ 	<string name="dialog_about_title">About</string>   
+	<string name="dialog_about_main"></string>
+	<string name="dialog_about_credit">Author: Kenichi Ohwada</string>
+	<string name="dialog_about_imageview_banner">banner</string>
+	     
 <!-- menu -->
     <string name="menu_restart">Restart Game</string>
+    <string name="menu_about">About</string>
+ 	<string name="menu_usage">Usage</string>
 	<string name="menu_finish">Finish Game</string>    
     <string name="menu_setting">Setting</string>
-	                 
+                                            	                 
 </resources>

@@ -3,19 +3,12 @@ package jp.ohwada.android.nfccconcentration;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.widget.TextView;
 
 /**
  * View for elapsed time
  */
 public class TimeView {
-
-	// dubug
-	protected String TAG_SUB = "TimeView : ";
-	protected final static String TAG = Constant.TAG;
-    protected final static boolean D = Constant.DEBUG; 
-
     private final static int MSG_WHAT = Constant.MSG_WHAT_TIME;
  
     private final static int INTERVAL = 100; // 0.1 sec;
@@ -116,13 +109,5 @@ public class TimeView {
     private synchronized void updateText() {   
 		mTextView.setText( getFormatedTime() );	
     }
-    
-// --- debug ---		           
-	/**
-	 * write log
-	 * @param String msg
-	 */ 
-	protected void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + msg );
-	}    
+  
 }

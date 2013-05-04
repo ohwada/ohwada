@@ -3,82 +3,66 @@ package jp.ohwada.android.nfccconcentration;
 import android.content.Context;
 import android.widget.Toast;
 
-/**
- * prevent to freeze Toast
- * http://www.taosoftware.co.jp/blog/2009/04/android_toast.html
- * http://developer.android.com/reference/android/widget/Toast.html
- * reference : com.android.alarmclock ToastMaster.java
+/** 
+ * ToastMaster
  */
-public class ToastMaster extends Toast {
-	private static Toast sToast = null;
+public class ToastMaster {
 
-	/**
-	 * Constructor
-	 * @param Context context
-	 */
-    public ToastMaster( Context context ) {
-		super( context );
-	}
+    private static Toast sToast = null;
 
-	/**
-	 * show Toast
-	 */
-    @Override
-    public void show() {
-    	ToastMaster.setToast( this );
-    	super.show();
+    /**
+     * === Construct ===
+     */
+    private ToastMaster() {
+		// dummy
     }
 
-	/**
-	 * set Toast object 
+	/** 
+	 * setToast
 	 * @param Toast toast
 	 */
     public static void setToast( Toast toast ) {
-        if (sToast != null) sToast.cancel();
+        if (sToast != null)
+            sToast.cancel();
         sToast = toast;
     }
 
-	/**
-	 * cancel to show Toast
+	/** 
+	 * cancelToast
 	 */
     public static void cancelToast() {
-        if (sToast != null) sToast.cancel();
+        if (sToast != null)
+            sToast.cancel();
         sToast = null;
     }
 
 	/**
-	 * show Toast long
-	 * @param context Context
-	 * @param int resId
-	 */
-    public static void showLong( Context context, int resId ) {
-		makeText( context, resId, LENGTH_LONG ).show();
+     * Make a standard toast that just contains a text view.
+     *
+     * @param context  The context to use.  
+     * @param text     The text to show.  Can be formatted text.
+     * @param duration How long to display the message.  
+	 * @return Toast
+     *
+     */
+    public static Toast makeText( Context context, CharSequence text, int duration ) {
+		Toast toast = Toast.makeText( context, text, duration );
+        setToast( toast );
+        return toast;
 	}
-
+    
 	/**
-	 * show Toast long
-	 * @param context Context
-	 * @param CharSequence text
-	 */
-    public static void showLong( Context context, CharSequence text ) {
-		makeText( context, text, LENGTH_LONG ).show();
-	}
-
-	/**
-	 * show Toast short
-	 * @param context Context
-	 * @param int resId
-	 */
-    public static void showShort( Context context, int resId ) {
-		makeText( context, resId, LENGTH_SHORT ).show();
-	}
-
-	/**
-	 * show Toast short
-	 * @param context Context
-	 * @param CharSequence text
-	 */
-    public static void showShort( Context context, CharSequence text ) {
-		makeText( context, text, LENGTH_SHORT ).show();
+     * Make a standard toast that just contains a text view.
+     *
+     * @param context  The context to use.  
+     * @param resId    The resource id of the string resource to use.  
+     * @param duration How long to display the message.  
+	 * @return Toast
+     *
+     */
+    public static Toast makeText( Context context, int resId , int duration ) {
+		Toast toast = Toast.makeText( context, resId, duration );
+        setToast( toast );
+        return toast;
 	}
 }

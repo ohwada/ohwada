@@ -1,27 +1,37 @@
 package jp.ohwada.android.nfccconcentration;
 
+import java.util.List;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.Spanned;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.text.method.SingleLineTransformationMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /*
- * Setting Activity : add card
+ * Setting Activity 
  */
-public class SettingActivity extends NfcCommonActivity {
-
+public class SettingActivity extends Activity {
+	// customize 
+	private int mModeAlready = Constant.MODE_ALREADY;
+	private boolean isUseButtonBulk = Constant.USE_BUTTON_BULK;
+	private boolean isUseButtonNum = Constant.USE_BUTTON_NUM;
+							
 	private final static int MODE_NONE = 0;	
 	private final static int MODE_BULK = 1;	// default
 	private final static int MODE_EACH = 2;
@@ -30,21 +40,19 @@ public class SettingActivity extends NfcCommonActivity {
 	private CardHelper mHelper;		
 	private ImageUtility mImageUtility;
 	private PreferenceUtility mPreference;
-    
+    private NfcUtility mNfcUtility;
+    		    
 	// view component
 	private LinearLayout mLinearLayoutButtons;        
-	private TextView mTextViewTitle;
+	private TextView mTextViewCard;
 	private ImageView mImageViewMain;
-    private Button mButtonEach;
-    private Button mButtonBulk;
-    private Button mButtonList;
-    private Button mButtonVideo;
-    private Button mButtonDir;
-    private Button mButtonNum;
+	private Spinner mSpinnerNum;
        
     private int mMode = MODE_NONE; 
 	private int mCardNum = 0;	
-	
+
+	private boolean isShowSelection = false;
+
 	/**
 	 * === onCreate ===
 	 * @param Bundle savedInstanceState 
@@ -57,14 +65,15 @@ public class SettingActivity extends NfcCommonActivity {
 		mHelper = new CardHelper( this );	
 		mImageUtility = new ImageUtility( this );	
 		mPreference = new PreferenceUtility( this );
+		mNfcUtility = new NfcUtility( this, getClass() );	
 
-        mTextViewTitle = (TextView) findViewById( R.id.textview_title );
+        mTextViewCard = (TextView) findViewById( R.id.textview_card );
         mImageViewMain = (ImageView) findViewById( R.id.imageview_main );
         mLinearLayoutButtons = (LinearLayout) findViewById( R.id.linearlayout_buttons );
-                        
+                                
 		// each button
-		mButtonEach = (Button) findViewById( R.id.button_each );
-		mButtonEach.setOnClickListener( new OnClickListener() {
+		Button btnEach = (Button) findViewById( R.id.button_each );
+		btnEach.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 				clickEach();
@@ -72,8 +81,8 @@ public class SettingActivity extends NfcCommonActivity {
 		});
 
 		// bulk button
-		mButtonBulk = (Button) findViewById( R.id.button_bulk );
-		mButtonBulk.setOnClickListener( new OnClickListener() {
+		Button btnBulk = (Button) findViewById( R.id.button_bulk );
+		btnBulk.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 				clickBulk();
@@ -81,8 +90,8 @@ public class SettingActivity extends NfcCommonActivity {
 		});
 
 		// list button
-		mButtonList = (Button) findViewById( R.id.button_list );
-		mButtonList.setOnClickListener( new OnClickListener() {
+		Button btnList = (Button) findViewById( R.id.button_list );
+		btnList.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 	 			startListActivity();
@@ -90,8 +99,8 @@ public class SettingActivity extends NfcCommonActivity {
 		});
 
 		// video button
-		mButtonVideo = (Button) findViewById( R.id.button_video );
-		mButtonVideo.setOnClickListener( new OnClickListener() {
+		Button btnVideo = (Button) findViewById( R.id.button_video );
+		btnVideo.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 	 			startVideoActivity();
@@ -99,8 +108,8 @@ public class SettingActivity extends NfcCommonActivity {
 		});
 
 		// dir button
-		mButtonDir = (Button) findViewById( R.id.button_dir );
-		mButtonDir.setOnClickListener( new OnClickListener() {
+		Button btnDir = (Button) findViewById( R.id.button_dir );
+		btnDir.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 	 			showDialogDir();
@@ -108,20 +117,72 @@ public class SettingActivity extends NfcCommonActivity {
 		});
 
 		// num button
-		mButtonNum = (Button) findViewById( R.id.button_num );
-		mButtonNum.setOnClickListener( new OnClickListener() {
+		Button btnNum = (Button) findViewById( R.id.button_num );
+		btnNum.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 	 			showDialogNum();
 			}
 		});
-				
-		showMenu();		
-		prepareIntent();
+
+        Button btnClear = (Button) findViewById( R.id.button_clear );        
+        btnClear.setOnClickListener( new OnClickListener() {
+			@Override
+			public void onClick( View v ) {
+				clickClear();
+			}
+		});
+
+        Button btnStart = (Button) findViewById( R.id.button_start );        
+        btnStart.setOnClickListener( new OnClickListener() {
+			@Override
+			public void onClick( View v ) {
+				finish();
+			}
+		});
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+			this, android.R.layout.simple_spinner_item );
+		adapter.setDropDownViewResource( 
+			android.R.layout.simple_spinner_dropdown_item );       
+        adapter.add( getString( R.string.num_two ));
+        adapter.add( getString( R.string.num_four ));
+        adapter.add( getString( R.string.num_six ));
+        adapter.add( getString( R.string.num_eight ));
+        adapter.add( getString( R.string.num_ten ));
+        
+        if ( isUseButtonNum ) {
+			adapter.add( getString( R.string.num_exceed ));
+		}
+        
+        mSpinnerNum = (Spinner) findViewById( R.id.spinner_num );        
+        mSpinnerNum.setAdapter( adapter );       
+        mSpinnerNum.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected( AdapterView<?> arg0, View view, int position, long id ) {
+				selectItem( position );
+			}
+			@Override
+			public void onNothingSelected( AdapterView<?> arg0 ) {
+				// dummy
+			}
+		});
+
+// not use, for customize
+		if ( ! isUseButtonBulk ) {
+			btnBulk.setVisibility( View.GONE );
+			btnEach.setVisibility( View.GONE );
+		}
+		if ( ! isUseButtonNum ) {
+			btnNum.setVisibility( View.GONE );
+		}
+		
+		showMenu();
+		showSelection();	
 	}
 
 	/**
-	 * click Each
+	 * set each mode when click Each
 	 */		
 	private void clickEach() {
 		mMode = MODE_EACH;
@@ -129,7 +190,7 @@ public class SettingActivity extends NfcCommonActivity {
 	}
 
 	/**
-	 * click Bulk
+	 * set buld mode when click Bulk
 	 */	
 	private void clickBulk() {
 		mMode = MODE_BULK;
@@ -137,11 +198,92 @@ public class SettingActivity extends NfcCommonActivity {
 	}
 
 	/**
+	 * delete all cards when click Clear
+	 */	
+	private void clickClear() {
+		mHelper.deleteAll();
+		showMenu();
+	}
+
+	/**
+	 * set number of cards when select Item
+	 * ＠param int position 
+	 */				
+	private void selectItem( int position ) {
+		if ( isShowSelection ) {
+			isShowSelection = false;
+			return;
+		}
+
+		int num = 0;
+		switch( position ) {
+			case 0:
+				num = 2;
+				break;
+			case 1:
+				num = 4;
+				break;
+			case 2:
+				num = 6;
+				break;
+			case 3:
+				num = 8;
+				break;
+			case 4:
+				num = 10;
+				break;
+		}
+		if ( num > 0 ) {
+			setCardNum( num );
+		} else {
+			showSelection();
+			toast_short( R.string.msg_manual );
+		}
+		showMenu();
+	}
+
+	/**
+	 * setCardNum
+	 */				
+	private void setCardNum( int num ) {
+		if ( mPreference.getNum() == num ) return;
+		mPreference.setNum( num );
+	}
+	
+	/**
+	 * showSelection
+	 */				
+	private void showSelection() {
+		isShowSelection = true;
+        int num = mPreference.getNum();        
+        switch( num ) {
+        	case 2:
+        		mSpinnerNum.setSelection( 0 );
+        		break;       		
+        	case 4:
+        		mSpinnerNum.setSelection( 1 );
+        		break;       		
+        	case 6:
+        		mSpinnerNum.setSelection( 2 );
+        		break;        		
+        	case 8:
+        		mSpinnerNum.setSelection( 3 );
+        		break;        		
+        	case 10:
+        		mSpinnerNum.setSelection( 4 );
+        		break;
+        	default:
+        		mSpinnerNum.setSelection( 5 );
+        		break;
+        }
+	}
+	
+	/**
 	 * prepare Scan card
 	 */	
-	private void showPrepare() {
-		mTextViewTitle.setText( "Please scan card" );
-		mTextViewTitle.setTextColor( Color.BLACK );
+	private void showPrepare() {		
+		mTextViewCard.setText( geMsgScanCard() );
+		mTextViewCard.setTextColor( Color.BLACK );
 		mLinearLayoutButtons.setVisibility( View.GONE );
 		mImageViewMain.setImageResource( R.drawable.white );
 	}
@@ -151,36 +293,76 @@ public class SettingActivity extends NfcCommonActivity {
 	 */	
     private void showMenu() {
     	mMode = MODE_NONE; 
-		mCardNum = mPreference.getNum();
-		mTextViewTitle.setText( "Add Card : Please scan card" );
-		mTextViewTitle.setTextColor( Color.BLACK );
+		mTextViewCard.setText( geMsgScanCard() );
+		mTextViewCard.setTextColor( Color.BLACK );
 		mLinearLayoutButtons.setVisibility( View.VISIBLE );
 		mImageViewMain.setImageDrawable( null );
     }
- 
+			
+	/**
+	 * geMsgScanCard
+	 * @return String
+	 */	
+	private String geMsgScanCard() {
+		String msg = "";
+		mCardNum = mPreference.getNum();
+		List<CardRecord> lists = mHelper.getRecordList( mCardNum );
+		if( lists != null ) {
+			int size = lists.size();
+			if( size < mCardNum ) {
+				msg = getMsgCardIn( size, mCardNum );
+			} else {
+				msg = getString( R.string.msg_all_already );
+			}
+		} else {
+			msg = getMsgCardIn( 0, mCardNum );
+		}
+		return msg;
+	}
+
+	/**
+	 * getMsgCardIn
+	 * @param int size
+	 * @param int num
+	 * @return String
+	 */	
+	private String getMsgCardIn( int size, int num ) {
+		String msg = getString( R.string.msg_please );
+		String format = getString( R.string.msg_card_in );
+   		msg += String.format( format, size, num );
+   		return msg;
+	}
+						 
 	/**
 	 * === onResume ===
 	 */							
     @Override
     public void onResume() {
         super.onResume();
-        enableForegroundDispatch();
+		mNfcUtility.enable();
     }
 
+	/**
+	 * === onPause ===
+	 */
+    @Override
+    public void onPause() {
+        super.onPause();
+		if ( isFinishing() ) {
+		 	mNfcUtility.disable();
+		}
+    } 
+    
 	/**
 	 * === onNewIntent ===
 	 * @param Intent intent
 	 */
     @Override
     public void onNewIntent( Intent intent ) { 
-		String tag = intentToTagID( intent );
-        log_d( "Discovered tag with intent: " + intent );
-		log_d( "tag: " + tag  );
-
+		String tag = mNfcUtility.intentToTagID( intent );
 		if ( mMode == MODE_NONE ) {
 			clickBulk();
 		}
-	
 		CardRecord record = mHelper.getRecordByTag( tag );
 		if ( record == null ) {
 			if ( mMode == MODE_BULK ) {
@@ -190,8 +372,8 @@ public class SettingActivity extends NfcCommonActivity {
 			}
 		} else {
 			if ( mMode == MODE_BULK ) {
-//				showAlready( record );
-				showDialogAleady( record );
+				showMenu();
+				showDialogAlready( record );
 			} else {
 				startUpdateActivity( record.id );
 			}
@@ -205,18 +387,24 @@ public class SettingActivity extends NfcCommonActivity {
 	private void addCardBulk( String tag ) {
 		int num = getNewCardNum();
 		if ( num == 0 ) {
-			toast_short( "Cards are full" );
+			showDialogFull( tag );
 			return;
 		}
  		int set = ( num + 1 ) / 2;	
 		CardRecord r = new CardRecord( tag, num, set );
         long ret = mHelper.insert( r ); 
         if ( ret > 0 ) {
-	    	mTextViewTitle.setText( "Add Card: " + num + " " + tag );
-	    	mTextViewTitle.setTextColor( Color.BLUE );
-			mImageUtility.showImageByNum( mImageViewMain, num );      		
+        	String msg = getString( R.string.msg_registered ) + " " + num + " " + tag ;
+	    	mTextViewCard.setText( msg );
+	    	mTextViewCard.setTextColor( Color.BLUE );
+			mImageViewMain.setImageBitmap( 
+				mImageUtility.getBitmapByNum( num ) );
+			if ( mHelper.getRecordCount() >= mPreference.getNum() ) {
+				showDialogFinish();	
+			}  		
 	     } else {
-	    	 toast_short( "Add Card Failed " + tag );    	   
+	     	String msg = getString( R.string.msg_add_fail ) + " " + tag;
+			toast_short( msg );    	   
 	    }
 	}
 
@@ -232,45 +420,21 @@ public class SettingActivity extends NfcCommonActivity {
 		}
 		return 0;
 	}
-               
-	/**
-	 * === onPause ===
-	 */
-    @Override
-    public void onPause() {
-        super.onPause();
-        disableForegroundDispatch();
-    } 
-    
-	/**
-	 * === onCreateOptionsMenu ===
-	 * @param Menu menu
-	 * @return boolean
-	 */
-    @Override
-    public boolean onCreateOptionsMenu( Menu menu ) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate( R.menu.add, menu );
-        return true;
-    }
 
 	/**
-	 * === onOptionsItemSelected ===
-	 * @param MenuItem item
-	 * @return boolean
+	 * delete record 
+	 * @param int id
 	 */
-    @Override
-    public boolean onOptionsItemSelected( MenuItem item ) {
-		switch ( item.getItemId() ) {
-			case R.id.menu_restart:
-				finish();
-				return true;
-			case R.id.menu_setting:
-				showMenu();
-				return true;
-        }
-		return false;
-    }
+    private void deleteRecord( int id ) {   
+    	// delete from DB
+        int ret = mHelper.delete( id ); 
+        // message        
+        if ( ret > 0 ) {
+			toast_short( R.string.delete_success );       		
+	     } else {	    	   
+	    	 toast_short( R.string.delete_fail );
+	     }   	   
+	}
     
 	/**
 	 * === onActivityResult ===
@@ -291,10 +455,11 @@ public class SettingActivity extends NfcCommonActivity {
 	private void showDialogDir() {
 		String dir = mPreference.getDir();    
 		final String[] items = mImageUtility.getSubDirs();
-		String msg = "Sub Directory: " + dir;
+		String msg = getString( R.string.dialog_dir ) + " " + dir;
+
 		AlertDialog dialog = new AlertDialog.Builder( this )
 			.setTitle( msg )
-			.setPositiveButton( "Cancel", null )
+			.setPositiveButton( R.string.button_cancel, null )
 			.setCancelable( true )
 			.setItems( items, new DialogInterface.OnClickListener() {
 				public void onClick( DialogInterface dialog, int whitch ) {
@@ -308,57 +473,194 @@ public class SettingActivity extends NfcCommonActivity {
 	/**
 	 * showDialog : save num
 	 */
-	private void showDialogNum() { 
-		int num = mPreference.getNum();   
+	private void showDialogNum() {  
 		final EditText et = new EditText( this );
-		et.setText( Integer.toString( num ) );
+		et.setText( 
+			Integer.toString( mPreference.getNum() ) );
+        et.setTransformationMethod( 
+        	SingleLineTransformationMethod.getInstance() );
+        et.setRawInputType( InputType.TYPE_CLASS_NUMBER );
+        
 		AlertDialog dialog = new AlertDialog.Builder( this )
-			.setTitle( "Card Num" )
+			.setTitle( R.string.dialog_num )
 			.setView( et )
 			.setCancelable( true )
-			.setNegativeButton( "Cancel", null )
-			.setPositiveButton( "Set", new AlertDialog.OnClickListener() {
-				public void onClick( DialogInterface dialog, int id ) {
-					String str = et.getText().toString();
-					mPreference.setNum( str );	
-               	}
-           	})
+			.setNegativeButton( R.string.button_cancel, null )
+			.setPositiveButton( R.string.button_set, 
+				new AlertDialog.OnClickListener() {
+					public void onClick( DialogInterface dialog, int id ) {
+						int num = Integer.parseInt( et.getText().toString() );
+						setCardNum( num );
+						showSelection();
+						showMenu();
+               		}
+           		})
 			.create();
 		dialog.show();
 	}
 	
 	/**
-	 * showDialog : startUpdateActivity
-	 * @param CallLogRecord record
-	 * @return void	 
+	 * showDialogAlready
+	 * @param CardRecord record 
 	 */	
-	private void showDialogAleady( CardRecord record  ) {
+	private void showDialogAlready( CardRecord record  ) {
 		final int id = record.id;
-		String tag_id = record.tag;
-		int num = record.num;
-		String title = "Aleady Card";
-		String msg = "tag = " + tag_id + "<br><br>";
-		Spanned spanned = mImageUtility.getHtmlImage( msg, num );
+		String msg = "tag = " + record.tag + "<br><br>";
+		Spanned spanned = mImageUtility.getHtmlImage( msg, record.num );
+
+		int res_id;
+		switch ( mModeAlready ) {
+			case Constant.MODE_ALREADY_UPDATE:
+				res_id = R.string.button_edit;
+				break;
+			case Constant.MODE_ALREADY_DELETE:
+			default:
+				res_id = R.string.button_delete;
+				break;
+		}
 
 		AlertDialog dialog = new AlertDialog.Builder( this )
-			.setTitle( title )
+			.setTitle( R.string.msg_already )
 			.setMessage( spanned )
 			.setCancelable( true )		               
-			.setNegativeButton( "Close",
+			.setNegativeButton( R.string.button_close,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick( DialogInterface dialog, int which ) {
 						// close
                     }
-                })
-			.setPositiveButton( "Edit",
+                })            
+			.setPositiveButton( res_id,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick( DialogInterface dialog, int which ) {
-						startUpdateActivity( id );
+                    	clickAlready( id );
                     }
                 })
 			.create();
-        dialog.show();
-    }	
+		dialog.show();
+    }
+
+	/**
+	 * clickAlready
+	 * @param int id
+	 */	
+	private void clickAlready( int id ) {
+		switch ( mModeAlready ) {
+			case Constant.MODE_ALREADY_UPDATE:
+				startUpdateActivity( id );
+				break;
+			case Constant.MODE_ALREADY_DELETE:
+			default:
+				deleteRecord( id );
+				showMenu();
+				break;
+		}
+	}
+	
+	/**
+	 * showDialogFull
+	 * @param String tag
+	 */	
+	private void showDialogFull( String tag ) {
+		String msg = "tag = " + tag;
+
+		AlertDialog dialog = new AlertDialog.Builder( this )
+			.setTitle( R.string.msg_full )
+			.setMessage( msg )
+			.setCancelable( true )		               
+			.setNegativeButton( R.string.button_close,
+				new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick( DialogInterface dialog, int which ) {
+						// close
+               		}
+			})
+			.create();
+		dialog.show();
+	} 
+ 
+ 	/**
+	 * showDialogFinish
+	 */	
+	private void showDialogFinish() {
+		AlertDialog dialog = new AlertDialog.Builder( this )
+			.setTitle( R.string.msg_finish )
+			.setCancelable( true )		               
+			.setPositiveButton(  R.string.button_start,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which ) {
+						finish();
+                    }
+                })
+			.setNegativeButton( R.string.button_close,
+				new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick( DialogInterface dialog, int which ) {
+						showMenu();
+               		}
+			})
+			.create();
+		dialog.show();
+	}
+	
+// --- start Activity ---	
+	/**
+	 * start ListActivity
+	 */	
+	private void startListActivity() {	
+		Intent intent = new Intent( this, CardListActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_CODE_LIST );
+	}
+		
+	/**
+	 * start VideoActivity
+	 */	
+	private void startVideoActivity() {	
+		Intent intent = new Intent( this, VideoActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_CODE_VIDEO );
+	}
+
+	/**
+	 * start CreateActivity
+	 * @param String tag_id
+	 */			    
+	private void startCreateActivity( String tag_id ) {
+		Intent new_intent = new Intent( this, CreateActivity.class );
+		Bundle bandle = new Bundle();
+		bandle.putString( Constant.BUNDLE_EXTRA_TAG, tag_id );
+		new_intent.putExtras( bandle );
+		startActivityForResult( new_intent, Constant.REQUEST_CODE_CREATE );
+	}
+
+	/**
+	 * start update activity with id
+	 * @param int id
+	 * @return void	 
+	 */
+	private void startUpdateActivity( int id ) {
+	    Intent intent = new Intent( this, UpdateActivity.class );
+	    Bundle bandle = new Bundle();
+	    bandle.putInt( Constant.BUNDLE_EXTRA_ID, id );
+	    intent.putExtras( bandle );
+		startActivityForResult( intent, Constant.REQUEST_CODE_UPDATE );
+	}
+		
+	/**
+	 * toast short
+	 * @param int id
+	 */ 
+	private void toast_short( int id ) {
+		ToastMaster.makeText( this, id, Toast.LENGTH_SHORT ).show();
+	}
+		
+	/**
+	 * toast short
+	 * @param String msg
+	 */ 
+	private void toast_short( String msg ) {
+		ToastMaster.makeText( this, msg, Toast.LENGTH_SHORT ).show();
+	}
+
 }

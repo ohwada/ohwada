@@ -1,119 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-
+    android:padding="4dp" >
+    	    
 	<TextView
-		android:id="@+id/textview_title" 
+		android:id="@+id/textview_registration" 
+		android:text="@string/label_registration"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="20dp"
-		android:textSize="20sp"
-		android:text="@string/setting_title"
-		/>
+		android:textSize="20sp" />
 
+	<TextView
+		android:id="@+id/textview_card" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:textSize="15sp" />
+				
 <!-- LinearLayou button -->
 	<LinearLayout
 		android:id="@+id/linearlayout_buttons" 
 		android:orientation="vertical"
     	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-		>
+    	android:layout_height="wrap_content" >
 
-<!-- button 1 -->
+		<Button
+			android:id="@+id/button_clear"
+			android:text="@string/button_clear"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" />
+		
+		<TextView
+			android:id="@+id/textview_other" 
+			android:text="@string/label_other"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:layout_marginLeft="20dp"
+			android:textSize="20sp" />
+			
+<!-- button 1 : not use -->
 		<LinearLayout
 			android:orientation="horizontal"
     		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-			>
+    		android:layout_height="wrap_content" >
 
 			<Button
     			android:id="@+id/button_bulk"
+    			android:text="@string/button_bulk"
     			android:layout_width="0dp" 
     			android:layout_height="wrap_content"
-				android:layout_weight="1" 
-    			android:text="@string/setting_bulk"
-    			/>
+				android:layout_weight="1" />
     			
 			<Button
     			android:id="@+id/button_each"
+    			android:text="@string/button_each"
     			android:layout_width="0dp" 
     			android:layout_height="wrap_content" 
-				android:layout_weight="1"
-    			android:text="@string/setting_each"
-    			/>
-    		   				
+				android:layout_weight="1" />
+			        		   				
 		</LinearLayout> 
 <!-- button 1 end -->
 
-		<TextView
-			android:id="@+id/textview_menu" 
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginLeft="20dp"
-			android:textSize="20sp"
-			android:text="@string/setting_menu"
-			/>
-
 <!-- button 2 -->
-		<LinearLayout 
+		<LinearLayout
 			android:orientation="horizontal"
     		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-			>
+    		android:layout_height="wrap_content" >
 
-			<Button
-    			android:id="@+id/button_dir"
-    			android:layout_width="0dp" 
-    			android:layout_height="wrap_content" 
-				android:layout_weight="1"
-    			android:text="@string/setting_dir"
-    			/>
-
+<!-- not use -->
 			<Button
     			android:id="@+id/button_num"
+     			android:text="@string/button_num"
     			android:layout_width="0dp" 
     			android:layout_height="wrap_content" 
-				android:layout_weight="1"
-    			android:text="@string/setting_num"
-    			/>
+				android:layout_weight="1" />
+
+			<Spinner
+	    		android:id="@+id/spinner_num"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1" />
 
 			<Button
-    			android:id="@+id/button_list"
+    			android:id="@+id/button_start"
+    			android:text="@string/button_start"
     			android:layout_width="0dp" 
     			android:layout_height="wrap_content" 
-				android:layout_weight="1"
-    			android:text="@string/setting_list"
-    			/>
-
-			<Button
-    			android:id="@+id/button_video"
-    			android:layout_width="0dp" 
-    			android:layout_height="wrap_content" 
-				android:layout_weight="1"
-    			android:text="@string/setting_video"
-    			/>
-    		    				
+				android:layout_weight="1" />
+				        						
 		</LinearLayout> 
 <!-- button 2 end -->
 
+<!-- button 3 -->
+		<LinearLayout 
+			android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" >
+
+			<Button
+    			android:id="@+id/button_dir"
+    			android:text="@string/button_dir"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1" />
+
+			<Button
+    			android:id="@+id/button_list"
+    			android:text="@string/button_list"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1" />
+
+			<Button
+    			android:id="@+id/button_video"
+    			android:text="@string/button_video"
+    			android:layout_width="0dp" 
+    			android:layout_height="wrap_content" 
+				android:layout_weight="1" />
+    		    				
+		</LinearLayout> 
+<!-- button 3 end -->
+				
 	</LinearLayout> 
 <!-- LinearLayou button end -->
 		
 	<LinearLayout 
 		android:orientation="horizontal"
     	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-		>
+    	android:layout_height="wrap_content" >
 		
 		<ImageView 
 			android:id="@+id/imageview_main"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_margin="10dp"
-			/>
+			android:layout_margin="8dp" />
 
 	</LinearLayout>			
 

@@ -14,6 +14,7 @@
 	<TextView android:id="@+id/row_textview_id"
 		android:layout_width="40dp"
 		android:layout_height="wrap_content"
+		android:layout_marginLeft="4dp"
 		/>
 
 	<TextView android:id="@+id/row_textview_tag"
@@ -28,7 +29,7 @@
 		/>
 
 	<TextView android:id="@+id/row_textview_set"
-		android:layout_width="40dp"
+		android:layout_width="50dp"
 		android:layout_height="wrap_content"
 		/>
 									

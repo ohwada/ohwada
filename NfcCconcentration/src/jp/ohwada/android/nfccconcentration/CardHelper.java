@@ -8,19 +8,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 /**
  * helper for DB
  */
 public class CardHelper extends SQLiteOpenHelper {
-
-	// dubug
-	private final static String TAG_SUB = "Helper : ";
-	private final static String TAG = Constant.TAG;
-    private final static boolean D = Constant.DEBUG; 
-    
-	// database
+    // database
     private static final String DB_NAME = "card.db";
     private static final int DB_VERSION = 1;
 
@@ -145,11 +138,20 @@ public class CardHelper extends SQLiteOpenHelper {
 	}	
 
 	/**
+     * delete all
+	 * @return int : the number of rows affected
+     */ 	
+	public int deleteAll()  {
+		String where = null;
+		return delete( where ); 
+	}
+	
+	/**
      * delete  for common
      * @param int id
 	 * @return int : the number of rows affected
      */ 	
-	public int delete(  String where )  {
+	public int delete( String where )  {
 		SQLiteDatabase db = getWritableDatabase();
 		if ( db == null ) return 0;
 		int ret = db.delete(
@@ -294,7 +296,6 @@ public class CardHelper extends SQLiteOpenHelper {
 	 * @return List<CardRecord>
      */ 
 	public List<CardRecord> getRecordList( int limit, int offset ) {
-		log_d( "getRecordList : " + limit + " : " + offset );
 		SQLiteDatabase db = getReadableDatabase();
 		if ( db == null ) return null;
         Cursor c = getCursorCommon( 
@@ -315,9 +316,7 @@ public class CardHelper extends SQLiteOpenHelper {
      * @param String limit  
 	 * @return Cursor
      */ 
-	private Cursor getCursorCommon( SQLiteDatabase db, String where, String limit ) {
-		log_d( "getCursorCommon : "  + where + " : "+ limit );
-		
+	private Cursor getCursorCommon( SQLiteDatabase db, String where, String limit ) {		
 		String[] param = null;
 		String groupby = null;
 		String having = null;
@@ -339,7 +338,6 @@ public class CardHelper extends SQLiteOpenHelper {
 	 * @return CardRecord
      */ 	
 	private CardRecord buildRecord( Cursor c ) {
-//		log_d( "buildRecord" );
 		CardRecord r = new CardRecord();
 		r.id = c.getInt(0);
 		r.tag = c.getString(1);
@@ -354,32 +352,34 @@ public class CardHelper extends SQLiteOpenHelper {
 	 * @return List<CardRecord>
      */ 			
 	private List<CardRecord> buildRecordList( Cursor c ) {
-		log_d( "buildRecordList" );
-		 List<CardRecord> list = new ArrayList<CardRecord>();
-		        
+		 List<CardRecord> list = new ArrayList<CardRecord>();		        
 		int count = c.getCount();
-		if ( count == 0 ) {
-			log_d( "buildRecordList no data" );
-			return list;
-		}
-		
+		if ( count == 0 ) return list;		
         c.moveToFirst();   
-        
 		for ( int i = 0; i < count; i++ ) {
 			list.add( buildRecord( c ) );
 			c.moveToNext();
- 		}
- 		
+ 		} 		
 		c.close();		
 		return list;
 	}
-	
+
 	/**
-	 * write log
-	 * @param String msg
-	 * @return void
-	 */ 
-	private void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + msg );
-	} 
+     * --- getRecordCoun ---
+	 * @return long
+     */ 
+    public long getRecordCount() {
+        long count = 0;
+		SQLiteDatabase db = getReadableDatabase();
+		if ( db == null ) return count;
+        String sql = "select count(*) from " + TBL_NAME;
+        Cursor c = db.rawQuery( sql, null );
+        if ( c != null ) {
+        	c.moveToLast();
+        	count = c.getLong( 0 );
+        }	
+        c.close();
+        return count;
+    }
+
 }

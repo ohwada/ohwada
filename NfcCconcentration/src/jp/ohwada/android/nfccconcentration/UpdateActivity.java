@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * SQLite demo : Update & Delete record
+ * Update & Delete record
  */
 public class UpdateActivity extends SqlCommonActivity {
 
@@ -52,7 +52,8 @@ public class UpdateActivity extends SqlCommonActivity {
 		mEditTextTag.setText( record.tag );
 		mEditTextNum.setText( Integer.toString( num ) );
 		mEditTextSet.setText( record.getSetString() );
-		mImageUtility.showImageByNum( mImageView, num );
+		mImageView.setImageBitmap( 
+			mImageUtility.getBitmapByNum( num ) );
 	}
 
 	/**
@@ -83,11 +84,11 @@ public class UpdateActivity extends SqlCommonActivity {
 			getEditTextSet() ) ;
         int ret = mHelper.update( r );         
         // message
-        String msg = "Update Failed";
         if ( ret > 0 ) {
-	    	msg = "Update Successful";       		
-	     }	    	   
-	     toast_short( msg );
+			toast_short( R.string.update_success );       		
+	     } else {	    	   
+	    	 toast_short( R.string.update_fail );
+	     }
 	}
 
 	/**
@@ -97,11 +98,11 @@ public class UpdateActivity extends SqlCommonActivity {
     	// delete from DB
         int ret = mHelper.delete( mId ); 
         // message        
-        if ( ret == 0 ) {
-			toast_short( "Delete Failed" ); 
-			return; 		
-	    }
-		toast_short( "Delete Successful" ); 
+        if ( ret > 0 ) {
+			toast_short( R.string.delete_success );       		
+	     } else {	    	   
+	    	 toast_short( R.string.delete_fail );
+	     }
 		finish();      	   
 	}
 

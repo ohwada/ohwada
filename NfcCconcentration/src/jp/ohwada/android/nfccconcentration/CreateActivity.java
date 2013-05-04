@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * SQLite demo : Create record
+ * Create record
  */
 public class CreateActivity extends SqlCommonActivity {
 	
@@ -60,7 +60,7 @@ public class CreateActivity extends SqlCommonActivity {
 		// get value
 		String tag = getEditTextTag();
 		if ( "".equals(tag) ) {
-		     toast_short( "Please entry tag" );
+		     toast_short( R.string.create_please_entry );
 		     return;
 		}
 
@@ -71,10 +71,10 @@ public class CreateActivity extends SqlCommonActivity {
 			getEditTextSet() ) ;
         long ret = mHelper.insert( r );        
         // message
-        String msg = "Insert Failed";
         if ( ret > 0 ) {
-	    	msg = "Insert Successful";       		
-	     }	    	   
-	     toast_short( msg );
+			toast_short( R.string.create_success );       		
+	     } else {	    	   
+	    	 toast_short( R.string.create_fail );
+	     }
 	}	
 }

@@ -1,21 +1,18 @@
 package jp.ohwada.android.nfccconcentration;
 
 import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * SQLite Common Activity
  */
 public class SqlCommonActivity extends Activity {
-
 	// dubug
-	protected final static String TAG_SUB = "SqlCommon : ";
-	protected final static String TAG = Constant.TAG;
 	protected final static boolean D = Constant.DEBUG; 
     
 	protected final static String BUNDLE_EXTRA_ID  = Constant.BUNDLE_EXTRA_ID;
@@ -145,20 +142,12 @@ public class SqlCommonActivity extends Activity {
 		mEditTextSet.setText("");
 	}
 		
-// --- debug ---		           
-	/**
-	 * write log
-	 * @param String msg
-	 */ 
-	protected void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + msg );
-	} 
-
+// --- debug ---		 
 	/**
 	 * toast short
-	 * @param String msg
+	 * @param int id
 	 */ 
-	protected void toast_short( String msg ) {
-		ToastMaster.showShort( this, msg );
+	protected void toast_short( int id ) {
+		ToastMaster.makeText( this, id, Toast.LENGTH_SHORT ).show();
 	}
 }
