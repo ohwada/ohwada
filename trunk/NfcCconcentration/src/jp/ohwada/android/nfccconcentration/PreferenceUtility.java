@@ -3,18 +3,11 @@ package jp.ohwada.android.nfccconcentration;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 /*
- * PreferenceUtility
+ * Preference Utility
  */
 public class PreferenceUtility {
-
-	// dubug
-	private final static String TAG_SUB = "Preference : ";
-	private final static String TAG = Constant.TAG;
-    private final static boolean D = Constant.DEBUG; 
-
 	private final static String PREF_KEY_DIR = Constant.PREF_KEY_DIR;    
 	private final static String PREF_KEY_NUM = Constant.PREF_KEY_NUM;
 	private final static String PREF_KEY_TIME = Constant.PREF_KEY_TIME;
@@ -37,7 +30,6 @@ public class PreferenceUtility {
      * @param String value
      */	
    public void setDir( String value ) {
-   		log_d( "setDir " + value );
 		mPreferences.edit().putString( PREF_KEY_DIR, value ).commit(); 
 	}
 	
@@ -49,14 +41,20 @@ public class PreferenceUtility {
 		return mPreferences.getString( PREF_KEY_DIR, DIR_SUB_DEFAULT );
 	}
 
+	/**
+	 * isDefualtDir
+	 * @return boolean
+	 */	
+	public boolean isDefualtDir() {
+		return DIR_SUB_DEFAULT.equals( getDir() );
+	}
+
     /**
      * setNum
-     * @param String value
+     * @param int value
      */	
-    public void setNum( String value ) {
-		log_d( "setNum " + value );
-		int v = Integer.parseInt( value );
-		mPreferences.edit().putInt( PREF_KEY_NUM, v ).commit(); 	
+    public void setNum( int value ) {
+		mPreferences.edit().putInt( PREF_KEY_NUM, value ).commit(); 	
 	}
 				
 	/**
@@ -72,7 +70,6 @@ public class PreferenceUtility {
      * @param String value
      */	
    public void setTime( String value ) {
-   		log_d( "setTime " + value );
 		mPreferences.edit().putString( PREF_KEY_TIME, value ).commit(); 
 	}
 
@@ -84,12 +81,4 @@ public class PreferenceUtility {
    		return mPreferences.getString( PREF_KEY_TIME,  STR_EMPTY );
 	}
 
-	/**
-	 * write log
-	 * @param String msg
-	 * @return void
-	 */ 
-	private void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + msg );
-	}
 }

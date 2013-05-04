@@ -3,15 +3,19 @@ package jp.ohwada.android.nfccconcentration;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Spanned;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * Create Read Update Delete
@@ -19,6 +23,10 @@ import android.widget.ListView;
 public class CardListActivity extends ListActivity
 	implements OnItemClickListener {  
 
+	// customize
+	private int mModeAlready = Constant.MODE_ALREADY; 
+	private boolean isUseButtonCreate = Constant.USE_BUTTON_CREATE;
+	
 	// constant
 	private final static String BUNDLE_EXTRA_ID  = Constant.BUNDLE_EXTRA_ID;
 	private final static int REQUEST_CODE_CREATE = Constant.REQUEST_CODE_CREATE;
@@ -28,7 +36,9 @@ public class CardListActivity extends ListActivity
 	// class object
 	private CardHelper mHelper;
    	private CardAdapter mAdapter;
-
+	private ImageUtility mImageUtility;
+    private NfcUtility mNfcUtility;
+    	
 	// view conponent
 	private ListView mListView;
 
@@ -47,10 +57,12 @@ public class CardListActivity extends ListActivity
 
 		// helper
 		mHelper = new CardHelper( this );
-
+		mImageUtility = new ImageUtility( this );	
+		mNfcUtility = new NfcUtility( this, getClass() );	
+		
 		// create button
 		Button btnCreate = (Button) findViewById( R.id.button_create );
-		btnCreate.setOnClickListener(new OnClickListener() {
+		btnCreate.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 				startCreateActivity();
@@ -59,7 +71,7 @@ public class CardListActivity extends ListActivity
 
 		// back button
 		Button btnBack = (Button) findViewById( R.id.button_back );
-		btnBack.setOnClickListener(new OnClickListener() {
+		btnBack.setOnClickListener( new OnClickListener() {
 	 		@Override
 			public void onClick( View v ) {
 				finish();
@@ -76,6 +88,11 @@ public class CardListActivity extends ListActivity
 		mListView.addHeaderView( headerView );
 		mListView.setAdapter( mAdapter );
 		mListView.setOnItemClickListener( this );
+
+// not use, for customize
+		if ( ! isUseButtonCreate ) {		
+			btnCreate.setVisibility( View.GONE );
+		}	
 	}
 
 	/**
@@ -87,7 +104,25 @@ public class CardListActivity extends ListActivity
 	@Override
 	public void onResume() {
 	    super.onResume();
+		showList();
+        mNfcUtility.enable();	    
+	}
 
+	/**
+	 * === onPause ===
+	 */
+    @Override
+    public void onPause() {
+        super.onPause();
+		if ( isFinishing() ) {
+		 	mNfcUtility.disable();
+		}
+    } 
+
+	/**
+	 * showList 
+	 */
+	private void showList() {
 		// get records (Read)	
 		mList.clear();
 		List<CardRecord> list = mHelper.getRecordList( LIMIT );
@@ -96,6 +131,19 @@ public class CardListActivity extends ListActivity
         }
         mAdapter.notifyDataSetChanged();				    
 	}
+
+	/**
+	 * === onNewIntent ===
+	 * @param Intent intent
+	 */
+    @Override
+    public void onNewIntent( Intent intent ) {
+		String tag = mNfcUtility.intentToTagID( intent );
+		if ( tag != null ) {
+    		// return to setting 
+			finish();
+		}
+    }
 
 	/** === onItemClick ===
 	 * @param AdapterView parent
@@ -139,7 +187,15 @@ public class CardListActivity extends ListActivity
    			return;
    		}
 
-		startUpdateActivity( record.id );				
+		switch ( mModeAlready ) {
+			case Constant.MODE_ALREADY_UPDATE:
+				startUpdateActivity( record.id );
+				break;
+			case Constant.MODE_ALREADY_DELETE:
+			default:
+				showDialogAleady( record );
+				break;
+		}				
 	}
 
 	/**
@@ -177,5 +233,63 @@ public class CardListActivity extends ListActivity
     protected void onActivityResult( int request, int result, Intent data ) {
         super.onActivityResult( request, result, data );     	
 	}
-		
+
+	/**
+	 * showDialogAleady
+	 * @param CardRecord record 
+	 */	
+	private void showDialogAleady( CardRecord record  ) {
+		final int id = record.id;
+		String msg = getString( R.string.item_id ) + ": " + id + "<br>";
+		msg += getString( R.string.item_tag ) + ": " + record.tag + "<br>";
+		msg +=  getString( R.string.item_num ) + ": " + record.num + "<br>";
+		msg +=  getString( R.string.item_set ) + ": " + record.set + "<br>";
+		msg += "<br>";				
+		Spanned spanned = mImageUtility.getHtmlImage( msg, record.num );
+
+		AlertDialog dialog = new AlertDialog.Builder( this )
+			.setTitle( R.string.msg_info )
+			.setMessage( spanned )
+			.setCancelable( true )		               
+			.setNegativeButton( R.string.button_close,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which ) {
+						// close
+                    }
+                })           
+			.setPositiveButton( R.string.button_delete,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which ) {
+						deleteRecord( id );
+						showList();
+                    }
+                })
+			.create();
+		dialog.show();
+    }
+
+	/**
+	 * delete record 
+	 * @param int id
+	 */
+    private void deleteRecord( int id ) {   
+    	// delete from DB
+        int ret = mHelper.delete( id ); 
+        // message        
+        if ( ret > 0 ) {
+			toast_short( R.string.delete_success );       		
+	     } else {	    	   
+	    	toast_short( R.string.delete_fail );
+	     }   	   
+	}
+    
+	/**
+	 * toast short
+	 * @param int id
+	 */ 
+    private void toast_short( int id ) {
+		ToastMaster.makeText( this, id, Toast.LENGTH_SHORT ).show();
+	}
 }

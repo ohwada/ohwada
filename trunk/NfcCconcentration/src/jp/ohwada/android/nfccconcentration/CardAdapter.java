@@ -72,7 +72,8 @@ public class CardAdapter extends ArrayAdapter<CardRecord>
 		h.tv_num.setText( Integer.toString( num ) );
 		h.tv_set.setText( item.getSetString() );
 		if ( num > 0 ) {
-			mUtility.showImageByNum( h.iv, num );	
+			h.iv.setImageBitmap( 
+				mUtility.getBitmapByNum( num ) );
 		}		
 		return view;
 	}

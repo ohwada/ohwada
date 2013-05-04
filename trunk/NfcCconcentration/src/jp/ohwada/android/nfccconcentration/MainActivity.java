@@ -1,7 +1,10 @@
 package jp.ohwada.android.nfccconcentration;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,17 +16,25 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /*
  * main Activity
  */
-public class MainActivity extends NfcCommonActivity {
+public class MainActivity extends Activity {
+	// dubug
+	private final static boolean D = Constant.DEBUG; 
 
     private static final int MSG_WHAT = Constant.MSG_WHAT_FINISH;
 	private static final String IMAGE_NAME_START = Constant.IMAGE_NAME_START;
 	private static final String IMAGE_NAME_COMPLETE = Constant.IMAGE_NAME_COMPLETE;
 	private final static String VIDEO_NAME_COMPLETE = Constant.VIDEO_NAME_COMPLETE;
+	private String mUrlWeb = Constant.URL_WEB;
 
+	// about
+	private final static String URL_USAGE = 
+		"http://android.ohwada.jp/nfc_cconcentration";
+	
     private static final int INTERVAL = 3000; // 3 sec;
     private static final int VIBRATE_TIME = 500;	// 0.5 sec
 	private final static int STATUS_PREVIEW = 0;
@@ -47,7 +58,8 @@ public class MainActivity extends NfcCommonActivity {
     private TimeView mTimeView;
 	private ImageUtility mImageUtility;
 	private FileUtility mFileUtility;
-
+    private NfcUtility mNfcUtility;
+    
 	private int mCardNum = 0;		    
 	private boolean[] mCardNumArray = null;
 	private int mStatus = STATUS_PREVIEW ;
@@ -69,7 +81,8 @@ public class MainActivity extends NfcCommonActivity {
 		mHelper = new CardHelper( this );	
 		mImageUtility = new ImageUtility( this );	
 		mFileUtility = new FileUtility( this );	
-
+		mNfcUtility = new NfcUtility( this, getClass() );	
+		
         mImageViewPhoto1 = (ImageView) findViewById( R.id.imageview_photo_1 );
 		mImageViewPhoto2 = (ImageView) findViewById( R.id.imageview_photo_2 );
         mTextViewLeft = (TextView) findViewById( R.id.textview_left );
@@ -86,7 +99,6 @@ public class MainActivity extends NfcCommonActivity {
 		
 		mFileUtility.init();	
 		showPreview();
-		prepareIntent();
 	}
 
 	/**
@@ -126,14 +138,29 @@ public class MainActivity extends NfcCommonActivity {
 	 */				
     private void showPreview() {
     	mStatus = STATUS_PREVIEW ;
+    	mTimeView.stop();
 		mTimeView.showTime() ;
-		mTextViewLeft.setText( "Please scan card" );
-		mTextViewLeft.setTextColor( Color.BLACK );
 		mTextViewCenter.setText( "" );
 		mTextViewCenter.setTextColor( Color.BLACK );
 		mImageUtility.restart();
-		mImageUtility.showImage( mImageViewPhoto1, IMAGE_NAME_START );
-		mImageViewPhoto2.setImageDrawable( null );
+		mImageViewPhoto2.setImageDrawable( null );		
+		if ( mHelper.getRecordCount() >= mPreference.getNum() ) {
+			// when the number of cards is enough
+			mTextViewLeft.setText( R.string.please_scan );
+			mTextViewLeft.setTextColor( Color.BLACK );
+		} else {
+			// when not enough
+			mTextViewLeft.setText( R.string.please_register );
+			mTextViewLeft.setTextColor( Color.RED );
+		}
+		Bitmap bitmap = mImageUtility.getBitmap( IMAGE_NAME_START );
+		if ( bitmap != null ) {
+			// if image exists 
+			mImageViewPhoto1.setImageBitmap( bitmap );
+		} else {
+			// default if not exists
+			mImageViewPhoto1.setImageResource( R.drawable.image_start );
+		}
 	}
 
 	/**
@@ -142,29 +169,43 @@ public class MainActivity extends NfcCommonActivity {
     private void showComplete() {
     	mStatus = STATUS_COMPLETE ;
 		mTimeView.showTime() ;
-		mTextViewLeft.setText( "Complete" );
+		mTextViewLeft.setText( R.string.geme_complete );
 		mTextViewLeft.setTextColor( Color.BLUE );
 		mTextViewCenter.setText( "" );
 		mTextViewCenter.setTextColor( Color.BLACK );
-		mImageUtility.showImage( mImageViewPhoto1, IMAGE_NAME_COMPLETE );
 		mImageViewPhoto2.setImageDrawable( null );
+		Bitmap bitmap = mImageUtility.getBitmap( IMAGE_NAME_COMPLETE );
+		if ( bitmap != null ) {
+			// if image exists 
+			mImageViewPhoto1.setImageBitmap( bitmap );
+		} else {
+			// default if not exists
+			mImageViewPhoto1.setImageResource( R.drawable.image_complete );
+		}
 	}
-
+		
 	/**
 	 * showFinish
 	 */	
     private void showFinish() {
 		stopGame();
 		mTimeView.saveTime() ;
-		mHandler.sendMessageDelayed( Message.obtain(mHandler, MSG_WHAT), INTERVAL ); 
+		mHandler.sendMessageDelayed( Message.obtain( mHandler, MSG_WHAT ), INTERVAL ); 
 	}
 
 	/**
 	 * clickPhoto1
 	 */	
     private void clickPhoto1() {
-		if ( mStatus == STATUS_PREVIEW ) {
-			showPreview();					
+    	switch( mStatus ) {
+			case STATUS_PREVIEW:
+				if ( mUrlWeb.length() > 0 ) {
+					startBrawser( mUrlWeb );
+				}
+				break;
+			case STATUS_COMPLETE:
+				showPreview();	
+				break;
 		}
 	}
 
@@ -174,7 +215,18 @@ public class MainActivity extends NfcCommonActivity {
     @Override
     public void onResume() {
         super.onResume();
-		enableForegroundDispatch();
+		mNfcUtility.enable();
+    }
+
+	/**
+	 * === onPause ===
+	 */								
+    @Override
+    public void onPause() {
+        super.onPause();
+		if ( isFinishing() ) {
+		 	mNfcUtility.disable();
+		}
     }
 
 	/**
@@ -183,31 +235,27 @@ public class MainActivity extends NfcCommonActivity {
 	 */
     @Override
     public void onNewIntent( Intent intent ) {
+    	// start Setting if no card
+		if ( mHelper.getRecordCount() == 0 ) {
+			startSettingActivity();
+			return;
+		}
 		// noting to do if not start
-		if (( mStatus == STATUS_STOP )||( mStatus == STATUS_COMPLETE )) {
-			log_d( "onNewIntent: invalid status: " + mStatus );
-			return;
-		}
-
+		if (( mStatus == STATUS_STOP )||(
+		  mStatus == STATUS_COMPLETE )) return;
 		// get tag, noting to do if invalid tag
-		String tag = intentToTagID( intent );
-		if ( tag == null ) {
-			log_d( "onNewIntent: tag is null" );
-			return;
-		}
-
+		String tag = mNfcUtility.intentToTagID( intent );
+		if ( tag == null ) return;
 		// read card, warning if invalid card
 		CardRecord record = mHelper.getRecordByTag( tag );
 		if ( record == null ) {
-			toast_short( "Joker: " + tag );
+			toast_short( R.string.not_registered );
 			return;
 		}
-
 		// start if preview
 		if ( mStatus == STATUS_PREVIEW ) {
 			startGame();
-		}		
-        
+		}        
 		switch ( mCardSet ) {
 			case CARD_SET_2:
 				showSecond( record );
@@ -229,9 +277,11 @@ public class MainActivity extends NfcCommonActivity {
 		int set = record.set;
 		mNum1 = num;
 		mSet1 = set;
-		mTextViewLeft.setText( "First Card: " + tag );
+		String msg = getString( R.string.first_card ) + " " + tag ;
+		mTextViewLeft.setText( msg );
 		mTextViewCenter.setText( "" );
-		mImageUtility.showImageByNum( mImageViewPhoto1, num );
+		mImageViewPhoto1.setImageBitmap( 
+			mImageUtility.getBitmapByNum( num ) );
 		mImageViewPhoto2.setImageResource( R.drawable.white );
 		mCardSet = CARD_SET_2; 
 	}
@@ -259,7 +309,7 @@ public class MainActivity extends NfcCommonActivity {
     private void showSecondMatch( CardRecord record ) {
     	showSecondCommon( record );
 
-		mTextViewCenter.setText( "Match" );
+		mTextViewCenter.setText( R.string.pieces_match );
 		mTextViewCenter.setTextColor( Color.BLUE );
 		mCardNumArray[ record.num ] = true;
 		mCardNumArray[ mNum1 ] = true;
@@ -276,7 +326,7 @@ public class MainActivity extends NfcCommonActivity {
 	 */ 
     private void showSecondUnmatch( CardRecord record ) {
     	showSecondCommon( record );
-		mTextViewCenter.setText( "unmatch" );
+		mTextViewCenter.setText( R.string.pieces_unmatch );
 		mTextViewCenter.setTextColor( Color.RED );
 	}
 
@@ -286,7 +336,7 @@ public class MainActivity extends NfcCommonActivity {
 	 */ 
     private void showSecondSame( CardRecord record ) {
 		showSecondCommon( record );
-		mTextViewCenter.setText( "same card" );
+		mTextViewCenter.setText( R.string.same_card );
 		mTextViewCenter.setTextColor( Color.RED );
     }
 	
@@ -295,21 +345,15 @@ public class MainActivity extends NfcCommonActivity {
 	 * @param CardRecord record
 	 */ 
     private void showSecondCommon( CardRecord record ) {
-		mTextViewLeft.setText( "Second Card: " + record.tag );
-		mImageUtility.showImageByNum( mImageViewPhoto1, mNum1 );
-		mImageUtility.showImageByNum( mImageViewPhoto2, record.num );
+    	String msg = getString( R.string.second_card ) + " " + record.tag ;
+		mTextViewLeft.setText( msg );
+		mImageViewPhoto1.setImageBitmap( 
+			mImageUtility.getBitmapByNum( mNum1 ) );
+		mImageViewPhoto2.setImageBitmap( 
+			mImageUtility.getBitmapByNum( record.num ) );						
 		mCardSet = CARD_SET_1; 
 	}
-
-	/**
-	 * === onPause ===
-	 */								
-    @Override
-    public void onPause() {
-        super.onPause();
-		disableForegroundDispatch();
-    } 
-    
+        
 	/**
 	 * === onCreateOptionsMenu ===
 	 * @param Menu menu
@@ -330,11 +374,14 @@ public class MainActivity extends NfcCommonActivity {
     @Override
     public boolean onOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
+			case R.id.menu_about:
+				showAboutDialog();
+				return true;
+			case R.id.menu_usage:
+				startBrawser( URL_USAGE );
+				return true;
 			case R.id.menu_restart:
 				showPreview();
-				return true;
-			case R.id.menu_finish:
-				finish();
 				return true;
 			case R.id.menu_setting:
 				startSettingActivity();
@@ -373,4 +420,53 @@ public class MainActivity extends NfcCommonActivity {
     		showComplete();
     	}
     }
+
+	/**
+     * showAboutDialog
+     */
+	private void showAboutDialog() {
+		AboutDialog dialog = new AboutDialog( this );
+		dialog.show();
+	}
+
+	/**
+	 * toast short
+	 * @param int id
+	 */ 
+	private void toast_short( int id ) {
+		ToastMaster.makeText( this, id, Toast.LENGTH_SHORT ).show();
+	}
+    
+// --- start Activity ---	
+	/**
+	 * start VideoActivity
+	 */	
+	private void startVideoActivity() {	
+		Intent intent = new Intent( this, VideoActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_CODE_VIDEO );
+	}
+
+	/**
+	 * start AddActivity
+	 */	
+	private void startSettingActivity() {	
+		Intent intent = new Intent( this, SettingActivity.class );
+		startActivityForResult( intent, Constant.REQUEST_CODE_SETTING );
+	}
+
+	/**
+	 * startBrawser
+	 * @param String url
+	 */ 
+    private void startBrawser( String url ) {
+		if (( url == null )|| url.equals("") ) return;
+    	try {
+    		Uri uri = Uri.parse( url );
+    		Intent intent = new Intent( Intent.ACTION_VIEW, uri );
+    		startActivity( intent );
+    	} catch( Exception e ) {
+			if (D) e.printStackTrace();
+    	}
+    }
+	
 }

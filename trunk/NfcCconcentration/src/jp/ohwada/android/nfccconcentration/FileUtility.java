@@ -1,24 +1,27 @@
 package jp.ohwada.android.nfccconcentration;
 
 import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
-import android.util.Log;
+import android.util.DisplayMetrics;
 
 /**
  * File Utility
  */
 public class FileUtility {
-
 	// dubug
-	private String TAG_SUB = "FileUtility : ";
-	private final static String TAG = Constant.TAG;
 	private final static boolean D = Constant.DEBUG; 
 
 	private final static String DIR_MAIN = Constant.DIR_MAIN;
@@ -40,8 +43,8 @@ public class FileUtility {
      * === constractor ===
 	 * @param Context context  
 	 */	    
-	 public FileUtility( Context c ) {
-		mManager = c.getAssets();
+	 public FileUtility( Context context  ) {
+		mManager = context.getAssets();
 		String sd = Environment.getExternalStorageDirectory().getPath();
 		mMainPath = sd + "/" + DIR_MAIN ;
 	} 
@@ -50,29 +53,51 @@ public class FileUtility {
 	 * --- init  ---
 	 */ 
 	public void init() {
-		log_d( "init" );
 		// make dir if not exists
 		File main_dir = new File( mMainPath  );
 		if ( !main_dir.exists() ) { 
 			main_dir.mkdir();
 		}
 		// make dir & copy files if not exists
-		File sub_dir = new File( getSubPath()  );
+		File sub_dir = new File( getDefaultPath()  );
 		if ( !sub_dir.exists() ) { 
 			sub_dir.mkdir();
-			copyFiles();
+		}
+		if ( Constant.USE_COPY_FILES ) {
+			String path = getDefaultPath() + "/" +  getNameByNum( 1 );
+			if ( !existsFile( path )) {
+				copyFiles();
+			}
 		}
 	}
-	
+
 	/**
-	 * getSubPath
+	 * getNameByNum
+	 * @param int num
+	 * @return String
+	 */		
+	public String getNameByNum( int num ) {
+		String name = Constant.IMAGE_PREFIX + num + "." + Constant.IMAGE_EXT ;
+		return name;
+	}
+
+	/**
+	 * getMainPath
 	 * @return String
 	 */  
-	private String getSubPath() {
+	public String getMainPath() {
+		return mMainPath ;
+	}
+		
+	/**
+	 * getDefaultPath
+	 * @return String
+	 */  
+	private String getDefaultPath() {
 		String path = mMainPath + "/" + DIR_SUB_DEFAULT ;
 		return path;
 	}
-			    
+	    
 	/**
 	 * Copy Assets files to SD
 	 * @return boolean
@@ -80,26 +105,18 @@ public class FileUtility {
 	private boolean copyFiles() {
 		boolean is_error = false;	
 		String[] files = getAssetsList();
-		if ( files == null ) {
-			log_d( "copyFiles file null" );
-			return false;
-		}
+		if ( files == null ) return false;
 		int length = files.length;
-		if ( length == 0 ) {
-			log_d( "copyFiles file zero" );
-			return false;
-		}
+		if ( length == 0 ) return false;
 		// copy all files
 		for ( int i=0; i < length; i ++ ) {
 			String src_file = files[i];
-			log_d( src_file );
 			// ignore images, sounds, webkit
 			if ( matchFile( src_file ) ) continue;
-			String dst_file = getSubPath() + "/" + src_file ;
+			String dst_file = getDefaultPath() + "/" + src_file ;
 			boolean ret = copyAssetsToSd( src_file, dst_file );
 			if ( !ret ) {
 				is_error = true;	
-				log_d( "copy error " + src_file );
 			}
 		}
 		return !is_error;	
@@ -126,7 +143,7 @@ public class FileUtility {
 		try {
 			list = mManager.list( LIST_PATH );
 		} catch (IOException e) {
-			e.printStackTrace();
+			if (D) e.printStackTrace();
 		}
 		return list;
 	}
@@ -155,7 +172,7 @@ public class FileUtility {
 
 		} catch ( IOException e ) {
 		 	is_error = true;	
-			e.printStackTrace();
+			if (D) e.printStackTrace();
 
 		} finally {		
 			// close if input file is open
@@ -164,7 +181,7 @@ public class FileUtility {
 					is.close();
 				} catch ( IOException e ) {
 					is_error = true;	
-					e.printStackTrace();
+					if (D) e.printStackTrace();
 				}
 			}
 			// close if output file is open
@@ -173,19 +190,102 @@ public class FileUtility {
 					os.close();
 				} catch ( IOException e ) {
 					is_error = true;	
-					e.printStackTrace();
+					if (D) e.printStackTrace();
 				}
 			}
 		}
 		
 		return !is_error;
 	}
-	
+
 	/**
-	 * write log
-	 * @param String msg
-	 */ 
-	private void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + msg );
-	} 
+	 * existsAssetsFile
+	 * @param String name
+	 * @return boolean
+	 */     
+    public boolean existsAssetsFile( String name ) {
+		try {
+    		InputStream is = mManager.open( name );
+			if ( is != null ) return true;
+		} catch (IOException e) {
+			if (D) e.printStackTrace();
+		}
+		return false;
+    }
+
+	/**
+	 * existsFile
+	 * @param String path
+	 * @return boolean
+	 */	
+	public boolean existsFile( String path ) {
+		File file = new File( path );
+		return file.exists();
+	}
+
+	/**
+	 * get Assets Image
+	 * @param String name
+	 * @return String
+	 */     
+    public Bitmap getAssetsBitmap( String name ) {
+    	Bitmap bitmap = null;
+		try {
+    		InputStream is = mManager.open( name );
+    		bitmap = BitmapFactory.decodeStream( is );
+ 			if ( bitmap != null ) {
+				bitmap.setDensity( DisplayMetrics.DENSITY_MEDIUM );
+			}	
+		} catch (IOException e) {
+			if (D) e.printStackTrace();
+		}
+		return bitmap;
+    }
+
+	/**
+	 * getBitmap
+	 * @param String path
+	 * @return Bitmap
+	 */	
+	public Bitmap getBitmap( String path ) {
+		Bitmap bitmap = BitmapFactory.decodeFile( path);
+		if ( bitmap != null ) {
+			bitmap.setDensity( DisplayMetrics.DENSITY_MEDIUM );
+		}
+		return bitmap;
+	}
+
+	/**
+	 * getAssetFileDescriptor
+	 * @param String name
+	 * @return AssetFileDescriptor
+	 */
+	public AssetFileDescriptor getAssetFileDescriptor( String name ) {
+		AssetFileDescriptor afd = null;
+		try {
+			afd = mManager.openFd( name );
+		} catch (IOException e) {
+			if (D) e.printStackTrace();
+		}
+		return afd;
+	}
+
+	/**
+	 * getFileDescriptor
+	 * @param String path
+	 * @return FileDescriptor
+	 */
+	public FileDescriptor getFileDescriptor( String path ) {
+		FileInputStream fis = null;
+		try {
+			fis = new FileInputStream( new File( path ) );
+			return fis.getFD();
+		} catch (FileNotFoundException e) {
+			if (D) e.printStackTrace();
+		} catch (IOException e) {
+			if (D) e.printStackTrace();
+		}
+		return null;
+	}
+
 }
