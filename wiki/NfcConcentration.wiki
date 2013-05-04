@@ -15,7 +15,7 @@ http://android.ohwada.jp/archives/1634
 http://android.ohwada.jp/archives/1660
 
 = ソースコード =
-http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FNfcCconcentration
+https://code.google.com/p/ohwada/source/browse/#svn%2FNfcCon
 
 = スクリーンショット =
 http://ohwada.googlecode.com/files/20130501nfc_concentration_match.png
