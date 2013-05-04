@@ -1,0 +1,90 @@
+<resources>
+
+    <string name="app_name">NFC神経衰弱</string>
+
+<!-- main -->
+    <string name="please_scan">カードを読み取ってください</string>
+     <string name="please_register">カードを登録してください</string>
+    <string name="geme_complete">コンプリート</string>
+    <string name="first_card">１枚目:</string>
+    <string name="second_card">２枚目:</string>  
+    <string name="pieces_match">正解！</string>
+    <string name="pieces_unmatch">違います</string>
+    <string name="same_card">同じカードです</string>
+    <string name="not_registered">登録されていないカードです</string>
+
+<!-- setting -->
+    <string name="label_registration">カードの登録</string>
+    <string name="label_other">その他</string>
+    <string name="button_each">１枚づつ登録</string>
+    <string name="button_bulk">まとめて登録</string>
+    <string name="button_clear">全て消去する</string>
+    <string name="button_dir">ディレクトリの選択</string>
+    <string name="button_num">カードの枚数</string>
+    <string name="button_list">カードの一覧</string>
+    <string name="button_video">動画</string>
+    <string name="button_close">閉じる</string> 
+    <string name="button_cancel">キャンセル</string> 
+    <string name="button_edit">編集</string> 
+    <string name="button_set">設定</string> 
+    <string name="button_start">ゲーム開始</string> 
+   
+    <string name="num_two">2枚組</string> 
+    <string name="num_four">4枚組</string> 
+    <string name="num_six">6枚組</string> 
+    <string name="num_eight">8枚組</string> 
+    <string name="num_ten">10枚組</string> 
+    <string name="num_exceed">10枚組以上</string> 
+    
+    <string name="msg_please">NFCカードを読み込んでください:</string>
+    <string name="msg_all_already">カードはすべて登録済みです</string>  
+    <string name="msg_already">このカードは登録済みです</string>  
+    <string name="msg_full">登録できるカードの上限を超えています</string>  
+    <string name="msg_registered">登録したカード:</string> 
+    <string name="msg_card_in" formatted="false">(登録済み %1$d / %2$d 中)</string> 
+    <string name="msg_manual">10枚組以上は「カードの枚数」から設定してください</string>  
+    <string name="msg_finish">最後のカードです</string>
+    <string name="msg_add_fail">登録に失敗した</string>
+
+    <string name="dialog_dir">ディレクトリ:</string> 
+    <string name="dialog_num">カードの枚数</string>
+    
+<!-- list -->
+    <string name="button_create">作成</string>
+    <string name="button_update">更新</string>
+	<string name="button_delete">削除</string>
+	<string name="button_back">戻る</string>
+	
+	<string name="item_image">画像</string>	
+	<string name="item_id">ID</string>	
+	<string name="item_tag">タグ</string>
+	<string name="item_num">番号</string>
+	<string name="item_set">組合せ</string>
+
+	<string name="msg_info">項目の情報</string>
+	
+<!-- create --> 
+	<string name="create_please_entry">タグを入力してください</string>
+	<string name="create_success">生成した</string>
+	<string name="create_fail">生成に失敗した</string>
+
+<!-- update --> 
+	<string name="update_success">更新した</string>
+	<string name="update_fail">更新に失敗した</string>
+	<string name="delete_success">削除した</string>
+	<string name="delete_fail">削除に失敗した</string>
+
+<!-- dialog about -->
+ 	<string name="dialog_about_title">このアプリについて</string>   
+	<string name="dialog_about_main">「NFC 神経衰弱」は、NFCタグ を使用した神経衰弱のゲームです。\n同封している画像は、横浜市の 野毛山動物園 で撮影しました。</string>
+	<string name="dialog_about_credit">制作者: 大和田健一</string>
+	<string name="dialog_about_imageview_banner">banner</string>
+	
+<!-- menu -->
+    <string name="menu_restart">ゲーム開始</string>
+    <string name="menu_about">このアプリについて</string> 
+ 	<string name="menu_usage">使い方</string>     
+	<string name="menu_finish">終了</string>    
+    <string name="menu_setting">設定</string>
+                                    	                 
+</resources>
