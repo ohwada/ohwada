@@ -13,6 +13,8 @@
     <string name="same_card">同じカードです</string>
     <string name="not_registered">登録されていないカードです</string>
 
+    <string name="usage_url">http://android.ohwada.jp/nfc_concentration</string>
+    
 <!-- setting -->
     <string name="label_registration">カードの登録</string>
     <string name="label_other">その他</string>
@@ -76,7 +78,7 @@
 
 <!-- dialog about -->
  	<string name="dialog_about_title">このアプリについて</string>   
-	<string name="dialog_about_main">「NFC 神経衰弱」は、NFCタグ を使用した神経衰弱のゲームです。\n同封している画像は、横浜市の 野毛山動物園 で撮影しました。</string>
+	<string name="dialog_about_main">「NFC 神経衰弱」は、NFCタグ を使用した神経衰弱のゲームです。\n遊び方はトランプの神経衰弱と一緒です。\n同封している画像は、横浜市の 野毛山動物園 で撮影しました。</string>
 	<string name="dialog_about_credit">制作者: 大和田健一</string>
 	<string name="dialog_about_imageview_banner">banner</string>
 	

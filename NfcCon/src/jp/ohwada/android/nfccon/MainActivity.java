@@ -30,10 +30,6 @@ public class MainActivity extends Activity {
 	private static final String IMAGE_NAME_COMPLETE = Constant.IMAGE_NAME_COMPLETE;
 	private final static String VIDEO_NAME_COMPLETE = Constant.VIDEO_NAME_COMPLETE;
 	private String mUrlWeb = Constant.URL_WEB;
-
-	// about
-	private final static String URL_USAGE = 
-		"http://android.ohwada.jp/nfc_concentration";
 	
     private static final int INTERVAL = 3000; // 3 sec;
     private static final int VIBRATE_TIME = 500;	// 0.5 sec
@@ -378,7 +374,7 @@ public class MainActivity extends Activity {
 				showAboutDialog();
 				return true;
 			case R.id.menu_usage:
-				startBrawser( URL_USAGE );
+				startBrawser( getString( R.string.usage_url ) );
 				return true;
 			case R.id.menu_restart:
 				showPreview();

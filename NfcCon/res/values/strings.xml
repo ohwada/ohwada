@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">NFC Cconcentration</string>
+    <string name="app_name">NFC Concentration</string>
 
 <!-- main -->
     <string name="please_scan">Please scan card</string>
@@ -13,6 +13,8 @@
     <string name="same_card">Same card</string>
     <string name="not_registered">This card is not registered</string>
 
+    <string name="usage_url">http://android.ohwada.jp/nfc_concentration_en</string>
+    
 <!-- setting -->
     <string name="label_registration">Registration of cards</string>
     <string name="label_other">Other Menu</string>
@@ -35,10 +37,10 @@
     <string name="num_eight">Eight pieces</string> 
     <string name="num_ten">Ten pieces</string> 
     <string name="num_exceed">Exceed ten pieces</string> 
-     
-    <string name="msg_please">Please_scan_card:</string>
+
+    <string name="msg_please">Please scan card:</string>
     <string name="msg_all_already">All cards are registered</string>  
-    <string name="msg_already">This card is registered</string> 
+    <string name="msg_already">This card is already registered</string> 
     <string name="msg_full">Cards are full</string> 
     <string name="msg_registered">Rregistered card:</string> 
     <string name="msg_card_in" formatted="false">( Registered %1$d / %2$d )</string>
@@ -65,18 +67,18 @@
 	
 <!-- create --> 
 	<string name="create_please_entry">Please entry tag</string>
-	<string name="create_success">Create Successful</string>
+	<string name="create_success">Create successful</string>
 	<string name="create_fail">Create Failed</string>
 
 <!-- update --> 
-	<string name="update_success">Update Successful</string>
+	<string name="update_success">Update successful</string>
 	<string name="update_fail">Update Failed</string>
-	<string name="delete_success">Delete Successful</string>
+	<string name="delete_success">Delete successful</string>
 	<string name="delete_fail">Delete Failed</string>
 
 <!-- dialog about -->
  	<string name="dialog_about_title">About</string>   
-	<string name="dialog_about_main"></string>
+	<string name="dialog_about_main"> A "NFC Concentration" is the game using NFC tags.\n How to play is the same as concentration of playing cards.\n The enclosed pictures were taken in Yokohama Nogeyama Zoo.</string>
 	<string name="dialog_about_credit">Author: Kenichi Ohwada</string>
 	<string name="dialog_about_imageview_banner">banner</string>
 	     
