@@ -36,7 +36,7 @@ public class Constant {
 	public static final String PREF_KEY_NUM = "num";	
 	public static final String PREF_KEY_TIME = "time";
 
-	public final static String DIR_MAIN = "NFC_Cconcentration";
+	public final static String DIR_MAIN = "NFC_Concentration";
 	public final static String DIR_SUB_DEFAULT = "default";
 	public final static int CARD_NUM_DEFAULT = 10;
 	
