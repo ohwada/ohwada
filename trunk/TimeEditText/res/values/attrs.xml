@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeEditText">
+        <attr name="timeedittext_numberWidth" format="dimension" />
+        <attr name="timeedittext_textSize" format="dimension" />
+        <attr name="timeedittext_hourMark" format="string" />        
+        <attr name="timeedittext_minuteMark" format="string" />       
+        <attr name="timeedittext_secondMark" format="string" />  
+    </declare-styleable>
+</resources>

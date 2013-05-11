@@ -1,0 +1,49 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <!-- hour -->
+    <jp.ohwada.android.timeedittext.NumberEditText
+        android:id="@+id/TimeEditText_hour"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/TextView_hour_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"  
+        android:text=":" />
+        
+    <!-- minute -->
+    <jp.ohwada.android.timeedittext.NumberEditText
+        android:id="@+id/TimeEditText_minute"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp" />
+
+    <TextView
+        android:id="@+id/TextView_minute_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"   
+        android:text=":" />
+        
+    <!-- second -->
+    <jp.ohwada.android.timeedittext.NumberEditText
+        android:id="@+id/TimeEditText_second"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp" />
+
+    <TextView
+        android:id="@+id/TextView_second_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"  
+        android:text="" />
+             
+</LinearLayout>
