@@ -2,9 +2,10 @@
 
 = 概要 ==
 画像をドラック操作で移動する<br>
+FrameLayout の中に ImageView を置いた例です。<br>
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/2866
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FImageMoveSample2
