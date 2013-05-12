@@ -1,0 +1,13 @@
+#summary SlideSwitchSample1
+
+= 概要 ==
+スライド操作でON/OFFするスイッチ<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FSlideSwitchSample1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130402slide_switch_sample_1.png
