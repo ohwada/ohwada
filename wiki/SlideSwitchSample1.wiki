@@ -4,7 +4,7 @@
 スライド操作でON/OFFするスイッチ<br>
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/2873
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FSlideSwitchSample1
