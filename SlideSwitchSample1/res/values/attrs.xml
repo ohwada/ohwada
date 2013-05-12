@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlideSwitch">
+        <attr name="slideswitch_width" format="dimension" />   
+        <attr name="slideswitch_height" format="dimension" />   
+        <attr name="slideswitch_orientation" format="string" />      
+        <attr name="slideswitch_background" format="reference" />    
+        <attr name="slideswitch_image" format="reference" />             
+    </declare-styleable>
+    
+</resources>

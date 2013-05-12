@@ -1,0 +1,25 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    >
+
+	<jp.ohwada.android.slideswitchsample1.SlideSwitch
+        android:id="@+id/SlideSwitch_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+        		
+	<jp.ohwada.android.slideswitchsample1.SlideSwitch
+		xmlns:custom="http://schemas.android.com/apk/res/jp.ohwada.android.slideswitchsample1"
+        android:id="@+id/SlideSwitch_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:slideswitch_height="200dp"
+        custom:slideswitch_orientation="vertical"
+        custom:slideswitch_background="@drawable/slide_switch_background_red"
+		custom:slideswitch_image="@drawable/droid70" />
+        
+</LinearLayout>
