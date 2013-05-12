@@ -4,7 +4,7 @@
 123456 と入力すると 12時34分56秒 となる EditVIew を作る。<br>
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/2849
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FTimeEditText
