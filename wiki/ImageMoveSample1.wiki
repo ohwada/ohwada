@@ -2,6 +2,7 @@
 
 = 概要 ==
 画像をドラック操作で移動する<br>
+Canvas を使用したもの<br>
 
 関連するブログ <br>
 http://android.ohwada.jp/archives/2859
