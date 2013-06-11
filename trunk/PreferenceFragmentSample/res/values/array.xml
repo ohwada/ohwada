@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="preference_list_1_entries">
+ 		<item>@string/preference_list_1_name_1</item>
+ 		<item>@string/preference_list_1_name_2</item>
+ 		<item>@string/preference_list_1_name_3</item>
+	</string-array>
+
+	<string-array name="preference_list_1_entryvalues">
+		<item>@string/preference_list_1_value_1</item>
+		<item>@string/preference_list_1_value_2</item>
+		<item>@string/preference_list_1_value_3</item>
+	</string-array>
+</resources>
