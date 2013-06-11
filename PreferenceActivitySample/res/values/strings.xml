@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Preference Activity Sample</string>
+    <string name="button_play">Play Ringtone</string>
+    <string name="button_stop">Stop</string>
+    
+     <string name="menu_settings">Settings</string>
+     
+     <string name="preference_checkbox_1_title">CheckBox 1</string>
+     <string name="preference_checkbox_1_summary">CheckBox 1 Summary</string>
+     <string name="preference_checkbox_1_summary_on">CheckBox 1 Summary On</string>
+     <string name="preference_checkbox_1_summary_off">CheckBox 1 Summary Off</string>
+     <string name="preference_checkbox_1_defaultvalue">true</string>
+
+     <string name="preference_edittext_1_title">EditText 1</string>
+     <string name="preference_edittext_1_summary">EditText 1 Summary</string>
+     <string name="preference_edittext_1_defaultvalue">abc</string>
+
+     <string name="preference_edittext_2_title">EditText 2</string>
+     <string name="preference_edittext_2_summary">EditText 2 Summary</string>
+     <string name="preference_edittext_2_defaultvalue">123</string>
+     
+     <string name="preference_list_1_title">List 1</string>
+     <string name="preference_list_1_summary">List 1 Summary</string>
+     <string name="preference_list_1_dialogtitle">List 1 Dialog Title</string>
+
+     <string name="preference_list_1_name_1">List 1 Name 1</string>
+     <string name="preference_list_1_name_2">List 1 Name 2</string>
+     <string name="preference_list_1_name_3">List 1 Name 3</string>
+
+     <string name="preference_list_1_value_1">Value A</string>
+     <string name="preference_list_1_value_2">Value B</string>
+     <string name="preference_list_1_value_3">Value C</string>
+
+     <string name="preference_ringtone_1_title">Ringtone 1</string>
+     <string name="preference_ringtone_1_summary">Ringtone 1 Summary</string>
+                                 
+     <string name="preference_category_1_title">Category 1</string>
+
+     <string name="preference_category_1_checkbox_1_title">Category 1 CheckBox 1</string>
+     <string name="preference_category_1_checkbox_1_summary">Category 1 CheckBox 1 Summary</string>
+     
+     <string name="preference_screen_1_title">Screen 1</string>
+     <string name="preference_screen_1_summary">Screen 1 Summary</string>
+
+     <string name="preference_screen_1_checkbox_1_title">Screen 1 CheckBox 1</string>
+     <string name="preference_screen_1_checkbox_1_summary">Screen 1 CheckBox 1 Summary</string>
+                           
+</resources>
