@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<CheckBoxPreference
+    	android:key="preference_key_checkbox_1"
+        android:title="@string/preference_checkbox_1_title"
+        android:summaryOn="@string/preference_checkbox_1_summary_on"
+        android:summaryOff="@string/preference_checkbox_1_summary_off"
+        android:defaultValue="@string/preference_checkbox_1_defaultvalue"
+        />
+        
+ 	<EditTextPreference 
+ 		android:key="preference_key_edittext_1" 
+		android:title="@string/preference_edittext_1_title"
+		android:summary="@string/preference_edittext_1_summary"
+		android:defaultValue="@string/preference_edittext_1_defaultvalue" 
+ 		/>
+
+	<EditTextPreference
+	 	android:key="preference_key_edittext_2" 
+		android:title="@string/preference_edittext_2_title"
+		android:summary="@string/preference_edittext_2_summary"
+		android:defaultValue="@string/preference_edittext_2_defaultvalue"  
+ 		android:inputType="number" 
+ 		android:maxLength="5"
+		/>
+
+    <ListPreference 
+      android:key="preference_key_list_1"
+      android:title="@string/preference_list_1_title" 
+      android:summary="@string/preference_list_1_summary"
+      android:entries="@array/preference_list_1_entries" 
+      android:entryValues="@array/preference_list_1_entryvalues"
+      android:dialogTitle="@string/preference_list_1_dialogtitle"
+      android:defaultValue="@string/preference_list_1_value_1"
+      />
+
+	<RingtonePreference 
+    	android:key="preference_key_ringtone_1" 
+    	android:title="@string/preference_ringtone_1_title"
+    	android:summary="@string/preference_ringtone_1_summary" 
+    	android:ringtoneType="all"
+    	android:showDefault="true"
+        android:showSilent="true"
+		/>
+		
+ 	<PreferenceCategory 
+		android:title="@string/preference_category_1_title"
+		>
+    
+    	<CheckBoxPreference 
+   			android:key="preference_key_category_1_checkbox_1" 
+   			android:title="@string/preference_category_1_checkbox_1_title"
+   			android:summary="@string/preference_category_1_checkbox_1_summary" 
+   			/>
+
+ 	</PreferenceCategory>
+  		
+	<PreferenceScreen
+		android:key="screen_1" 
+		android:title="@string/preference_screen_1_title" 
+		android:summary="@string/preference_screen_1_summary"
+		>
+  
+		<CheckBoxPreference 
+	   		android:key="preference_key_screen_1_checkbox_1"  
+	   		android:title="@string/preference_screen_1_checkbox_1_title"
+	   		android:summary="@string/preference_screen_1_checkbox_1_summary" 
+ 	  		/>
+  
+ 	</PreferenceScreen>
+ 	
+</PreferenceScreen>
