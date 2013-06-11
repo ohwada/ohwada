@@ -4,7 +4,7 @@
 PreferenceFragmentのサンプルプログラム<br>
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/2922
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FPreferenceFragmentSample
