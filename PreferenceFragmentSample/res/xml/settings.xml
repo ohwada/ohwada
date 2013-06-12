@@ -2,14 +2,6 @@
 <PreferenceScreen 
 	xmlns:android="http://schemas.android.com/apk/res/android" >
 
-	<CheckBoxPreference
-    	android:key="preference_key_checkbox_1"
-        android:title="@string/preference_checkbox_1_title"
-        android:summaryOn="@string/preference_checkbox_1_summary_on"
-        android:summaryOff="@string/preference_checkbox_1_summary_off"
-        android:defaultValue="@string/preference_checkbox_1_defaultvalue"
-        />
-        
  	<EditTextPreference 
  		android:key="preference_key_edittext_1" 
 		android:title="@string/preference_edittext_1_title"
@@ -17,24 +9,42 @@
 		android:defaultValue="@string/preference_edittext_1_defaultvalue" 
  		/>
 
-	<EditTextPreference
-	 	android:key="preference_key_edittext_2" 
-		android:title="@string/preference_edittext_2_title"
-		android:summary="@string/preference_edittext_2_summary"
-		android:defaultValue="@string/preference_edittext_2_defaultvalue"  
- 		android:inputType="number" 
- 		android:maxLength="5"
+	<CheckBoxPreference
+    	android:key="preference_key_checkbox_1"
+        android:title="@string/preference_checkbox_1_title"
+        android:summaryOn="@string/preference_checkbox_1_on"
+        android:summaryOff="@string/preference_checkbox_1_off"
+        android:defaultValue="@string/preference_checkbox_1_defaultvalue"
+        />
+
+	<SwitchPreference
+		android:key="preference_key_switch_1"
+        android:title="@string/preference_switch_1_title" 
+		android:summary="@string/preference_switch_1_summary"
+		android:switchTextOff="@string/preference_switch_1_off"
+        android:switchTextOn="@string/preference_switch_1_on"
+        android:defaultValue="@string/preference_switch_1_defaultvalue"
 		/>
 
-    <ListPreference 
-      android:key="preference_key_list_1"
-      android:title="@string/preference_list_1_title" 
-      android:summary="@string/preference_list_1_summary"
-      android:entries="@array/preference_list_1_entries" 
-      android:entryValues="@array/preference_list_1_entryvalues"
-      android:dialogTitle="@string/preference_list_1_dialogtitle"
-      android:defaultValue="@string/preference_list_1_value_1"
-      />
+	<ListPreference 
+		android:key="preference_key_list_1"
+		android:title="@string/preference_list_1_title" 
+		android:summary="@string/preference_list_1_summary"
+		android:dialogTitle="@string/preference_list_1_dialogtitle"
+		android:entries="@array/preference_list_1_entries" 
+		android:entryValues="@array/preference_list_1_entryvalues"
+		android:defaultValue="@string/preference_list_1_value_1"
+		/>
+
+	<MultiSelectListPreference 
+    	android:key="preference_key_multiselectlist_1" 
+    	android:title="@string/preference_multiselectlist_1_title"
+		android:summary="@string/preference_multiselectlist_1_summary"
+		android:dialogTitle="@string/preference_multiselectlist_1_dialogtitle"
+		android:entries="@array/preference_multiselectlist_1_entries" 
+		android:entryValues="@array/preference_multiselectlist_1_entryvalues"
+		android:defaultValue="@array/preference_multiselectlist_1_defaultvalue"
+		/>
 
 	<RingtonePreference 
     	android:key="preference_key_ringtone_1" 

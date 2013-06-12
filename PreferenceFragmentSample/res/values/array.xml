@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string-array name="preference_list_1_entries">
+<!-- List -->
+	<string-array 
+		name="preference_list_1_entries">
  		<item>@string/preference_list_1_name_1</item>
  		<item>@string/preference_list_1_name_2</item>
  		<item>@string/preference_list_1_name_3</item>
 	</string-array>
 
-	<string-array name="preference_list_1_entryvalues">
+	<string-array 
+		name="preference_list_1_entryvalues">
 		<item>@string/preference_list_1_value_1</item>
 		<item>@string/preference_list_1_value_2</item>
 		<item>@string/preference_list_1_value_3</item>
 	</string-array>
+	
+<!-- MultiSelectList -->
+	<string-array 
+		name="preference_multiselectlist_1_entries">
+ 		<item>@string/preference_multiselectlist_1_name_1</item>
+ 		<item>@string/preference_multiselectlist_1_name_2</item>
+ 		<item>@string/preference_multiselectlist_1_name_3</item>
+ 		<item>@string/preference_multiselectlist_1_name_4</item>
+ 		<item>@string/preference_multiselectlist_1_name_5</item>
+	</string-array>
+
+	<string-array 
+		name="preference_multiselectlist_1_entryvalues">
+		<item>@string/preference_multiselectlist_1_value_1</item>
+		<item>@string/preference_multiselectlist_1_value_2</item>
+		<item>@string/preference_multiselectlist_1_value_3</item>
+		<item>@string/preference_multiselectlist_1_value_4</item>
+		<item>@string/preference_multiselectlist_1_value_5</item>
+	</string-array>
+
+	<string-array 
+		name="preference_multiselectlist_1_defaultvalue">
+		<item>@string/preference_multiselectlist_1_value_1</item>
+		<item>@string/preference_multiselectlist_1_value_3</item>
+	</string-array>
+
+	<string-array name="empty_array"/>
+	
 </resources>
