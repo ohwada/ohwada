@@ -5,21 +5,27 @@
     <string name="button_stop">Stop</string>
     
      <string name="menu_settings">Settings</string>
-     
+
+<!-- CheckBox -->    
      <string name="preference_checkbox_1_title">CheckBox 1</string>
      <string name="preference_checkbox_1_summary">CheckBox 1 Summary</string>
-     <string name="preference_checkbox_1_summary_on">CheckBox 1 Summary On</string>
-     <string name="preference_checkbox_1_summary_off">CheckBox 1 Summary Off</string>
+     <string name="preference_checkbox_1_on">CheckBox 1 On</string>
+     <string name="preference_checkbox_1_off">CheckBox 1 Off</string>
      <string name="preference_checkbox_1_defaultvalue">true</string>
 
+<!-- Switch -->   
+     <string name="preference_switch_1_title">Switch 1</string>
+     <string name="preference_switch_1_summary">Switch 1 Summary</string>
+     <string name="preference_switch_1_on">On</string>
+     <string name="preference_switch_1_off">Off</string>
+     <string name="preference_switch_1_defaultvalue">true</string>
+
+<!-- EditText -->   
      <string name="preference_edittext_1_title">EditText 1</string>
      <string name="preference_edittext_1_summary">EditText 1 Summary</string>
      <string name="preference_edittext_1_defaultvalue">abc</string>
 
-     <string name="preference_edittext_2_title">EditText 2</string>
-     <string name="preference_edittext_2_summary">EditText 2 Summary</string>
-     <string name="preference_edittext_2_defaultvalue">123</string>
-     
+<!-- List -->        
      <string name="preference_list_1_title">List 1</string>
      <string name="preference_list_1_summary">List 1 Summary</string>
      <string name="preference_list_1_dialogtitle">List 1 Dialog Title</string>
@@ -28,18 +34,38 @@
      <string name="preference_list_1_name_2">List 1 Name 2</string>
      <string name="preference_list_1_name_3">List 1 Name 3</string>
 
-     <string name="preference_list_1_value_1">Value A</string>
-     <string name="preference_list_1_value_2">Value B</string>
-     <string name="preference_list_1_value_3">Value C</string>
+     <string name="preference_list_1_value_1">1</string>
+     <string name="preference_list_1_value_2">2</string>
+     <string name="preference_list_1_value_3">3</string>
 
+<!-- MultiSelectList -->        
+     <string name="preference_multiselectlist_1_title">MultiSelectList 1</string>
+     <string name="preference_multiselectlist_1_summary">MultiSelectList 1 Summary</string>
+     <string name="preference_multiselectlist_1_dialogtitle">MultiSelectList 1 Dialog Title</string>
+
+     <string name="preference_multiselectlist_1_name_1">MultiSelectList 1 Name 1</string>
+     <string name="preference_multiselectlist_1_name_2">MultiSelectList 1 Name 2</string>
+     <string name="preference_multiselectlist_1_name_3">MultiSelectList 1 Name 3</string>
+     <string name="preference_multiselectlist_1_name_4">MultiSelectList 1 Name 4</string>
+     <string name="preference_multiselectlist_1_name_5">MultiSelectList 1 Name 5</string>
+     
+     <string name="preference_multiselectlist_1_value_1">1</string>
+     <string name="preference_multiselectlist_1_value_2">2</string>
+     <string name="preference_multiselectlist_1_value_3">3</string>
+     <string name="preference_multiselectlist_1_value_4">4</string>
+     <string name="preference_multiselectlist_1_value_5">5</string>
+
+<!-- Ringtone -->   
      <string name="preference_ringtone_1_title">Ringtone 1</string>
      <string name="preference_ringtone_1_summary">Ringtone 1 Summary</string>
-                                 
+
+<!-- Category -->                                    
      <string name="preference_category_1_title">Category 1</string>
 
      <string name="preference_category_1_checkbox_1_title">Category 1 CheckBox 1</string>
      <string name="preference_category_1_checkbox_1_summary">Category 1 CheckBox 1 Summary</string>
-     
+
+<!-- Screen -->        
      <string name="preference_screen_1_title">Screen 1</string>
      <string name="preference_screen_1_summary">Screen 1 Summary</string>
 

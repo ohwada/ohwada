@@ -1,9 +1,12 @@
 package jp.ohwada.android.preferencefragmentsample;
 
+import java.util.Set;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
+import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
@@ -14,11 +17,11 @@ import android.preference.RingtonePreference;
  * SettingsFragment
  */
 public class SettingsFragment extends PreferenceFragment {
-	
+
 	private MyPreference mPreference = null;
 	private EditTextPreference mEditTextPreference1 = null;
-	private EditTextPreference mEditTextPreference2 = null;
 	private ListPreference mListPreference1 = null;
+	private MultiSelectListPreference mMultiSelectListPreference1 = null;
 	private RingtonePreference mRingtonePreference = null;
 			
     /**
@@ -40,16 +43,6 @@ public class SettingsFragment extends PreferenceFragment {
         		return true;
         	}	
         });
-
-        mEditTextPreference2 = (EditTextPreference) findPreference( "preference_key_edittext_2" );
-        mEditTextPreference2.setOnPreferenceChangeListener(
-        		new OnPreferenceChangeListener() {        	
-        	@Override
-        	public boolean onPreferenceChange(Preference p, Object o) {
-        		setSummaryEditText2(p, o);
-        		return true;
-        	}	
-        });
         
         mListPreference1 = (ListPreference) findPreference( "preference_key_list_1" );
         mListPreference1.setOnPreferenceChangeListener(
@@ -57,6 +50,16 @@ public class SettingsFragment extends PreferenceFragment {
         	@Override
         	public boolean onPreferenceChange(Preference p, Object o) {
         		setSummaryList1(p, o);
+        		return true;
+        	}	
+        });
+
+        mMultiSelectListPreference1 = (MultiSelectListPreference) findPreference( "preference_key_multiselectlist_1" );
+        mMultiSelectListPreference1.setOnPreferenceChangeListener(
+        		new OnPreferenceChangeListener() {        	
+        	@Override
+        	public boolean onPreferenceChange(Preference p, Object o) {
+        		setSummaryMultiSelectList1(p, o);
         		return true;
         	}	
         });
@@ -75,14 +78,15 @@ public class SettingsFragment extends PreferenceFragment {
         
         String value_edittext_1 = preference.getString( "preference_key_edittext_1", "" );
         mEditTextPreference1.setSummary( value_edittext_1 );        
-        
-        String value_edittext_2 = preference.getString( "preference_key_edittext_2", "" );
-        mEditTextPreference2.setSummary( value_edittext_2 ); 
                 
         String value_list_1 = preference.getString( "preference_key_list_1", "" );
-        String entry = mPreference.getListEntry( mListPreference1, value_list_1 );
-        mListPreference1.setSummary( entry );  
-        
+        String entry_list_1 = mPreference.getListEntry( mListPreference1, value_list_1 );
+        mListPreference1.setSummary( entry_list_1 );  
+
+        Set<String> set_multiselectlist_1 = mPreference.getStringSet( "preference_key_multiselectlist_1" );
+        String entry_multiselectlist_1 = mPreference.getListEntry( mMultiSelectListPreference1, set_multiselectlist_1 );
+        mMultiSelectListPreference1.setSummary( entry_multiselectlist_1 );  
+ 
         String value_ringtone_1 = preference.getString( "preference_key_ringtone_1", "" );
     	String title = mPreference.getRingtoneTitle( value_ringtone_1 );
         mRingtonePreference.setSummary( title );  
@@ -98,15 +102,6 @@ public class SettingsFragment extends PreferenceFragment {
 	}
 
     /**
-	 * setSummaryEditText2
-	 * @param Preference p
-	 * @param Object object
-	 */ 
-	private void setSummaryEditText2(Preference p, Object object) {
-        mEditTextPreference2.setSummary( (String) object );  
-	}
-
-    /**
 	 * setSummaryList1
 	 * @param Preference p
 	 * @param Object object
@@ -114,6 +109,16 @@ public class SettingsFragment extends PreferenceFragment {
 	private void setSummaryList1(Preference p, Object object) {
         String entry = mPreference.getListEntry( mListPreference1, object );
         mListPreference1.setSummary( entry );  
+	}
+
+    /**
+	 * setSummaryMultiSelectList1
+	 * @param Preference p
+	 * @param Object object
+	 */
+	private void setSummaryMultiSelectList1(Preference p, Object object) {
+        String entry = mPreference.getListEntry( mMultiSelectListPreference1, object );
+		mMultiSelectListPreference1.setSummary( entry );  
 	}
 
     /**
@@ -160,4 +165,5 @@ public class SettingsFragment extends PreferenceFragment {
 	private void stopRingtone() {
 		mPreference.stopRingtone();  	
 	}
+
 }
