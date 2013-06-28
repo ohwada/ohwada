@@ -1,0 +1,13 @@
+#summary BatteryManagerSample1
+
+= 概要 ==
+電池残量を知る サンプルプログラム<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/3015
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FBatteryManagerSample1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130513battery_manager_sample1.png
