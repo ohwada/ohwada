@@ -1,0 +1,13 @@
+#summary AnalogClockSample3
+
+= 概要 ==
+秒針だけの AnalogClock と 時分秒の DigtalClock<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FAnalogClockSample3
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130514analog_clock_3.png
