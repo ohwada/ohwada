@@ -1,0 +1,13 @@
+#summary AnalogClockSample2
+
+= 概要 ==
+AnalogClock に秒針を追加した<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FAnalogClockSample2
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130513analog_clock_2.png
