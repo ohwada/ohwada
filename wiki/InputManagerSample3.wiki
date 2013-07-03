@@ -1,3 +1,5 @@
+#summary InputManagerSample3
+
 = 概要 ==
 キーボードとキーマップの対応<br>
 
