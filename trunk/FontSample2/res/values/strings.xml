@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FontSample2</string>
+    <string name="sample_text">abcde 12345 あいうえお アイウエオ 漢字</string>
+
+</resources>
