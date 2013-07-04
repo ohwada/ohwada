@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FontSample3</string>
+    <string name="sample_text">The quick brown fox jumps over the lazy dog</string>
+
+</resources>
