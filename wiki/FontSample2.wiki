@@ -4,7 +4,7 @@
 内蔵フォントを使用する<br>
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/3111
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FFontSample2
