@@ -1,0 +1,13 @@
+#summary Toast のビューを変更する
+
+= 概要 ==
+Toast のビューを変更する<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/3146
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/ToastSample6/
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130318toast6.png
