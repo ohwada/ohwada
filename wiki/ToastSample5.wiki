@@ -1,0 +1,10 @@
+#summary Toast の表示位置を変更する
+
+= 概要 ==
+Toast の表示位置を変更する <br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FToastSample5
