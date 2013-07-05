@@ -8,3 +8,6 @@ http://android.ohwada.jp/archives/
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FToastSample5
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130314toast5_center.png
