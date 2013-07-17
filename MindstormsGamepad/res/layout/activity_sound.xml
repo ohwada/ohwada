@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp" >
+
+	<Button 
+		android:id="@+id/Button_sound_file"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:text="@string/button_sound" />
+			    
+	<LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" >
+    
+		<Button 
+			android:id="@+id/Button_sound_tone_1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_margin="4dp"
+			android:text="@string/button_tone_1" />
+
+		<Button 
+			android:id="@+id/Button_sound_tone_2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_margin="4dp"
+			android:text="@string/button_tone_2" />
+
+		<Button 
+			android:id="@+id/Button_sound_tone_3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_margin="4dp"
+			android:text="@string/button_tone_3" />
+			
+	</LinearLayout>
+                
+	<include layout="@layout/bt_button" /> 
+	<include layout="@layout/text_debug" /> 
+	<include layout="@layout/button_back" /> 	
+
+</LinearLayout>

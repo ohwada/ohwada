@@ -1,0 +1,50 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+	<ScrollView  
+		android:id="@+id/scrollview" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  >
+
+	<LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+
+		<include layout="@layout/nine_buttons" /> 
+				
+<!-- button other activity -->
+		<LinearLayout 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="5dp"
+   			android:layout_marginRight="5dp" >
+    
+			<Button 
+				android:id="@+id/button_connect"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="10dp"
+				android:text="@string/bt_button_connect" />
+		
+			<Button 
+				android:id="@+id/button_back"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="10dp"
+				android:text="@string/button_back" />
+		
+		</LinearLayout>	
+<!-- button other activity end -->
+
+		<include layout="@layout/text_debug" /> 
+
+	</LinearLayout>
+	</ScrollView>  	    
+</LinearLayout>

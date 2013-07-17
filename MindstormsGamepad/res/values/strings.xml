@@ -1,0 +1,102 @@
+<resources>
+
+<!-- AndroidManifest -->
+    <string name="app_name">LEGO NXT</string>
+	<string name="activity_touch">NXT Touch</string>
+	<string name="activity_orientation">NXT Orientation</string>
+	<string name="activity_voice">NXT Voice</string>   
+	<string name="activity_joystick">NXT Joystick</string> 
+	<string name="activity_two_joystick">NXT 2 Joystick</string> 
+	<string name="activity_gamepad">NXT Gamepad</string> 
+	<string name="activity_bt_list">NXT Device List</string>  
+	<string name="activity_settings">NXT Settings</string> 
+    <string name="activity_sound">NXT Sound</string>
+    <string name="activity_report">NXT Report</string>
+    <string name="activity_program">NXT Program</string>
+     
+<!--  Main Activity -->
+    <string name="button_go_orientation">Orientation Sensor</string>
+	<string name="button_go_voice">Voice Recognizer</string>
+	<string name="button_go_joystick">Joystick</string> 
+	<string name="button_go_two_joystick">Two Joystick</string> 
+	<string name="button_go_gamepad">Gamepad</string> 
+    <string name="button_go_sound">NXT Sound</string>
+    <string name="button_go_report">NXT Report</string>
+    <string name="button_go_program">NXT Program List</string>
+             
+ <!--  Voice Activity -->
+	<string name="title_voice">Voice Control</string>
+    <string name="title_power">Power Control</string>
+    <string name="voice_prompt">Voice Recognizer</string>
+    <string name="voice_activity_not_found">Not Found Voice Recognizer</string>
+
+<!-- Sound Activity --> 
+	<string name="button_sound">Get Sound File List</string> 
+    <string name="button_tone_1">Play Tone 1</string>
+	<string name="button_tone_2">Play Tone 2</string> 
+	<string name="button_tone_3">Play Tone 3</string> 
+    <string name="sound_dialog_title">Play Sound</string>  
+    		 
+<!--  Report Activity -->
+    <string name="report_firmware">Firmware:</string>
+    <string name="report_battery">Battery:</string>
+    <string name="report_device">Device Info:</string>
+    <string name="button_report">Get Report</string>       
+    <string name="firmware_version_error">FirmwareVersion Error</string>
+
+<!-- Program Activity -->
+    <string name="button_program">Get Program List</string>
+    <string name="no_programs_found">No programs found on NXT robot!</string>    
+    <string name="file_dialog_title_1">Start/Stop a program</string>    
+    <string name="file_dialog_title_2">Start a program</string>    
+       
+<!--  Bluetooth layout -->
+    <string name="bt_button_connect">Connect to Bluetooth</string>
+    
+<!--  Bluetooth activty -->    
+    <string name="bt_title_connecting">BT connecting...</string>
+    <string name="bt_title_connected">BT =</string>
+    <string name="bt_title_not_connected">BT not connected</string>
+	<string name="bt_connected">Connected to</string>
+	<string name="bt_not_available">Bluetooth is not available.</string>
+    <string name="bt_not_enabled">Bluetooth was not enabled.</string>
+    <string name="bt_write_failed">You are not connected to a device</string>
+    <string name="bt_connection_failed">Unable to connect device</string>
+    <string name="bt_connection_lost">Device connection was lost</string>
+       
+<!-- Bluetooth DeviceList layout -->
+    <string name="list_title_paired_devices">Paired Devices</string>
+    <string name="list_title_other_devices">Other Available Devices</string>
+    <string name="list_button_scan">Scan for devices</string>
+        
+<!-- Bluetooth DeviceList activty -->
+    <string name="list_scanning">scanning for devices ...</string>
+    <string name="list_select_device">select a device to connect</string>
+    <string name="list_none_paired">No devices have been paired</string>
+    <string name="list_none_found">No devices found</string>
+
+ <!-- button -->
+    <string name="button_back">BACK</string>
+    <string name="button_save">SAVE</string>
+    <string name="button_cancel">Cancel</string>
+     
+<!-- menu -->
+	<string name="menu_setting">General Setting</string>
+	<string name="menu_gamepad">Gamepad Setting</string>
+	<string name="menu_joystick">Joystick Setting</string>
+	<string name="menu_two_joystick">Two Joystick Setting</string>
+    <string name="menu_bt_connect">Connect BT Device</string>
+    <string name="menu_bt_disconnect">Disconnect BT Device</string>
+    <string name="menu_bt_clear">Clear BT Address</string>
+
+<!-- setting -->
+     <string name="pref_category_bt">Bluetooth</string>
+
+     <string name="pref_bt_show_debug_title">Show Comm Msg with BT</string>
+     <string name="pref_bt_show_debug_summary">Show Communication Message with Bluetooth Device</string>
+     <string name="pref_bt_show_debug_on">Show</string>
+     <string name="pref_bt_show_debug_off">Not Show</string>
+     <string name="pref_bt_show_debug_default">false</string>
+ 
+     
+</resources>

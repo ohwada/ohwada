@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+	<Button 
+		android:id="@+id/button_program"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:text="@string/button_program"			
+		/>
+                
+	<include layout="@layout/bt_button" /> 
+	<include layout="@layout/text_debug" /> 
+	<include layout="@layout/button_back" /> 	
+
+</LinearLayout>
