@@ -226,25 +226,32 @@ public class TwoJoystickActivity extends CommonActivity {
     @Override
     public boolean onOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
-			case R.id.two_joystick:
-				isSetting = true;
-				mSettingNum = 1;
-				// set current value
-				mSettingAxisLeft = mAxisLeft ;
-				mSettingAxisRight = mAxisRight ;
-				isSettingAxisSignLeft = isAxisSignLeft ;
-				isSettingAxisSignRight = isAxisSignRight ;
-				// show setting
-				mJoystickTwoView.showSetting();
-				mJoystickTwoView.showImageIndividual( true, false, false, false );
-				showSettingLabel();
-				mInputDeviceManager.clearFirstMove();
+			case R.id.menu_two_joystick:
+				execOptionsItemTwoJoystick();
 				return true;
 		}
 		execOptionsItemSelected( item );
-        return false;
+        return true;
     }
 
+ 	/**
+	 * execOptionsItemTwoJoystick
+	 */
+    private void execOptionsItemTwoJoystick() {
+		isSetting = true;
+		mSettingNum = 1;
+		// set current value
+		mSettingAxisLeft = mAxisLeft ;
+		mSettingAxisRight = mAxisRight ;
+		isSettingAxisSignLeft = isAxisSignLeft ;
+		isSettingAxisSignRight = isAxisSignRight ;
+		// show setting
+		mJoystickTwoView.showSetting();
+		mJoystickTwoView.showImageIndividual( true, false, false, false );
+		showSettingLabel();
+		mInputDeviceManager.clearFirstMove();
+    }
+ 
 // SharedPreferences
 	/**
 	 * getPref

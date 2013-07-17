@@ -1,8 +1,12 @@
 package jp.ohwada.android.mindstormsgamepad;
 
+import jp.ohwada.android.mindstormsgamepad.view.AboutDialog;
 import jp.ohwada.android.mindstormsgamepad.view.NineButtonsView;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +18,9 @@ public class MainActivity extends CommonActivity {
 
 	/** Debug */
 	protected String TAG_SUB = "MainActivity";
-		
+
+	private final static String URL_USAGE = "http://android.ohwada.jp/mindstorms";
+			
 	private NineButtonsView mNineButtonsView;
 	
 // --- onCreate ---
@@ -123,6 +129,47 @@ public class MainActivity extends CommonActivity {
 		super.onDestroy();
 		sendStop();
 		stopService();
+	}
+
+	/**
+	 * === onCreateOptionsMenu ===
+	 */
+    @Override
+    public boolean onCreateOptionsMenu( Menu menu ) {
+        getMenuInflater().inflate( R.menu.main, menu );
+        return true;
+    }
+
+ 	/**
+	 * === onOptionsItemSelected ===
+	 */
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item ) {
+		switch ( item.getItemId() ) {
+			case R.id.menu_about:
+				AboutDialog dialog = new AboutDialog( this );
+				dialog.show();
+				return true;
+			case R.id.menu_usage:
+				startBrawser( URL_USAGE );
+				return true;
+			case R.id.menu_setting:
+				Intent intent = new Intent( this, SettingsActivity.class );
+				startActivityForResult( intent, Constant.REQUEST_SETTING );
+				return true;
+		}
+		execOptionsItemSelected( item );
+        return true;
+    }
+
+    /**
+     * startBrawser
+     * @param String url
+     */
+	private void startBrawser( String url ) {
+		Uri uri = Uri.parse( url );
+		Intent intent = new Intent( Intent.ACTION_VIEW, uri );
+		startActivity( intent );
 	}
 
 // --- touch & click --

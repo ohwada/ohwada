@@ -178,13 +178,13 @@ public class BtCommand {
 	 */
     public boolean execOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
-			case R.id.bt_connect:
+			case R.id.menu_bt_connect:
 				mBluetoothManager.connectService();
 				return true;
-			case R.id.bt_disconnect:
+			case R.id.menu_bt_disconnect:
 				mBluetoothManager.stopService();
 				return true;
-			case R.id.bt_clear:
+			case R.id.menu_bt_clear:
 				mBluetoothManager.clearPrefAddress();
 				return true;
         }

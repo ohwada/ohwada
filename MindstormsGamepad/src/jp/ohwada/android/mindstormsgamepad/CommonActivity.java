@@ -277,15 +277,7 @@ public class CommonActivity extends Activity {
 	 * @return boolean
 	 */
     protected boolean execOptionsItemSelected( MenuItem item ) {
-    	boolean ret =  mCommand.execOptionsItemSelected( item );
-		if ( ret ) return true;
-		switch ( item.getItemId() ) {
-			case R.id.setting:
-				Intent intent = new Intent( this, SettingsActivity.class );
-				startActivityForResult( intent, Constant.REQUEST_SETTING );
-				return true;
-		}
-		return false;
+    	return mCommand.execOptionsItemSelected( item );
     }
     
 	/**

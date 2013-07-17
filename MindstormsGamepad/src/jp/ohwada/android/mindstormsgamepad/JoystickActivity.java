@@ -54,8 +54,6 @@ public class JoystickActivity extends CommonActivity {
 		/* Initialization of Bluetooth */
 		initManager( view );
 		setTitleName( R.string.activity_joystick );
-
-		/* MindstormsCommand */		
 		initButtonBack();
 		initInputDeviceManager();
 		initSeekbarPower( view ); 
@@ -216,25 +214,32 @@ public class JoystickActivity extends CommonActivity {
     @Override
     public boolean onOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
-			case R.id.joystick:
-				isSetting = true;
-				mSettingNum = 1;
-				// set current value
-				mSettingAxisX = mAxisX ;
-				mSettingAxisY = mAxisY ;
-				isSettingAxisSignX = isAxisSignX ;
-				isSettingAxisSignY = isAxisSignY ;
-				// show setting
-				mNineButtonsView.showSetting();
-				mNineButtonsView.showImageCode( NineButtonsView.BUTTON_FORWARD );
-				showSettingLabel();
-				mInputDeviceManager.clearFirstMove();
+			case R.id.menu_joystick:
+				execOptionsItemJoystick();
 				return true;
 		}
 		execOptionsItemSelected( item );
-        return false;
+        return true;
     }
 
+ 	/**
+	 * execOptionsItemJoystick
+	 */
+    private void execOptionsItemJoystick() {
+		isSetting = true;
+		mSettingNum = 1;
+		// set current value
+		mSettingAxisX = mAxisX ;
+		mSettingAxisY = mAxisY ;
+		isSettingAxisSignX = isAxisSignX ;
+		isSettingAxisSignY = isAxisSignY ;
+		// show setting
+		mNineButtonsView.showSetting();
+		mNineButtonsView.showImageCode( NineButtonsView.BUTTON_FORWARD );
+		showSettingLabel();
+		mInputDeviceManager.clearFirstMove();
+	}
+				
 // SharedPreferences
 	/**
 	 * getPref

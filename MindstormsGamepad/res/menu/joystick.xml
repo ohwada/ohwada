@@ -2,32 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item 
-    	android:id="@+id/joystick"
+    	android:id="@+id/menu_joystick"
         android:title="@string/menu_joystick"
         android:orderInCategory="100"
         android:showAsAction="never" />
 
     <item 
-    	android:id="@+id/setting"
-        android:title="@string/menu_setting"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
-
-    <item 
-    	android:id="@+id/bt_clear"
+    	android:id="@+id/menu_bt_clear"
         android:title="@string/menu_bt_clear"         
         android:orderInCategory="100"
         android:showAsAction="never" />
 
     <item 
-    	android:id="@+id/bt_connect"
+    	android:id="@+id/menu_bt_connect"
         android:icon="@android:drawable/ic_menu_search"
         android:title="@string/menu_bt_connect"
         android:orderInCategory="100"
         android:showAsAction="never" />
 
     <item 
-    	android:id="@+id/bt_disconnect"
+    	android:id="@+id/menu_bt_disconnect"
 		android:icon="@android:drawable/ic_menu_close_clear_cancel"
 		android:title="@string/menu_bt_disconnect"
         android:orderInCategory="100"

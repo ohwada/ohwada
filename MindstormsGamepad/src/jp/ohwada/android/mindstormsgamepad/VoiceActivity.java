@@ -2,7 +2,7 @@ package jp.ohwada.android.mindstormsgamepad;
 
 import java.util.ArrayList;
 
-import jp.ohwada.android.mindstormsgamepad.util.KanjiYumi;
+import jp.ohwada.android.mindstormsgamepad.util.WordList;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
@@ -45,7 +45,7 @@ public class VoiceActivity extends CommonActivity {
 	private ImageView mImageViewMic;
     		
 	// object
-	private KanjiYumi mKanjiYumi;
+	private WordList mWordList;
 		
 // --- onCreate ---
 	/**
@@ -82,9 +82,9 @@ public class VoiceActivity extends CommonActivity {
            }
         });
        
-		// KanjiYumi
-		mKanjiYumi = new KanjiYumi( this );
-		mKanjiYumi.load();
+		// WordList
+		mWordList = new WordList( this );
+		mWordList.load();
 		// show wrod list
 		showText();
     }
@@ -93,7 +93,7 @@ public class VoiceActivity extends CommonActivity {
 	 * show word list f
 	 */		
 	private void showText() {
-		String[] words = mKanjiYumi.getWordArray();
+		String[] words = mWordList.getWordArray();
 		mTextViewForward.setText( words[ GROUP_FORWARD ] ); 
 		mTextViewBack.setText( words[ GROUP_BACK ] ); 
 		mTextViewLeft.setText( words[ GROUP_LEFT ] ); 
@@ -155,10 +155,19 @@ public class VoiceActivity extends CommonActivity {
 		int group = matchGroup( data );
 		switch ( group ) { 
 			case GROUP_FORWARD:
-			case GROUP_BACK:
-			case GROUP_LEFT: 
-			case GROUP_RIGHT: 
 				mTextViewForward.setTextColor( Color.RED );  
+				sendMoveDuration( group );
+				break; 
+			case GROUP_BACK:
+				mTextViewBack.setTextColor( Color.RED );  
+				sendMoveDuration( group );
+				break; 
+			case GROUP_LEFT: 
+				mTextViewLeft.setTextColor( Color.RED );  
+				sendMoveDuration( group );
+				break; 
+			case GROUP_RIGHT: 
+				mTextViewRight.setTextColor( Color.RED );  
 				sendMoveDuration( group );
 				break; 
 		} 
@@ -204,16 +213,16 @@ public class VoiceActivity extends CommonActivity {
 		// process every word       
 		for ( int i = 0; i< results.size(); i++ ) {
 			word = results.get( i );
-			group = mKanjiYumi.match( word );
+			group = mWordList.match( word );
 			// if match
-			if ( group != KanjiYumi.GROUP_UNMTACH ) {
+			if ( group != WordList.GROUP_UNMTACH ) {
 				return group ;
 			}
 			text += i + ": " + word + Constant.LF;
 		}
 		// show result 
 		mTextViewResult.setText( text );  
-		return KanjiYumi.GROUP_UNMTACH;
+		return WordList.GROUP_UNMTACH;
 	}
 // --- onActivityResult end --- 
 

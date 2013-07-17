@@ -241,24 +241,30 @@ public class GamepadActivity extends CommonActivity {
     @Override
     public boolean onOptionsItemSelected( MenuItem item ) {
 		switch ( item.getItemId() ) {
-			case R.id.gamepad:
-				isSetting = true;
-				mSettingNum = 1;
-				// set current value
-				mSettingKeycodeLeftForward = mKeycodeLeftForward ;
-				mSettingKeycodeLeftBack = mKeycodeLeftBack ;
-				mSettingKeycodeRightForward = mKeycodeRightForward ;
-				mSettingKeycodeRightBack = mKeycodeRightBack ;
-				// show setting
-				mJoystickTwoView.showSetting();
-				mJoystickTwoView.showImageIndividual( true, false, false, false );
-				showSettingLabel();
+			case R.id.menu_gamepad:
+				execOptionsItemGamepad();
 				return true;
 		}
 		execOptionsItemSelected( item );
-        return false;
+        return true;
     }
 
+ 	/**
+	 * execOptionsItemGamepad
+	 */
+    private void execOptionsItemGamepad() {
+		isSetting = true;
+		mSettingNum = 1;
+		// set current value
+		mSettingKeycodeLeftForward = mKeycodeLeftForward ;
+		mSettingKeycodeLeftBack = mKeycodeLeftBack ;
+		mSettingKeycodeRightForward = mKeycodeRightForward ;
+		mSettingKeycodeRightBack = mKeycodeRightBack ;
+		// show setting
+		mJoystickTwoView.showSetting();
+		showSettingLabel();
+    }
+    
 // SharedPreferences
 	/**
 	 * getPref

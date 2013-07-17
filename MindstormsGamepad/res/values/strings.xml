@@ -8,12 +8,12 @@
 	<string name="activity_joystick">NXT Joystick</string> 
 	<string name="activity_two_joystick">NXT 2 Joystick</string> 
 	<string name="activity_gamepad">NXT Gamepad</string> 
-	<string name="activity_bt_list">NXT Device List</string>  
-	<string name="activity_settings">NXT Settings</string> 
     <string name="activity_sound">NXT Sound</string>
     <string name="activity_report">NXT Report</string>
     <string name="activity_program">NXT Program</string>
-     
+	<string name="activity_bt_list">NXT Device List</string> 
+	<string name="activity_settings">NXT Settings</string> 
+	     
 <!--  Main Activity -->
     <string name="button_go_orientation">Orientation Sensor</string>
 	<string name="button_go_voice">Voice Recognizer</string>
@@ -40,10 +40,10 @@
 <!--  Report Activity -->
     <string name="report_firmware">Firmware:</string>
     <string name="report_battery">Battery:</string>
-    <string name="report_device">Device Info:</string>
-    <string name="button_report">Get Report</string>       
+    <string name="report_device">Device Info:</string>     
     <string name="firmware_version_error">FirmwareVersion Error</string>
-
+    <string name="button_report">Get NXT Info</string>   
+    
 <!-- Program Activity -->
     <string name="button_program">Get Program List</string>
     <string name="no_programs_found">No programs found on NXT robot!</string>    
@@ -81,6 +81,8 @@
     <string name="button_cancel">Cancel</string>
      
 <!-- menu -->
+	<string name="menu_about">About</string>
+	<string name="menu_usage">Usage</string>
 	<string name="menu_setting">General Setting</string>
 	<string name="menu_gamepad">Gamepad Setting</string>
 	<string name="menu_joystick">Joystick Setting</string>
@@ -98,5 +100,10 @@
      <string name="pref_bt_show_debug_off">Not Show</string>
      <string name="pref_bt_show_debug_default">false</string>
  
-     
+<!-- dialog about -->
+ 	<string name="dialog_about_title">About</string>   
+	<string name="dialog_about_main">This application is a controller for LOGO Mindstorms NXT. \nYou can control by touch panel, orientation sensor, and voice recognition. And control with Joystick and Gamepad.</string>
+	<string name="dialog_about_credit">Author: Kenichi Ohwada</string>
+	<string name="dialog_button_close">Close</string>
+	     
 </resources>
