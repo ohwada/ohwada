@@ -1,0 +1,14 @@
+#summary マウス Hover
+
+= 概要 ==
+ApiDemos の Hover.java を移植したもの
+ApiDemos/src/com/example/android/apis/view/Hover.java
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/3306
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FHover
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130702mouse_hover.png
