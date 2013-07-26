@@ -1,0 +1,17 @@
+#summary MouseSample1
+
+= 概要 ==
+マウスのイベントを検出するアプリです。
+マウスの移動した軌跡を表示します。
+左ボタンで開始、右ボタンで終了です。
+ホイールで軌跡の色が変わります。
+ホイールボタンで軌跡が消えます。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/3310
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FMouseSample1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130703mouse_trace.png
