@@ -1,8 +1,8 @@
 #summary TouchPaint
 
 = 概要 ==
-ApiDemos の TouchPaint.java を移植したもの
-ApiDemos/src/com/example/android/apis/graphics/TouchPaint.java
+ApiDemos の TouchPaint.java を移植したもの <br>
+ApiDemos/src/com/example/android/apis/graphics/TouchPaint.java <br>
 
 関連するブログ <br>
 http://android.ohwada.jp/archives/3321
@@ -12,4 +12,3 @@ https://code.google.com/p/ohwada/source/browse/trunk/TouchPaint
 
 = スクリーンショット =
 http://ohwada.googlecode.com/files/20130704touch_paint.png
-
