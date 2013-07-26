@@ -2,8 +2,6 @@ package jp.ohwada.android.mousesample1;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Toast;
 
 /**
@@ -14,7 +12,6 @@ public class MainActivity extends Activity {
   	private static final String LF = "\n";
   	  
 	private InputDeviceManager mInputDeviceManager;	
-	private MouseView mMouseView;
 
 	/**
 	 * === onCreate ===
@@ -23,8 +20,8 @@ public class MainActivity extends Activity {
 	protected void onCreate( Bundle savedInstanceState ) {
 		super.onCreate( savedInstanceState );
 		
-		mMouseView = new MouseView( this ); 
-		setContentView( mMouseView );
+		MouseView view = new MouseView( this ); 
+		setContentView( view );
 
         mInputDeviceManager = new InputDeviceManager( this );
 		mInputDeviceManager.getInputDevices();
@@ -42,13 +39,6 @@ public class MainActivity extends Activity {
 				toast_show( "Removed " + name + " " + deviceId );        
             }
         });
-
-        mMouseView.setOnGenericMotionListener( new View.OnGenericMotionListener() {
-            public boolean onGenericMotion( View v, MotionEvent event ) {
-            	execGenericMotion( event );
-            	return true;
-            }
-		});
 		            
 	}
 
@@ -68,17 +58,6 @@ public class MainActivity extends Activity {
     protected void onPause() {
         super.onPause();
 		mInputDeviceManager.unregister();
-    }
-
-	/**
-	 * execGenericMotion
-	 * @param MotionEvent event
-	 */
-    private void execGenericMotion( MotionEvent event ) {
-		boolean ret = mInputDeviceManager.dispatchMotionEvent( event );
-		if ( ret ) {
-			mMouseView.setValues( mInputDeviceManager.getValues() );		
-        }
     }
 
 	/**
