@@ -8,8 +8,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.Pair;
 import android.util.TypedValue;
+import android.view.InputDevice;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -17,6 +20,10 @@ import android.view.View;
  */
 public class MouseView extends View {
 
+	private static final boolean D = true;
+    private static final String TAG = "GamePad"; 
+    private static final String TAG_SUB = "MouseView";
+    
     private static final int[] COLORS = {
     	Color.BLACK, Color.RED, Color.GREEN, Color.BLUE, Color.MAGENTA, Color.GRAY, Color.CYAN, };    
     private static final int TEXT_SIZE = 16;
@@ -43,7 +50,12 @@ public class MouseView extends View {
 
  	private boolean isDrawLine = false;
  	private boolean isDrawPoint = false;
- 		
+ 	private boolean isFirst = true;
+			
+ 	private boolean isPrimary = false;
+ 	private boolean isSecondary = false;
+ 	private boolean isTertiary = false;
+     		
     private String mStringX = "";
     private String mStringY = "";
     private String mStringVscroll = "";
@@ -103,7 +115,9 @@ public class MouseView extends View {
 		mPaintLine = new Paint();
 		mPaintPoint = new Paint();
 		setColor();
-						
+
+		mList = new ArrayList<Position>();
+										
 		setTextString( 0, 0, 0 ,false, false, false );	
     }
 
@@ -116,7 +130,37 @@ public class MouseView extends View {
         return TypedValue.applyDimension( 
 			unit, size, getContext().getResources().getDisplayMetrics() );
     }
- 
+
+	/*
+	 * === onTouchEvent ===
+	 */ 
+	@Override
+	public boolean onTouchEvent( MotionEvent event ) {
+		log_d( "onTouchEvent" );
+		log_d( event.toString() );
+		return setValues( event );
+	}
+
+	/*
+	 * === onHoverEvent ===
+	 */
+	@Override
+	public boolean onHoverEvent( MotionEvent event ) {
+		log_d( "onHoverEvent" );
+		log_d( event.toString() );
+		return setValues( event );
+	}
+
+	/*
+	 * === onGenericMotionEvent ===
+	 */
+	@Override
+	public boolean onGenericMotionEvent( MotionEvent event ) {
+		log_d( "onGenericMotion" );
+		log_d( event.toString() );
+		return setValues( event );
+	}
+        
 	/*
 	 * === onDraw ===
 	 */ 
@@ -148,35 +192,91 @@ public class MouseView extends View {
       	}
     }
 
+	/**
+	 * setValues
+	 * @param MotionEvent event
+	 */	
+	private boolean setValues( MotionEvent event ) {
+		if ( !isMouse( event ) ) return false;
+		boolean ret = false;
+		float x = event.getX();
+		float y = event.getY();
+		float vscroll = 0;
+		switch ( event.getAction() ) {
+			// onTouchEvent
+			case MotionEvent.ACTION_MOVE:
+			// onHoverEvent
+			case MotionEvent.ACTION_HOVER_ENTER:
+			case MotionEvent.ACTION_HOVER_MOVE:
+			case MotionEvent.ACTION_HOVER_EXIT:
+				ret = true;
+				break;
+			// onTouchEvent
+			case MotionEvent.ACTION_DOWN:
+				switch ( event.getButtonState() ) {
+					case MotionEvent.BUTTON_PRIMARY:
+						ret = true;
+						isPrimary = true;
+						break;						
+					case MotionEvent.BUTTON_SECONDARY:
+						ret = true;
+						isSecondary = true;
+						break;	
+					case MotionEvent.BUTTON_TERTIARY:
+						ret = true;
+						isTertiary = true;
+						break;	
+				}
+				break;
+			// onTouchEvent
+			case MotionEvent.ACTION_UP:
+				ret = true;
+				isPrimary = false;
+				isSecondary = false;						
+				isTertiary = false;
+				break;
+			// onGenericMotionEvent			
+			case MotionEvent.ACTION_SCROLL:
+				ret = true;
+				vscroll = event.getAxisValue( MotionEvent.AXIS_VSCROLL );
+				break;
+		}
+		if ( ret ) {
+			setValues( x, y, vscroll, isPrimary, isSecondary, isTertiary );
+		}
+		log_d( "" + ret );
+		return ret;	
+	}
+
 	/*
 	 * setValues
-	 * @param InputDeviceManager.Values values
+	 * @param float x
+	 * @param float y
+	 * @param float vscroll
+	 * @param boolean primary
+	 * @param boolean secondary
+	 * @param boolean tertiary
 	 */ 
-    public void setValues( InputDeviceManager.Values values ) {
-    	float x = values.x;
-    	float y = values.y;
-		float vscroll = values.vscroll;
-		boolean primary = values.primary;    	    	    	
-		boolean secondary = values.secondary;    
-		boolean tertiary = values.tertiary;    
+    private void setValues( float x, float y, float vscroll, boolean primary, boolean secondary, boolean tertiary ) {
     
         setTextString( x, y, vscroll, primary, secondary, tertiary );
 
         mX = (int)x;
         mY = (int)y;
-        
+			        
 		if ( primary ) {
 			isDrawLine = true;
-			mList = new ArrayList<Position>();
+			if ( isFirst ) {
+				isFirst = false;
+				mList.clear();
+			}
+		} else {
+			isDrawLine = false;
+			isFirst = true;
 		}
 
 		if ( secondary ) {
-			isDrawLine = false;
-		}
-
-		if ( tertiary ) {
-			isDrawLine = false;
-			mList = new ArrayList<Position>();
+			mList.clear();
 		}
 
 		if ( isDrawLine ) {
@@ -231,6 +331,25 @@ public class MouseView extends View {
 		mPaintPoint.setColor( color );
 	}
 
+	/**
+	 * isMouse
+	 * @param MotionEvent event
+	 * @return boolean
+	 */	
+	private boolean isMouse( MotionEvent event ) {
+		return isSource( event.getSource(), InputDevice.SOURCE_MOUSE );
+  }
+
+	/**
+	 * isSource
+	 * @param int source
+	 * @param int kind
+	 * @return boolean
+	 */	
+	private boolean isSource( int source, int kind ) {
+        return ( source & kind & ~InputDevice.SOURCE_CLASS_MASK ) != 0;
+    }
+
     /** 
 	 * class Position	 
 	 */	
@@ -245,5 +364,12 @@ public class MouseView extends View {
         	return super.second;  
 		}
 	}
-  	             
+  	
+	/**
+	 * write log
+	 * @param String msg
+	 */ 
+	private void log_d( String msg ) {
+		if (D) Log.d( TAG, TAG_SUB + " " + msg );
+	}
 }
