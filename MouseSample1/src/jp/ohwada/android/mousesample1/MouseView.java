@@ -1,15 +1,12 @@
 package jp.ohwada.android.mousesample1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.util.Pair;
 import android.util.TypedValue;
 import android.view.InputDevice;
 import android.view.MotionEvent;
@@ -21,8 +18,7 @@ import android.view.View;
 public class MouseView extends View {
 
 	private static final boolean D = true;
-    private static final String TAG = "GamePad"; 
-    private static final String TAG_SUB = "MouseView";
+    private static final String TAG = "MouseView"; 
     
     private static final int[] COLORS = {
     	Color.BLACK, Color.RED, Color.GREEN, Color.BLUE, Color.MAGENTA, Color.GRAY, Color.CYAN, };    
@@ -33,7 +29,9 @@ public class MouseView extends View {
     private Paint mPaintLine;
     private Paint mPaintPoint;
 
- 	private List<Position> mList = null;
+	private Bitmap mBitmap = null;
+	private Canvas mCanvas = null;	
+
     private int mX = 0;
     private int mY = 0;
     
@@ -55,6 +53,9 @@ public class MouseView extends View {
  	private boolean isPrimary = false;
  	private boolean isSecondary = false;
  	private boolean isTertiary = false;
+
+	private float mPrevX = 0f;
+	private float mPrevY = 0f;
      		
     private String mStringX = "";
     private String mStringY = "";
@@ -115,8 +116,6 @@ public class MouseView extends View {
 		mPaintLine = new Paint();
 		mPaintPoint = new Paint();
 		setColor();
-
-		mList = new ArrayList<Position>();
 										
 		setTextString( 0, 0, 0 ,false, false, false );	
     }
@@ -130,6 +129,16 @@ public class MouseView extends View {
         return TypedValue.applyDimension( 
 			unit, size, getContext().getResources().getDisplayMetrics() );
     }
+
+	/*
+	 * === onSizeChanged ===
+	 */ 
+    @Override
+	protected void onSizeChanged( int w, int h, int oldw, int oldh ) {
+		super.onSizeChanged( w, h, oldw, oldh );
+		mBitmap = Bitmap.createBitmap( w, h, Bitmap.Config.ARGB_8888 );
+		mCanvas = new Canvas( mBitmap );
+	}
 
 	/*
 	 * === onTouchEvent ===
@@ -168,6 +177,10 @@ public class MouseView extends View {
     protected void onDraw( Canvas canvas ) {
         super.onDraw( canvas );
 
+    	if ( mBitmap != null ) {
+			canvas.drawBitmap( mBitmap, 0, 0, null );
+		}
+		
     	canvas.drawText( mStringX, mTextX, mTextXY, mPaintText );
    		canvas.drawText( mStringY, mTextX, mTextYY, mPaintText );
     	canvas.drawText( mStringVscroll, mTextX, mTextVscrollY, mPaintText );
@@ -179,17 +192,6 @@ public class MouseView extends View {
 			isDrawPoint = false;
 			canvas.drawCircle( mX, mY, mPointRadius, mPaintPoint );
 		}		
-
-   		if ( mList == null ) return;
- 		int size = mList.size() - 1;
- 		if ( size <= 0 ) return;
- 		
- 		for ( int i=0; i < size; i++ )  {
- 			Position p1 = mList.get( i );
- 			Position p2 = mList.get( i + 1 );
-      		canvas.drawLine( 
-      			p1.getX(), p1.getY(), p2.getX(), p2.getY(), mPaintLine );
-      	}
     }
 
 	/**
@@ -244,7 +246,6 @@ public class MouseView extends View {
 		if ( ret ) {
 			setValues( x, y, vscroll, isPrimary, isSecondary, isTertiary );
 		}
-		log_d( "" + ret );
 		return ret;	
 	}
 
@@ -268,7 +269,7 @@ public class MouseView extends View {
 			isDrawLine = true;
 			if ( isFirst ) {
 				isFirst = false;
-				mList.clear();
+				startLine( x, y );
 			}
 		} else {
 			isDrawLine = false;
@@ -276,12 +277,11 @@ public class MouseView extends View {
 		}
 
 		if ( secondary ) {
-			mList.clear();
+			clearLine();
 		}
 
 		if ( isDrawLine ) {
-		    Position p = new Position( (int)x, (int)y );
-			mList.add( p );
+			drawLine( x, y );
 		}
 
 		boolean flag = false;
@@ -307,7 +307,36 @@ public class MouseView extends View {
 		
 		invalidate();
     }
-				
+
+    /** 
+	 * clearLine
+	 */	
+	 private void clearLine() {
+		mCanvas.drawColor( Color.WHITE );
+ 	}
+
+    /** 
+	 * startLine
+	 * @param int x
+	 * @param int y	 
+	 */	
+	 private void startLine( float x, float y ) {
+	 	clearLine();
+		mPrevX = x;
+ 		mPrevY = y;
+ 	}
+
+    /** 
+	 * drawLine
+	 * @param int x
+	 * @param int y	 
+	 */	
+	 private void drawLine( float x, float y ) {
+		mCanvas.drawLine( mPrevX, mPrevY, x, y, mPaintLine );
+		mPrevX = x;
+		mPrevY = y;
+	}
+	 				 										
     /** 
 	 * setTextString
 	 * @param int x
@@ -349,27 +378,12 @@ public class MouseView extends View {
 	private boolean isSource( int source, int kind ) {
         return ( source & kind & ~InputDevice.SOURCE_CLASS_MASK ) != 0;
     }
-
-    /** 
-	 * class Position	 
-	 */	
-	private class Position extends Pair<Integer, Integer> {    
-    	public Position( Integer x, Integer y ) {  
-        	super( x, y );
-    	}  
-		public Integer getX() {  
-        	return super.first;  
-		}  
-		public Integer getY() { 
-        	return super.second;  
-		}
-	}
   	
 	/**
 	 * write log
 	 * @param String msg
 	 */ 
 	private void log_d( String msg ) {
-		if (D) Log.d( TAG, TAG_SUB + " " + msg );
+		if (D) Log.d( TAG, msg );
 	}
 }
