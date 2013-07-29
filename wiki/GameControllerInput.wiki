@@ -1,0 +1,14 @@
+#summary GameControllerInput
+
+= 概要 ==
+ApiDemos の GameControllerInput.java を移植したもの <br>
+ApiDemos/src/com/example/android/apis/view/GameControllerInput.java <br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/3333
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/GameControllerInput/
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20130709game_controller_input.png
