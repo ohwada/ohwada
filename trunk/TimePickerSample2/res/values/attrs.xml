@@ -5,5 +5,6 @@
         <attr name="timepicker_numberWidth" format="dimension" />
         <attr name="timepicker_textSize" format="dimension" />
         <attr name="timepicker_visibilitySecond" format="boolean" />        
+        <attr name="timepicker_isClearOnFocus" format="boolean" />
     </declare-styleable>
 </resources>
