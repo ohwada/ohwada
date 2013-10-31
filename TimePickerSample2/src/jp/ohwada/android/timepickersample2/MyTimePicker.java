@@ -1,3 +1,6 @@
+// 2013-06-01
+// setIsClearOnFocus()
+//
 // 2013-02-01
 // TimePicker
 // added second 
@@ -22,6 +25,8 @@
 
 //package android.widget;
 package jp.ohwada.android.timepickersample2;
+
+import jp.ohwada.android.timepickersample2.R;
 
 //import android.annotation.Widget;
 import android.content.Context;
@@ -313,6 +318,7 @@ public class MyTimePicker extends FrameLayout {
 		int numberWidth = ta.getLayoutDimension( R.styleable.MyTimePicker_timepicker_numberWidth, 0 );
 		int textSize = ta.getDimensionPixelSize( R.styleable.MyTimePicker_timepicker_textSize, 0 );
 		boolean visibilitySecond = ta.getBoolean( R.styleable.MyTimePicker_timepicker_visibilitySecond, false );
+		boolean isClearOnFocus = ta.getBoolean( R.styleable.MyTimePicker_timepicker_isClearOnFocus, false );
 		if ( textSize != 0 ) {
 			setTextSize( TypedValue.COMPLEX_UNIT_PX, textSize );
 		}
@@ -325,6 +331,9 @@ public class MyTimePicker extends FrameLayout {
 		if ( is24Hour ) {
 			log_d( "is24Hour " + is24Hour );
 			setIs24HourView( is24Hour );
+		}
+		if ( isClearOnFocus ) {
+			setIsClearOnFocus( isClearOnFocus );
 		}
 		ta.recycle();
 	}
@@ -378,6 +387,18 @@ public class MyTimePicker extends FrameLayout {
         return TypedValue.applyDimension( 
         		unit, size, getContext().getResources().getDisplayMetrics() );
     }
+
+// 2013-06-01 K.OHWADA
+	/**
+	 * setIsClearOnFocus
+	 * @param boolean is
+	 */ 
+	public void setIsClearOnFocus( boolean is ) {
+		log_d( "setIsClearOnFocus " + is );
+		mHourPicker.setIsClearOnFocus( is );
+		mMinutePicker.setIsClearOnFocus( is );
+		mSecondPicker.setIsClearOnFocus( is );
+	}
 	
     /**
      * Used to save / restore state of time picker
@@ -620,10 +641,14 @@ public class MyTimePicker extends FrameLayout {
         mSecondPicker.setCurrent(mCurrentSecond);
         onTimeChanged();
     }
-
-// 2013-02-01     
+    
+// 2013-02-01
+ 	/**
+	 * write into logcat
+	 * @param String msg
+	 */ 
     private void log_d( String msg ) {    
 		if (D) Log.d( TAG, msg );
-    }		
+    }			
 }
 
