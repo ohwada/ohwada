@@ -12,6 +12,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -253,10 +254,17 @@ public class NumberEditText extends EditText
 	 * @param boolean hasFocus	 
 	 */    
     public void onFocusChange( View v, boolean hasFocus ) {
+		// When view is focused, 
+		// clear current value on text
+		// and set current value on hint. 
 		if ( hasFocus && isClearOnFocus ){
 			String text = getText().toString();
 			setText( "" );
 			setHint( text );
+			// The keyboard will not be displayed on the 1st touch 
+			// when text is set up.
+			// And then show the keyboard explicitly. 
+			showKeyboard();
 		}
                 
         /* When focus is lost check that the text field
@@ -447,5 +455,13 @@ public class NumberEditText extends EditText
 	 private void execOnTextChanged( CharSequence s, int start, int before, int count ) {
 		// dummy
 	 }
-		    
+
+	/**
+	 * show soft keyboard
+	 */
+	private void showKeyboard() {
+		InputMethodManager imm = (InputMethodManager) 
+			getContext().getSystemService( Context.INPUT_METHOD_SERVICE );
+		imm.showSoftInput( this, InputMethodManager.SHOW_FORCED );
+	}			    
 }

@@ -1,29 +1,35 @@
 package jp.ohwada.android.timeedittext;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * MainActivity
+ */
 public class MainActivity extends Activity {
-
-	private EditText mEditText2;	
 	
+	private TextView mTextView1;
+
+	/**
+	 * onCreate
+	 */	
 	@Override
 	protected void onCreate( Bundle savedInstanceState)  {
 		super.onCreate( savedInstanceState );
 		setContentView( R.layout.activity_main );
 
-		EditText mEditText1 = (EditText) findViewById( R.id.EditText_1 );
-		mEditText1.setVisibility( View.GONE );
-		        
-        mEditText2 = (EditText) findViewById( R.id.EditText_2 );
-		mEditText2.setVisibility( View.GONE );
-
-		EditText mEditText3 = (EditText) findViewById( R.id.EditText_3 );
-		mEditText3.setVisibility( View.GONE );
-		
+		// There are no method that EditView is not focused.
+		// And then Textview is prepared as dummy, and is focused.
+		// As a result, EditView is not focused for appearance.
+		mTextView1 = (TextView) findViewById( R.id.TextView_1 );
+        mTextView1.setFocusable( true );
+        mTextView1.setFocusableInTouchMode( true );
+		mTextView1.requestFocus(); 
+							
         TimeEditText mTimeEditText1 = (TimeEditText) findViewById( R.id.TimeEditText_1 );               
 		mTimeEditText1.isClearOnFocus( true );
 		mTimeEditText1.setNextFocus();
@@ -38,7 +44,8 @@ public class MainActivity extends Activity {
 	 		@Override
 			public void onFinished( TimeEditText view, boolean hasFocusSecond ) {
 				if ( hasFocusSecond ) {
-					mEditText2.requestFocus(); 
+					mTextView1.requestFocus(); 
+					hideKeyboard();
 				}
 			}
 		});
@@ -47,6 +54,18 @@ public class MainActivity extends Activity {
 		mTimeEditText2.setCurrentTime( 1, 2, 3 );
 	}
 
+	/**
+	 * hide Keyboard
+	 */
+	private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager)
+        	getSystemService( Context.INPUT_METHOD_SERVICE );
+        imm.hideSoftInputFromWindow( mTextView1.getWindowToken(), 0 ); 
+	}
+
+	/**
+	 * toast_show
+	 */	
     private void toast_show( String msg ) {
         Toast.makeText( this, msg, Toast.LENGTH_SHORT ).show();
     }
