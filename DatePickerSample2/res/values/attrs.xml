@@ -11,5 +11,6 @@
         <attr name="datepicker_dayWidth" format="dimension" />
         <attr name="datepicker_textSize" format="dimension" />
         <attr name="datepicker_monthTwoDigit" format="boolean" />
+        <attr name="datepicker_isClearOnFocus" format="boolean" />
     </declare-styleable>
 </resources>
