@@ -5,50 +5,29 @@
     android:orientation="vertical"
     android:padding="8dp" >
 
-    <LinearLayout 
-    	android:orientation="horizontal"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content" 
-        android:layout_marginBottom="8dp" >
-        	
-    	<EditText
-        	android:id="@+id/EditText_1"
-        	android:layout_width="48dp"
-        	android:layout_height="wrap_content"
-        	android:layout_marginRight="8dp"
-        	android:inputType="number" />
+    <TextView
+        android:id="@+id/TextView_1"
+        android:text="TimeEditView"  
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
                 
-		<jp.ohwada.android.timeedittext.TimeEditText
-			android:id="@+id/TimeEditText_1"  
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"  />
-
-    	<EditText
-        	android:id="@+id/EditText_2"
-        	android:layout_width="48dp"
-        	android:layout_height="wrap_content"
-        	android:layout_marginLeft="8dp"
-        	android:inputType="number" />
+	<jp.ohwada.android.timeedittext.TimeEditText
+		android:id="@+id/TimeEditText_1"  
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+        android:layout_margin="8dp" />
         
-	</LinearLayout>  
-
 	<jp.ohwada.android.timeedittext.TimeEditText
         xmlns:custom="http://schemas.android.com/apk/res/jp.ohwada.android.timeedittext"
 		android:id="@+id/TimeEditText_2"  
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp" 
         custom:timeedittext_textSize="24dp"
         custom:timeedittext_numberWidth="60dp"
         custom:timeedittext_hourMark="時" 
         custom:timeedittext_minuteMark="分"
         custom:timeedittext_secondMark="秒"  />
-
-	<EditText
-   		android:id="@+id/EditText_3"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:inputType="number" />
 	    		        
 </LinearLayout>        			
         			
