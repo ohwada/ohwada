@@ -1,4 +1,7 @@
-// 20130-02-01
+// 2013-06-01
+// setIsClearOnFocus()
+//
+// 2013-02-01
 // DatePicker
 // setOnDateChangedListener()
 // setTextSize()
@@ -24,6 +27,7 @@
 //package android.widget;
 package jp.ohwada.android.datepickersample2;
 
+import jp.ohwada.android.datepickersample2.R;
 import jp.ohwada.android.datepickersample2.MyNumberPicker.OnChangedListener;
 
 //import android.annotation.Widget;
@@ -61,9 +65,9 @@ import java.util.Calendar;
 public class MyDatePicker extends FrameLayout {
 
 // 2013-02-01
-    private final static boolean D = true;
+	private final static boolean D = true;
 	private final static String TAG = "MyDatePicker";
-	
+
     private static final int DEFAULT_START_YEAR = 1900;
     private static final int DEFAULT_END_YEAR = 2100;
     
@@ -142,7 +146,7 @@ public class MyDatePicker extends FrameLayout {
         
 //        mMonthPicker.setFormatter(NumberPicker.TWO_DIGIT_FORMATTER);
         mMonthPicker.setFormatter(MyNumberPicker.TWO_DIGIT_FORMATTER);
-        
+
         DateFormatSymbols dfs = new DateFormatSymbols();
         String[] months = dfs.getShortMonths();
         mMonthPicker.setRange(1, 12, months);
@@ -221,6 +225,7 @@ public class MyDatePicker extends FrameLayout {
 		int dayWidth = ta.getLayoutDimension( R.styleable.MyDatePicker_datepicker_dayWidth, 0 );
 		int textSize = ta.getDimensionPixelSize( R.styleable.MyDatePicker_datepicker_textSize, 0 );
 		boolean isMonthTwoDigit = ta.getBoolean( R.styleable.MyDatePicker_datepicker_monthTwoDigit, false );
+		boolean isClearOnFocus = ta.getBoolean( R.styleable.MyDatePicker_datepicker_isClearOnFocus, false );
 		if ( textSize != 0 ) {
 			setTextSize( TypedValue.COMPLEX_UNIT_PX, textSize );
 		}
@@ -235,6 +240,9 @@ public class MyDatePicker extends FrameLayout {
 		}
 		if ( isMonthTwoDigit ) {
 			setMonthTwoDigit( isMonthTwoDigit );
+		}
+		if ( isClearOnFocus ) {
+			setIsClearOnFocus( isClearOnFocus );
 		}
 		ta.recycle();
 	}
@@ -298,6 +306,17 @@ public class MyDatePicker extends FrameLayout {
         return TypedValue.applyDimension( 
         		unit, size, getContext().getResources().getDisplayMetrics() );
     }
+
+// 2013-06-01 K.OHWADA
+	/**
+	 * setIsClearOnFocus
+	 * @param boolean is
+	 */ 
+	public void setIsClearOnFocus( boolean is ) {
+		mYearPicker.setIsClearOnFocus( is );
+		mMonthPicker.setIsClearOnFocus( is );
+		mDayPicker.setIsClearOnFocus( is );
+	}
 
     public void setMonthTwoDigit( boolean flag ) {
     	log_d( "setMonthTwoDigit " + flag );
@@ -550,8 +569,12 @@ public class MyDatePicker extends FrameLayout {
         }
     }
     
-    // 2013-02-01     
-    private void log_d( String msg ) {    
-		if (D) Log.d( TAG, msg );
-    }
+// 2013-02-01     
+ 	/**
+	 * write into logcat
+	 * @param String msg
+	 */ 
+	private void log_d( String msg ) {
+	    if (D) Log.d( TAG, msg );
+	} 
 }
