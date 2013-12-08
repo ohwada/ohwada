@@ -1,0 +1,17 @@
+#summary Evy1Sample1
+
+= 概要 ==
+Android からeVY1 シールドを制御する<br>
+eVY1_MML_sample.ino を移植したもの<br>
+USB-HOST 機能を使っています<br>
+USB-MIDI-Driver が必要です<br>
+https://github.com/kshoji/USB-MIDI-Driver
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/
+
+= ソースコード =
+http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FEvy1Sample1
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20131208evy1sample1.png
