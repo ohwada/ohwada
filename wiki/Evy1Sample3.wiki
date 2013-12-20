@@ -8,7 +8,7 @@ USB-MIDI-Driver が必要です<br>
 https://github.com/kshoji/USB-MIDI-Driver
 
 関連するブログ <br>
-http://android.ohwada.jp/archives/
+http://android.ohwada.jp/archives/4195
 
 = ソースコード =
 http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FEvy1Sample3
