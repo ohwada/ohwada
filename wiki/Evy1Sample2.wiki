@@ -1,3 +1,5 @@
+#summary Evy1Sample2
+
 = 概要 ==
 Android からeVY1 シールドを制御する<br>
 evocaloid_smf.ino を移植したもの<br>
