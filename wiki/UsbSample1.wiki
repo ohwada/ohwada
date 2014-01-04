@@ -7,7 +7,7 @@ USB 機器のインターフェイスとエンドポイントを取得します�
 http://android.ohwada.jp/archives/4206
 
 = ソースコード =
-http://code.google.com/p/ohwada/source/browse/#svn%2Ftrunk%2FUsbSample1
+https://code.google.com/p/ohwada/source/browse/trunk/UsbSample1/
 
 = スクリーンショット =
-http://ohwada.googlecode.com/files/201401014usb_sample1.png
+http://ohwada.googlecode.com/files/20140104usb_sample1.png
