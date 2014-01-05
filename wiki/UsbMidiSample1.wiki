@@ -1,0 +1,13 @@
+#summary UsbMidiSample1
+
+= 概要 ==
+Android から USB MIDI 機器を制御する
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4233
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/UsbMidiSample1/
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20140105usb_midi_sampl1_not_connect.png
