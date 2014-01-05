@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UsbMidiSample1</string>
+
+    <string name="not_connect">Not Connect</string>
+    <string name="channel_select">Channel Select</string>
+    
+    <string name="button_c">C</string>
+    <string name="button_cis">C#</string>
+    <string name="button_d">D</string>
+    <string name="button_dis">D#</string>
+    <string name="button_e">E</string>
+    <string name="button_f">F</string>
+    <string name="button_fis">F#</string>
+    <string name="button_g">G</string>
+    <string name="button_gis">G#</string>
+    <string name="button_a">A</string>
+    <string name="button_ais">A#</string>
+    <string name="button_b">B</string>
+    <string name="button_c2">C2</string>
+            
+</resources>
