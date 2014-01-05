@@ -1,0 +1,100 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+	<TextView
+		android:id="@+id/TextView_connect"
+ 		android:text="@string/not_connect" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_marginBottom="10dp" />
+		
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <Button
+            android:id="@+id/ButtonC"
+            android:text="@string/button_c"
+            android:tag="60"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonCis"
+            android:text="@string/button_cis"
+            android:tag="61"
+            style="@style/black_key" />
+			           
+        <Button
+            android:id="@+id/ButtonD"
+            android:text="@string/button_d"
+            android:tag="62"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonDis"
+            android:text="@string/button_dis"
+            android:tag="63"
+            style="@style/black_key" />
+						
+        <Button
+            android:id="@+id/ButtonE"
+            android:text="@string/button_e"
+            android:tag="64"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonF"
+            android:text="@string/button_f"
+            android:tag="65"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonFis"
+            android:text="@string/button_fis"
+            android:tag="66" 
+            style="@style/black_key" />	
+            		
+        <Button
+            android:id="@+id/ButtonG"
+            android:text="@string/button_g"
+            android:tag="67"
+			style="@style/white_key" />
+			
+        <Button
+            android:id="@+id/ButtonGis"
+            android:text="@string/button_gis"
+            android:tag="68"
+            style="@style/black_key" />	
+			            
+        <Button
+            android:id="@+id/ButtonA"
+            android:text="@string/button_a"
+            android:tag="69"
+			style="@style/white_key" />
+			
+        <Button
+            android:id="@+id/ButtonAis"
+            android:text="@string/button_ais"
+            android:tag="70"
+            style="@style/black_key" />	
+			            
+        <Button
+            android:id="@+id/ButtonB"
+            android:text="@string/button_b"
+            android:tag="71"
+			style="@style/white_key" />
+			
+        <Button
+            android:id="@+id/ButtonC2"
+            android:text="@string/button_c2"
+            android:tag="72"
+			style="@style/white_key" />
+			            
+    </LinearLayout>
+
+</LinearLayout>
