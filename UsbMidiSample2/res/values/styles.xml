@@ -1,0 +1,55 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+	<style name="white_key">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">180dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_gravity">top|center_horizontal</item>
+		<item name="android:gravity">top|center_horizontal</item>
+		<item name="android:layout_margin">1dp</item>
+		<item name="android:paddingTop">10dp</item>
+		<item name="android:textColor">#FF000000</item>
+		<item name="android:background">@drawable/white_key</item>
+	</style>
+
+	<style name="black_key">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">80dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_gravity">top|center_horizontal</item>
+		<item name="android:gravity">top|center_horizontal</item>
+		<item name="android:layout_margin">1dp</item>
+		<item name="android:paddingTop">10dp</item>
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:background">@drawable/black_key</item>
+	</style>
+
+	<style name="drum_key">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">40dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_margin">1dp</item>
+		<item name="android:textColor">#FF000000</item>
+		<item name="android:background">@drawable/drum_key</item>
+	</style>
+	
+</resources>
