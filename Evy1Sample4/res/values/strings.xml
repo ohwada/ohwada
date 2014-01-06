@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Evy1Sample4</string>
+
+    <string name="not_connect">Not Connect</string>
+    <string name="channel_select">Channel Select</string>
+    <string name="checkbox_vocal">With Vocal</string>
+
+    <string name="button_c">C\nど</string>
+    <string name="button_cis">C#\nあ</string>
+    <string name="button_d">D\nれ</string>
+    <string name="button_dis">D#\nい</string>
+    <string name="button_e">E\nみ</string>
+    <string name="button_f">F\nふぁ</string>
+    <string name="button_fis">F#\nう</string>
+    <string name="button_g">G\nそ</string>
+    <string name="button_gis">G#\nえ</string>
+    <string name="button_a">A\nら</string>
+    <string name="button_ais">A#\nお</string>
+    <string name="button_b">B\nし</string>
+    <string name="button_c2">C2\nど</string>
+
+    <string name="button_drum60">60</string>
+    <string name="button_drum61">61</string>
+	<string name="button_drum62">62</string>
+	<string name="button_drum63">63</string>
+	<string name="button_drum64">64</string>
+	<string name="button_drum65">65</string>
+	<string name="button_drum66">66</string>
+	<string name="button_drum67">67</string>
+	<string name="button_drum68">68</string>
+	<string name="button_drum69">69</string>
+	<string name="button_drum70">70</string>
+	<string name="button_drum71">71</string>
+	<string name="button_drum72">72</string>
+
+</resources>
