@@ -1,0 +1,14 @@
+#summary UsbMidiSample2
+
+= 概要 ==
+Android から USB MIDI 機器を制御する
+Program Change を使って楽器を選択します。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4246
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/UsbMidiSample2/
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20140106usb_midi_sampl2.png
