@@ -1,7 +1,7 @@
 #summary UsbMidiSample2
 
 = 概要 ==
-Android から USB MIDI 機器を制御する
+Android から USB MIDI 機器を制御する。 <br>
 Program Change を使って楽器を選択します。
 
 関連するブログ <br>
