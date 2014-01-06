@@ -1,7 +1,8 @@
 #summary UsbMidiSample1
 
 = 概要 ==
-Android から USB MIDI 機器を制御する
+Android から USB MIDI 機器を制御する。<br>
+Note On を使って音を鳴らします。
 
 関連するブログ <br>
 http://android.ohwada.jp/archives/4233
