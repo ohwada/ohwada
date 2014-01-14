@@ -1,0 +1,35 @@
+<resources>
+
+    <string-array name="channels">
+        <item>ch 0 Vocaloid</item>
+        <item>ch 1 Piano</item>
+        <item>ch 2 Vibraphone</item>
+        <item>ch 3 Organ</item>
+        <item>ch 4 Guitar</item>
+        <item>ch 5 Bass</item>
+        <item>ch 6 Violin</item>
+        <item>ch 7 Strings</item>
+        <item>ch 8 Trumpet</item>
+        <item>ch 9 Piano</item>
+        <item>ch 10 Saxophone</item>
+        <item>ch 11 Flute</item>
+        <item>ch 12 Banjo</item>
+        <item>ch 13 Tinkle Bell</item>
+        <item>ch 14 Synth Calliope</item>
+        <item>ch 15 Synth Fantasia</item>
+    </string-array>
+ 
+     <string-array name="octaves">
+        <item>Octave C-1</item>
+        <item>Octave C0</item>
+        <item>Octave C1</item>
+        <item>Octave C2</item>
+        <item>Octave C3</item>
+        <item>Octave C4 (default)</item>
+        <item>Octave C5</item>
+        <item>Octave C6</item>
+        <item>Octave C7</item>
+        <item>Octave C8</item>
+    </string-array>
+   
+</resources>
