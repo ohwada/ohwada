@@ -1,0 +1,133 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="4dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+
+    	<CheckBox 
+    		android:id="@+id/CheckBox_vocal"
+        	android:text="@string/checkbox_vocal"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="4dp" 
+        	android:layout_marginRight="4dp" /> 
+        	
+    	<CheckBox 
+    		android:id="@+id/CheckBox_piano"
+        	android:text="@string/checkbox_piano"  
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" />
+        		
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+
+		<EditText
+			android:id="@+id/EditText_input"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" /> 
+
+        <Button
+            android:id="@+id/Button_set"
+            android:text="@string/button_set"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+			         	    	
+    </LinearLayout>
+        	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <Button
+            android:id="@+id/ButtonC"
+            android:text="@string/button_c"
+            android:tag="0"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonCis"
+            android:text="@string/button_cis"
+            android:tag="1"
+            style="@style/black_key" />
+			           
+        <Button
+            android:id="@+id/ButtonD"
+            android:text="@string/button_d"
+            android:tag="2"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonDis"
+            android:text="@string/button_dis"
+            android:tag="3"
+            style="@style/black_key" />
+						
+        <Button
+            android:id="@+id/ButtonE"
+            android:text="@string/button_e"
+            android:tag="4"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonF"
+            android:text="@string/button_f"
+            android:tag="5"
+			style="@style/white_key" />
+						
+        <Button
+            android:id="@+id/ButtonFis"
+            android:text="@string/button_fis"
+            android:tag="6" 
+            style="@style/black_key" />	
+            		
+        <Button
+            android:id="@+id/ButtonG"
+            android:text="@string/button_g"
+            android:tag="7"
+			style="@style/white_key" />
+			
+        <Button
+            android:id="@+id/ButtonGis"
+            android:text="@string/button_gis"
+            android:tag="8"
+            style="@style/black_key" />	
+			            
+        <Button
+            android:id="@+id/ButtonA"
+            android:text="@string/button_a"
+            android:tag="9"
+			style="@style/white_key" />
+			
+        <Button
+            android:id="@+id/ButtonAis"
+            android:text="@string/button_ais"
+            android:tag="10"
+            style="@style/black_key" />	
+			            
+        <Button
+            android:id="@+id/ButtonB"
+            android:text="@string/button_b"
+            android:tag="11"
+			style="@style/white_key" />
+			
+        <Button
+            android:id="@+id/ButtonC2"
+            android:text="@string/button_c2"
+            android:tag="12"
+			style="@style/white_key" />
+			            
+    </LinearLayout>
+
+</LinearLayout>
