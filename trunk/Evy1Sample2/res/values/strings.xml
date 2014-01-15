@@ -3,4 +3,8 @@
 
     <string name="app_name">eVY1 Sample2</string>
 
+    <string name="title">ふるさと</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    
 </resources>
