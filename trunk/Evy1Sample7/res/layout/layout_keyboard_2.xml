@@ -1,0 +1,206 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+<!-- keyboard -->    
+	<LinearLayout 
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" >
+
+<!-- upper key -->
+    	<LinearLayout
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+    		android:orientation="horizontal" >
+    
+        	<Button
+            	android:id="@+id/Button_2_upper_c"
+            	android:text="@string/button_c"
+            	android:tag="0"
+				style="@style/key_white_upper_left" />
+						
+        	<Button
+            	android:id="@+id/Button_2_upper_cis"
+            	android:text="@string/button_cis"
+            	android:tag="1"
+            	style="@style/key_black" />
+			           
+        	<Button
+            	android:id="@+id/Button_2_upper_d"
+            	android:text="@string/button_d"
+            	android:tag="2"
+				style="@style/key_white_upper_middle" />
+						
+        	<Button
+            	android:id="@+id/Button_2_upper_dis"
+            	android:text="@string/button_dis"
+            	android:tag="3"
+            	style="@style/key_black" />
+						
+        	<Button
+            	android:id="@+id/Button_2_upper_e"
+            	android:text="@string/button_e"
+            	android:tag="4"
+				style="@style/key_white_upper_right" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        								
+        	<Button
+            	android:id="@+id/Button_2_upper_f"
+            	android:text="@string/button_f"
+            	android:tag="5"
+				style="@style/key_white_upper_left" />
+						
+        	<Button
+            	android:id="@+id/Button_2_upper_fis"
+            	android:text="@string/button_fis"
+            	android:tag="6" 
+            	style="@style/key_black" />	
+            		
+        	<Button
+            	android:id="@+id/Button_2_upper_g"
+            	android:text="@string/button_g"
+            	android:tag="7"
+				style="@style/key_white_upper_middle" />
+			
+        	<Button
+            	android:id="@+id/Button_2_upper_gis"
+            	android:text="@string/button_gis"
+            	android:tag="8"
+            	style="@style/key_black" />	
+			            
+        	<Button
+            	android:id="@+id/Button_2_upper_a"
+            	android:text="@string/button_a"
+            	android:tag="9"
+				style="@style/key_white_upper_middle" />
+			
+        	<Button
+            	android:id="@+id/Button_2_upper_ais"
+            	android:text="@string/button_ais"
+            	android:tag="10"
+            	style="@style/key_black" />	
+			            
+        	<Button
+            	android:id="@+id/Button_2_upper_b"
+            	android:text="@string/button_b"
+            	android:tag="11"
+				style="@style/key_white_upper_right" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        					
+        	<Button
+            	android:id="@+id/Button_2_upper_c2"
+            	android:text="@string/button_c2"
+            	android:tag="12"
+				style="@style/key_white_upper_full" />
+			            
+    	</LinearLayout>
+
+<!-- lower key -->
+    	<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        	<Button
+            	android:id="@+id/Button_2_lower_c"
+            	android:tag="0"
+				style="@style/key_white_lower" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+						           
+        	<Button
+            	android:id="@+id/Button_2_lower_d"
+            	android:tag="2"       
+				style="@style/key_white_lower" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        							
+        	<Button
+            	android:id="@+id/Button_2_lower_e"
+            	android:tag="4"
+				style="@style/key_white_lower" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        								
+        	<Button
+            	android:id="@+id/Button_2_lower_f"
+            	android:tag="5"
+				style="@style/key_white_lower" />
+ 
+         	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        	           		
+        	<Button
+            	android:id="@+id/Button_2_lower_g"
+            	android:tag="7"
+				style="@style/key_white_lower" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        					            
+        	<Button
+            	android:id="@+id/Button_2_lower_a"
+            	android:tag="9"
+				style="@style/key_white_lower" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+        				            
+        	<Button
+            	android:id="@+id/Button_2_lower_b"
+            	android:tag="11"
+				style="@style/key_white_lower" />
+
+        	<Space
+            	android:layout_width="2dp"           
+        		android:layout_height="wrap_content" />
+			
+        	<Button
+            	android:id="@+id/Button_2_lower_c2"
+            	android:tag="12"
+				style="@style/key_white_lower" />
+			            
+    	</LinearLayout>
+
+	</LinearLayout>
+
+<!-- setting -->   
+	<LinearLayout 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+    	android:layout_marginLeft="10dp"
+		android:orientation="vertical" >
+
+		<Button
+			android:id="@+id/Button_instrument_2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+				
+		<Spinner
+			android:id="@+id/Spinner_octave_2"
+			android:prompt="@string/octave_select"
+			android:entries="@array/octaves" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+	</LinearLayout>
+		    			            
+</LinearLayout>
