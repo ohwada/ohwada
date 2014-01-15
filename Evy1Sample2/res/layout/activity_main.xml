@@ -4,6 +4,12 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="10dp" >
+
+	<TextView
+		android:id="@+id/TextView_title"
+        android:text="@string/title"  
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
     
 	<LinearLayout 
 		android:layout_width="fill_parent"
@@ -12,14 +18,14 @@
     
 		<Button
 			android:id="@+id/Button_start"
-			android:text="Start"
+			android:text="@string/start"  
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1" />
 		
 		<Button
 			android:id="@+id/Button_stop"
-			android:text="Stop"
+			android:text="@string/stop"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1" />
