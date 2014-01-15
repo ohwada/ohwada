@@ -1,0 +1,14 @@
+#summary Evy1Sample6
+
+= 概要 ==
+Android からeVY1 シールドを制御する<br>
+SDカード上にある MIDI ファイルを演奏します。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4278
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/Evy1Sample6/
+
+= スクリーンショット =
+http://ohwada.googlecode.com/files/20140115evy1_sample6.png
