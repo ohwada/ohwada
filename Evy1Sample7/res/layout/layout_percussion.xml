@@ -1,0 +1,54 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"  >
+
+	<Button
+		android:id="@+id/Button_perc0"
+		android:tag="0"
+		style="@style/key_perc" />
+						
+	<Button
+		android:id="@+id/Button_perc1"
+		android:tag="1" 
+		style="@style/key_perc" />
+			           
+	<Button
+		android:id="@+id/Button_perc2"
+		android:tag="2"
+		style="@style/key_perc" />
+						
+	<Button
+		android:id="@+id/Button_perc3"
+		android:tag="3"
+		style="@style/key_perc" />
+						
+	<Button
+  		android:id="@+id/Button_perc4"
+		android:tag="4"
+		style="@style/key_perc" />
+						
+	<Button
+		android:id="@+id/Button_perc5"
+		android:tag="5"
+		style="@style/key_perc" />
+						
+	<Button
+		android:id="@+id/Button_perc6"
+		android:tag="6"
+		style="@style/key_perc" />	
+            		
+	<Button
+		android:id="@+id/Button_perc7"
+		android:tag="7"
+		style="@style/key_perc" />
+
+	<Button
+		android:id="@+id/Button_perc_select"
+		android:text="@string/percussion_select"  
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp" />
+					
+</LinearLayout>
