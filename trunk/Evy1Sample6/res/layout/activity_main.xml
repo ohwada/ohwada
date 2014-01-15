@@ -1,0 +1,49 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+	<TextView
+		android:id="@+id/TextView_connect"
+ 		android:text="@string/not_connect" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+
+ 	<Spinner 
+ 		android:id="@+id/Spinner_list"
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+						    
+	<LinearLayout 
+		android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:orientation="horizontal" >
+
+		<Button
+			android:id="@+id/Button_start"
+			android:text="@string/button_start"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1" />
+		
+		<Button
+			android:id="@+id/Button_stop"
+			android:text="@string/button_stop"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1" />
+							            
+	</LinearLayout>
+	
+    <ListView
+        android:id="@+id/ListView_report"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+        		
+</LinearLayout>
