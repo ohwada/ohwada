@@ -1,4 +1,4 @@
-##summary NtpClientSample2
+#summary NtpClientSample2
 
 = 概要 ==
 Android で NTP を使うサンプルです。
