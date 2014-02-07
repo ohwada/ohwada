@@ -1,0 +1,14 @@
+##summary NtpClientSample2
+
+= 概要 ==
+Android で NTP を使うサンプルです。
+Apache Commons Net を使います。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4296
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/NtpClientSample2/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/02/20140207ntp_client.png
