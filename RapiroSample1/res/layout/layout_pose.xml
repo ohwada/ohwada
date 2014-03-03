@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/LinearLayout_pose"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S00"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S00"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+	
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S01"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S01"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S02"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S02"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S03"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S03"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S04"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S04"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S05"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S05"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S06"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S06"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S07"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S07"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S08"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S08"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S09"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S09"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S10"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S10"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_S11"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_S11"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+        	
+		<TextView
+			android:text="@string/text_R"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        		
+		<SeekBar 
+     		android:id="@+id/SeekBar_R"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+        	
+		<TextView
+			android:text="@string/text_G"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+	
+		<SeekBar 
+     		android:id="@+id/SeekBar_G"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="8dp" > 
+
+		<TextView
+			android:text="@string/text_B"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"  /> 
+        	        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_B"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+
+	</LinearLayout>
+									                                		
+</LinearLayout>
