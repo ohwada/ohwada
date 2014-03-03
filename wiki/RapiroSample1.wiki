@@ -1,8 +1,8 @@
 #summary RapiroSample1
 
 = 概要 ==
-Android から Rapiro を動かすサンプルです。
-PhysicaloidLibrary が必要です。
+Android から Rapiro を動かすサンプルです。<br>
+PhysicaloidLibrary が必要です。<br>
 https://github.com/ksksue/PhysicaloidLibrary
 
 関連するブログ <br>
