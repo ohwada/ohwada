@@ -1,0 +1,15 @@
+#summary RapiroSample1
+
+= 概要 ==
+Android から Rapiro を動かすサンプルです。
+PhysicaloidLibrary が必要です。
+https://github.com/ksksue/PhysicaloidLibrary
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4357
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/RapiroSample1/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/03/20140302rapiro_move.png
