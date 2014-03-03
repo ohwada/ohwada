@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rapiro 1</string>
+
+    <string name="button_move">MOVE</string>
+    <string name="button_pose">POSE</string>
+        
+    <string name="button_start">Start</string>
+    <string name="button_forward">Forward</string>
+    <string name="button_stop">Stop</string>
+
+    <string name="button_green">Green</string>
+    <string name="button_yellow">Yellow</string>
+    <string name="button_blue">Blue</string>
+    <string name="button_red">Red</string>
+    <string name="button_push">Push</string>
+                    
+    <string name="text_R">R</string>
+    <string name="text_G">G</string>
+    <string name="text_B">B</string>
+
+	<string name="text_S00">Head</string>    
+    <string name="text_S01">Waist</string>
+    <string name="text_S02">R Sholder Roll</string>
+    <string name="text_S03">R Sholder Pitch</string>
+    <string name="text_S04">R Hand</string>
+    <string name="text_S05">L Sholder Roll</string>
+    <string name="text_S06">L Sholder Pitch</string>
+	<string name="text_S07">L Hand</string>
+	<string name="text_S08">R Foot Yaw</string>
+	<string name="text_S09">R Foot Pitch</string>
+	<string name="text_S10">L Foot Yaw</string>
+	<string name="text_S11">L Foot Pitch</string>
+					                                            
+    <string name="button_write">Write</string>
+
+    <string name="terminal_setting_header_title">Serial Settings</string>
+    <string name="terminal_setting_header_summary"></string>
+
+    <string name="display_setting_header_title">Display Settings</string>
+    <string name="display_setting_header_summary"></string>
+
+    <string name="display_setting_title">Display Setting</string>
+
+    <string name="fontsize_title">Font size</string>
+    <string name="fontsize_summary">Select font size</string>
+
+    <string name="typeface_title">Typeface</string>
+    <string name="typeface_summary">Select typeface</string>
+
+    <string name="display_title">Display</string>
+    <string name="display_summary">Select char or dec, hex</string>
+
+    <string name="linefeedcode_setting_title">Linefeed Code Setting</string>
+    <string name="readlinefeedcode_title">Read Linefeed Code</string>
+    <string name="readlinefeedcode_summary">Select CR or LF, CR/LF</string>
+    <string name="writelinefeedcode_title">Write Linefeed Code</string>
+    <string name="writelinefeedcode_summary">Select CR or LF, CR/LF</string>
+
+    <string name="email_setting_title">Email Setting</string>
+    <string name="email_title">email</string>
+    <string name="email_summary"></string>
+
+    <string name="serial_setting_title">Serial Setting</string>
+
+    <string name="baudrate_title">Baudrate</string>
+    <string name="baudrate_summary">baud rate</string>
+
+    <string name="databits_title">Data bits</string>
+    <string name="databits_summary">Data bits</string>
+
+    <string name="parity_title">Parity check</string>
+    <string name="parity_summary">Parity check</string>
+
+    <string name="stopbits_title">Stop bit</string>
+    <string name="stopbits_summary">Stop bit</string>
+
+    <string name="flowcontrol_title">Flow control</string>
+    <string name="flowcontrol_summary">Flow control</string>
+
+    <string name="break_title">Break</string>
+    <string name="break_summary">Break</string>
+    <string name="add_list">Add</string>
+
+</resources>
