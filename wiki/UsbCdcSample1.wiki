@@ -1,3 +1,5 @@
+#summary UsbCdcSample1
+
 = 概要 ==
 Android から USB シリアルで通信するサンプルです。<br>
 
