@@ -1,0 +1,11 @@
+= 概要 ==
+Android から USB シリアルで通信するサンプルです。<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4365
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/UsbCdcSample1/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/03/20140301usb_cdc_sample.png
