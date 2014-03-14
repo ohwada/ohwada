@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_default"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_default"/>
+
+    <item
+        android:id="@+id/action_resize"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_resize"/>
+
+    <item
+        android:id="@+id/action_no_fullscreen"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_no_fullscreen"/>
+
+</menu>
