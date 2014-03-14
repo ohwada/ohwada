@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ImeSample1</string>
+
+    <string name="action_default">Default</string>
+    <string name="action_resize">Adjust Resize</string>
+    <string name="action_no_fullscreen">No Fullscreen</string>
+
+    <string name="edittext1">enter text</string>
+    <string name="button1">Enter</string>
+
+</resources>
