@@ -1,0 +1,13 @@
+#summary ImeSample1
+
+= 概要 ==
+ソフト・キーボードの画面表示のサンプルです。<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4382
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/ImeSample1
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/03/20140311landscape_no_fullscreen.png
