@@ -28,7 +28,6 @@ public class UsbCdcManager extends UsbTransferManager {
 	
 	private static final int SCLS_REQUEST_TYPE = 0x21;
 	private static final int SCLS_REQUEST = 0x22;
-	private static final int SCLS_INDEX = 0;
 	private static final byte[] SCLS_BUFFER = null; 
 	private static final int SCLS_LENGHT = 0;
 	private static final int SCLS_TIMEOUT = 0;
@@ -46,10 +45,12 @@ public class UsbCdcManager extends UsbTransferManager {
 	private static final int SLC_REQUEST_TYPE = SCLS_REQUEST_TYPE;
 	private static final int SLC_REQUEST = 0x20;		
 	private static final int SLC_VALUE = 0;
-	private static final int SLC_INDEX = 0;
 	private static final int SLC_TIMEOUT = 100;
 	
 	private static final int DATA_BIT = 8;
+
+	// index for controlTransfer
+	private int mAcmIndex = 0;
 
     /**
 	 * constructor
@@ -85,23 +86,34 @@ public class UsbCdcManager extends UsbTransferManager {
 		List<UsbDevice> list = getDeviceList();
 		for ( int i = 0; i < list.size(); i++ ) {
 			UsbDevice device = list.get( i );;
-			boolean ret = findDeviceCdcData( list.get( i ) );
+			boolean ret = findDeviceCdc( list.get( i ) );
 			if ( ret ) {
 				return device;
 			}
 		}
 		return null;
 	}
-	
+
+	/**
+	 * findDeviceCdc
+	 * @param UsbDevice device
+	 * @return boolean 
+	 */  
+	private boolean findDeviceCdc( UsbDevice device ) {
+		log_d( "findDeviceCdc " + device );
+		if ( device == null ) return false;
+		if ( isDeviceAlready() ) return false;
+		boolean ret = findDeviceCdcAcm( device );
+		if ( !ret ) return false;
+		return findDeviceCdcData( device );
+	}
+
 	/**
 	 * findDeviceCdcData
 	 * @param UsbDevice device
 	 * @return boolean 
 	 */  
 	private boolean findDeviceCdcData( UsbDevice device ) {
-		log_d( "findDeviceCdcData " + device );
-		if ( device == null ) return false;
-		if ( isDeviceAlready() ) return false;
 	   	UsbInterface usbInterface = findInterface( 
 	   		device, 
 	   		UsbConstants.USB_CLASS_CDC_DATA, 
@@ -121,25 +133,24 @@ public class UsbCdcManager extends UsbTransferManager {
         if ( connection == null ) return false;
 		boolean ret = claimInterface( connection, usbInterface );
 		if ( ret == false ) return false;
+		log_d( "find CDC DATA");
 		setDevice( device );
 		setInterface( usbInterface );
 		setConnection( connection );
 		setEndpointOut( epOutput );		
 		setEndpointOut( epOutput );
 		setEndpointIn( epInput );
-		log_d( "find CDC DATA");
 		initSetControlLineState();
 		startRecv();
         return true;
 	}
 
 	/**
-	 * findDeviceComm
+	 * findDeviceCdcAcm
 	 * @param UsbDevice device
 	 * @return boolean 
 	 */ 
-	@SuppressWarnings("unused")
-	private boolean findDeviceComm( UsbDevice device ) {
+	private boolean findDeviceCdcAcm( UsbDevice device ) {
 	   	UsbInterface usbInterface = findInterface( 
 	   		device, 
 	   		UsbConstants.USB_CLASS_COMM, 
@@ -150,12 +161,8 @@ public class UsbCdcManager extends UsbTransferManager {
 	   		UsbConstants.USB_DIR_IN,
 	   		UsbConstants.USB_ENDPOINT_XFER_INT );
 		if ( endpoint == null ) return false;
-	   	UsbDeviceConnection connection = openDevice( device );
-        if ( connection == null ) return false;
-		boolean ret = claimInterface( connection, usbInterface );
-		if ( ret == false ) return false;
-		log_d( "find CDC ACM");
-		startRecv();
+		mAcmIndex = usbInterface.getId();
+		log_d( "find CDC ACM " + mAcmIndex );
 		return true;
 	}
 			
@@ -189,12 +196,12 @@ public class UsbCdcManager extends UsbTransferManager {
   			SCLS_REQUEST_TYPE, 
   			SCLS_REQUEST, 
   			value, 
-  			SCLS_INDEX, 
+			mAcmIndex, 			
   			SCLS_BUFFER, 
   			SCLS_LENGHT, 
   			SCLS_TIMEOUT );
         if ( ret < 0 ) { 
-            log_d( "setControlLineState failed");
+            log_d( "setControlLineState failed " + ret );
             return false;
         }
         return true;
@@ -230,12 +237,12 @@ public class UsbCdcManager extends UsbTransferManager {
         	SLC_REQUEST_TYPE, 
         	SLC_REQUEST, 
         	SLC_VALUE, 
-        	SLC_INDEX, 
+			mAcmIndex, 
         	buf, 
         	buf.length, 
         	SLC_TIMEOUT );
         if ( ret < 0 ) { 
-            log_d( "setLineCoding failed" );
+            log_d( "setLineCoding failed " + ret );
             return false;
         }
         return true;
@@ -258,7 +265,7 @@ public class UsbCdcManager extends UsbTransferManager {
 	 */ 
 	protected void	receivePermission( UsbDevice device ) {
 	   	log_d( "receivePermission" );
-	   	boolean ret = findDeviceCdcData( device );
+	   	boolean ret = findDeviceCdc( device );
 	   	if ( ret ) {
         	notifyAttached( device );
         }
