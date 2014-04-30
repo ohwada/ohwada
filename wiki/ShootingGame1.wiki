@@ -1,0 +1,15 @@
+#summary ShootingGame1
+
+= 概要 ==
+いわゆるシューティング・ゲームです。<br>
+端末を左右に回して、敵のターゲットを補足します。<br>
+ロックオンしたときに、弾を撃つと撃墜できます。<br>
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4547
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/ShootingGame1/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/03/20140308game_target.png
