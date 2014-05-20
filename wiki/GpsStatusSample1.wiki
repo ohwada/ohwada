@@ -1,0 +1,13 @@
+#summary GpsStatusSample1
+
+= 概要 ==
+GpsStatus.Listener を使って、GPS衛星の位置情報を取得します。
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4610
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/GpsStatusSample1/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/05/20140505GpsStatus_Listener.png
