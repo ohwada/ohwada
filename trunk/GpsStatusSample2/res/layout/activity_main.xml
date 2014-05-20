@@ -1,0 +1,48 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="4dp" > 
+        	
+		<Button
+			android:id="@+id/Button_radar"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1" 
+			android:text="@string/button_radar" />
+
+		<Button
+			android:id="@+id/Button_nmea"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1" 
+			android:text="@string/button_nmea" />
+
+	</LinearLayout>
+        
+    <jp.ohwada.android.gpsstatussample2.SatelliteView
+    	android:id="@+id/SatelliteView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+                
+    	<TextView
+    		android:id="@+id/TextView1"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent" />
+
+    </ScrollView>
+                                           
+</LinearLayout>
