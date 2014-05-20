@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GpsStatusSample2</string>
+
+    <string name="button_radar">Radar</string>
+    <string name="button_nmea">Nmea</string>
+        
+</resources>
