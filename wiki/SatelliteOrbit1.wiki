@@ -1,0 +1,13 @@
+#summary SatelliteOrbit1
+
+= 概要 ==
+準天頂衛星の軌道シミュレーター
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4669
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/SatelliteOrbit1/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/05/20140523satellite_orbit_app.png
