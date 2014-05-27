@@ -1,0 +1,119 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="4dp" >
+
+   	<TextView
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/label_orbit" />
+
+	<LinearLayout 
+    	android:orientation="horizontal"
+		android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+   		<Button
+			android:id="@+id/Button_left"
+			android:layout_width="wrap_content"
+        	android:layout_height="fill_parent" 
+        	android:text="@string/button_left" />
+   		
+		<jp.ohwada.android.satelliteorbit1.SatelliteGLSurfaceView
+			android:id="@+id/SurfaceView"
+			android:layout_width="0dp"
+        	android:layout_height="wrap_content"
+       		android:layout_weight="1" />
+
+   		<Button
+			android:id="@+id/Button_right"
+			android:layout_width="wrap_content"
+        	android:layout_height="fill_parent" 
+        	android:text="@string/button_right" />
+
+	</LinearLayout> 
+	
+   	<TextView
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/label_tarcking" />
+
+	<jp.ohwada.android.satelliteorbit1.SatelliteView
+		android:id="@+id/SatelliteView"
+		android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+	<LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" >
+
+   		<Button
+			android:id="@+id/Button_qz"
+			android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1" 
+        	android:text="@string/button_qz" />
+
+   		<Button
+			android:id="@+id/Button_stationary"
+			android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1" 
+        	android:text="@string/button_stationary" />
+        	        	        	
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="4dp" > 
+
+		<TextView
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content" 
+        	android:text="@string/label_inclination" />
+        	
+		<TextView
+			android:id="@+id/TextView_inclination"
+        	android:layout_width="50dp"
+        	android:layout_height="wrap_content"  /> 
+        	        	        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_inclination"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+        				
+	</LinearLayout>
+
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        android:layout_margin="4dp" > 
+
+		<TextView
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content" 
+        	android:text="@string/label_eccentricity" />
+         
+		<TextView
+			android:id="@+id/TextView_eccentricity"
+        	android:layout_width="50dp"
+        	android:layout_height="wrap_content"  /> 
+        	        	        	
+		<SeekBar 
+     		android:id="@+id/SeekBar_eccentricity"
+        	android:layout_width="0dp"
+        	android:layout_height="wrap_content" 
+        	android:layout_weight="1"  /> 
+        				
+	</LinearLayout>
+	        
+</LinearLayout>

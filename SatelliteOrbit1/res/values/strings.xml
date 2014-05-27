@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SatelliteOrbit1</string>
+
+    <string name="label_orbit">Satellite Orbit around the earth</string>
+    <string name="label_tarcking">Satellite Tarcking on the earth\'s surface</string>
+    <string name="label_eccentricity">Eccentricity</string>
+    <string name="label_inclination">Inclination</string>
+
+    <string name="button_qz">Quasi Zenith</string>
+    <string name="button_stationary">Stationary</string>
+
+    <string name="button_left">&lt;&lt;</string>
+    <string name="button_right">&gt;&gt;</string>
+
+</resources>
