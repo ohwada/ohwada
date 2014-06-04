@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SatelliteTracking1</string>
+
+    <string name="label_orbit">Satellite Orbit around the earth</string>
+    <string name="label_tarcking">Satellite Tarcking on the earth\'s surface</string>
+
+    <string name="button_refresh">Refresh</string>    
+    <string name="button_left">&lt;&lt;</string>
+    <string name="button_right">&gt;&gt;</string>
+
+</resources>
