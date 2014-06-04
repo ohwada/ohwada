@@ -1,0 +1,13 @@
+#summary SatelliteTracking1
+
+= 概要 ==
+準天頂衛星のトラッキング
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4678
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/SatelliteTracking1/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/06/20140602_satellite_tracking_app.png
