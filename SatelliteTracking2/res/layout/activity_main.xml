@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="4dp" >
+    
+   <Button
+		android:id="@+id/Button_refresh"
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/button_refresh" />
+
+   	<TextView
+		android:id="@+id/TextView_time"
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"  />
+        	
+   	<TextView
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/label_latlng" />
+
+   	<TextView
+		android:id="@+id/TextView_latlng"
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+        
+	<jp.ohwada.android.satellitetracking2.LatLngView
+		android:id="@+id/LatLngView"
+		android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+   	<TextView
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/label_aziele" />
+
+   	<TextView
+		android:id="@+id/TextView_aziele"
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+ 
+	<jp.ohwada.android.satellitetracking2.AziEleView
+		android:id="@+id/AziEleView"
+		android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+        
+</LinearLayout>
