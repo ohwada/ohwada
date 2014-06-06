@@ -1,7 +1,7 @@
 #summary SatelliteTracking1
 
 = 概要 ==
-準天頂衛星のトラッキング
+準天頂衛星のトラッキング 緯度経度
 
 関連するブログ <br>
 http://android.ohwada.jp/archives/4678
