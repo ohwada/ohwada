@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SatelliteTracking2</string>
+
+    <string name="label_latlng">Satellite Tarcking on the earth\'s surface</string>
+    <string name="label_aziele">Satellite Rader from Tokyo</string>
+ 
+    <string name="button_refresh">Refresh</string>    
+    
+</resources>
