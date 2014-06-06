@@ -1,0 +1,13 @@
+#summary SatelliteTracking2
+
+= 概要 ==
+準天頂衛星のトラッキング 方位角と仰角
+
+関連するブログ <br>
+http://android.ohwada.jp/archives/4691
+
+= ソースコード =
+https://code.google.com/p/ohwada/source/browse/trunk/SatelliteTracking2/
+
+= スクリーンショット =
+http://android.ohwada.jp/wp-content/uploads/2014/06/20140606satellite_tracking_app.png
