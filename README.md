@@ -1,4 +1,3 @@
 # ohwada - code.google.com
 
-Automatically exported from code.google.com
-https://code.google.com/p/ohwada/
+Automatically exported from https://code.google.com/p/ohwada/
