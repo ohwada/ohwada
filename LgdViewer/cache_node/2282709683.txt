@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2282709683
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/RailwayThing
+rdf:type:3	http://linkedgeodata.org/ontology/SubwayEntrance
+rdfs:label	野毛ちかみち 南2
+dc:modified	2013-04-27T04:11:47+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2282709683
+geo:lat	35.4497
+geo:long	139.631
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15878683
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.449661&long=139.63062#point
+lgdo:version	1
+lgdo:wheelchair	0
+type:url	http://linkedgeodata.org/ontology/SubwayEntrance
+type:label	SubwayEntrance
+type:label:ja	地下鉄駅入口

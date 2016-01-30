@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/SubwayEntrance/key/railway/value/subway_entrance
+rdfs:subClassOf	http://linkedgeodata.org/ontology/RailwayThing
+rdfs:label:aln	Metro Hyrja
+rdfs:label:mk	Влез во метро
+rdfs:label:de	U-Bahn-Zugang
+rdfs:label:uk	Вхід в метро
+rdfs:label:it	Ingresso alla metropolitana
+rdfs:label:sl	Vhod na podzemno
+rdfs:label:tl	Pasukan sa Pang-ilalim na Daambakal
+rdfs:label:cs	Vstup do metra
+rdfs:label:en-GB	Subway Entrance
+rdfs:label:tr	Metro Giriş
+rdfs:label:no	T-baneinngang
+rdfs:label:dsb	Zachod k pódzemskej
+rdfs:label:be-tarask	Уваход у мэтро
+rdfs:label:eu	Metro Sarbidea
+rdfs:label:ca	Accés al Metro
+rdfs:label:ja	地下鉄駅入口
+rdfs:label:sr-EL	Ulaz u metro
+rdfs:label:ka	მეტროში შესასვლელი
+rdfs:label:sk	Vchod do metra
+rdfs:label:ast	Entrada de metro
+rdfs:label:ia	Entrata al metro
+rdfs:label:da	Undergrundsindgang
+rdfs:label:ar	مدخل مترو
+rdfs:label:arz	مدخل مترو
+rdfs:label:hu	Metrókijárat
+rdfs:label:fi	Metron sisäänkäynti
+rdfs:label:lt	Įėjimas į metro
+rdfs:label:he	כניסה לתחנת רכבת תחתית
+rdfs:label:sr-EC	Улаз у метро
+rdfs:label:nl	Metroingang
+rdfs:label:af	Metroingang
+rdfs:label:hr	Podzemna - ulaz
+rdfs:label:zh-Hans	地铁入口
+rdfs:label:ru	Вход в метро
+rdfs:label:ms	Pintu Masuk Bawah Tanah
+rdfs:label:fr	Bouche de métro
+rdfs:label:vi	Cửa vào Nhà ga Xe điện ngầm
+rdfs:label:es	Boca de metro
+rdfs:label:gl	Boca de metro
+rdfs:label:el	Είσοδος Στο Μετρό
+rdfs:label:pl	Wejście na stację metra
+rdfs:label:sv	Tunnelbaneingång
+rdfs:label:lv	Metro ieeja
+rdfs:label:br	Antre metro
+rdfs:label:pt-BR	Entrada do metrô
+rdfs:label:hsb	Zachod do podzemskeje železnicy
+url	http://linkedgeodata.org/ontology/SubwayEntrance
+label	SubwayEntrance

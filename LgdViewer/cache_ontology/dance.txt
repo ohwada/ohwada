@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Dance/key/leisure/value/dance
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Leisure
+url	http://linkedgeodata.org/ontology/Dance
+label	Dance

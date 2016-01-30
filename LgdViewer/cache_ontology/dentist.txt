@@ -1,0 +1,59 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Dentist/key/amenity/value/dentist
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:hu	Fogorvos
+rdfs:label:en-GB	Dentist
+rdfs:label:fur	Dentist
+rdfs:label:sq	Dentist
+rdfs:label:dsb	Zubny gójc
+rdfs:label:de	Zahnarzt
+rdfs:label:sl	Zobozdravnik
+rdfs:label:ru	Стоматология
+rdfs:label:lb	Zänndokter
+rdfs:label:tl	Dentista
+rdfs:label:fi	Hammaslääkäri
+rdfs:label:gl	Dentista
+rdfs:label:ca	Dentista
+rdfs:label:pt	Dentista
+rdfs:label:eu	Dentista
+rdfs:label:it	Dentista
+rdfs:label:ia	Dentista
+rdfs:label:pt-BR	Dentista
+rdfs:label:ast	Dentista
+rdfs:label:es	Dentista
+rdfs:label:hr	Zubar
+rdfs:label:sr-EL	Zubar
+rdfs:label:be-tarask	Стаматалёгія
+rdfs:label:sr-EC	Зубар
+rdfs:label:nds	Tähndokter
+rdfs:label:he	רופא שיניים
+rdfs:label:aln	Mjeku i dhomve
+rdfs:label:no	Tannlege
+rdfs:label:pl	Gabinet dentystyczny
+rdfs:label:uk	Стоматологія
+rdfs:label:ms	Doktor Gigi
+rdfs:label:hsb	Zubny lěkar
+rdfs:label:af	Tandarts
+rdfs:label:nl	Tandarts
+rdfs:label:el	Οδοντίατρος
+rdfs:label:vi	Nha sĩ
+rdfs:label:cs	Zubař
+rdfs:label:ka	დანტისტი
+rdfs:label:et	Hambaarst
+rdfs:label:sk	Zubár
+rdfs:label:fa	دندانپزشک
+rdfs:label:sv	Tandläkare
+rdfs:label:is	Tannlæknirinn
+rdfs:label:lt	Dantistas
+rdfs:label:br	Dentour
+rdfs:label:ja	歯科医
+rdfs:label:lv	Zobārsts
+rdfs:label:ar	طبيب أسنان
+rdfs:label:arz	طبيب أسنان
+rdfs:label:da	Tandlæge
+rdfs:label:mk	Забар
+rdfs:label:tr	Diş hekimi
+rdfs:label:zh-Hant	牙醫
+rdfs:label:zh-Hans	牙医
+rdfs:label:fr	Dentiste
+url	http://linkedgeodata.org/ontology/Dentist
+label	Dentist

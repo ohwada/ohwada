@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CarShop/key/shop/value/car
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:mk	Автосалон
+rdfs:label:ka	ავტოსალონი
+rdfs:label:br	Stal girri
+rdfs:label:it	Concessionaria
+rdfs:label:pl	Sklep samochodowy
+rdfs:label:sr-EC	Ауто-кућа
+rdfs:label:fi	Autokauppa
+rdfs:label:cs	Prodej automobilů
+rdfs:label:lt	Automobilių parduotuvė
+rdfs:label:zh-Hans	车店
+rdfs:label:sl	Avtomobilski salon
+rdfs:label:ar	متجر سيارات
+rdfs:label:arz	متجر سيارات
+rdfs:label:hu	Autókereskedés
+rdfs:label:hr	Autokuća
+rdfs:label:ca	Venda de Cotxes
+rdfs:label:aln	Shitore e Kerreve
+rdfs:label:ast	Automóvil
+rdfs:label:fr	Magasin de voitures
+rdfs:label:be-tarask	Аўтамабільны салён
+rdfs:label:no	Bilbutikk
+rdfs:label:nds	Autohuus
+rdfs:label:tl	Tindahan ng Kotse
+rdfs:label:en-GB	Car Shop
+rdfs:label:ja	自動車販売店
+rdfs:label:af	Motorwinkel
+rdfs:label:pt	Oficina
+rdfs:label:es	Concesionario
+rdfs:label:uk	Автомагазин
+rdfs:label:gl	Concesionario
+rdfs:label:de	Autohaus
+rdfs:label:hsb	Awtosalon
+rdfs:label:sv	Bilhandlare
+rdfs:label:da	Bilforhandler
+rdfs:label:he	חנות כלי רכב
+rdfs:label:dsb	Awtownja
+rdfs:label:ia	Magazin de automobiles
+rdfs:label:is	Bílabúðin
+rdfs:label:nl	Automaterialenwinkel
+rdfs:label:lv	Auto veikals
+rdfs:label:sr-EL	Auto-kuća
+rdfs:label:tr	Araba Galerisi
+rdfs:label:vi	Tiệm Xe hơi
+rdfs:label:pt-BR	Loja de carros
+rdfs:label:ms	Kedai Kereta
+rdfs:label:ru	Автосалон
+url	http://linkedgeodata.org/ontology/CarShop
+label	CarShop

@@ -1,0 +1,62 @@
+<ScrollView  
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_margin="8dp" >
+
+   		<ImageView 
+    		android:id="@+id/dialog_about_imageview_banner"
+			android:src="@drawable/about_banner"
+			contentDescription="@string/dialog_about_imageview_banner"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_margin="8dp" />
+						
+		<LinearLayout 
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+    		android:orientation="vertical" >
+					
+    		<TextView 
+				android:text="@string/dialog_about_title"
+				android:textColor="@color/dialog_about_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center" 
+ 				android:layout_marginBottom="8dp"
+				android:textSize="20sp" />
+				
+    		<TextView 
+    			android:id="@+id/dialog_about_textview_main"
+				android:text="@string/dialog_about_main"
+				android:textColor="@color/dialog_about_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+
+    		<TextView 
+    			android:id="@+id/dialog_about_textview_credit"
+				android:text="@string/dialog_about_credit"
+				android:textColor="@color/dialog_about_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp" />
+
+ 			<Button android:id="@+id/dialog_about_button_close" 
+ 				android:text="@string/button_close"
+				android:background="@android:drawable/btn_default_small"
+ 				android:layout_width="fill_parent" 
+ 				android:layout_height="wrap_content"
+ 				android:layout_gravity="center" 
+ 				android:layout_marginLeft="8dp"
+ 				android:layout_marginRight="8dp" />			
+
+		</LinearLayout>
+	</LinearLayout> 
+</ScrollView>		

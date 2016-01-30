@@ -1,0 +1,45 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Hifi/key/shop/value/hifi
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:aln	dyqan hi-fi
+rdfs:label:ar	متجر هاي فاي
+rdfs:label:br	Stal Hi-Fi
+rdfs:label:sr-EC	Музичка опрема
+rdfs:label:ru	Магазин аудио/видео аппаратуры
+rdfs:label:ast	Soníu
+rdfs:label:de	Elektroshop
+rdfs:label:sl	Trgovina z avdio opremo
+rdfs:label:zh-Hant	音響店
+rdfs:label:hu	Hi-Fi bolt
+rdfs:label:sr-EL	Muzička oprema
+rdfs:label:dsb	Technika hi-fi
+rdfs:label:uk	Аудіо-техніка
+rdfs:label:is	Hljómtækjabúðin
+rdfs:label:pt-BR	Loja de artigos de som
+rdfs:label:be-tarask	Крама аўдыё/відэё тэхнікі
+rdfs:label:no	Hi-Fi
+rdfs:label:sv	Hi-Fi
+rdfs:label:en-GB	Hi-Fi
+rdfs:label:lt	Hi-Fi
+rdfs:label:ms	Hi-Fi
+rdfs:label:tl	Hi-Fi
+rdfs:label:it	Hi-Fi
+rdfs:label:da	Hi-Fi
+rdfs:label:lv	Hi-Fi
+rdfs:label:ca	Hi-Fi
+rdfs:label:sk	Hi-Fi
+rdfs:label:eu	Hi-Fi
+rdfs:label:es	Hi-Fi
+rdfs:label:hr	Hi-Fi
+rdfs:label:pl	Hi-Fi
+rdfs:label:pt	Hi-Fi
+rdfs:label:zh-Hans	Hi-Fi
+rdfs:label:gl	Hi-Fi
+rdfs:label:mk	Аудиосистеми
+rdfs:label:cs	Prodej Hi-Fi elektroniky
+rdfs:label:nl	Hi-fi
+rdfs:label:af	Hi-fi
+rdfs:label:ia	Hi-fi
+rdfs:label:hsb	Hi-fi
+rdfs:label:fr	Magasin Hi-Fi
+url	http://linkedgeodata.org/ontology/Hifi
+label	Hifi

@@ -1,0 +1,44 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Stationery/key/shop/value/stationery
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:pl	Sklep papierniczy
+rdfs:label:af	Skryfbehoeftes-winkel
+rdfs:label:da	Papirvarehandel
+rdfs:label:hsb	Papjernistwo
+rdfs:label:it	Cartoleria
+rdfs:label:cs	Papírnictví
+rdfs:label:uk	Канцтовари
+rdfs:label:ru	Канцелярские товары
+rdfs:label:ia	Papireria
+rdfs:label:mk	Прибор и репроматеријали
+rdfs:label:aln	dyqan shkrimi
+rdfs:label:pt-BR	Papelaria
+rdfs:label:fr	Papeterie
+rdfs:label:lv	Kancelejas preču veikals
+rdfs:label:dsb	Pśedawarnja za pisańskich wórow
+rdfs:label:sv	Pappershandel
+rdfs:label:en-GB	Stationery Shop
+rdfs:label:vi	Tiệm Văn phòng phẩm
+rdfs:label:he	חנות כלי כתיבה
+rdfs:label:ca	Botiga de papereria
+rdfs:label:sr-EC	Папирница
+rdfs:label:be-tarask	Канцтавары
+rdfs:label:sk	Papierníctvo
+rdfs:label:es	Papelería
+rdfs:label:ast	Papelería
+rdfs:label:de	Papierwarenladen
+rdfs:label:ja	文房具店
+rdfs:label:no	Papirbutikk
+rdfs:label:hu	Írószerbolt
+rdfs:label:br	Paperaerezh
+rdfs:label:nl	Kantoorartikelenwinkel
+rdfs:label:gl	Papelaría
+rdfs:label:zh-Hant	文具店
+rdfs:label:sl	Papirnica
+rdfs:label:hr	Papirnica
+rdfs:label:sr-EL	Papirnica
+rdfs:label:zh-Hans	文具店
+rdfs:label:ar	محل قرطاسية
+rdfs:label:arz	محل قرطاسية
+rdfs:label:tl	Tindahan ng Papel
+url	http://linkedgeodata.org/ontology/Stationery
+label	Stationery

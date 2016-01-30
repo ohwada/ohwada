@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/MobilePhone/key/shop/value/mobile_phone
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:no	Mobiltelefonbutikk
+rdfs:label:be-tarask	Крама мабільных тэлефонаў
+rdfs:label:hr	Trgovina mobitelima
+rdfs:label:tr	Cep Telefonu Dükkanı
+rdfs:label:da	Mobiltelefonforretning
+rdfs:label:dsb	Wobchod za mobilne telefony
+rdfs:label:ms	Kedai Telefon Bimbit
+rdfs:label:et	Mobiiltelefonide pood
+rdfs:label:sk	Obchod s mobilnými telefónmi
+rdfs:label:tl	Tindahan ng Teleponong Selular
+rdfs:label:lv	Mobilo telefonu veikals
+rdfs:label:lt	Mobiliųjų telefonų parduotuvė
+rdfs:label:pt-BR	Loja de celulares
+rdfs:label:hsb	Telekomunikaciski wobchod
+rdfs:label:ia	Boteca de telephonos mobile
+rdfs:label:es	Tienda de telefonía
+rdfs:label:hu	Mobiltelefonbolt
+rdfs:label:nl	Mobiele telefoons
+rdfs:label:sv	Mobiltelefonbutik
+rdfs:label:ast	Tienda de telefonía móvil
+rdfs:label:pl	Sklep z telefonami komórkowymi
+rdfs:label:vi	Tiệm Điện thoại Di động
+rdfs:label:fr	Magasin de téléphones mobiles
+rdfs:label:ja	携帯電話販売店
+rdfs:label:gl	Tenda de telefonía móbil
+rdfs:label:eu	Mugikor-denda
+rdfs:label:aln	Shop Mobile Phone
+rdfs:label:ru	Магазин мобильных телефонов
+rdfs:label:it	Centro telefonia mobile
+rdfs:label:cs	Prodej mobilních telefonů
+rdfs:label:sr-EL	Prodavnica mobilnih telefona
+rdfs:label:en-GB	Mobile Phone Shop
+rdfs:label:uk	Мобільні телефони
+rdfs:label:af	Selfoonwinkel
+rdfs:label:zh-Hans	手机店
+rdfs:label:de	Handygeschäft
+rdfs:label:is	Farsímaverslunin
+rdfs:label:he	חנות טלפונים ניידים
+rdfs:label:mk	Мобилни телефони
+rdfs:label:fi	Matkapuhelinkauppa
+rdfs:label:br	Stal pellgomzerioù hezoug
+rdfs:label:zh-Hant	手機店
+rdfs:label:sl	Trgovina mobilnih telefonov
+rdfs:label:sr-EC	Продавница мобилних телефона
+rdfs:label:ka	მობილური ტელეფონების მაღაზია
+rdfs:label:ar	متجر هواتف محمولة
+rdfs:label:arz	متجر هواتف محمولة
+rdfs:label:ca	Botiga de telèfon mòbil
+url	http://linkedgeodata.org/ontology/MobilePhone
+label	MobilePhone

@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Photo/key/shop/value/photo
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:da	Fotobutik
+rdfs:label:lv	Fotoveikals
+rdfs:label:gl	Tenda de fotografía
+rdfs:label:aln	dyqan fotografik
+rdfs:label:es	Tienda fotográfica
+rdfs:label:sr-EL	Fotografska radnja
+rdfs:label:ia	Magazin de photographia
+rdfs:label:lt	Foto prekių parduotuvė
+rdfs:label:zh-Hans	照相馆
+rdfs:label:br	Stal luc'hskeudenniñ
+rdfs:label:no	Fotobutikk
+rdfs:label:ka	ფოტომაღაზია
+rdfs:label:ru	фотомагазин
+rdfs:label:eu	Argazki-denda
+rdfs:label:lb	Fotosgeschäft
+rdfs:label:nds	Fotoladen
+rdfs:label:en-GB	Photo Shop
+rdfs:label:ms	Kedai Foto
+rdfs:label:it	Articoli fotografici
+rdfs:label:de	Fotoshop
+rdfs:label:sr-EC	Фотографска радња
+rdfs:label:ast	Fotografía
+rdfs:label:mk	Фотографски дуќан
+rdfs:label:sk	Fotokino
+rdfs:label:cs	Prodejna foto
+rdfs:label:uk	Фотомагазин
+rdfs:label:vi	Tiệm Rửa Hình
+rdfs:label:arz	متجر صور
+rdfs:label:hsb	Fotograf
+rdfs:label:dsb	Fotograf
+rdfs:label:ar	متجر صور
+rdfs:label:sl	Fotograf
+rdfs:label:hr	Fotograf
+rdfs:label:tl	Tindahan ng Litrato
+rdfs:label:af	Fotowinkel
+rdfs:label:fr	Magasin de photographie
+rdfs:label:nl	Fotowinkel
+rdfs:label:be-tarask	Фотакрама
+rdfs:label:sv	Fotoaffär
+rdfs:label:tr	Fotoğrafçı
+rdfs:label:pt-BR	Loja fotográfica
+rdfs:label:ca	Botiga de foto
+rdfs:label:pl	Sklep fotograficzny
+rdfs:label:fi	Valokuvausliike
+rdfs:label:hu	Fotóbolt
+rdfs:label:he	חנות צילום
+url	http://linkedgeodata.org/ontology/Photo
+label	Photo

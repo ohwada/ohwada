@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Tower/key/man_made/value/tower
+rdfs:subClassOf	http://linkedgeodata.org/ontology/ManMadeThing
+url	http://linkedgeodata.org/ontology/Tower
+label	Tower

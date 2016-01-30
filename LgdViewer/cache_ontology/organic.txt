@@ -1,0 +1,48 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Organic/key/shop/value/organic
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:lt	Ekologiškų maisto produktų parduotuvė
+rdfs:label:sl	Trgovina z ekološko hrano
+rdfs:label:dsb	Wobchod za biocarobu
+rdfs:label:fr	Magasin bio
+rdfs:label:hu	Bioélelmiszerbolt
+rdfs:label:pl	Sklep z produktami organicznymi
+rdfs:label:fi	Luomukauppa
+rdfs:label:en-GB	Organic Food Shop
+rdfs:label:sv	Ekologiska livsmedelsaffär
+rdfs:label:ms	Kedai Makanan Organik
+rdfs:label:tl	Tindahan ng Pagkaing Organiko
+rdfs:label:af	Organiese koswinkel
+rdfs:label:aln	Organike dyqan Ushqim
+rdfs:label:hsb	Biowobchod
+rdfs:label:pt-BR	Loja de alimentos orgânicos
+rdfs:label:ast	Comida ecolóxica
+rdfs:label:sr-EC	Продавница здраве хране
+rdfs:label:zh-Hant	有機食品店
+rdfs:label:he	חנות מזון אורגני
+rdfs:label:uk	Продовольчий магазин
+rdfs:label:sk	Obchod so zdravou výživou
+rdfs:label:sr-EL	Prodavnica zdrave hrane
+rdfs:label:br	Stal boued bio
+rdfs:label:hr	Trgovina zdrave hrane
+rdfs:label:lv	Bioloģiskās pārtikas veikals
+rdfs:label:mk	Здрава храна
+rdfs:label:gl	Tenda de alimentos orgánicos
+rdfs:label:tr	Organik Yiyecek Dükkanı
+rdfs:label:da	Økologisk fødevarebutik
+rdfs:label:ru	Продуктовый магазин
+rdfs:label:ja	有機食材店
+rdfs:label:cs	Prodej biopotravin
+rdfs:label:arz	متجر أغذيه عضوية
+rdfs:label:ca	Botiga d'aliments orgànics
+rdfs:label:be-tarask	Харчовая крама
+rdfs:label:it	Negozio di prodotti naturali ed ecologici
+rdfs:label:vi	Tiệm Thực phẩm Hữu cơ
+rdfs:label:no	Organisk matbutikk
+rdfs:label:ia	Boteca de alimentos organic
+rdfs:label:ar	متجر أغذية عضوية
+rdfs:label:zh-Hans	有机食品店
+rdfs:label:nl	Organische winkel
+rdfs:label:es	Tienda de alimentos orgánicos
+rdfs:label:de	Biokostladen
+url	http://linkedgeodata.org/ontology/Organic
+label	Organic

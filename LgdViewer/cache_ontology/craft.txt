@@ -1,0 +1,5 @@
+lgdm:sourceKey	craft
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Craft/key/shop/value/craft
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+url	http://linkedgeodata.org/ontology/Craft
+label	Craft

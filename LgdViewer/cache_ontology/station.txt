@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Station/key/public_transport/value/station
+rdfs:subClassOf	http://linkedgeodata.org/ontology/PublicTransportThing
+url	http://linkedgeodata.org/ontology/Station
+label	Station

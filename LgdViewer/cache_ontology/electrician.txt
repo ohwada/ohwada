@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Electrician/key/craft/value/electrician
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+url	http://linkedgeodata.org/ontology/Electrician
+label	Electrician

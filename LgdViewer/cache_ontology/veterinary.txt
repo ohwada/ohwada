@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Veterinary/key/amenity/value/veterinary
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:lt	Veterinarijos chirurgija
+rdfs:label:zh-Hans	兽医
+rdfs:label:fi	Eläinlääkäri
+rdfs:label:el	Κτηνιατρική Χειρουργική
+rdfs:label:hu	Állatorvosi rendelő
+rdfs:label:tr	Veteriner
+rdfs:label:hr	Veterinar
+rdfs:label:ru	Ветеринарная клиника
+rdfs:label:ar	جراحة بيطرية
+rdfs:label:af	Veearts
+rdfs:label:mk	Ветеринарна клиника
+rdfs:label:fur	Veterinari
+rdfs:label:ca	Veterinari
+rdfs:label:be-tarask	Вэтэрынарная клініка
+rdfs:label:ka	ვეტერინარული კლინიკა
+rdfs:label:tl	Paninistis na Pangbeterinarya
+rdfs:label:cs	Veterinární ordinace
+rdfs:label:he	מרפאה וטרינרית
+rdfs:label:de	Tierarzt
+rdfs:label:en-GB	Veterinary Surgery
+rdfs:label:uk	Ветлікарня
+rdfs:label:hsb	Zwěrjacy lěkar
+rdfs:label:nl	Dierenarts
+rdfs:label:dsb	Skótny gójc
+rdfs:label:ms	Doktor Haiwan
+rdfs:label:aln	Kirurgji Veterinare
+rdfs:label:sl	Veterinarska klinika
+rdfs:label:pl	Chirurgia weterynaryjna
+rdfs:label:no	Veterinærklinikk
+rdfs:label:it	Veterinario
+rdfs:label:lv	Veterinārā ķirurģija
+rdfs:label:vi	Phẫu thuật Thú y
+rdfs:label:es	Clínica veterinaria
+rdfs:label:gl	Clínica veterinaria
+rdfs:label:pt-BR	Clínica veterinária
+rdfs:label:sr-EC	Ветеринарска хирургија
+rdfs:label:arz	جراحه بيطرية
+rdfs:label:ia	Clinica veterinari
+rdfs:label:fr	Chirurgie vétérinaire
+rdfs:label:ast	Ciruxía veterinaria
+rdfs:label:sk	Veterinárna ordinácia
+rdfs:label:da	Dyrlæge
+rdfs:label:sv	Veterinär
+rdfs:label:br	Surjianerezh evit al loened
+rdfs:label:sr-EL	Veterinarska hirurgija
+rdfs:label:ja	獣医外科
+url	http://linkedgeodata.org/ontology/Veterinary
+label	Veterinary

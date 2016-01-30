@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1000517501
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Police
+rdfs:label	横浜水上警察暑
+dc:modified	2010-11-23T06:43:09+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.44838&long=139.6454#point
+geo:long	139.645
+geo:lat	35.4484
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node1000517501
+lgdo:changeset	6436856
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Police
+type:label	Police
+type:label:ja	警察所

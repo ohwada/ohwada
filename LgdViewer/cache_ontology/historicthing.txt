@@ -1,0 +1,3 @@
+lgdm:sourceKey	historic
+url	http://linkedgeodata.org/ontology/HistoricThing
+label	HistoricThing

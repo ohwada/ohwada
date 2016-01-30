@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/College/key/amenity/value/college
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:tl	Dalubhasaan
+rdfs:label:ast	Colexu universitariu
+rdfs:label:pl	Uczelnia
+rdfs:label:de	Hochschule
+rdfs:label:ps	پوهنځی
+rdfs:label:aln	Kolegj
+rdfs:label:el	Κολέγιο
+rdfs:label:ms	Maktab
+rdfs:label:no	Høyskole
+rdfs:label:ia	Schola superior
+rdfs:label:dsb	Wusoka šula
+rdfs:label:pt-BR	Faculdade
+rdfs:label:tr	Lise
+rdfs:label:bn	কলেজ
+rdfs:label:sv	Gymnasium
+rdfs:label:hr	Fakultet
+rdfs:label:sr-EL	Fakultet
+rdfs:label:fi	Oppilaitos
+rdfs:label:nds	Hoogschool
+rdfs:label:br	Skol-veur pe skol-uhel
+rdfs:label:lt	Koledžas
+rdfs:label:arz	كلّية
+rdfs:label:ar	كلّية
+rdfs:label:hu	Főiskola
+rdfs:label:da	College
+rdfs:label:en-GB	College
+rdfs:label:ca	Institut
+rdfs:label:es	Universidad o instituto
+rdfs:label:zh-Hans	学院
+rdfs:label:ka	კოლეჯი
+rdfs:label:be-tarask	Каледж
+rdfs:label:ru	Колледж
+rdfs:label:gl	Instituto
+rdfs:label:lv	Koledža
+rdfs:label:sl	Srednja šola
+rdfs:label:uk	Коледж
+rdfs:label:pt	Colégio
+rdfs:label:sr-EC	Факултет
+rdfs:label:fr	Établissement d'enseignement supérieur
+rdfs:label:ja	大学
+rdfs:label:cs	Vysoká škola
+rdfs:label:sk	Vysoká škola
+rdfs:label:nl	Hogeschool
+rdfs:label:it	Scuola superiore
+rdfs:label:vi	Trường Cao đẳng
+rdfs:label:af	Kollege
+rdfs:label:eu	Kolegioa
+rdfs:label:te	కళాశాల
+rdfs:label:he	מכללה
+rdfs:label:hsb	Wysoka šula
+rdfs:label:mk	Колеџ
+url	http://linkedgeodata.org/ontology/College
+label	College

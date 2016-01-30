@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2190819544
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Dentist
+rdfs:label	五十嵐歯科クリニック
+dc:modified	2013-04-19T15:37:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.448681&long=139.63683#point
+geo:long	139.637
+geo:lat	35.4487
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2190819544
+lgdo:changeset	15785608
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Dentist
+type:label	Dentist
+type:label:ja	歯科医

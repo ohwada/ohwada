@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420813610
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Townhall
+rdfs:label	中区役所
+dc:modified	2012-10-19T09:43:47+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.444695&long=139.6422#point
+geo:long	139.642
+geo:lat	35.4447
+dc:contributor	http://linkedgeodata.org/triplify/user414618
+geom:geometry	http://linkedgeodata.org/geometry/node1420813610
+lgdo:changeset	13552682
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	2
+lgdo:KSJ2%3AADS	日本大通35
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	市区町村
+type:url	http://linkedgeodata.org/ontology/Townhall
+type:label	Townhall
+type:label:ja	市庁舎

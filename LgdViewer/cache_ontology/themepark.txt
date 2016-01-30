@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/ThemePark/key/tourism/value/theme_park
+rdfs:subClassOf	http://linkedgeodata.org/ontology/TourismThing
+rdfs:label:ia	Parco de attractiones
+rdfs:label:ru	Аттракционы
+rdfs:label:rue	Тематічный парк
+rdfs:label:arz	حديقه ملاهي
+rdfs:label:hr	Tematski park
+rdfs:label:sr-EL	Tematski park
+rdfs:label:eu	Parke tematiko
+rdfs:label:ast	Parque temáticu
+rdfs:label:et	Teemapark
+rdfs:label:sr-EC	Тематски парк
+rdfs:label:nl	Pretpark
+rdfs:label:af	Pretpark
+rdfs:label:dsb	Rozwjaseleński park
+rdfs:label:pt-BR	Parque temático
+rdfs:label:gl	Parque temático
+rdfs:label:pt	Parque temático
+rdfs:label:tl	Liwasang may Tema
+rdfs:label:es	Parque temático
+rdfs:label:ka	თემატური პარკი
+rdfs:label:sl	Zabaviščni park
+rdfs:label:ms	Taman Tema
+rdfs:label:no	Fornøyelsespark
+rdfs:label:be-tarask	Атракцыёны
+rdfs:label:fr	Parc à thème
+rdfs:label:he	פארק נושאי
+rdfs:label:cs	Zábavní park
+rdfs:label:sv	Nöjespark
+rdfs:label:da	Forlystelsespark
+rdfs:label:en-GB	Theme Park
+rdfs:label:hsb	Park zabawy
+rdfs:label:hu	Vidámpark
+rdfs:label:br	Park tematek
+rdfs:label:de	Vergnügungspark
+rdfs:label:ja	テーマパーク
+rdfs:label:sk	Zábavný park
+rdfs:label:vi	Công viên Giải trí
+rdfs:label:pl	Park tematyczny
+rdfs:label:aln	Park i lojnave
+rdfs:label:zh-Hans	主题公园
+rdfs:label:lv	Atrakciju parks
+rdfs:label:it	Parco divertimenti
+rdfs:label:ca	Parc temàtic
+rdfs:label:tr	Lunapark
+rdfs:label:fi	Teemapuisto
+rdfs:label:uk	Тематичний парк
+rdfs:label:ar	حديقة ملاهي
+rdfs:label:mk	Забавен парк
+url	http://linkedgeodata.org/ontology/ThemePark
+label	ThemePark

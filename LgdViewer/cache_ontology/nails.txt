@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Nails/key/shop/value/nails
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+url	http://linkedgeodata.org/ontology/Nails
+label	Nails

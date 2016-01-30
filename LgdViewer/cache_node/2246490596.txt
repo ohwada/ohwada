@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246490596
+rdf:type:0	http://linkedgeodata.org/ontology/Pharmacy
+rdf:type:1	http://geovocab.org/spatial#Feature
+rdf:type:2	http://linkedgeodata.org/meta/Node
+rdf:type:3	http://linkedgeodata.org/ontology/Amenity
+rdfs:label	日の出薬局
+dc:modified	2013-04-03T16:13:02+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246490596
+geo:lat	35.4457
+geo:long	139.627
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15595325
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445744&long=139.62714#point
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Pharmacy
+type:label	Pharmacy
+type:label:ja	薬局

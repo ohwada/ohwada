@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/EstateAgentOffice/key/office/value/estate_agent
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Office
+url	http://linkedgeodata.org/ontology/EstateAgentOffice
+label	EstateAgentOffice

@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BedShop/key/shop/value/bed
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+url	http://linkedgeodata.org/ontology/BedShop
+label	BedShop

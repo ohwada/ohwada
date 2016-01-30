@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/PlaceOfWorship/key/amenity/value/place_of_worship
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:da	Kultsted
+rdfs:label:nl	Religieuze samenkomstplaats
+rdfs:label:sr-EC	Место богослужења
+rdfs:label:fur	Lûc di cult
+rdfs:label:aln	Vendi i Adhurimi
+rdfs:label:mk	Верски објект
+rdfs:label:be-tarask	Культавае збудаваньне
+rdfs:label:pl	Miejsce kultu
+rdfs:label:zh-Hant	宗教場所
+rdfs:label:es	Templo
+rdfs:label:ja	神社仏閣
+rdfs:label:sr-EL	Mesto bogosluženja
+rdfs:label:ms	Tempat Ibadat
+rdfs:label:ca	Lloc de culte
+rdfs:label:de	Andachtsstätte
+rdfs:label:pt-BR	Lugar de Adoração
+rdfs:label:hsb	Boži dom
+rdfs:label:fi	Kirkko
+rdfs:label:it	Luogo di culto
+rdfs:label:zh-Hans	宗教场所
+rdfs:label:ia	Loco de adoration
+rdfs:label:dsb	Bóžy dom
+rdfs:label:vi	Nơi Thờ phụng
+rdfs:label:he	מקום פולחן
+rdfs:label:ar	معبد
+rdfs:label:arz	معبد
+rdfs:label:tl	Sambahan
+rdfs:label:tr	İbadethane / Tapınak
+rdfs:label:lv	Dievnams
+rdfs:label:sk	Kostol
+rdfs:label:af	Plek van aanbidding
+rdfs:label:fr	Lieu de culte
+rdfs:label:br	Lec'h azeuliñ
+rdfs:label:sv	Plats för tillbedjan
+rdfs:label:eu	Otoitzerako Lekua
+rdfs:label:ast	Llugar de cultu
+rdfs:label:ru	Место поклонения
+rdfs:label:uk	Культова споруда
+rdfs:label:sl	Cerkev
+rdfs:label:cs	Náboženský objekt
+rdfs:label:ka	რელიგიური ადგილი
+rdfs:label:lt	Maldos namai
+rdfs:label:hu	Vallási hely
+rdfs:label:hr	Crkva
+rdfs:label:gl	Lugar de culto
+rdfs:label:en-GB	Place of Worship
+rdfs:label:no	Tilbedelsesplass
+url	http://linkedgeodata.org/ontology/PlaceOfWorship
+label	PlaceOfWorship

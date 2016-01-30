@@ -1,0 +1,13 @@
+<resources>
+	<string-array name="preference_map_kind_entries">
+ 		<item>@string/preference_map_kind_name_1</item>
+ 		<item>@string/preference_map_kind_name_2</item>
+ 		<item>@string/preference_map_kind_name_3</item>
+	</string-array>
+
+	<string-array name="preference_map_kind_entry_values">
+		<item>@string/preference_map_kind_value_1</item>
+		<item>@string/preference_map_kind_value_2</item>
+		<item>@string/preference_map_kind_value_3</item>
+	</string-array>
+</resources>

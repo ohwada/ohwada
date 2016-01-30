@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/HistoricPointOfInterest/key/historic/value/yes
+rdfs:subClassOf	http://linkedgeodata.org/ontology/HistoricThing
+url	http://linkedgeodata.org/ontology/HistoricPointOfInterest
+label	HistoricPointOfInterest

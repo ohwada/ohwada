@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2190817948
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/HistoricThing
+rdf:type:3	http://linkedgeodata.org/ontology/Monument
+rdfs:label	馬の飲み水
+dc:modified	2013-04-19T15:44:16+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.448959&long=139.63681#point
+geo:long	139.637
+geo:lat	35.449
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2190817948
+lgdo:changeset	15785691
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Monument
+type:label	Monument
+type:label:ja	記念碑

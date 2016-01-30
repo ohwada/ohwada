@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Music/key/shop/value/music
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:sk	Hudobniny
+rdfs:label:hu	Zenebolt
+rdfs:label:ru	Музыкальный магазин
+rdfs:label:ca	Botiga de música
+rdfs:label:da	Musikforretning
+rdfs:label:cs	Prodej hudby
+rdfs:label:hsb	Wobchod za hudźbniny
+rdfs:label:ast	Discos
+rdfs:label:vi	Tiệm Nhạc
+rdfs:label:tl	Tindahan ng Tugtugin
+rdfs:label:lt	Muzikos prekių parduotuvė
+rdfs:label:et	Muusikapood
+rdfs:label:it	Articoli musicali
+rdfs:label:af	Musiekwinkel
+rdfs:label:he	חנות כלי מוזיקה
+rdfs:label:eu	Musika-denda
+rdfs:label:es	Tienda de música
+rdfs:label:sr-EL	Muzička prodavnica
+rdfs:label:fr	Magasin de musique
+rdfs:label:gl	Tenda de música
+rdfs:label:aln	dyqan muzikë
+rdfs:label:mk	Музички дуќан
+rdfs:label:pt	Loja de música
+rdfs:label:pt-BR	Loja de música
+rdfs:label:lv	Mūzikas veikals
+rdfs:label:en-GB	Music Shop
+rdfs:label:be-tarask	Музычная крама
+rdfs:label:nl	Muziekwinkel
+rdfs:label:uk	Музика
+rdfs:label:ka	მუსიკალური მაღაზია
+rdfs:label:tr	Müzik Mağazası
+rdfs:label:sr-EC	Музичка продавница
+rdfs:label:dsb	Wobchod za muzikalije
+rdfs:label:sl	Trgovina z glasbo
+rdfs:label:hr	Trgovina glazbom
+rdfs:label:no	Musikkbutikk
+rdfs:label:fi	Musiikkikauppa
+rdfs:label:ja	ミュージックショップ
+rdfs:label:br	Stal sonerezh
+rdfs:label:de	Musikladen
+rdfs:label:pl	Sklep muzyczny
+rdfs:label:zh-Hans	音乐店
+rdfs:label:ia	Magazin de musica
+rdfs:label:sv	Musikaffär
+rdfs:label:arz	متجر موسيقى
+rdfs:label:ar	متجر موسيقى
+url	http://linkedgeodata.org/ontology/Music
+label	Music

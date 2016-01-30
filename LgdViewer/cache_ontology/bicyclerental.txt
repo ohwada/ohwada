@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BicycleRental/key/amenity/value/bicycle_rental
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:hsb	Wupožcowarnja za kolesa
+rdfs:label:lt	Dviračių nuoma
+rdfs:label:eu	Txirrindu Alokairua
+rdfs:label:sv	Cykeluthyrning
+rdfs:label:et	Jalgrattarent
+rdfs:label:ja	レンタサイクル
+rdfs:label:he	השכרת אופניים
+rdfs:label:ka	ველოსიპედების გაქირავება
+rdfs:label:en-GB	Cycle Rental
+rdfs:label:ia	Location de bicyclettas
+rdfs:label:aln	biçikleta me qira
+rdfs:label:ru	Прокат велосипедов
+rdfs:label:fi	Pyörävuokraamo
+rdfs:label:hr	Rent a bicikl
+rdfs:label:de	Fahrradverleih
+rdfs:label:ms	Sewa Basikal
+rdfs:label:pt-BR	Aluguel de bicicletas
+rdfs:label:sr-EC	Изнајмљивање бицикла
+rdfs:label:fr	Location de vélos
+rdfs:label:ca	Lloguer de bicicletes
+rdfs:label:tr	Bisiklet kiralama
+rdfs:label:it	Noleggio biciclette
+rdfs:label:mk	Изнајмување велосипеди
+rdfs:label:sl	Izposoja koles
+rdfs:label:no	Sykkelutleie
+rdfs:label:cs	Půjčovna kol
+rdfs:label:da	Cykeludlejning
+rdfs:label:af	Fietsverhuring
+rdfs:label:sr-EL	Iznajmljivanje bicikla
+rdfs:label:hu	Kerékpárkölcsönző
+rdfs:label:gl	Aluguer de bicicletas
+rdfs:label:zh-Hant	自行車租賃
+rdfs:label:lv	Velosipēdu noma
+rdfs:label:nl	Fietsverhuur
+rdfs:label:be-tarask	Пракат ровараў
+rdfs:label:fur	Nauli di bicicletis
+rdfs:label:pl	Wypożyczalnia rowerów
+rdfs:label:sk	Požičovňa bicyklov
+rdfs:label:dsb	Pśepóžycarnja kólasow
+rdfs:label:is	Reiðhjólaleigan
+rdfs:label:ar	تأجير دراجة
+rdfs:label:arz	تأجير دراجة
+rdfs:label:es	Alquiler de bicicletas
+rdfs:label:ast	Alquiler de bicicletes
+rdfs:label:uk	Прокат велосипедів
+rdfs:label:vi	Chỗ Mướn Xe đạp
+rdfs:label:zh-Hans	自行车租赁
+rdfs:label:tl	Arkilahan ng Bisikleta
+rdfs:label:br	Feurmiñ beloioù
+url	http://linkedgeodata.org/ontology/BicycleRental
+label	BicycleRental

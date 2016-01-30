@@ -1,0 +1,21 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1752070580
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label:en	HOU RAI KAKU
+rdfs:label	蓬莱閣
+dc:modified	2012-05-14T07:05:23+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442493&long=139.64705#point
+geo:long	139.647
+geo:lat	35.4425
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1752070580
+lgdo:changeset	11592408
+lgdo:source	survey; Bing
+lgdo:version	1
+lgdo:cuisine	beijing
+lgdo:contact%3Aphone	045-681-5514
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン

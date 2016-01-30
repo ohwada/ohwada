@@ -1,0 +1,3 @@
+lgdm:sourceKey	tourism
+url	http://linkedgeodata.org/ontology/TourismThing
+label	TourismThing

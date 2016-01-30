@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2206327329
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label	海岸通り 風我亭キッチン
+dc:modified	2013-04-19T15:44:16+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.45047&long=139.63806#point
+geo:long	139.638
+geo:lat	35.4505
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2206327329
+lgdo:changeset	15785691
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン

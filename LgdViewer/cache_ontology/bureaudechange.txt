@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BureauDeChange/key/amenity/value/bureau_de_change
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:tr	Döviz bürosu
+rdfs:label:fr	Bureau de change
+rdfs:label:de	Wechselstube
+rdfs:label:hr	Mjenjačnica
+rdfs:label:ia	Officio de cambio
+rdfs:label:hu	Pénzváltó
+rdfs:label:sr-EL	Menjačnica
+rdfs:label:dsb	Zaměnjarnja
+rdfs:label:sl	Menjalnica
+rdfs:label:aln	Byroja Ndryshimi de
+rdfs:label:be-tarask	Абмен валюты
+rdfs:label:nds	Wesselkontoor
+rdfs:label:cs	Směnárna
+rdfs:label:en-GB	Bureau de Change
+rdfs:label:no	Vekslingskontor
+rdfs:label:ar	مكتب صرافة
+rdfs:label:arz	مكتب صرافة
+rdfs:label:zh-Hans	货币兑换
+rdfs:label:da	Vekselkontor
+rdfs:label:sv	Växlingskontor
+rdfs:label:ms	Pengurup Wang
+rdfs:label:gl	Casa de cambio
+rdfs:label:es	Casa de cambio
+rdfs:label:lv	Valūtas maiņas punkts
+rdfs:label:ka	ვალუტის გადაცვლა
+rdfs:label:he	חלפן כספים
+rdfs:label:br	Burev eskemm
+rdfs:label:ast	Troquéu de moneda
+rdfs:label:ru	Обмен валют
+rdfs:label:mk	Менувачница
+rdfs:label:tl	Tanggapang Palitan ng Pera
+rdfs:label:is	Gjaldeyrisskipti
+rdfs:label:pl	Kantor
+rdfs:label:nl	Wisselkantoor
+rdfs:label:af	Wisselkantoor
+rdfs:label:eu	Diru-truke Bulegoa
+rdfs:label:sk	Zmenáreň
+rdfs:label:vi	Tiệm Đổi tiền
+rdfs:label:it	Cambia valute
+rdfs:label:fi	Rahanvaihto
+rdfs:label:uk	Обмін валют
+rdfs:label:lb	Wiesselbüro
+rdfs:label:fur	Ufizi di cambi
+rdfs:label:pt-BR	Casa de câmbio
+rdfs:label:et	Rahavahetus
+rdfs:label:ca	Oficina de canvi
+rdfs:label:sr-EC	Мењачница
+rdfs:label:hsb	Měnjernja
+rdfs:label:lt	Valiutos keitimo punktas
+url	http://linkedgeodata.org/ontology/BureauDeChange
+label	BureauDeChange

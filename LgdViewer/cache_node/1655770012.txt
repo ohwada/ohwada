@@ -1,0 +1,25 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1655770012
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/SocialFacility
+rdfs:label	富士吉田市特別養護老人ホーム寿荘
+dc:modified	2012-03-02T11:14:33+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.492241&long=138.8044#point
+geo:long	138.804
+geo:lat	35.4922
+dc:contributor	http://linkedgeodata.org/triplify/user393606
+geom:geometry	http://linkedgeodata.org/geometry/node1655770012
+lgdo:changeset	10846518
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	1
+lgdo:KSJ2%3AADS	下吉田田端区画整理地仮換地番9街区1-23
+lgdo:KSJ2%3AAdminArea	山梨県富士吉田市
+lgdo:KSJ2%3APubFacAdmin	民間
+lgdo:social_facility	group_home
+type:url	http://linkedgeodata.org/ontology/SocialFacility
+type:label	SocialFacility
+type:label:ja	

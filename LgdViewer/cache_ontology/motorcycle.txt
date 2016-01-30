@@ -1,0 +1,48 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Motorcycle/key/shop/value/motorcycle
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:br	Stal marc'hoù-tan
+rdfs:label:sk	Motocyklový obchod
+rdfs:label:arz	متجر دراجات نارية
+rdfs:label:ar	متجر دراجات نارية
+rdfs:label:de	Motorradgeschäft
+rdfs:label:hu	Motorbolt
+rdfs:label:sr-EL	Prodavnica motocikala
+rdfs:label:dsb	Wobchod za motorske
+rdfs:label:hsb	Wobchod za motorske
+rdfs:label:sl	Trgovina z motorji
+rdfs:label:sv	Motorcykelhandlare
+rdfs:label:nds	Motoorradladen
+rdfs:label:vi	Cửa hàng Xe mô tô
+rdfs:label:sr-EC	Продавница мотоцикала
+rdfs:label:nl	Motorfietsenwinkel
+rdfs:label:ast	Venta de motos
+rdfs:label:fr	Magasin de moto
+rdfs:label:hr	Moto Shop
+rdfs:label:tl	Tindahan ng Motorsiklo
+rdfs:label:cs	Prodej motocyklů
+rdfs:label:be-tarask	Крама матацыклаў
+rdfs:label:zh-Hant	摩托車店
+rdfs:label:pt-BR	Loja de motocicletas
+rdfs:label:uk	Мотоцикли
+rdfs:label:mk	Моторцикли
+rdfs:label:pl	Sklep z motocyklami
+rdfs:label:en-GB	Motorcycle Shop
+rdfs:label:af	Motorfietswinkel
+rdfs:label:ca	Botiga de motocicletes
+rdfs:label:tr	Motosiklet Dükkanı
+rdfs:label:ja	バイクショップ
+rdfs:label:it	Concessionario di motociclette
+rdfs:label:lt	Motociklų parduotuvė
+rdfs:label:gl	Tenda de motocicletas
+rdfs:label:ru	Магазин по продаже мотоциклов
+rdfs:label:aln	Shitore e Motorrave
+rdfs:label:lv	Motociklu veikals
+rdfs:label:no	Motorsykkelbutikk
+rdfs:label:ia	Magazin de motocyclos
+rdfs:label:zh-Hans	摩托车店
+rdfs:label:da	Motorcykelbutik
+rdfs:label:fi	Moottoripyöräkauppa
+rdfs:label:he	חנות אופנועים
+rdfs:label:es	Tienda de motocicletas
+url	http://linkedgeodata.org/ontology/Motorcycle
+label	Motorcycle

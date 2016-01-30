@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Memorial/key/historic/value/memorial
+rdfs:subClassOf	http://linkedgeodata.org/ontology/HistoricThing
+rdfs:label:ast	Monumentu
+rdfs:label:eu	Memoriala
+rdfs:label:ru	Памятник
+rdfs:label:tl	Muog na Pang-alaala
+rdfs:label:de	Gedenkstätte
+rdfs:label:be-tarask	Мэмарыял
+rdfs:label:sv	Minnesmärke
+rdfs:label:ja	記念碑
+rdfs:label:fi	Muistomerkki
+rdfs:label:it	Memoriale
+rdfs:label:he	אנדרטה
+rdfs:label:nds	Gedenksteed
+rdfs:label:br	Kounlec'h
+rdfs:label:cs	Památník
+rdfs:label:uk	Меморіал
+rdfs:label:sr-EL	Spomenik
+rdfs:label:sl	Spomenik
+rdfs:label:sr-EC	Споменик
+rdfs:label:mk	Споменик
+rdfs:label:dsb	Wopomnišćo
+rdfs:label:hsb	Wopomnišćo
+rdfs:label:hu	Emlékmű
+rdfs:label:tr	Anıt
+rdfs:label:ms	Peringatan
+rdfs:label:et	Memoriaal
+rdfs:label:sk	Pomník
+rdfs:label:vi	Đài Tưởng niệm
+rdfs:label:lt	Memorialas
+rdfs:label:zh-Hans	纪念馆
+rdfs:label:ka	მემორიალი
+rdfs:label:aln	Përkujtim
+rdfs:label:ca	Memorial
+rdfs:label:gl	Memorial
+rdfs:label:pt-BR	Memorial
+rdfs:label:pt	Memorial
+rdfs:label:en-GB	Memorial
+rdfs:label:es	Memorial
+rdfs:label:ia	Memorial
+rdfs:label:pl	Mniejszy pomnik
+rdfs:label:arz	نصب تذكاري
+rdfs:label:ar	نصب تذكاري
+rdfs:label:no	Minne
+rdfs:label:lv	Memoriāls
+rdfs:label:hr	Spomen dom
+rdfs:label:da	Mindesmærke
+rdfs:label:fr	Mémorial
+rdfs:label:nl	Herdenkingsmonument
+rdfs:label:af	Herdenkingsmonument
+rdfs:label:el	Μνημόσυνο
+url	http://linkedgeodata.org/ontology/Memorial
+label	Memorial

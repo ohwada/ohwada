@@ -1,0 +1,57 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/IceCream/key/amenity/value/ice_cream
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ps	آيسکريم
+rdfs:label:tl	Sorbetes
+rdfs:label:sr-EL	Prodavnica sladoleda
+rdfs:label:mk	Сладолед
+rdfs:label:hr	Slastičarna
+rdfs:label:aln	Akullore
+rdfs:label:hsb	Jědźny lód
+rdfs:label:lv	Saldējums
+rdfs:label:el	Παγωτό
+rdfs:label:ms	Aiskrim
+rdfs:label:sv	Glass
+rdfs:label:af	Roomys
+rdfs:label:nds	Iesladen
+rdfs:label:pl	Lodziarnia
+rdfs:label:be-tarask	Марозіва
+rdfs:label:da	Is
+rdfs:label:es	Heladería
+rdfs:label:br	Dienn skorn
+rdfs:label:ia	Gelato
+rdfs:label:nl	IJs
+rdfs:label:fi	Jäätelö
+rdfs:label:fr	Crème glacée
+rdfs:label:he	גלידה
+rdfs:label:zh-Hans	冰淇淋
+rdfs:label:zh-Hant	冰淇淋
+rdfs:label:eu	Izozkiak
+rdfs:label:fur	Gjelato
+rdfs:label:et	Jäätis
+rdfs:label:sk	Zmrzlina
+rdfs:label:de	Eisdiele
+rdfs:label:gl	Xeadaría
+rdfs:label:ru	Мороженное
+rdfs:label:en-GB	Ice Cream
+rdfs:label:lt	Ledai
+rdfs:label:it	Gelateria
+rdfs:label:fa	بستنی فروشی
+rdfs:label:pt-BR	Sorveteria
+rdfs:label:hu	Jégkrém
+rdfs:label:sr-EC	Продавница сладоледа
+rdfs:label:dsb	Lod
+rdfs:label:uk	Морозиво
+rdfs:label:ka	ნაყინი
+rdfs:label:vi	Tiệm Kem
+rdfs:label:ja	アイスクリーム販売店
+rdfs:label:arz	مثلجات
+rdfs:label:ar	مثلجات
+rdfs:label:no	Iskrem
+rdfs:label:sl	Sladoled
+rdfs:label:ast	Xelaos
+rdfs:label:ca	Gelat
+rdfs:label:cs	Zmrzlinárna
+rdfs:label:tr	Dondurma
+rdfs:label:lb	Glace
+url	http://linkedgeodata.org/ontology/IceCream
+label	IceCream

@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Marketplace/key/amenity/value/marketplace
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:mk	Пазар
+rdfs:label:sl	Tržnica
+rdfs:label:sk	Tržnica
+rdfs:label:hr	Tržnica
+rdfs:label:zh-Hans	市场
+rdfs:label:sr-EL	Pijaca
+rdfs:label:ms	Tempat Pasar
+rdfs:label:ja	市場
+rdfs:label:tr	Pazar yeri
+rdfs:label:pl	Plac targowy
+rdfs:label:lv	Tirgus
+rdfs:label:it	Mercato
+rdfs:label:ia	Mercato
+rdfs:label:ru	Рыночная площадь
+rdfs:label:ast	Mercáu
+rdfs:label:nds	Marktplatz
+rdfs:label:de	Marktplatz
+rdfs:label:af	Markplein
+rdfs:label:lb	Maartplaz
+rdfs:label:cs	Tržiště
+rdfs:label:dsb	Wikowanišćo
+rdfs:label:sr-EC	Пијаца
+rdfs:label:he	שוק
+rdfs:label:lt	Turgavietė
+rdfs:label:fr	Place de marché
+rdfs:label:nl	Marktplein
+rdfs:label:ka	ბაზარი
+rdfs:label:el	Αγορά
+rdfs:label:pt-BR	Mercado público / feira
+rdfs:label:be-tarask	Рынкавая плошча
+rdfs:label:et	Turg
+rdfs:label:ca	Mercat
+rdfs:label:gl	Praza de mercado
+rdfs:label:en-GB	Marketplace
+rdfs:label:eu	Merkatua
+rdfs:label:fa	بازار
+rdfs:label:ar	سوق
+rdfs:label:arz	سوق
+rdfs:label:fi	Tori
+rdfs:label:hu	Vásártér
+rdfs:label:tl	Palengke
+rdfs:label:hsb	Torhošćo
+rdfs:label:vi	Chợ phiên
+rdfs:label:da	Markedsplads
+rdfs:label:sv	Marknad
+rdfs:label:no	Markedsplass
+rdfs:label:aln	Treg
+rdfs:label:es	Mercado
+rdfs:label:br	Marc'hallac'h
+rdfs:label:uk	Ринок
+url	http://linkedgeodata.org/ontology/Marketplace
+label	Marketplace

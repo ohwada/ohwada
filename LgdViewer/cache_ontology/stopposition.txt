@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/StopPosition/key/public_transport/value/stop_position
+rdfs:subClassOf	http://linkedgeodata.org/ontology/PublicTransportThing
+url	http://linkedgeodata.org/ontology/StopPosition
+label	StopPosition

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item 
+    	android:id="@+id/menu_bt_clear"
+        android:title="@string/menu_bt_clear"         
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item 
+    	android:id="@+id/menu_bt_connect"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/menu_bt_connect"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item 
+    	android:id="@+id/menu_bt_disconnect"
+		android:icon="@android:drawable/ic_menu_close_clear_cancel"
+		android:title="@string/menu_bt_disconnect"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+	<item 
+    	android:id="@+id/menu_setting"
+        android:title="@string/menu_setting"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+        
+    <item 
+    	android:id="@+id/menu_about"
+		android:title="@string/menu_about"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item 
+    	android:id="@+id/menu_usage"
+		android:title="@string/menu_usage"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+                  
+</menu>

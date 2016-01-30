@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/RetirementHome/key/amenity/value/retirement_home
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:pt-BR	Asilo
+rdfs:label:sr-EC	Старачки дом
+rdfs:label:sr-EL	Starački dom
+rdfs:label:ia	Residentia pro vetere personas
+rdfs:label:en-GB	Retirement Home
+rdfs:label:gl	Residencia de xubilados
+rdfs:label:ru	Дом престарелых
+rdfs:label:eu	Nagusien etxea
+rdfs:label:et	Vanadekodu
+rdfs:label:dsb	Starcownja
+rdfs:label:uk	Будинки для людей похилого віку
+rdfs:label:pl	Dom starców
+rdfs:label:af	Ouetehuis
+rdfs:label:de	Altersheim
+rdfs:label:sk	Domov dôchodcov
+rdfs:label:sv	Äldreboende
+rdfs:label:hr	Dom za starije osobe
+rdfs:label:fur	Cjase di polse
+rdfs:label:tl	Tahanan ng Pagreretiro
+rdfs:label:ar	بيت مسنين
+rdfs:label:no	Gamlehjem
+rdfs:label:sl	Dom za ostarele
+rdfs:label:zh-Hans	养老院
+rdfs:label:it	Casa di Riposo
+rdfs:label:cs	Domov důchodců
+rdfs:label:fr	Maison de retraite
+rdfs:label:he	בית אבות
+rdfs:label:ca	Casa de Retirament
+rdfs:label:tr	Bakımevi
+rdfs:label:nds	Olenhuus
+rdfs:label:lv	Pansionāts
+rdfs:label:lt	Senelių namai
+rdfs:label:da	Plejehjem
+rdfs:label:be-tarask	Дом састарэлых
+rdfs:label:mk	Старечки дом
+rdfs:label:br	Ti-retredidi
+rdfs:label:aln	Daljes në pension Home
+rdfs:label:ast	Residencia de mayores
+rdfs:label:fi	Vanhainkoti
+rdfs:label:nl	Bejaardenhuis
+rdfs:label:es	Residencia de jubilados
+rdfs:label:hsb	Starownja
+rdfs:label:ms	Rumah Persaraan
+rdfs:label:hu	Nyugdíjasotthon
+rdfs:label:ka	მოხუცებულთა თავშესაფარი
+rdfs:label:vi	Nhà về hưu
+rdfs:label:ja	老人ホーム
+url	http://linkedgeodata.org/ontology/RetirementHome
+label	RetirementHome

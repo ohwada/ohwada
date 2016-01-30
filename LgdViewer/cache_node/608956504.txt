@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node608956504
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Police
+rdfs:label	山下町交番
+dc:modified	2010-12-12T07:26:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.443707&long=139.64722#point
+geo:long	139.647
+geo:lat	35.4437
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node608956504
+lgdo:changeset	6632540
+lgdo:version	4
+type:url	http://linkedgeodata.org/ontology/Police
+type:label	Police
+type:label:ja	警察所

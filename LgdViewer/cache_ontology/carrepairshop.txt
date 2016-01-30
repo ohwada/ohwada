@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CarRepairShop/key/shop/value/car_repair
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:dsb	Pórěźarnja awtow
+rdfs:label:nl	Autogarage
+rdfs:label:pl	Naprawa samochodów
+rdfs:label:br	Dresañ kirri
+rdfs:label:ia	Reparation de automobiles
+rdfs:label:pt-BR	Oficina mecânica
+rdfs:label:lt	Automobilių remontas
+rdfs:label:aln	riparimin e makinave
+rdfs:label:sr-EL	Auto-servis
+rdfs:label:sv	Bilverkstad
+rdfs:label:ka	ავტოსახელოსნო
+rdfs:label:lb	Garage
+rdfs:label:nds	Autowarksteed
+rdfs:label:sr-EC	Ауто-сервис
+rdfs:label:pt	Oficina
+rdfs:label:ar	مرآب سيارات
+rdfs:label:arz	مرآب سيارات
+rdfs:label:fur	Riparazion di machinis
+rdfs:label:vi	Tiệm Sửa Xe
+rdfs:label:fr	Réparation de voitures
+rdfs:label:sl	Avtoservis
+rdfs:label:uk	Авто майстерня
+rdfs:label:es	Taller mecánico
+rdfs:label:gl	Taller mecánico
+rdfs:label:hr	Autoservis
+rdfs:label:sk	Autoservis
+rdfs:label:cs	Autoservis
+rdfs:label:et	Autoparandus
+rdfs:label:en-GB	Car Repair
+rdfs:label:lv	Auto remonts
+rdfs:label:da	Bilværksted
+rdfs:label:ru	Автомастерская
+rdfs:label:hsb	Awtowa porjedźernja
+rdfs:label:zh-Hans	汽车维修
+rdfs:label:zh-Hant	汽車維修
+rdfs:label:be-tarask	Аўтамабільная майстэрня
+rdfs:label:mk	Автосервис
+rdfs:label:fi	Autokorjaamo
+rdfs:label:de	Autowerkstatt
+rdfs:label:he	מוסך
+rdfs:label:tl	Kumpunihan ng Kotse
+rdfs:label:no	Bilverksted
+rdfs:label:hu	Autószerviz
+rdfs:label:tr	Oto tamir
+rdfs:label:af	Motorherstel
+rdfs:label:ast	Taller d'automóviles
+rdfs:label:ca	Reparació d'automòbils
+rdfs:label:it	Autofficina
+url	http://linkedgeodata.org/ontology/CarRepairShop
+label	CarRepairShop

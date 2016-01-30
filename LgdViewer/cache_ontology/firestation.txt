@@ -1,0 +1,57 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FireStation/key/amenity/value/fire_station
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:br	Kazarn pomperien
+rdfs:label:fa	آتش نشانی
+rdfs:label:en-GB	Fire Station
+rdfs:label:et	Tuletõrjedepoo
+rdfs:label:lv	Ugunsdzēsēju depo
+rdfs:label:fr	Caserne des pompiers
+rdfs:label:fur	Stazion dai pompîrs
+rdfs:label:mk	Пожарна
+rdfs:label:sr-EL	Vatrogasna stanica
+rdfs:label:gl	Parque de bombeiros
+rdfs:label:nds	Füürwehr
+rdfs:label:eu	Suhiltzaileak
+rdfs:label:es	Parque de bomberos
+rdfs:label:zh-Hant	消防局
+rdfs:label:zh-Hans	消防局
+rdfs:label:pl	Remiza strażacka
+rdfs:label:sr-EC	Ватрогасна станица
+rdfs:label:hr	Vatrogasna postaja
+rdfs:label:ia	Caserna de pumperos
+rdfs:label:tl	Himpilan ng Bumbero
+rdfs:label:pt-BR	Corpo de bombeiros
+rdfs:label:fi	Paloasema
+rdfs:label:sq	Zjarrëfiksat
+rdfs:label:ja	消防署
+rdfs:label:aln	Zjarrëfiksat
+rdfs:label:cs	Hasičská stanice
+rdfs:label:tr	Itfaiye
+rdfs:label:be-tarask	Пажарны пастарунак
+rdfs:label:ar	فوج إطفاء
+rdfs:label:arz	فوج إطفاء
+rdfs:label:ast	Bomberos
+rdfs:label:dsb	Wognjarnja
+rdfs:label:af	Brandweerstasie
+rdfs:label:no	Brannstasjon
+rdfs:label:lb	Pompjeeën
+rdfs:label:ru	Пожарная охрана
+rdfs:label:lt	Gaisrinė
+rdfs:label:ca	Parc de bombers
+rdfs:label:vi	Trạm Cứu hỏa
+rdfs:label:de	Feuerwehr
+rdfs:label:ka	სახანძრო განყოფილება
+rdfs:label:da	Brandstation
+rdfs:label:sv	Brandstation
+rdfs:label:he	תחנת כיבוי אש
+rdfs:label:nl	Brandweer
+rdfs:label:it	Vigili del fuoco
+rdfs:label:ms	Balai Bomba
+rdfs:label:is	Slökkvistöð
+rdfs:label:uk	Пожежна станція
+rdfs:label:hsb	Wohnjostraža
+rdfs:label:sk	Požiarna stanica
+rdfs:label:sl	Gasilska postaja
+rdfs:label:hu	Tűzoltóság
+url	http://linkedgeodata.org/ontology/FireStation
+label	FireStation

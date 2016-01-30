@@ -1,0 +1,59 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BooksShop/key/shop/value/books
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:is	Bókabúðin
+rdfs:label:et	Raamatupood
+rdfs:label:gl	Libraría
+rdfs:label:ms	Kedai Buku
+rdfs:label:da	Boghandel
+rdfs:label:fur	Librerie
+rdfs:label:nds	Bookladen
+rdfs:label:pt	Livraria
+rdfs:label:pt-BR	Livraria
+rdfs:label:sk	Kníhkupectvo
+rdfs:label:hsb	Kniharnja
+rdfs:label:br	Levrdi
+rdfs:label:cs	Knihkupectví
+rdfs:label:lb	Bichergeschäft
+rdfs:label:fa	فروشگاه کتاب
+rdfs:label:ar	متجر كتب
+rdfs:label:arz	متجر كتب
+rdfs:label:ru	Книжный магазин
+rdfs:label:ja	書店
+rdfs:label:zh-Hant	書店
+rdfs:label:af	Boekwinkel
+rdfs:label:eu	Liburudenda
+rdfs:label:dsb	Knigłarnja
+rdfs:label:aln	Librari
+rdfs:label:lv	Grāmatu veikals
+rdfs:label:en-GB	Book Shop
+rdfs:label:hr	Knjižara
+rdfs:label:sr-EL	Knjižara
+rdfs:label:hu	Könyvesbolt
+rdfs:label:de	Buchgeschäft
+rdfs:label:sl	Knjigarna
+rdfs:label:vi	Tiệm Sách
+rdfs:label:he	חנות ספרים
+rdfs:label:nl	Boekenwinkel
+rdfs:label:mk	Книжарница
+rdfs:label:lt	Knygynas
+rdfs:label:ia	Libreria
+rdfs:label:it	Libreria
+rdfs:label:be-tarask	Кніжная крама
+rdfs:label:tr	Kitap Evi
+rdfs:label:fi	Kirjakauppa
+rdfs:label:tl	Tindahan ng Aklat
+rdfs:label:pl	Księgarnia
+rdfs:label:sr-EC	Књижара
+rdfs:label:ast	Llibrería
+rdfs:label:ca	Llibreria
+rdfs:label:zh-Hans	书店
+rdfs:label:mzn	کتاب بروتن جاء
+rdfs:label:fr	Librairie
+rdfs:label:es	Librería
+rdfs:label:ka	წიგნის მაღაზია
+rdfs:label:uk	Книгарня
+rdfs:label:el	Βιβλιοπωλείο
+rdfs:label:no	Bokhandel
+rdfs:label:sv	Bokhandel
+url	http://linkedgeodata.org/ontology/BooksShop
+label	BooksShop

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OSM Node Viewer 2</string>
+		
+<!-- MainActivity -->
+	<string name="button_option">オプション</string>
+	<string name="button_get">情報を取得する</string>
+	<string name="gps_no_manager">GPSが有効になっていません</string>
+	<string name="gps_not_found">GPSの場所が見つかりません</string>
+	<string name="error_not_get_node">データが取得できません</string>
+
+<!-- NodeActivity -->
+	<string name="button_source">LinkedGeoData</string>
+	<string name="button_phone">電話</string>
+	<string name="button_back">戻る</string>
+	<string name="error_not_specify_node">ノードが指定されていない</string>	
+	
+<!-- MapSettingActivity -->
+	<string name="geo_name">関内</string>
+	<string name="edit_address">住所</string>
+	<string name="button_search">検索</string>
+	<string name="button_location_set">設定</string>
+	<string name="search_please_address">住所を入力してください</string>
+	<string name="search_please_name">名称を入力してください</string>
+	<string name="search_found">場所が見つかりました</string>
+	<string name="search_not_found">指定された住所が見つかりません</string>
+	
+<!-- dialog marker -->
+	<string name="dialog_button_detail">詳細</string>
+	<string name="dialog_button_close">閉じる</string>
+
+<!-- dialog option  -->
+	<string name="dialog_button_gps">GPS</string>
+
+<!-- dialog loading -->
+	<string name="dialog_loading">ダウンロード中 …</string>
+
+<!-- dialog searching -->
+	<string name="dialog_searching">検索中 ...</string>	
+			
+<!-- dialog about -->
+ 	<string name="dialog_about_title">このアプリについて</string>   
+	<string name="dialog_about_main">「OSM Node Viewer」は、 Open Street Map に登録されているノードの情報を地図に表示するアプリケーションです。\n地図の中心から1km以内のノードを表示します。\n\nノード情報の取得には、 Linked Geo Data を利用しました。\nこのアプリは、LOD チャレンジ の応募作品です。</string>
+	<string name="dialog_about_osm">Open Street Map</string>
+	<string name="dialog_about_lgd">Linked Geo Data</string>
+	<string name="dialog_about_lod">LOD (Linked Open Data) チャレンジ Japan 2012</string>
+	<string name="dialog_about_credit">制作者: 大和田健一</string>
+
+ <!-- menu -->  
+ 	<string name="menu_about">このアプリについて</string> 
+ 	<string name="menu_usage">使い方</string>     
+	<string name="menu_setting">設定</string>  
+	<string name="menu_map_setting">地図の設定</string>    
+	<string name="menu_clear">キャッシュを削除する</string>
+
+     <string name="preference_map_kind_title">地図の選択</string>
+     <string name="preference_map_kind_summary">オープンストリートマップ</string>
+     <string name="preference_map_kind_dialog_title">地図の選択</string>
+     <string name="preference_map_kind_default_value">osm</string>
+     
+     <string name="preference_map_kind_name_1">オープンストリートマップ</string>
+     <string name="preference_map_kind_name_2">ヤフー地図</string>
+     <string name="preference_map_kind_name_3">グーグル地図</string>
+
+     <string name="preference_map_kind_value_1">osm</string>
+     <string name="preference_map_kind_value_2">yahoo</string>
+     <string name="preference_map_kind_value_3">google</string>
+					
+</resources>

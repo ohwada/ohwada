@@ -1,0 +1,31 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420824964
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Townhall
+rdfs:label:en	City of Yokohama
+rdfs:label:ja	横浜市
+rdfs:label	横浜市役所 (City of Yokohama Hall)
+dc:modified	2012-11-15T15:54:42+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.443909&long=139.63803#point
+geo:long	139.638
+foaf:phone	+81-45-6712121
+geo:lat	35.4439
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1420824964
+lgdo:changeset	13883784
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:opening_hours	Mo-Fr 08:45-17:00; PH off
+lgdo:source	KSJ2; (URL)
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	3
+lgdo:wheelchair	http://linkedgeodata.org/ontology/wheelchair_yes
+lgdo:wikipedia	ja:横浜市役所
+lgdo:KSJ2%3AADS	港町1-1
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	市区町村
+lgdo:is_in%3Aja	日本神奈川県横浜市
+type:url	http://linkedgeodata.org/ontology/Townhall
+type:label	Townhall
+type:label:ja	市庁舎

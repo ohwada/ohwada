@@ -1,0 +1,26 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1809628350
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label:en	Totoyamichi
+rdfs:label:ja-rm	Totoyamichi
+rdfs:label:ja	魚屋路
+rdfs:label	魚屋路 (Totoyamichi)
+dc:modified	2012-07-02T09:03:45+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.48333&long=138.79878#point
+geo:long	138.799
+geo:lat	35.4833
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1809628350
+lgdo:changeset	12083806
+lgdo:opening_hours	Mo-Su 11:00-23:00
+lgdo:operator	すかいらーく
+lgdo:source	Bing 2007, (URL)
+lgdo:version	1
+lgdo:cuisine	sushi
+lgdo:brand	魚屋路
+lgdo:branch	富士吉田店
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

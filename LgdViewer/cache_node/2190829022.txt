@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2190829022
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pharmacy
+rdfs:label	ミネドラッグ
+dc:modified	2013-04-19T15:44:14+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.446903&long=139.63799#point
+geo:long	139.638
+geo:lat	35.4469
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2190829022
+lgdo:changeset	15785691
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Amenity
+type:label	Amenity
+type:label:ja	

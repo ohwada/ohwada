@@ -1,0 +1,49 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/NursingHome/key/amenity/value/nursing_home
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:be-tarask	Дом састарэлых
+rdfs:label:es	Residencia para la tercera edad
+rdfs:label:fr	Maison de santé
+rdfs:label:uk	Будинок престарілих
+rdfs:label:de	Altersheim
+rdfs:label:pl	Dom opieki
+rdfs:label:sr-EL	Starački dom
+rdfs:label:hr	Starački dom
+rdfs:label:ar	دار رعاية مسنين/معاقين
+rdfs:label:lv	Pansionāts
+rdfs:label:ru	Дом престарелых
+rdfs:label:ca	Llar d'Avis
+rdfs:label:tl	Alagaan ng mga Matatanda
+rdfs:label:he	בית אבות
+rdfs:label:gl	Residencia para a terceira idade
+rdfs:label:ms	Rumah Penjagaan
+rdfs:label:arz	دار رعايه مسنين/معاقين
+rdfs:label:hsb	Hladarnja
+rdfs:label:sv	Vårdhem
+rdfs:label:ast	Residencia asistencial
+rdfs:label:mk	Старечки дом
+rdfs:label:af	Verpleeghuis
+rdfs:label:fi	Hoitokoti
+rdfs:label:nl	Verpleeghuis
+rdfs:label:sr-EC	Старачки дом
+rdfs:label:cs	Pečovatelský dům
+rdfs:label:it	Asilo nido
+rdfs:label:tr	Huzurevi
+rdfs:label:ja	特別養護老人ホーム
+rdfs:label:da	Plejehjem
+rdfs:label:pt-BR	Asilo
+rdfs:label:ia	Casa de convalescentia
+rdfs:label:hu	Idősek otthona
+rdfs:label:lt	Slaugos namai
+rdfs:label:vi	Viện Dưỡng lão
+rdfs:label:nds	Pleeghuus
+rdfs:label:sk	Sanatórium
+rdfs:label:zh-Hans	护理院
+rdfs:label:ka	მოხუცებულთა თავშესაფარი
+rdfs:label:dsb	Wótwardowarnja
+rdfs:label:no	Pleiehjem
+rdfs:label:br	Ti yec'hed
+rdfs:label:aln	shtëpi pleqsh
+rdfs:label:sl	Dom za ostarele
+rdfs:label:en-GB	Nursing Home
+url	http://linkedgeodata.org/ontology/NursingHome
+label	NursingHome

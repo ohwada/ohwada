@@ -1,0 +1,47 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BuildingEntrance/key/building/value/entrance
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ia	Entrata de edificio
+rdfs:label:ja	ビル入口
+rdfs:label:cs	Vstup do objektu
+rdfs:label:lt	Įėjimas į pastatą
+rdfs:label:ca	Entrada de l'Edifici
+rdfs:label:af	Ingang
+rdfs:label:nl	Ingang
+rdfs:label:sr-EC	Улаз у зграду
+rdfs:label:uk	Вхід у будівлю
+rdfs:label:sr-EL	Ulaz u zgradu
+rdfs:label:zh-Hans	建筑入口
+rdfs:label:arz	مدخل مبنى
+rdfs:label:gl	Entrada do edificio
+rdfs:label:ar	مدخل مبنى
+rdfs:label:fi	Rakennuksen sisäänkäynti
+rdfs:label:br	Antre ar savadur
+rdfs:label:lv	Ēkas ieeja
+rdfs:label:he	כניסה לבניין
+rdfs:label:it	Entrata dell'edificio
+rdfs:label:ms	Pintu Masuk Bangunan
+rdfs:label:fr	Entrée de bâtiment
+rdfs:label:ka	შენობის შესასვლელი
+rdfs:label:sl	Vhod
+rdfs:label:de	Eingang
+rdfs:label:es	Entrada a edificio
+rdfs:label:tr	Bina Girişi
+rdfs:label:mk	Влез во зграда
+rdfs:label:fur	Jentrade dal edifici
+rdfs:label:vi	Cửa vào
+rdfs:label:tl	Pasukan ng Gusali
+rdfs:label:hu	Épületbejárat
+rdfs:label:en-GB	Building Entrance
+rdfs:label:ast	Accesu al edificiu
+rdfs:label:ru	Вход в здание
+rdfs:label:pl	Wejście do budynku
+rdfs:label:aln	Ndërtimi Hyrja
+rdfs:label:be-tarask	Уваход у будынак
+rdfs:label:hsb	Twarjenjowy zachod
+rdfs:label:da	Bygningsindgang
+rdfs:label:dsb	Zachod do twarjenja
+rdfs:label:pt-BR	Entrada de edifício
+rdfs:label:no	Bygningsinngang
+rdfs:label:hr	Ulaz
+url	http://linkedgeodata.org/ontology/BuildingEntrance
+label	BuildingEntrance

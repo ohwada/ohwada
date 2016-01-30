@@ -1,0 +1,22 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246488964
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label:en	Origin Bento
+rdfs:label	オリジン弁当
+rdfs:label:ja	オリジン弁当
+dc:modified	2014-04-19T02:51:42+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246488964
+geo:lat	35.4456
+geo:long	139.628
+dc:contributor	http://linkedgeodata.org/triplify/user171028
+lgdo:takeaway	only
+lgdo:changeset	21788087
+lgdo:cuisine	japanese
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445644&long=139.62779#point
+lgdo:version	3
+lgdo:brand	オリジン弁当
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

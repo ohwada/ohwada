@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node989912029
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Hospital
+rdfs:label	横浜港大桟橋診療所
+dc:modified	2010-11-15T09:57:55+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.448803&long=139.64516#point
+geo:long	139.645
+geo:lat	35.4488
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node989912029
+lgdo:changeset	6375712
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Hospital
+type:label	Hospital
+type:label:ja	病院

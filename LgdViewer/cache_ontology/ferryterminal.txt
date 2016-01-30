@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FerryTerminal/key/amenity/value/ferry_terminal
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:es	Terminal de ferrys
+rdfs:label:fi	Lauttaterminaali
+rdfs:label:hr	Trajektni terminal
+rdfs:label:en-GB	Ferry Terminal
+rdfs:label:he	מסוף מעבורת
+rdfs:label:arz	مرسى عبّارة
+rdfs:label:ar	مرسى عبّارة
+rdfs:label:ka	ბორანის სადგური
+rdfs:label:be-tarask	Паромная станцыя
+rdfs:label:hu	Kompkikötő
+rdfs:label:mk	Ферибот-терминал
+rdfs:label:pt-BR	Terminal de barca
+rdfs:label:vi	Trạm Phà
+rdfs:label:nds	Fährterminal
+rdfs:label:sl	Trajekt
+rdfs:label:de	Fähren-Anlaufstelle
+rdfs:label:af	Veerterminaal
+rdfs:label:gl	Terminal de transbordadores
+rdfs:label:hsb	Přewozny přistaw
+rdfs:label:tr	Feribot Terminali
+rdfs:label:sr-EL	Skela
+rdfs:label:no	Ferjeterminal
+rdfs:label:dsb	Pśewózny pśistaw
+rdfs:label:uk	Поромна станція
+rdfs:label:zh-Hans	轮渡码头
+rdfs:label:lv	Prāmju termināls
+rdfs:label:ru	Паромная станция
+rdfs:label:da	Færgeterminal
+rdfs:label:eu	Ferry terminal
+rdfs:label:sk	Terminál trajektu
+rdfs:label:sv	Färjeterminal
+rdfs:label:sr-EC	Скела
+rdfs:label:tl	Himpilan ng Barkong Pangtawid
+rdfs:label:pl	Terminal promowy
+rdfs:label:br	Porzh karrlistri
+rdfs:label:aln	Terminali i Trageteve
+rdfs:label:ca	Terminal de Ferry
+rdfs:label:ms	Terminal Feri
+rdfs:label:it	Terminal traghetti
+rdfs:label:cs	Přístaviště přívozu
+rdfs:label:ia	Terminal de ferry
+rdfs:label:fr	Terminal de ferry
+rdfs:label:ja	フェリー乗り場
+rdfs:label:nl	Veerterminal
+rdfs:label:ast	Terminal de ferry
+rdfs:label:lt	Keltų terminalas
+url	http://linkedgeodata.org/ontology/FerryTerminal
+label	FerryTerminal

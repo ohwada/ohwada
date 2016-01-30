@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Electronics/key/shop/value/electronics
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:fi	Elektroniikkakauppa
+rdfs:label:gl	Tenda de electrónica
+rdfs:label:ca	Botiga d'electrònica
+rdfs:label:da	Elektronikforretning
+rdfs:label:hsb	Wobchod za elektroniku
+rdfs:label:eu	Elektronika-denda
+rdfs:label:ast	Tienda d'electrónica
+rdfs:label:lt	Elektronikos parduotuvė
+rdfs:label:sk	Elektro
+rdfs:label:arz	متجر إلكترونيات
+rdfs:label:ar	متجر إلكترونيات
+rdfs:label:zh-Hant	電子產品商店
+rdfs:label:sl	Elektronska trgovina
+rdfs:label:tl	Tindahan ng Elektroniks
+rdfs:label:tr	Elektronik Mağazası
+rdfs:label:ru	Магазин электротоваров
+rdfs:label:is	Raftækjaverslunin
+rdfs:label:aln	Elektronikë Shop
+rdfs:label:zh-Hans	电子产品商店
+rdfs:label:ja	電気製品販売店
+rdfs:label:pt-BR	Loja de Eletrônicos
+rdfs:label:hu	Elektronikai bolt
+rdfs:label:pl	Sklep elektroniczny
+rdfs:label:lv	Elektronikas veikals
+rdfs:label:dsb	Elektronikowy wobchod
+rdfs:label:he	חנות אלקטרוניקה
+rdfs:label:en-GB	Electronics Shop
+rdfs:label:br	Stal traoù eletronek
+rdfs:label:pt	Loja de electrónica
+rdfs:label:be-tarask	Крама электронікі
+rdfs:label:hr	Trgovina elektronikom
+rdfs:label:de	Elektronikgeschäft
+rdfs:label:ms	Kedai Elektronik
+rdfs:label:nl	Elektronicawinkel
+rdfs:label:vi	Tiệm Thiết bị Điện tử
+rdfs:label:sr-EL	Elektronska oprema
+rdfs:label:ka	ელექტროტექნიკის მაღაზია
+rdfs:label:af	Elektronikawinkel
+rdfs:label:it	Elettronica
+rdfs:label:no	Elektronikkforretning
+rdfs:label:es	Tienda de electrónica
+rdfs:label:cs	Prodej elektroniky
+rdfs:label:ia	Boteca de electronica
+rdfs:label:sr-EC	Електронска опрема
+rdfs:label:uk	Магазин електроніки
+rdfs:label:mk	Електронска опрема
+rdfs:label:sv	Elektronikbutik
+rdfs:label:fr	Magasin d'électronique
+url	http://linkedgeodata.org/ontology/Electronics
+label	Electronics

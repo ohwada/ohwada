@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246500206
+rdf:type:0	http://linkedgeodata.org/ontology/Bar
+rdf:type:1	http://geovocab.org/spatial#Feature
+rdf:type:2	http://linkedgeodata.org/meta/Node
+rdf:type:3	http://linkedgeodata.org/ontology/Amenity
+rdfs:label	FOOTPRINT
+dc:modified	2013-04-03T14:34:47+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246500206
+geo:lat	35.4445
+geo:long	139.627
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15594220
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.444481&long=139.62683#point
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Bar
+type:label	Bar
+type:label:ja	バー (立ち飲み屋)

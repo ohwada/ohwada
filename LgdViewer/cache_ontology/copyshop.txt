@@ -1,0 +1,41 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Copyshop/key/shop/value/copyshop
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:ar	محل تصوير مستندات
+rdfs:label:dsb	Kopěrowański wobchod
+rdfs:label:mk	Фотокопир
+rdfs:label:fr	Magasin de photocopies
+rdfs:label:pt-BR	Gráfica/copiadora
+rdfs:label:pl	Ksero
+rdfs:label:sr-EC	Копирница
+rdfs:label:tl	Tindahang Kopyahan
+rdfs:label:vi	Tiệm In ấn
+rdfs:label:af	Fotokopie-winkel
+rdfs:label:be-tarask	Паслугі капіяваньня
+rdfs:label:zh-Hant	複印店
+rdfs:label:sr-EL	Kopirnica
+rdfs:label:sl	Kopirnica
+rdfs:label:zh-Hans	复印店
+rdfs:label:ia	Centro de photocopias
+rdfs:label:tr	Fotokopi Merkezi
+rdfs:label:en-GB	Copy Shop
+rdfs:label:aln	Copy Shop
+rdfs:label:lv	Kopētava
+rdfs:label:gl	Tenda de fotocopias
+rdfs:label:ru	Услуги копирования
+rdfs:label:hu	Fénymásoló bolt
+rdfs:label:it	Copisteria
+rdfs:label:ca	Copisteria
+rdfs:label:he	חנות צילום
+rdfs:label:ast	Copistería
+rdfs:label:br	Stal luc'heilañ
+rdfs:label:es	Copistería
+rdfs:label:hr	Kopiraona
+rdfs:label:nl	Copyshop
+rdfs:label:de	Copyshop
+rdfs:label:da	Kopibutik
+rdfs:label:hsb	Kopěrowanski wobchod
+rdfs:label:no	Kopieringsbutikk
+rdfs:label:uk	Послуги копіювання
+rdfs:label:cs	Copycentrum
+url	http://linkedgeodata.org/ontology/Copyshop
+label	Copyshop

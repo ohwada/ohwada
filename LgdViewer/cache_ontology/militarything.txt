@@ -1,0 +1,3 @@
+lgdm:sourceKey	military
+url	http://linkedgeodata.org/ontology/MilitaryThing
+label	MilitaryThing

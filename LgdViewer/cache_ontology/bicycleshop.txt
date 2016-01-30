@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BicycleShop/key/shop/value/bicycle
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:hsb	Wobchod za kolesa
+rdfs:label:fr	Magasin de vélos
+rdfs:label:ia	Magazin de bicyclettas
+rdfs:label:fi	Polkupyöräkauppa
+rdfs:label:ja	自転車販売店
+rdfs:label:sv	Cykelaffär
+rdfs:label:ru	Веломагазин
+rdfs:label:uk	Веломагазин
+rdfs:label:pl	Sklep rowerowy
+rdfs:label:lt	Dviračių parduotuvė
+rdfs:label:ka	ველოსიპედების მაღაზია
+rdfs:label:br	Stal marc'hoù-houarn
+rdfs:label:tr	Bisikletçi
+rdfs:label:de	Fahrradgeschäft
+rdfs:label:nds	Radladen
+rdfs:label:gl	Tenda de bicicletas
+rdfs:label:dsb	Wobchod za kólasa
+rdfs:label:lv	Velosipēdu veikals
+rdfs:label:zh-Hant	自行車店
+rdfs:label:pt-BR	Loja de bicicletas
+rdfs:label:nl	Fietsenwinkel
+rdfs:label:is	Hjólabúðin
+rdfs:label:aln	Biciklete Shop
+rdfs:label:et	Rattapood
+rdfs:label:es	Tienda de bicicletas
+rdfs:label:it	Negozio biciclette
+rdfs:label:sk	Obchod s bicylkami
+rdfs:label:no	Sykkelbutikk
+rdfs:label:be-tarask	Роварная крама
+rdfs:label:ca	Tenda de bicicletes
+rdfs:label:cs	Cykloobchod
+rdfs:label:zh-Hans	自行车店
+rdfs:label:mk	Продавница за велосипеди
+rdfs:label:en-GB	Bicycle Shop
+rdfs:label:vi	Tiệm Xe đạp
+rdfs:label:fur	Buteghe di bicicletis
+rdfs:label:sr-EC	Продавница бицикала
+rdfs:label:ms	Kedai Basikal
+rdfs:label:ast	Tienda de bicicletes
+rdfs:label:da	Cykelhandel
+rdfs:label:hu	Kerékpárbolt
+rdfs:label:hr	Trgovina biciklima
+rdfs:label:sl	Trgovina koles
+rdfs:label:tl	Tindahan ng Bisikleta
+rdfs:label:sr-EL	Prodavnica bicikala
+rdfs:label:ar	متجر دراجات
+rdfs:label:he	חנות אפניים
+rdfs:label:arz	متجر دراجات
+rdfs:label:af	Fietswinkel
+url	http://linkedgeodata.org/ontology/BicycleShop
+label	BicycleShop

@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/RecyclingFacility/key/amenity/value/recycling
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:lt	Perdirbimo punktas
+rdfs:label:ms	Kitar Semula
+rdfs:label:zh-Hans	回收点
+rdfs:label:cs	Tříděný odpad
+rdfs:label:lv	Pārstrādes punkts
+rdfs:label:arz	نقطه إعاده تصنيع
+rdfs:label:gl	Punto de reciclaxe
+rdfs:label:af	Herwinningspunt
+rdfs:label:sk	Recyklačké miesto
+rdfs:label:tr	Geri dönüşüm noktası
+rdfs:label:fur	Pont pal ricicli
+rdfs:label:hu	Szelektív hulladékgyűjtő
+rdfs:label:vi	Trung tâm hoặc Thùng Tái sinh
+rdfs:label:da	Genbrugsstation
+rdfs:label:tl	Pook ng Muling Paggamit
+rdfs:label:de	Recycling-Center
+rdfs:label:uk	Місце переробки відходів
+rdfs:label:es	Punto de reciclaje
+rdfs:label:ast	Puntu llimpiu
+rdfs:label:ia	Puncto de recyclage
+rdfs:label:eu	Birziklatze gune
+rdfs:label:nl	Recyclingpunt
+rdfs:label:sl	Reciklirna točka
+rdfs:label:aln	Pika riciklimit
+rdfs:label:no	Resirkuleringspunkt
+rdfs:label:br	Lec'h adaozañ
+rdfs:label:pl	Miejsce recyklingu
+rdfs:label:ru	Место утилизации
+rdfs:label:en-GB	Recycling Point
+rdfs:label:fr	Point de recyclage
+rdfs:label:it	Punto riciclaggio rifiuti
+rdfs:label:sr-EL	Mesto za reciklažu
+rdfs:label:he	נקודת מיחזור
+rdfs:label:ar	نقطة إعادة تصنيع
+rdfs:label:hsb	Přijimarnja starowiznow
+rdfs:label:fi	Kierrätyspaikka
+rdfs:label:sv	Återvinningsstation
+rdfs:label:pt-BR	Posto de Reciclagem
+rdfs:label:ca	Punt de reciclatge
+rdfs:label:fa	بازیافت
+rdfs:label:be-tarask	Месца перапрацоўкі адыходаў
+rdfs:label:hr	Reciklažna točka
+rdfs:label:mk	Рециклирање
+rdfs:label:ka	ნაგავსაყრელი
+rdfs:label:sr-EC	Место за рециклажу
+rdfs:label:dsb	Zběranišćo starowinow
+url	http://linkedgeodata.org/ontology/RecyclingFacility
+label	RecyclingFacility

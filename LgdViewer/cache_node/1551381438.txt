@@ -1,0 +1,23 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1551381438
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label	マクドナルド (Mcdonald's)
+dc:modified	2011-12-18T05:26:31+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442238&long=139.63765#point
+geo:long	139.638
+geo:lat	35.4422
+dc:contributor	http://linkedgeodata.org/triplify/user162590
+geom:geometry	http://linkedgeodata.org/geometry/node1551381438
+lgdo:changeset	10143678
+lgdo:opening_hours	24/7
+lgdo:ref	関内南口店
+lgdo:version	1
+lgdo:cuisine	burger
+lgdo:contact%3Aphone	045-661-1683
+lgdo:addr%3Afull	横浜市中区不老町1-1-11
+lgdo:cuisine%3Aja	ハンバーガー
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

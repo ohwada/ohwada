@@ -1,0 +1,45 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CarSharing/key/amenity/value/car_sharing
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:it	Car Sharing
+rdfs:label:en-GB	Car Sharing
+rdfs:label:dsb	Centrala za sobujězdźenje
+rdfs:label:hu	Autómegosztás
+rdfs:label:tr	Araç Paylaşımı
+rdfs:label:uk	Прокат авто
+rdfs:label:ru	Каршаринг
+rdfs:label:ast	Compartir coche
+rdfs:label:ar	مشاركة سيارات
+rdfs:label:sv	Bilpool
+rdfs:label:tl	Paghihiraman ng Kotse
+rdfs:label:sl	Souporaba avtomobila
+rdfs:label:nl	Autodelen
+rdfs:label:pl	Dzielenie się samochodami
+rdfs:label:no	Bildeling
+rdfs:label:be-tarask	Кароткатэрміновая арэнда аўтамабіляў
+rdfs:label:ia	Repartition de autos
+rdfs:label:fi	Kimppakyyti
+rdfs:label:sr-EL	Zajedničko korišćenje automobila
+rdfs:label:hsb	Centrala za sobujěducych
+rdfs:label:vi	Chia sẻ Xe cộ
+rdfs:label:fr	Covoiturage
+rdfs:label:aln	Car Sharing/Ndarja e Automobil
+rdfs:label:arz	مشاركه سيارات
+rdfs:label:gl	Aluguer de automóbiles
+rdfs:label:br	Leur genweturañ
+rdfs:label:cs	Sdílení aut
+rdfs:label:pt-BR	Aluguel de Carro
+rdfs:label:de	Carsharing
+rdfs:label:hr	Carsharing
+rdfs:label:es	Vehículo compartido
+rdfs:label:sk	Autopožičovňa
+rdfs:label:ca	Per Compartir Cotxe
+rdfs:label:he	נקודת שיתוף רכבים
+rdfs:label:da	Delebiler
+rdfs:label:zh-Hans	汽车共享
+rdfs:label:lt	Dalinimosi automobiliu paslauga
+rdfs:label:ms	Kongsi Kereta
+rdfs:label:lv	Auto koplietošana
+rdfs:label:sr-EC	Заједничко коришћење аутомобила
+rdfs:label:mk	Изнајмување автомобил
+url	http://linkedgeodata.org/ontology/CarSharing
+label	CarSharing

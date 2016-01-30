@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node595913266
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Fountain
+rdfs:label	噴水
+dc:modified	2010-12-07T14:45:59+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.444187&long=139.64066#point
+geo:long	139.641
+geo:lat	35.4442
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node595913266
+lgdo:changeset	6574937
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Fountain
+type:label	Fountain
+type:label:ja	噴水

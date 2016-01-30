@@ -1,0 +1,26 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1906470090
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pharmacy
+rdfs:label:en	Tomod's express
+rdfs:label:ja-rm	Tomozu express
+rdfs:label:ja	トモズエクスプレス
+rdfs:label	トモズエクスプレス (Tomod's express)
+dc:modified	2012-09-09T06:59:10+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.443901&long=139.63187#point
+geo:long	139.632
+foaf:phone	+81-45-2602380
+geo:lat	35.4439
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1906470090
+lgdo:changeset	13040199
+lgdo:opening_hours	Mo-Su 10:00-22:00
+lgdo:operator	住商ドラッグストアーズ
+lgdo:source	(URL)
+lgdo:version	1
+lgdo:brand	Tomod's express
+lgdo:branch	伊勢佐木町店
+type:url	http://linkedgeodata.org/ontology/Amenity
+type:label	Amenity
+type:label:ja	

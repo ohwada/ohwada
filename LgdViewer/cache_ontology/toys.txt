@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Toys/key/shop/value/toys
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:en-GB	Toy Shop
+rdfs:label:vi	Tiệm Đồ chơi
+rdfs:label:it	Negozio di giocattoli
+rdfs:label:ast	Xuguetería
+rdfs:label:be-tarask	Крама цацак
+rdfs:label:sv	Leksaksaffär
+rdfs:label:hsb	Wobchod za hrajki
+rdfs:label:pt-BR	Loja de brinquedos
+rdfs:label:eu	Jostailu Denda
+rdfs:label:lv	Rotaļlietu veikals
+rdfs:label:es	Juguetería
+rdfs:label:et	Mänguasjapood
+rdfs:label:ru	Магазин игрушек
+rdfs:label:da	Legetøjsbutik
+rdfs:label:mk	Продавница за играчки
+rdfs:label:fur	Negozi di zugatui
+rdfs:label:sk	Hračkárstvo
+rdfs:label:tr	Oyuncakçı
+rdfs:label:ia	Magazin de joculos
+rdfs:label:tl	Tindahan ng Laruan
+rdfs:label:fi	Lelukauppa
+rdfs:label:sr-EC	Продавница играчака
+rdfs:label:hu	Játékbolt
+rdfs:label:lt	Žaislų parduotuvė
+rdfs:label:aln	Shitore e Lojnave
+rdfs:label:sr-EL	Prodavnica igračaka
+rdfs:label:arz	متجر ألعاب
+rdfs:label:ca	Botiga de joguines
+rdfs:label:ar	متجر ألعاب
+rdfs:label:de	Spielwarengeschäft
+rdfs:label:br	Stal c'hoarielloù
+rdfs:label:hr	Trgovina igračkama
+rdfs:label:he	חנות צעצועים
+rdfs:label:fr	Magasin de jouets
+rdfs:label:gl	Xoguetaría
+rdfs:label:nds	Speeltüügladen
+rdfs:label:is	Leikfangaverslunin
+rdfs:label:uk	Іграшки
+rdfs:label:sl	Trgovina igrač
+rdfs:label:ms	Kedai Mainan
+rdfs:label:pl	Sklep z zabawkami
+rdfs:label:dsb	Wobchod za grajki
+rdfs:label:ka	სათამაშოების მაღაზია
+rdfs:label:no	Lekebutikk
+rdfs:label:zh-Hans	玩具店
+rdfs:label:zh-Hant	玩具店
+rdfs:label:ja	玩具店
+rdfs:label:af	Speelgoedwinkel
+rdfs:label:nl	Speelgoedwinkel
+rdfs:label:cs	Hračkářství
+url	http://linkedgeodata.org/ontology/Toys
+label	Toys

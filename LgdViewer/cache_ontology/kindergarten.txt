@@ -1,0 +1,57 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Kindergarten/key/amenity/value/kindergarten
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:fa	کودکستان
+rdfs:label:ja	幼稚園
+rdfs:label:dsb	Źiśownja
+rdfs:label:hsb	Pěstowarnja
+rdfs:label:sr-EC	Обданиште
+rdfs:label:sr-EL	Obdanište
+rdfs:label:nl	Kleuterschool
+rdfs:label:pl	Przedszkole
+rdfs:label:ku-Latn	zarrokxane
+rdfs:label:hu	Óvoda
+rdfs:label:et	Lasteaed
+rdfs:label:sk	Materská škola
+rdfs:label:no	Barnehage
+rdfs:label:tr	Kreş
+rdfs:label:pt-BR	Jardim de infância
+rdfs:label:ia	Schola pro juvene infantes
+rdfs:label:cs	Mateřská škola
+rdfs:label:lb	Spillschoul
+rdfs:label:ka	საბავშვო ბაღი
+rdfs:label:ps	وړکتون
+rdfs:label:el	Νηπιαγωγείο
+rdfs:label:mk	Градинка
+rdfs:label:da	Børnehave
+rdfs:label:br	Liorzh ar vugale
+rdfs:label:be-tarask	Дзіцячы садок
+rdfs:label:lt	Vaikų darželis
+rdfs:label:ast	Guardería
+rdfs:label:af	Kleuterskool
+rdfs:label:fr	Jardin d'enfant
+rdfs:label:es	Jardín de infancia
+rdfs:label:fur	Scuelute
+rdfs:label:ar	حضانة أطفال
+rdfs:label:gl	Xardín de infancia
+rdfs:label:eu	Haurtzaindegi
+rdfs:label:aln	Kopshti i fëmijëve
+rdfs:label:fi	Päiväkoti
+rdfs:label:uk	Дитячий садок
+rdfs:label:he	גן ילדים
+rdfs:label:sl	Vrtec
+rdfs:label:vi	Tiểu học
+rdfs:label:en-GB	Kindergarten
+rdfs:label:tl	Kindergarten
+rdfs:label:de	Kindergarten
+rdfs:label:nds	Kinnergoorn
+rdfs:label:lv	Bērnudārzs
+rdfs:label:sv	Dagis
+rdfs:label:arz	حضانه أطفال
+rdfs:label:it	Asilo infantile
+rdfs:label:ms	Tadika
+rdfs:label:ca	Jardí d'infància
+rdfs:label:hr	Dječji vrtić
+rdfs:label:ru	Детский сад
+rdfs:label:zh-Hans	幼儿园
+url	http://linkedgeodata.org/ontology/Kindergarten
+label	Kindergarten

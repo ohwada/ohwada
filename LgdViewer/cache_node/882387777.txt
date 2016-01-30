@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node882387777
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Bar
+rdfs:label	BankArt
+dc:modified	2013-04-27T09:51:47+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.450375&long=139.64041#point
+geo:long	139.64
+geo:lat	35.4504
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+geom:geometry	http://linkedgeodata.org/geometry/node882387777
+lgdo:changeset	15880325
+lgdo:version	4
+type:url	http://linkedgeodata.org/ontology/Bar
+type:label	Bar
+type:label:ja	バー (立ち飲み屋)

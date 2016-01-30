@@ -1,0 +1,20 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node581536194
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label	高田屋 (Takadaya)
+dc:modified	2011-12-18T05:26:31+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442242&long=139.63718#point
+geo:long	139.637
+foaf:phone	0456417751
+geo:lat	35.4422
+dc:contributor	http://linkedgeodata.org/triplify/user162590
+geom:geometry	http://linkedgeodata.org/geometry/node581536194
+lgdo:changeset	10143678
+lgdo:opening_hours	11:00-23:30
+lgdo:version	4
+http://www.w3.org/1999/02/22-rdf-syntax-ns#comment	北前そば高田屋関内南口店
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン

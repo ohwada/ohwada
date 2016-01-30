@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1734796344
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Cafe
+rdfs:label	タリーズ 横浜馬車道店
+dc:modified	2013-04-19T15:44:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.447212&long=139.63544#point
+geo:long	139.635
+geo:lat	35.4472
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1734796344
+lgdo:changeset	15785691
+lgdo:source	survey; Bing
+lgdo:version	3
+lgdo:contact%3Aphone	045-222-3521
+type:url	http://linkedgeodata.org/ontology/Cafe
+type:label	Cafe
+type:label:ja	喫茶店

@@ -1,0 +1,56 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BusStation/key/amenity/value/bus_station
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:tl	Himpilan ng Bus
+rdfs:label:fur	Stazion des corieris
+rdfs:label:fi	Linja-autoasema
+rdfs:label:lt	Autobusų stotis
+rdfs:label:de	Busbahnhof
+rdfs:label:en-GB	Bus Station
+rdfs:label:gl	Estación de autobuses
+rdfs:label:es	Estación de autobuses
+rdfs:label:ka	ავტობუსის გაჩერება
+rdfs:label:mk	Автобуска станица
+rdfs:label:ms	Stesen Bas
+rdfs:label:lb	Busarrêt
+rdfs:label:lv	Autoosta
+rdfs:label:ast	Estación d'autobús
+rdfs:label:zh-Hans	公交主站
+rdfs:label:uk	Автовокзал
+rdfs:label:ia	Station de autobus
+rdfs:label:hr	Autobusni kolodvor
+rdfs:label:hu	Autóbusz-állomás
+rdfs:label:no	Busstasjon
+rdfs:label:he	תחנת אוטובוס
+rdfs:label:aln	Stacioni i Autobusave
+rdfs:label:bn	বাস স্টেশন
+rdfs:label:ca	Estació d'autobusos
+rdfs:label:da	Busstation
+rdfs:label:sv	Busstation
+rdfs:label:nl	Busstation
+rdfs:label:sk	Autobusová stanica
+rdfs:label:ar	محطة حافلات
+rdfs:label:sr-EL	Autobuska stanica
+rdfs:label:tr	Otogar
+rdfs:label:et	Bussijaam
+rdfs:label:hsb	Busowe dwórnišćo
+rdfs:label:dsb	Busowe dwórnišćo
+rdfs:label:arz	محطه حافلات
+rdfs:label:vi	Trạm Xe buýt
+rdfs:label:ru	Автобусная станция
+rdfs:label:it	Stazione degli autobus
+rdfs:label:cs	Autobusové nádraží
+rdfs:label:pt-BR	Estação de Ônibus/Rodoviária
+rdfs:label:is	Strætóstöð
+rdfs:label:eu	Autobus-geltoki
+rdfs:label:br	Arsav bus
+rdfs:label:pl	Stacja autobusowa
+rdfs:label:el	Σταθμός Λεωφορείου
+rdfs:label:sr-EC	Аутобуска станица
+rdfs:label:af	Bushalte
+rdfs:label:be-tarask	Аўтобусны прыпынак
+rdfs:label:ja	バス停
+rdfs:label:ps	د بسونو اډه
+rdfs:label:sl	Avtobusna postaja
+rdfs:label:fr	Arrêt de bus
+url	http://linkedgeodata.org/ontology/BusStation
+label	BusStation

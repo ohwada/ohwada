@@ -1,0 +1,43 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Convenience/key/shop/value/convenience
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:zh-Hant	便利店
+rdfs:label:zh-Hans	便利店
+rdfs:label:hr	Minimarket
+rdfs:label:sl	Minimarket
+rdfs:label:it	Minimarket
+rdfs:label:sv	Närköp
+rdfs:label:ast	Alimentación
+rdfs:label:cs	Smíšené zboží
+rdfs:label:be-tarask	Крама
+rdfs:label:dsb	Kšamarska loda
+rdfs:label:hu	Kisbolt
+rdfs:label:lt	Parduotuvė
+rdfs:label:tl	Tindahang Maginhawa
+rdfs:label:sr-EL	Potrepštine
+rdfs:label:ca	Botiga de conveniència
+rdfs:label:br	Ispiserezh
+rdfs:label:da	Kiosk
+rdfs:label:es	Pequeño supermercado
+rdfs:label:arz	متجر للأغراض اليومية
+rdfs:label:no	Nærbutikk
+rdfs:label:ar	متجر للأغراض اليومية
+rdfs:label:pt-BR	Loja de conveniência
+rdfs:label:hsb	Miniwiki
+rdfs:label:he	מכולת
+rdfs:label:nl	Gemakswinkel
+rdfs:label:af	Gemakswinkel
+rdfs:label:fi	Lähikauppa
+rdfs:label:pl	Mały sklep wielobranżowy
+rdfs:label:fr	Épicerie
+rdfs:label:sr-EC	Потрепштине
+rdfs:label:vi	Tiệm Tập hóa
+rdfs:label:uk	Мінімаркет
+rdfs:label:en-GB	Convenience Store
+rdfs:label:mk	Бакалница
+rdfs:label:ia	Magazin de quartiero
+rdfs:label:ru	Ларёк
+rdfs:label:gl	Tenda 24 horas
+rdfs:label:aln	Komoditet Shitore
+rdfs:label:de	Minimarkt
+url	http://linkedgeodata.org/ontology/Convenience
+label	Convenience

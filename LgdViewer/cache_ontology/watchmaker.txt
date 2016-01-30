@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Watchmaker/key/craft/value/watchmaker
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Craft
+url	http://linkedgeodata.org/ontology/Watchmaker
+label	Watchmaker

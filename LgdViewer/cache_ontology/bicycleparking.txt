@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BicycleParking/key/amenity/value/bicycle_parking
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:lv	Velosipēdu novietne
+rdfs:label:fi	Pyöräparkki
+rdfs:label:cs	Parkoviště pro kola
+rdfs:label:sr-EC	Бициклистички паркинг
+rdfs:label:dsb	Zmakanišćo za kólasa
+rdfs:label:vi	Chỗ Đậu Xe đạp
+rdfs:label:ca	Aparcament de Bicicletes
+rdfs:label:pt-BR	Estacionamento de bicicletas
+rdfs:label:en-GB	Cycle Parking
+rdfs:label:ka	ველოსიპედების სადგომი
+rdfs:label:mk	Велосипедско паркирање
+rdfs:label:ru	Велопарковка
+rdfs:label:ar	موقف دراجات
+rdfs:label:arz	موقف دراجات
+rdfs:label:aln	parkimi për biçikleta
+rdfs:label:pl	Parking rowerowy
+rdfs:label:be-tarask	Стаянка для ровараў
+rdfs:label:es	Aparcamiento de bibicletas
+rdfs:label:sl	Parkirišče za kolesa
+rdfs:label:ast	Aparcaderu de bicicletes
+rdfs:label:tl	Paradahan ng Bisikleta
+rdfs:label:sk	Parkovisko bicyklov
+rdfs:label:ia	Stationamento pro bicyclettas
+rdfs:label:hr	Biciklistički parking
+rdfs:label:sr-EL	Biciklistički parking
+rdfs:label:nl	Fietsenstalling
+rdfs:label:ja	駐輪場
+rdfs:label:lt	Dviračių stovėjimo aikštelė
+rdfs:label:da	Cykelparkering
+rdfs:label:sv	Cykelparkering
+rdfs:label:uk	Місце стоянки для велосипедів
+rdfs:label:af	Fietsparkering
+rdfs:label:de	Fahrrad-Stellplatz
+rdfs:label:et	Jalgrattaparkla
+rdfs:label:he	חניית אופניים
+rdfs:label:it	Parcheggio per biciclette
+rdfs:label:gl	Aparcadoiro de bicicletas
+rdfs:label:hu	Kerékpártároló
+rdfs:label:fr	Parking à vélos
+rdfs:label:nds	Rad-Parkplatz
+rdfs:label:hsb	Wotstajenišćo za kolesa
+rdfs:label:tr	Bisiklet Parkı
+rdfs:label:ms	Letak Basikal
+rdfs:label:br	Parklec'h evit ar beloioù
+rdfs:label:no	Sykkelparkering
+rdfs:label:zh-Hans	自行车停车
+url	http://linkedgeodata.org/ontology/BicycleParking
+label	BicycleParking

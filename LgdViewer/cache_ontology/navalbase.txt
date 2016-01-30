@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/NavalBase/key/military/value/naval_base
+rdfs:subClassOf	http://linkedgeodata.org/ontology/MilitaryThing
+url	http://linkedgeodata.org/ontology/NavalBase
+label	NavalBase

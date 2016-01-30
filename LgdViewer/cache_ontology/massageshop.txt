@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/MassageShop/key/shop/value/massage
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+url	http://linkedgeodata.org/ontology/MassageShop
+label	MassageShop

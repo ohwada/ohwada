@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/RailwayStation/key/railway/value/station
+rdfs:subClassOf	http://linkedgeodata.org/ontology/RailwayThing
+rdfs:label:be-tarask	Чыгуначная станцыя
+rdfs:label:tr	Tren istasyonu
+rdfs:label:lt	Geležinkelio stotis
+rdfs:label:fi	Rautatieasema
+rdfs:label:ru	Железнодорожная станция
+rdfs:label:ia	Station ferroviari
+rdfs:label:no	Jernbanestasjon
+rdfs:label:pl	Stacja kolejowa
+rdfs:label:cs	Železniční stanice
+rdfs:label:ar	محطة قطار
+rdfs:label:vi	Nhà ga
+rdfs:label:pt-BR	Estação de Trem
+rdfs:label:en-GB	Railway Station
+rdfs:label:ca	Estació de tren
+rdfs:label:ast	Estación de tren
+rdfs:label:uk	Залізнична станція
+rdfs:label:tl	Himpilan ng Daambakal
+rdfs:label:br	Porzh-houarn
+rdfs:label:sk	Železničná stanica
+rdfs:label:gl	Estación de ferrocarril
+rdfs:label:sl	Železniška postaja
+rdfs:label:nl	Spoorwegstation
+rdfs:label:arz	محطه قطار
+rdfs:label:el	Σιδηροδρομικός Σταθμός
+rdfs:label:es	Estación de trenes
+rdfs:label:mk	Железничка станица
+rdfs:label:sr-EC	Железничка станица
+rdfs:label:eu	Tren Geltokia
+rdfs:label:de	Bahnhof
+rdfs:label:ka	რკინიგზის სადგური
+rdfs:label:ms	Stesen Keretapi
+rdfs:label:et	Raudteejaam
+rdfs:label:dsb	Dwórnišćo
+rdfs:label:hsb	Dwórnišćo
+rdfs:label:fur	Stazion de ferade
+rdfs:label:he	תחנת רכבת
+rdfs:label:hr	Željeznički kolodvor
+rdfs:label:sv	Tågstation
+rdfs:label:ja	鉄道駅
+rdfs:label:aln	Stacion hekurudhor
+rdfs:label:fr	Gare ferroviaire
+rdfs:label:da	Jernbanestation
+rdfs:label:it	Stazione ferroviaria
+rdfs:label:hu	Vasútállomás
+rdfs:label:af	Spoorwegstasie
+rdfs:label:lv	Dzelzceļa stacija
+rdfs:label:sr-EL	Železnička stanica
+rdfs:label:zh-Hans	火车站
+rdfs:label:lb	Gare (Eisebunn)
+url	http://linkedgeodata.org/ontology/RailwayStation
+label	RailwayStation

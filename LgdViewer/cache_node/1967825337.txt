@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1967825337
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label	Hotto Motto
+dc:modified	2013-04-19T15:31:56+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445648&long=139.63995#point
+geo:long	139.64
+geo:lat	35.4456
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1967825337
+lgdo:changeset	15785558
+lgdo:version	3
+lgdo:wheelchair	http://linkedgeodata.org/ontology/wheelchair_yes
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

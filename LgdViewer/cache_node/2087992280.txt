@@ -1,0 +1,16 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2087992280
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Shop
+rdfs:label	サンロード
+dc:modified	2012-12-30T05:13:08+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.481503&long=138.80264#point
+geo:long	138.803
+geo:lat	35.4815
+dc:contributor	http://linkedgeodata.org/triplify/user621319
+geom:geometry	http://linkedgeodata.org/geometry/node2087992280
+lgdo:changeset	14459501
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Shop
+type:label	Shop
+type:label:ja	店舗

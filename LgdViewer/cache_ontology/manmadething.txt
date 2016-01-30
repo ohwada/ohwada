@@ -1,0 +1,3 @@
+lgdm:sourceKey	man_made
+url	http://linkedgeodata.org/ontology/ManMadeThing
+label	ManMadeThing

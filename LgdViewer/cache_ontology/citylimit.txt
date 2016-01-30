@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CityLimit/key/boundary/value/city_limit
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Boundary
+url	http://linkedgeodata.org/ontology/CityLimit
+label	CityLimit

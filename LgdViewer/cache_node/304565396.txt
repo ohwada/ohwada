@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node304565396
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PlaceOfWorship
+rdfs:label:en	Ma Zhu Miao
+rdfs:label:ja	媽祖廟 (天后宮)
+rdfs:label	媽祖廟 Ma Zhu Miao
+dc:modified	2010-12-14T13:34:21+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442127&long=139.64774#point
+geo:long	139.648
+geo:lat	35.4421
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node304565396
+lgdo:changeset	6657831
+lgdo:version	4
+type:url	http://linkedgeodata.org/ontology/PlaceOfWorship
+type:label	PlaceOfWorship
+type:label:ja	神社仏閣

@@ -1,0 +1,3 @@
+lgdm:sourceKey	barrier
+url	http://linkedgeodata.org/ontology/BarrierThing
+label	BarrierThing

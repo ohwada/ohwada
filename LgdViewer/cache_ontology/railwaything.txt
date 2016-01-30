@@ -1,0 +1,3 @@
+lgdm:sourceKey	railway
+url	http://linkedgeodata.org/ontology/RailwayThing
+label	RailwayThing

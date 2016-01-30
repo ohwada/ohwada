@@ -1,0 +1,44 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/EstateAgent/key/shop/value/estate_agent
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:tr	Emlakçı
+rdfs:label:br	Kourater tiez
+rdfs:label:vi	Văn phòng Bất động sản
+rdfs:label:be-tarask	Агенцтва нерухомасьці
+rdfs:label:de	Imobilienhändler
+rdfs:label:lv	Nekustamā īpašuma aģents
+rdfs:label:tl	Ahente ng Lupain
+rdfs:label:es	Inmobiliaria
+rdfs:label:nl	Makelaar
+rdfs:label:sk	Realitná kancelária
+rdfs:label:sr-EL	Agent za nekretnine
+rdfs:label:ast	Axencia inmobiliaria
+rdfs:label:gl	Axencia inmobiliaria
+rdfs:label:da	Ejendomsmægler
+rdfs:label:it	Agenzia immobiliare
+rdfs:label:mk	Недвижности
+rdfs:label:aln	agjent immobile
+rdfs:label:arz	وكيل عقاري
+rdfs:label:ar	وكيل عقاري
+rdfs:label:ia	Agentia immobiliari
+rdfs:label:hsb	Makler z imobilijemi
+rdfs:label:sv	Egendomsmäklare
+rdfs:label:eu	Higiezinen agente
+rdfs:label:lt	Nekilnojamojo turto agentas
+rdfs:label:en-GB	Estate Agent
+rdfs:label:ca	Immobiliària
+rdfs:label:ru	Продажа недвижимости
+rdfs:label:dsb	Maklaŕ gruntow
+rdfs:label:hr	Agencija za nekretnine
+rdfs:label:pt-BR	Imobiliária
+rdfs:label:sl	Nepremičninska agencija
+rdfs:label:no	Eiendomsmegler
+rdfs:label:pl	Biuro nieruchomości
+rdfs:label:zh-Hant	地產代理
+rdfs:label:cs	Realitní kancelář
+rdfs:label:uk	Агентство нерухомості
+rdfs:label:zh-Hans	房产中介
+rdfs:label:sr-EC	Агент за некретнине
+rdfs:label:fr	Agent immobilier
+rdfs:label:hu	Ingatlankereskedés
+url	http://linkedgeodata.org/ontology/EstateAgent
+label	EstateAgent

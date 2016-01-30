@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Gift/key/shop/value/gift
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:lt	Dovanų parduotuvė
+rdfs:label:is	Gjafabúðin
+rdfs:label:af	Geskenkwinkel
+rdfs:label:sl	Prodajalna daril
+rdfs:label:fr	Boutique de cadeaux
+rdfs:label:dsb	Wobchod za dary
+rdfs:label:hsb	Wobchod za dary
+rdfs:label:tr	Hediye eşya
+rdfs:label:ja	ギフトショップ
+rdfs:label:fi	Lahjakauppa
+rdfs:label:en-GB	Gift Shop
+rdfs:label:vi	Tiệm Quà tặng
+rdfs:label:lv	Dāvanu veikals
+rdfs:label:sr-EL	Suvenirnica
+rdfs:label:br	Stal profoù
+rdfs:label:aln	Shitore e Dhuratave
+rdfs:label:he	חנות מתנות
+rdfs:label:zh-Hant	禮品店
+rdfs:label:no	Gavebutikk
+rdfs:label:hr	Poklon trgovina
+rdfs:label:arz	متجر هدايا
+rdfs:label:ar	متجر هدايا
+rdfs:label:mk	Дуќан за подароци
+rdfs:label:cs	Dárkové zboží, suvenýry
+rdfs:label:ca	Botiga de regals
+rdfs:label:nds	Geschenkladen
+rdfs:label:sk	Suveníry
+rdfs:label:ru	Магазин подарков
+rdfs:label:eu	Opari-denda
+rdfs:label:ia	Boteca de donos
+rdfs:label:it	Articoli da regalo
+rdfs:label:zh-Hans	礼品店
+rdfs:label:da	Souvenirbutik
+rdfs:label:ka	საჩუქრების მაღაზია
+rdfs:label:de	Geschenkeladen
+rdfs:label:tl	Tindahan ng Regalo
+rdfs:label:pl	Sklep z pamiątkami
+rdfs:label:hu	Ajándékbolt
+rdfs:label:nl	Cadeauwinkel
+rdfs:label:pt-BR	Loja de presentes
+rdfs:label:be-tarask	Крама падарункаў
+rdfs:label:es	Tienda de regalos
+rdfs:label:ast	Tienda de regalos
+rdfs:label:uk	Подарунки
+rdfs:label:sr-EC	Сувенирница
+rdfs:label:gl	Tenda de agasallos
+rdfs:label:sv	Presentaffär
+url	http://linkedgeodata.org/ontology/Gift
+label	Gift

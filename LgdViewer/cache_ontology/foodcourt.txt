@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FoodCourt/key/amenity/value/food_court
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+url	http://linkedgeodata.org/ontology/FoodCourt
+label	FoodCourt

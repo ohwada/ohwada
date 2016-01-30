@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Courthouse/key/amenity/value/courthouse
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:hr	Sud
+rdfs:label:sr-EL	Sud
+rdfs:label:ia	Tribunal
+rdfs:label:fr	Palais de justice
+rdfs:label:fa	دادگاه
+rdfs:label:es	Juzgado
+rdfs:label:de	Gericht
+rdfs:label:nds	Gericht
+rdfs:label:it	Tribunale
+rdfs:label:tr	Adliye
+rdfs:label:ru	Помещение суда
+rdfs:label:fi	Oikeustalo
+rdfs:label:gl	Xulgado
+rdfs:label:no	Rettsbygning
+rdfs:label:br	Lez-varn
+rdfs:label:ast	Xulgáu
+rdfs:label:lt	Teismo pastatas
+rdfs:label:sl	Sodišče
+rdfs:label:tl	Gusali ng Hukuman
+rdfs:label:sk	Súd
+rdfs:label:af	Hof
+rdfs:label:cs	Soud
+rdfs:label:pl	Sąd
+rdfs:label:da	Retsbygning
+rdfs:label:pt-BR	Fórum
+rdfs:label:et	Kohtuhoone
+rdfs:label:ca	Jutjat
+rdfs:label:ja	裁判所
+rdfs:label:eu	Epaitegia
+rdfs:label:arz	محكمة
+rdfs:label:ar	محكمة
+rdfs:label:sr-EC	Суд
+rdfs:label:be-tarask	Суд
+rdfs:label:uk	Суд
+rdfs:label:mk	Суд
+rdfs:label:ka	სასამართლო
+rdfs:label:aln	Ndërtesë e gjyqit
+rdfs:label:el	Δικαστήριο
+rdfs:label:hu	Bíróság
+rdfs:label:lv	Tiesa
+rdfs:label:dsb	Sudnistwo
+rdfs:label:hsb	Sudnistwo
+rdfs:label:en-GB	Courthouse
+rdfs:label:vi	Tòa
+rdfs:label:ms	Mahkamah
+rdfs:label:nl	Rechtbank
+rdfs:label:zh-Hans	法庭
+rdfs:label:he	בית משפט
+rdfs:label:sv	Tingshus
+url	http://linkedgeodata.org/ontology/Courthouse
+label	Courthouse

@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Clock/key/amenity/value/clock
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+url	http://linkedgeodata.org/ontology/Clock
+label	Clock

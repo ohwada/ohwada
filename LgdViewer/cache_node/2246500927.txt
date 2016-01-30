@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246500927
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label	そば処 辰巳庵
+dc:modified	2013-04-03T16:17:07+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246500927
+geo:lat	35.4444
+geo:long	139.627
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15595381
+lgdo:cuisine	noodle
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.444374&long=139.62679#point
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン

@@ -1,0 +1,25 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1655770248
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/SocialFacility
+rdfs:label	小規模通所授産施設ありんこ
+dc:modified	2012-03-02T11:14:45+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.487686&long=138.80258#point
+geo:long	138.803
+geo:lat	35.4877
+dc:contributor	http://linkedgeodata.org/triplify/user393606
+geom:geometry	http://linkedgeodata.org/geometry/node1655770248
+lgdo:changeset	10846518
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	1
+lgdo:KSJ2%3AADS	下吉田562
+lgdo:KSJ2%3AAdminArea	山梨県富士吉田市
+lgdo:KSJ2%3APubFacAdmin	民間
+lgdo:social_facility	assisted_living
+type:url	http://linkedgeodata.org/ontology/SocialFacility
+type:label	SocialFacility
+type:label:ja	

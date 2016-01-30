@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">身勝手ぐるめ</string>
+
+<!-- メイン -->
+    <string name="main_message">好きなところに\nタッチしてください</string>
+    <string name="main_no_loc_manager">GPS機能が無効です</string>
+
+<!-- 地図 -->
+    <string name="map_search">検索</string>
+    <string name="map_next">決定 (次へ)</string>
+    <string name="map_searching">検索中</string>
+    <string name="map_found">見つかりました</string>
+    <string name="map_not_found">地名が見つかりません</string>
+    <string name="map_message">位置を確認してください</string>
+    <string name="map_no_location">位置情報が取得できません</string>
+    <string name="map_setting_message">デフォルトの位置を指定してください\nGPSから位置情報が取得できないときに使用します</string>
+    <string name="map_set">位置情報を保存しました</string>
+    <string name="map_latitude">35.466592</string>
+    <string name="map_longitude">139.622149</string>
+    <string name="map_zoom">15</string>
+
+<!-- 詳細 -->
+    <string name="detail_ok">つぶやく</string>
+    <string name="detail_ng">もう一度</string>
+    <string name="detail_gnavi_logo">提供：ぐるなび</string>
+    <string name="detail_twitter_fail">Twitter情報が取得できなかった</string>
+    <string name="detail_feeling">な気分</string>
+
+<!-- 失敗 -->
+    <string name="fail_keyword">に該当するお店が見つかりません</string>
+    <string name="fail_location">この付近にお店が見つかりません</string>
+
+<!-- メニュー -->
+    <string name="menu_map_title">位置情報</string>
+    <string name="menu_map_label">位置情報の設定</string>
+    <string name="menu_map_shortcut">m</string>
+    <string name="menu_start_title">開始</string>
+    <string name="menu_start_label">開始</string>
+    <string name="menu_start_shortcut">n</string>
+    <string name="menu_settings_title">設定</string>
+    <string name="menu_settings_label">設定</string>
+    <string name="menu_settings_shortcut">s</string>
+    <string name="menu_debug_title">デバック</string>
+    <string name="menu_debug_label">デバック</string>
+    <string name="menu_debug_shortcut">d</string>
+    <string name="menu_reserved">将来の予備</string>
+    <string name="debug_month_title">月</string>
+    <string name="debug_month_summary">デバック用 01...12</string>
+    <string name="debug_day_title">日</string>
+    <string name="debug_day_summary">デバック用 01...31</string>
+
+<!-- select キーワード -->
+    <string name="keywords_left_up">焼肉,牛,豚,串焼,鶏,焼鳥,ホルモン,飲放,コース,鍋,居酒屋</string>
+    <string name="keywords_left_down">新鮮,海鮮,刺身,魚,寿司,海老,鍋,野菜,蟹,ヘルシー,ワイン</string>
+    <string name="keywords_right_up">エスニック,無国籍,しゃぶしゃぶ,お子様,ベビーベッド,リーズナブル,テイクアウト,アジア,イタリアン</string>
+    <string name="keywords_right_down">野菜,個室,貸切可,座敷,掘りごたつ,ヘルシー,和風</string>
+
+<!-- simple キーワード -->
+    <string name="keyword_22">カレー</string>
+    <string name="keyword_29">肉</string>
+    <string name="layout_22">main_curry</string>
+    <string name="layout_29">main_meat</string>
+
+</resources>

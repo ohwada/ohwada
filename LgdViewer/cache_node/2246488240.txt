@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246488240
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label	九州とんこつラーメン 武者がよか
+dc:modified	2013-04-03T16:11:07+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246488240
+geo:lat	35.4457
+geo:long	139.628
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15595307
+lgdo:cuisine	ramen
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445709&long=139.62767#point
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

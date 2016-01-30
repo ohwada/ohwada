@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246503626
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label	横浜長浜ラーメン たつ屋
+dc:modified	2013-04-03T16:17:40+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246503626
+geo:lat	35.4441
+geo:long	139.626
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15595389
+lgdo:cuisine	ramen
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.44408&long=139.6264#point
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

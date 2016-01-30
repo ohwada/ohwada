@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/SocialFacility/key/amenity/value/social_facility
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+url	http://linkedgeodata.org/ontology/SocialFacility
+label	SocialFacility

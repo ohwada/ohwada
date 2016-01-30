@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    >
+
+	<include layout="@layout/button_menu" /> 	
+						
+	<TextView android:id="@+id/place_textview_label"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="4dp"
+		android:textSize="20sp"
+		/>
+		
+    <TextView 
+    	android:id="@+id/textview_error"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+		/>
+		
+    <ListView 
+    	android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"  
+		android:layout_weight="1" 
+        />
+        
+	<LinearLayout
+		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_margin="4dp"
+ 		>
+
+ 		<Button android:id="@+id/place_button_homepage" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="8sp"
+ 			android:text="@string/button_homepage" />
+ 
+  		<Button android:id="@+id/place_button_wiki" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+ 			android:text="@string/button_wiki" />
+ 						
+ 		<Button android:id="@+id/place_button_map" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+ 			android:text="@string/button_map" />
+
+ 		<Button android:id="@+id/place_button_phone" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/btn_default_small"
+			android:textSize="12sp"
+ 			android:text="@string/button_phone" />
+ 			 		 		
+	</LinearLayout>
+ 		                        
+</LinearLayout>

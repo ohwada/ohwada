@@ -1,0 +1,39 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Wine/key/shop/value/wine
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:vi	Tiệm Rượu
+rdfs:label:cs	Vinárna
+rdfs:label:pl	Winiarnia
+rdfs:label:sr-EL	Trgovina pićem
+rdfs:label:tr	Şarap evi
+rdfs:label:gl	Tenda de licores
+rdfs:label:tl	Wala sa Lisensiya
+rdfs:label:it	Alcolici
+rdfs:label:es	Licorería
+rdfs:label:mk	Алкохолни пијалоци
+rdfs:label:sk	Mimo povolenia
+rdfs:label:ar	متجر نبيذ للبيع الخارجي
+rdfs:label:aln	kiosk
+rdfs:label:br	Kavour gwin
+rdfs:label:dsb	Wobchod za spirituoze
+rdfs:label:en-GB	Off License
+rdfs:label:da	Vinforretning
+rdfs:label:ast	Venta de bébores
+rdfs:label:fr	Caviste
+rdfs:label:nl	Slijterij
+rdfs:label:de	Weinkost
+rdfs:label:hsb	Wobchod za spirituozy
+rdfs:label:zh-Hans	无许可证
+rdfs:label:sv	Alkoholbutik
+rdfs:label:ia	Magazin de vinos
+rdfs:label:sr-EC	Трговина пићем
+rdfs:label:uk	Вино
+rdfs:label:hr	Vinoteka
+rdfs:label:sl	Vinoteka
+rdfs:label:no	Utenfor lisens
+rdfs:label:hu	Borárusító italbolt
+rdfs:label:pt-BR	Loja de vinhos
+rdfs:label:ru	Винный магазин
+rdfs:label:be-tarask	Алькагольная крама
+rdfs:label:ca	De llicència
+url	http://linkedgeodata.org/ontology/Wine
+label	Wine

@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1710654167
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	82 ale house
+dc:modified	2013-04-19T15:32:05+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.446316&long=139.63594#point
+geo:long	139.636
+geo:lat	35.4463
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1710654167
+lgdo:changeset	15785558
+lgdo:source	survey
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

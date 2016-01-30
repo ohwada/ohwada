@@ -1,0 +1,63 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Zoo/key/tourism/value/zoo
+rdfs:subClassOf	http://linkedgeodata.org/ontology/TourismThing
+rdfs:label:ar	حديقة حيوانات
+rdfs:label:sr-EC	Зоолошки врт
+rdfs:label:sr-EL	Zoološki vrt
+rdfs:label:tr	Hayvanat bahçesi
+rdfs:label:he	גן חיות
+rdfs:label:lt	Zoologijos sodas
+rdfs:label:lv	Zooloģiskais dārzs
+rdfs:label:zh-Hans	动物园
+rdfs:label:pt-BR	Zoológico
+rdfs:label:es	Zoológico
+rdfs:label:nds	Zoo
+rdfs:label:fr	Zoo
+rdfs:label:en-GB	Zoo
+rdfs:label:fur	Zoo
+rdfs:label:lb	Zoo
+rdfs:label:hr	Zoo
+rdfs:label:de	Zoo
+rdfs:label:br	Zoo
+rdfs:label:cs	Zoo
+rdfs:label:it	Zoo
+rdfs:label:sk	Zoo
+rdfs:label:ast	Zoo
+rdfs:label:pl	Zoo
+rdfs:label:ka	ზოოპარკი
+rdfs:label:et	Loomaaed
+rdfs:label:ms	Taman Haiwan
+rdfs:label:is	Dýragarður
+rdfs:label:ca	Zoològic
+rdfs:label:sl	Živalski vrt
+rdfs:label:be-tarask	Заапарк
+rdfs:label:ps	ژوبڼ
+rdfs:label:ia	Jardin zoologic
+rdfs:label:nl	Dierentuin
+rdfs:label:vi	Vườn thú
+rdfs:label:gl	Zoolóxico
+rdfs:label:da	Zoologisk have
+rdfs:label:tl	Hayupan
+rdfs:label:eu	Zoologiko
+rdfs:label:arz	حديقه حيوانات
+rdfs:label:te	జంతుప్రదర్శనశాల
+rdfs:label:ku-Latn	Baxçeyê heywanan
+rdfs:label:fi	Eläintarha
+rdfs:label:fa	باغ وحش
+rdfs:label:hsb	Coo
+rdfs:label:ja	動物園
+rdfs:label:zh-Hant	動物園
+rdfs:label:dsb	Coo
+rdfs:label:ru	Зоопарк
+rdfs:label:uk	Зоопарк
+rdfs:label:rue	Зоопарк
+rdfs:label:myv	Зоопарк
+rdfs:label:sq	Kopsht zoologjik
+rdfs:label:no	Dyrepark
+rdfs:label:hu	Állatkert
+rdfs:label:aln	Kopsht Zoologjik
+rdfs:label:mk	Зоолошка
+rdfs:label:af	Dieretuin
+rdfs:label:sv	Djurpark
+rdfs:label:pt	Jardim zoológico
+url	http://linkedgeodata.org/ontology/Zoo
+label	Zoo

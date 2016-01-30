@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1901975047
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PlaceOfWorship
+rdfs:label	玉泉寺
+rdfs:label:ja	玉泉寺
+dc:modified	2012-09-06T12:23:00+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.435562&long=139.63312#point
+geo:long	139.633
+geo:lat	35.4356
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1901975047
+lgdo:changeset	13008102
+lgdo:source	image;Bing 2010
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/PlaceOfWorship
+type:label	PlaceOfWorship
+type:label:ja	神社仏閣

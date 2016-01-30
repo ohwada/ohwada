@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Catere/key/craft/value/caterer
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Craft
+url	http://linkedgeodata.org/ontology/Catere
+label	Catere

@@ -1,0 +1,43 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BeverageMarket/key/shop/value/beverages
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:nl	Frisdrankverkooppunt
+rdfs:label:da	Drikkevareforretning
+rdfs:label:pl	Sklep z napojami
+rdfs:label:ru	Магазин напитков
+rdfs:label:en-GB	Beverages Shop
+rdfs:label:hr	Trgovina pićem
+rdfs:label:sr-EL	Prodavnica pića
+rdfs:label:tl	Tindahan ng mga Inumin
+rdfs:label:es	Tienda de bebidas
+rdfs:label:lt	Gėrimų parduotuvė
+rdfs:label:sk	Občerstvenie
+rdfs:label:hsb	Napojowe wiki
+rdfs:label:br	Stal evajoù
+rdfs:label:he	חנות משקאות
+rdfs:label:arz	متجر مشروبات
+rdfs:label:ar	متجر مشروبات
+rdfs:label:zh-Hans	饮料店
+rdfs:label:cs	Prodej nápojů
+rdfs:label:sr-EC	Продавница пића
+rdfs:label:aln	Pijet Shop
+rdfs:label:no	Drikkevarerbutikk
+rdfs:label:ka	სასმელების მაღაზია
+rdfs:label:ast	Venta de bébores
+rdfs:label:be-tarask	Крама напояў
+rdfs:label:ia	Boteca de bibitas
+rdfs:label:fr	Magasin de boissons
+rdfs:label:pt-BR	Loja/depósito de bebidas
+rdfs:label:lv	Dzērienu veikals
+rdfs:label:vi	Tiệm Đồ uống
+rdfs:label:sl	Trgovina pijač
+rdfs:label:hu	Italbolt
+rdfs:label:gl	Tenda de bebidas
+rdfs:label:ja	飲料ショップ
+rdfs:label:mk	Пијалоци
+rdfs:label:uk	Напої
+rdfs:label:it	Negozio bevande
+rdfs:label:dsb	Piśowy mark
+rdfs:label:de	Getränkemarkt
+rdfs:label:ca	Botiga de begudes
+url	http://linkedgeodata.org/ontology/BeverageMarket
+label	BeverageMarket

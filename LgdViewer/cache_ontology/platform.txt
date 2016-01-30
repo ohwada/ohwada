@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Platform/key/public_transport/value/platform
+rdfs:subClassOf	http://linkedgeodata.org/ontology/PublicTransportThing
+url	http://linkedgeodata.org/ontology/Platform
+label	Platform

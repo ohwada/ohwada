@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2190826589
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	おじゃまむし
+dc:modified	2013-04-19T15:44:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.447952&long=139.63834#point
+geo:long	139.638
+geo:lat	35.448
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2190826589
+lgdo:changeset	15785691
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1906379532
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Bank
+rdfs:label	三井住友銀行
+dc:modified	2012-09-09T05:55:07+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.444553&long=139.63409#point
+geo:long	139.634
+geo:lat	35.4446
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1906379532
+lgdo:changeset	13040135
+lgdo:source	Bing 2010
+lgdo:version	1
+lgdo:atm	1
+type:url	http://linkedgeodata.org/ontology/Bank
+type:label	Bank
+type:label:ja	銀行

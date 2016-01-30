@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- gray  --> 
+    <color name="title_background">#aaaaaa</color>
+	<!-- white  --> 
+	<color name="title_color">#ffffff</color>
+
+	<!-- white  -->    
+	<color name="dialog_about_text">#FFFFFF</color>
+</resources>

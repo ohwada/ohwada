@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Computer/key/shop/value/computer
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:sr-EC	Рачунарска опрема
+rdfs:label:lv	Datorveikals
+rdfs:label:ca	Botiga d'informàtica
+rdfs:label:tr	Bilgisayar Mağazası
+rdfs:label:mk	Продавница за сметачи
+rdfs:label:hr	Computer Shop
+rdfs:label:en-GB	Computer Shop
+rdfs:label:ia	Magazin de computatores
+rdfs:label:he	חנות מחשבים
+rdfs:label:eu	Ordenagailu-denda
+rdfs:label:is	Tölvubúðin
+rdfs:label:ms	Kedai Komputer
+rdfs:label:pt	Loja de informática
+rdfs:label:zh-Hant	電腦商店
+rdfs:label:ru	Компьютерный магазин
+rdfs:label:ast	Tienda d'informática
+rdfs:label:da	Computerforretning
+rdfs:label:pl	Sklep komputerowy
+rdfs:label:de	Computergeschäft
+rdfs:label:sr-EL	Računarska oprema
+rdfs:label:lt	Kompiuterių parduotuvė
+rdfs:label:hu	Számítástechnikai bolt
+rdfs:label:nds	Computerladen
+rdfs:label:br	Stal urzhiataerioù
+rdfs:label:be-tarask	Кампутарная крама
+rdfs:label:cs	Prodej počítačů
+rdfs:label:tl	Tindahan ng Kompyuter
+rdfs:label:sv	Datorbutik
+rdfs:label:arz	متجر كمبيوتر
+rdfs:label:ar	متجر كمبيوتر
+rdfs:label:pt-BR	Loja de computação
+rdfs:label:gl	Tenda informática
+rdfs:label:es	Tienda de informática
+rdfs:label:fr	Magasin informatique
+rdfs:label:sl	Računalniška trgovina
+rdfs:label:uk	Комп’ютерна крамниця
+rdfs:label:af	Rekenaarwinkel
+rdfs:label:vi	Tiệm Máy tính
+rdfs:label:sk	Obchod s počítačmi
+rdfs:label:dsb	Computerowy wobchod
+rdfs:label:nl	Computerwinkel
+rdfs:label:no	Databutikk
+rdfs:label:it	Negozio di computer
+rdfs:label:ka	კომპიუტერების მაღაზია
+rdfs:label:fi	Tietokonekauppa
+rdfs:label:hsb	Kompjuterowy wobchod
+rdfs:label:aln	Shitore e kompjuterave
+rdfs:label:sq	Shitore e kompjuterave
+rdfs:label:et	Arvutikauplus
+rdfs:label:zh-Hans	电脑店
+url	http://linkedgeodata.org/ontology/Computer
+label	Computer

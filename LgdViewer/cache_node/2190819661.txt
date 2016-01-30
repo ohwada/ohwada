@@ -1,0 +1,16 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2190819661
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdfs:label	Gold'd Gym
+dc:modified	2013-04-19T15:44:12+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.448429&long=139.6366#point
+geo:long	139.637
+geo:lat	35.4484
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2190819661
+lgdo:changeset	15785691
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Amenity
+type:label	Amenity
+type:label:ja	

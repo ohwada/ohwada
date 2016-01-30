@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/OfficeSupplies/key/shop/value/office_supplies
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+url	http://linkedgeodata.org/ontology/OfficeSupplies
+label	OfficeSupplies

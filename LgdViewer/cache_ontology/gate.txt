@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Gate/key/barrier/value/gate
+rdfs:subClassOf	http://linkedgeodata.org/ontology/BarrierThing
+url	http://linkedgeodata.org/ontology/Gate
+label	Gate

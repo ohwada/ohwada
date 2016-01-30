@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/NgoOffice/key/office/value/ngo
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Office
+url	http://linkedgeodata.org/ontology/NgoOffice
+label	NgoOffice

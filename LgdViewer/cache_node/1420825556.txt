@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420825556
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PublicBuilding
+rdfs:label	横浜検疫所
+dc:modified	2013-04-19T15:34:02+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.449181&long=139.64236#point
+geo:long	139.642
+geo:lat	35.4492
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1420825556
+lgdo:changeset	15785585
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	3
+lgdo:KSJ2%3AADS	海岸通1-1（横浜第二港湾合同庁舎）
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	国
+type:url	http://linkedgeodata.org/ontology/PublicBuilding
+type:label	PublicBuilding
+type:label:ja	公共建築物

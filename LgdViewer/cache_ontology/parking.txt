@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Parking/key/amenity/value/parking
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:be-tarask	Стаянка
+rdfs:label:uk	Автостоянка
+rdfs:label:ja	駐車場
+rdfs:label:hu	Parkoló
+rdfs:label:nl	Parkeren
+rdfs:label:is	Bílastæði
+rdfs:label:da	Parkering
+rdfs:label:br	Parklec'h
+rdfs:label:et	Parkimisplats
+rdfs:label:sl	Parkirišče
+rdfs:label:ar	موقف سيارات
+rdfs:label:arz	موقف سيارات
+rdfs:label:ca	Pàrquing
+rdfs:label:fr	Parking
+rdfs:label:lb	Parking
+rdfs:label:fa	پارکینگ
+rdfs:label:pl	Parking
+rdfs:label:hr	Parking
+rdfs:label:en-GB	Parking
+rdfs:label:sr-EL	Parking
+rdfs:label:aln	Parking
+rdfs:label:ia	Parking
+rdfs:label:de	Parkplatz
+rdfs:label:nds	Parkplatz
+rdfs:label:af	Parkade
+rdfs:label:cs	Parkoviště
+rdfs:label:ru	Стоянка
+rdfs:label:sk	Parkovisko
+rdfs:label:mk	Паркинг
+rdfs:label:sr-EC	Паркинг
+rdfs:label:zh-Hans	停车场
+rdfs:label:vi	Chỗ Đậu xe
+rdfs:label:ms	Letak Kereta
+rdfs:label:he	חנייה
+rdfs:label:pt-BR	Estacionamento
+rdfs:label:tr	Otopark
+rdfs:label:lt	Stovėjimo aikštelė
+rdfs:label:fi	Parkkipaikka
+rdfs:label:lv	Autostāvvieta
+rdfs:label:ka	ავტოსადგომი
+rdfs:label:hsb	Parkowanišćo
+rdfs:label:dsb	Parkowanišćo
+rdfs:label:gl	Aparcadoiro
+rdfs:label:it	Parcheggio
+rdfs:label:sv	Parkeringsplats
+rdfs:label:tl	Paradahan
+rdfs:label:no	Parkeringsplass
+rdfs:label:ast	Aparcaderu
+rdfs:label:fur	Parcament
+rdfs:label:es	Aparcamiento
+rdfs:label:eu	Aparkaleku
+url	http://linkedgeodata.org/ontology/Parking
+label	Parking

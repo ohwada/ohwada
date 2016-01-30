@@ -1,0 +1,3 @@
+lgdm:sourceKey	boundary
+url	http://linkedgeodata.org/ontology/Boundary
+label	Boundary

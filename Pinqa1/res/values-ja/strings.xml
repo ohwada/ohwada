@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">どこでもPinQA</string>
+		
+<!-- MainActivity -->
+	<string name="button_option">オプション</string>
+	<string name="button_get">情報を取得する</string>
+	<string name="loading">ダウンロード中…</string>
+	<string name="searching">検索中...</string>	
+	<string name="gps_no_manager">GPSが有効になっていません</string>
+	<string name="gps_not_found">GPSの場所が見つかりません</string>
+	<string name="error_not_get_article">記事データが取得できません</string>
+	
+<!-- ArticleActivity -->
+	<string name="button_source">PinQAへ</string>
+	<string name="button_back">戻る</string>
+	<string name="error_not_specify_article">記事が指定されていない</string>	
+
+<!-- MapSettingActivity -->
+	<string name="geo_name">関内</string>
+	<string name="edit_address">住所</string>
+	<string name="button_search">検索</string>
+	<string name="button_location_set">設定</string>
+	<string name="search_please_address">住所を入力してください</string>
+	<string name="search_please_name">名称を入力してください</string>
+	<string name="search_found">場所が見つかりました</string>
+	<string name="search_not_found">指定された住所が見つかりません</string>
+				
+<!-- dialog marker -->
+	<string name="dialog_button_detail">詳細</string>
+	<string name="dialog_button_close">閉じる</string>
+	<string name="dialog_button_app">アプリ連携</string>
+	<string name="dialog_button_navicon">NaviCon連携</string>
+	<string name="navicon_please_install">NaviCon をインストールしてください</string>
+	<string name="market_please_install">GooglePlay をインストールしてください</string>
+			
+<!-- dialog option  -->
+	<string name="dialog_button_gps">GPSへ</string>
+			
+<!-- dialog about -->
+ 	<string name="dialog_about_title">このアプリについて</string>   
+	<string name="dialog_about_main">「どこでもPinQA」は、 PinQA に登録されている情報を地図に表示するアプリケーションです。\n地図の中心から1km以内のノードを表示します。\n\nデータの取得には PinQA LOD API を使用しました。\nこのアプリは、LOD チャレンジ の応募作品です。</string>
+	<string name="dialog_about_pinqa">PinQA</string>
+	<string name="dialog_about_lod">LOD (Linked Open Data) チャレンジ Japan 2012</string>
+	<string name="dialog_about_credit">制作者: 大和田健一</string>
+	
+ <!-- menu -->  
+ 	<string name="menu_about">このアプリについて</string>     
+ 	<string name="menu_usage">使い方</string>     
+	<string name="menu_map_setting">地図の設定</string>
+	<string name="menu_clear">キャッシュを削除する</string>
+					
+</resources>

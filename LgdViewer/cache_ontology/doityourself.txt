@@ -1,0 +1,43 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Doityourself/key/shop/value/doityourself
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:br	Stal bitellat
+rdfs:label:tl	Gawin ng Sarili Mo
+rdfs:label:lt	Pasidaryk pats
+rdfs:label:hsb	Paslerska potrjeba
+rdfs:label:uk	Зроби сам
+rdfs:label:af	Doen-dit-self-winkel
+rdfs:label:ar	براعة منزلية
+rdfs:label:ast	Bricolax
+rdfs:label:nl	Doe-het-zelf-winkel
+rdfs:label:it	Fai da-te
+rdfs:label:da	Gør-det-selv
+rdfs:label:zh-Hans	DIY
+rdfs:label:pl	Sklep budowlany
+rdfs:label:pt-BR	Faça você mesmo
+rdfs:label:en-GB	Do-It-Yourself
+rdfs:label:hu	Barkácsbolt
+rdfs:label:sv	Gör-det-själv
+rdfs:label:hr	Uradi sam
+rdfs:label:sr-EL	Uradi sam
+rdfs:label:sr-EC	Уради сам
+rdfs:label:no	Gjør-det-selv
+rdfs:label:de	Baumarkt
+rdfs:label:be-tarask	Зрабі сам
+rdfs:label:fr	Magasin de bricolage
+rdfs:label:mk	Направи-сам
+rdfs:label:cs	Obchod pro kutily
+rdfs:label:aln	Për ta bërë vetë
+rdfs:label:fi	Tee-se-itse
+rdfs:label:ia	Magazin de bricolage
+rdfs:label:dsb	Wobchod za baslarsku pótrjebu
+rdfs:label:gl	Tenda de bricolaxe
+rdfs:label:arz	براعه منزلية
+rdfs:label:sk	Urob si sám
+rdfs:label:ca	Bricolatge
+rdfs:label:vi	Tiệm Ngũ kim
+rdfs:label:he	חנות עשה-זאת-בעצמך
+rdfs:label:es	Tienda de bricolaje
+rdfs:label:ru	Сделай-Сам
+rdfs:label:sl	Orodjarna
+url	http://linkedgeodata.org/ontology/Doityourself
+label	Doityourself

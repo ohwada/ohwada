@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/AdministrativeBoundary/key/boundary/value/administrative
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Boundary
+rdfs:label:de	Verwaltungsgrenze
+rdfs:label:tl	Hangganang Pampangangasiwa
+rdfs:label:af	Administratiewe grens
+rdfs:label:fi	Hallinnollinen raja
+rdfs:label:dsb	Zastojnstwowa granica
+rdfs:label:pt-BR	Limite Administrativo
+rdfs:label:en-GB	Administrative Boundary
+rdfs:label:lv	Administratīvā robeža
+rdfs:label:br	Bevennoù melestradurel
+rdfs:label:ka	ადმინისტრაციული საზღვარი
+rdfs:label:sr-EC	Административна граница
+rdfs:label:mk	Административна граница
+rdfs:label:fr	Limite administrative
+rdfs:label:ia	Limite administrative
+rdfs:label:pl	Granica administracyjna
+rdfs:label:hsb	Zarjadniska hranica
+rdfs:label:nl	Administratieve grens
+rdfs:label:es	Frontera administrativa
+rdfs:label:ast	Llende alministrativa
+rdfs:label:he	גבול איזור מנהל
+rdfs:label:sl	Upravne meje
+rdfs:label:ca	Administració de Fronteres
+rdfs:label:et	Halduspiir
+rdfs:label:lt	Administracinė riba
+rdfs:label:eu	Muga Administratiboa
+rdfs:label:sv	Administrativ gräns
+rdfs:label:it	Confine amministrativo
+rdfs:label:cs	Administrativní hranice
+rdfs:label:ru	Административная граница
+rdfs:label:ja	行政境界
+rdfs:label:hu	Közigazgatási határ
+rdfs:label:fur	Confin aministratîf
+rdfs:label:tr	İdari Sınır
+rdfs:label:ms	Sempadan Pentadbiran
+rdfs:label:zh-Hans	行政区边界
+rdfs:label:da	Administrativ grænse
+rdfs:label:uk	Адміністративний кордон
+rdfs:label:hr	Administrativna granica
+rdfs:label:sr-EL	Administrativna granica
+rdfs:label:no	Administrativ grense
+rdfs:label:be-tarask	Адміністрацыйная мяжа
+rdfs:label:gl	Límite administrativo
+rdfs:label:vi	Biên giới Hành chính
+rdfs:label:aln	Administrative kufitare
+rdfs:label:ar	حدود إدارية
+rdfs:label:arz	حدود إدارية
+rdfs:label:sk	Administratívne hranice
+url	http://linkedgeodata.org/ontology/AdministrativeBoundary
+label	AdministrativeBoundary

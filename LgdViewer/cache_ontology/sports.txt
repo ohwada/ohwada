@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Sports/key/shop/value/sports
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:lv	Sporta veikals
+rdfs:label:zh-Hant	體育用品店
+rdfs:label:sr-EC	Спортска опрема
+rdfs:label:ar	متجر رياضة
+rdfs:label:arz	متجر رياضة
+rdfs:label:ca	Botiga d'esports
+rdfs:label:lt	Sporto prekių parduotuvė
+rdfs:label:ia	Magazin de sport
+rdfs:label:br	Stal sport
+rdfs:label:hsb	Sportowy wobchod
+rdfs:label:dsb	Sportowy wobchod
+rdfs:label:zh-Hans	体育用品店
+rdfs:label:et	Spordipood
+rdfs:label:sl	Športna trgovina
+rdfs:label:cs	Prodejna pro sportovce
+rdfs:label:lb	Sportsgeschäft
+rdfs:label:he	חנות ספורט
+rdfs:label:pl	Sklep sportowy
+rdfs:label:hu	Sportbolt
+rdfs:label:sk	Športový obchod
+rdfs:label:tr	Spor Malzemeleri Mağazası
+rdfs:label:es	Tienda de artículos deportivos
+rdfs:label:no	Sportsbutikk
+rdfs:label:tl	Tindahang Pampalakasan
+rdfs:label:fi	Urheilukauppa
+rdfs:label:pt-BR	Loja de artigos esportivos
+rdfs:label:eu	Kirol denda
+rdfs:label:de	Sportgeschäft
+rdfs:label:ast	Deportes
+rdfs:label:en-GB	Sports Shop
+rdfs:label:vi	Tiệm Thể thao
+rdfs:label:it	Articoli sportivi
+rdfs:label:el	Κατάστημα Αθλητικών
+rdfs:label:mk	Спортски дуќан
+rdfs:label:aln	Sport Dyqani
+rdfs:label:fr	Magasin de sport
+rdfs:label:da	Sportsforretning
+rdfs:label:sv	Sportaffär
+rdfs:label:ru	Спортивный магазин
+rdfs:label:gl	Tenda de deportes
+rdfs:label:uk	Спортивні товари
+rdfs:label:hr	Trgovina sportskom opremom
+rdfs:label:sr-EL	Sportska oprema
+rdfs:label:nl	Sportwinkel
+rdfs:label:af	Sportwinkel
+rdfs:label:ja	スポーツ用品専門店
+rdfs:label:be-tarask	Спартовая крама
+url	http://linkedgeodata.org/ontology/Sports
+label	Sports

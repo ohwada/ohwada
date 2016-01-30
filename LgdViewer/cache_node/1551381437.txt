@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1551381437
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label	モスバーガー (Mos burger)
+dc:modified	2011-12-18T05:26:31+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442459&long=139.63742#point
+geo:long	139.637
+geo:lat	35.4425
+dc:contributor	http://linkedgeodata.org/triplify/user162590
+geom:geometry	http://linkedgeodata.org/geometry/node1551381437
+lgdo:changeset	10143678
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

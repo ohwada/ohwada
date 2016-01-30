@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420834329
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PublicBuilding
+rdfs:label	駐留軍等労働者労務管理機構横須賀支部横浜分室
+dc:modified	2013-04-19T15:37:20+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.448055&long=139.63351#point
+geo:long	139.634
+geo:lat	35.4481
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1420834329
+lgdo:changeset	15785608
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	3
+lgdo:KSJ2%3AADS	尾上町6-83（MY横浜尾上町ビル）
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	その他
+type:url	http://linkedgeodata.org/ontology/PublicBuilding
+type:label	PublicBuilding
+type:label:ja	公共建築物

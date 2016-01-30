@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1901971043
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PlaceOfWorship
+rdfs:label	淨光寺
+rdfs:label:ja	淨光寺
+dc:modified	2012-09-06T12:18:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.435074&long=139.63603#point
+geo:long	139.636
+geo:lat	35.4351
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1901971043
+lgdo:changeset	13008044
+lgdo:source	Bing 2010
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/PlaceOfWorship
+type:label	PlaceOfWorship
+type:label:ja	神社仏閣

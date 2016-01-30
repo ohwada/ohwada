@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Clockmaker/key/craft/value/clockmaker
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Craft
+url	http://linkedgeodata.org/ontology/Clockmaker
+label	Clockmaker

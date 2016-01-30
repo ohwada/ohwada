@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node608956478
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Police
+rdfs:label	加賀町警察署
+dc:modified	2010-12-12T09:33:16+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.443512&long=139.64363#point
+geo:long	139.644
+geo:lat	35.4435
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node608956478
+lgdo:changeset	6633098
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Police
+type:label	Police
+type:label:ja	警察所

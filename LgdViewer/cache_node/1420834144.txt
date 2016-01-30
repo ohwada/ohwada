@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420834144
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PublicBuilding
+rdfs:label	関東運輸局
+dc:modified	2013-04-19T15:37:19+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.450516&long=139.63731#point
+geo:long	139.637
+geo:lat	35.4505
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1420834144
+lgdo:changeset	15785608
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	3
+lgdo:KSJ2%3AADS	北仲通5-57（横浜第二合同庁舎）
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	国
+type:url	http://linkedgeodata.org/ontology/PublicBuilding
+type:label	PublicBuilding
+type:label:ja	公共建築物

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="4dp"
+	android:orientation="horizontal" >
+
+	<EditText android:id="@+id/search_edittext_address"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:hint="@string/edit_address" 
+		android:singleLine="true" />
+			
+	<Button android:id="@+id/search_button_search"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/button_search" />
+
+	<Button android:id="@+id/map_setting_button_set"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/button_location_set" />
+			
+</LinearLayout>

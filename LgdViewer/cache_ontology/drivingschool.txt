@@ -1,0 +1,56 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/DrivingSchool/key/amenity/value/driving_school
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ar	مدرسة تعليم قيادة
+rdfs:label:tl	Paaralan ng Pagmamaneho
+rdfs:label:sr-EL	Auto-škola
+rdfs:label:zh-Hans	驾驶学校
+rdfs:label:ja	自動車学校
+rdfs:label:fr	École de conduite
+rdfs:label:de	Fahrschule
+rdfs:label:fi	Autokoulu
+rdfs:label:lv	Braukšanas skola
+rdfs:label:aln	Auto shkollë
+rdfs:label:dsb	Jězdna šula
+rdfs:label:it	Scuola guida
+rdfs:label:hr	Autoškola
+rdfs:label:cs	Autoškola
+rdfs:label:sk	Autoškola
+rdfs:label:sv	Körskola
+rdfs:label:fur	Scuele guide
+rdfs:label:be-tarask	Аўташкола
+rdfs:label:lt	Vairavimo mokykla
+rdfs:label:ast	Autoescuela
+rdfs:label:es	Autoescuela
+rdfs:label:zh-Hant	駕駛學校
+rdfs:label:et	Autokool
+rdfs:label:en-GB	Driving School
+rdfs:label:hsb	Jězbna šula
+rdfs:label:he	בית ספר לנהיגה
+rdfs:label:el	Σχολή Οδηγών
+rdfs:label:ca	Autoescola
+rdfs:label:pt-BR	Autoescola
+rdfs:label:arz	مدرسه تعليم قيادة
+rdfs:label:is	Ökuskóli
+rdfs:label:ka	ავტოსკოლა
+rdfs:label:nds	Fohrschool
+rdfs:label:da	Køreskole
+rdfs:label:br	Skol bleinañ
+rdfs:label:uk	Автошкола
+rdfs:label:no	Kjøreskole
+rdfs:label:ru	Автошкола
+rdfs:label:mk	Автошкола
+rdfs:label:sr-EC	Ауто-школа
+rdfs:label:af	Bestuurskool
+rdfs:label:eu	Autoeskola
+rdfs:label:vi	Trường Lái xe
+rdfs:label:tr	Sürücü Kursu
+rdfs:label:ia	Autoschola
+rdfs:label:lb	Fahrschoul
+rdfs:label:hu	Autósiskola
+rdfs:label:pl	Nauka jazdy
+rdfs:label:sl	Avtošola
+rdfs:label:ms	Sekolah Memandu
+rdfs:label:nl	Rijschool
+rdfs:label:gl	Escola de condución
+url	http://linkedgeodata.org/ontology/DrivingSchool
+label	DrivingSchool

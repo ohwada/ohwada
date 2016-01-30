@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1871401926
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Shop
+rdf:type:3	http://linkedgeodata.org/ontology/Convenience
+rdfs:label	セブンイレブン
+dc:modified	2012-08-18T15:47:27+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.486916&long=138.80009#point
+geo:long	138.8
+geo:lat	35.4869
+dc:contributor	http://linkedgeodata.org/triplify/user563872
+geom:geometry	http://linkedgeodata.org/geometry/node1871401926
+lgdo:changeset	12773300
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Convenience
+type:label	Convenience
+type:label:ja	

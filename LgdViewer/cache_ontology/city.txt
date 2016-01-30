@@ -1,0 +1,62 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/City/key/place/value/city
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Place
+rdfs:label:pt	Cidade
+rdfs:label:gl	Cidade
+rdfs:label:pt-BR	Cidade
+rdfs:label:te	నగరం
+rdfs:label:it	Città
+rdfs:label:sq	Qyteti
+rdfs:label:aln	Qyteti
+rdfs:label:no	By
+rdfs:label:ru	Город
+rdfs:label:fur	Citât
+rdfs:label:kn	ನಗರ
+rdfs:label:tl	Lungsod
+rdfs:label:es	Ciudad
+rdfs:label:ja	市
+rdfs:label:mk	Град
+rdfs:label:sr-EC	Град
+rdfs:label:eu	Hiria
+rdfs:label:he	עיר
+rdfs:label:ca	Ciutat
+rdfs:label:is	Borg
+rdfs:label:zh-Hans	城市
+rdfs:label:ps	ښار
+rdfs:label:fr	Ville
+rdfs:label:hsb	Wulkoměsto
+rdfs:label:ku-Latn	Bajarr
+rdfs:label:nds	Stadt
+rdfs:label:be-tarask	Горад
+rdfs:label:de	Stadt
+rdfs:label:ka	ქალაქი
+rdfs:label:fa	شهر بزرگ
+rdfs:label:el	Πόλη
+rdfs:label:dsb	Wjelike město
+rdfs:label:fi	Kaupunki
+rdfs:label:hr	Grad
+rdfs:label:sr-EL	Grad
+rdfs:label:sk	Mesto nad 100 tis.
+rdfs:label:lv	Pilsēta
+rdfs:label:pl	Miasto
+rdfs:label:nl	Stad
+rdfs:label:af	Stad
+rdfs:label:sv	Stad
+rdfs:label:et	Linn
+rdfs:label:br	Meurgêr
+rdfs:label:vi	Thành phố
+rdfs:label:en-GB	City
+rdfs:label:ast	Ciudá
+rdfs:label:myv	Ош
+rdfs:label:da	Storby
+rdfs:label:uk	Місто
+rdfs:label:cs	Velkoměsto
+rdfs:label:ms	Bandar
+rdfs:label:ar	مدينة
+rdfs:label:lt	Miestas
+rdfs:label:arz	مدينة
+rdfs:label:ia	Citate
+rdfs:label:tr	Büyükşehir / il merkezi
+rdfs:label:hu	Nagyváros
+rdfs:label:sl	Mesto
+url	http://linkedgeodata.org/ontology/City
+label	City

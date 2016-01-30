@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Townhall/key/amenity/value/townhall
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ia	Casa municipal
+rdfs:label:myv	Ош кудо
+rdfs:label:pt-BR	Prefeitura
+rdfs:label:vi	Thị sảnh
+rdfs:label:nl	Gemeentehuis
+rdfs:label:cs	Radnice
+rdfs:label:it	Municipio
+rdfs:label:es	Ayuntamiento
+rdfs:label:mzn	شهرداری
+rdfs:label:el	Δημαρχείο
+rdfs:label:be-tarask	Ратуша
+rdfs:label:de	Rathaus
+rdfs:label:ca	Ajuntament
+rdfs:label:fi	Kaupungintalo
+rdfs:label:lt	Rotušė
+rdfs:label:uk	Міськвиконком
+rdfs:label:hu	Városháza
+rdfs:label:da	Rådhus
+rdfs:label:no	Rådhus
+rdfs:label:sv	Rådhus
+rdfs:label:arz	مبنى بلدية
+rdfs:label:ar	مبنى بلدية
+rdfs:label:he	עירייה
+rdfs:label:fa	شهر داری
+rdfs:label:fur	Municipi
+rdfs:label:lb	Stadhaus
+rdfs:label:sr-EL	Gradska skupština
+rdfs:label:sr-EC	Градска скупштина
+rdfs:label:en-GB	Town Hall
+rdfs:label:ru	Городская администрация
+rdfs:label:pl	Urząd miejski
+rdfs:label:sl	Mestna hiša
+rdfs:label:ka	ქალაქის ადმინისტრაცია
+rdfs:label:hr	Gradsko poglavarstvo
+rdfs:label:ast	Casa conceyu
+rdfs:label:mk	Градски дом
+rdfs:label:tl	Bulwagan ng Bayan
+rdfs:label:aln	Godina kryesore e qytetit
+rdfs:label:tr	Belediye binası
+rdfs:label:lv	Rātsnams
+rdfs:label:gl	Concello
+rdfs:label:ja	市庁舎
+rdfs:label:zh-Hans	市政厅
+rdfs:label:af	Stadsaal
+rdfs:label:fr	Hôtel de ville
+rdfs:label:eu	Udaletxe
+rdfs:label:sk	Radnica
+rdfs:label:hsb	Radnica
+rdfs:label:dsb	Radnica
+rdfs:label:br	Ti-kêr
+rdfs:label:ms	Dewan Bandar
+url	http://linkedgeodata.org/ontology/Townhall
+label	Townhall

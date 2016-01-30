@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1733094471
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label	Alte Liebe
+dc:modified	2012-04-27T17:48:47+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.446125&long=139.64249#point
+geo:long	139.642
+geo:lat	35.4461
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1733094471
+lgdo:changeset	11433773
+lgdo:source	survey
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン

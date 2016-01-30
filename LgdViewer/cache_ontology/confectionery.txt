@@ -1,0 +1,45 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Confectionery/key/craft/value/confectionery
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Craft
+rdfs:label:ast	Confitería
+rdfs:label:sr-EC	Посластичарница
+rdfs:label:lv	Konditorejas veikals
+rdfs:label:sr-EL	Poslastičarnica
+rdfs:label:fr	Confiserie
+rdfs:label:he	קונדיטוריה
+rdfs:label:be-tarask	Кандытарская
+rdfs:label:hsb	Konditarnja
+rdfs:label:dsb	Konditarnja
+rdfs:label:el	Ζαχαροπλαστική
+rdfs:label:en-GB	Confectionery Shop
+rdfs:label:hr	Delikatesa
+rdfs:label:lt	Konditerijos parduotuvė
+rdfs:label:pt-BR	Confeitaria
+rdfs:label:uk	Кондитерська
+rdfs:label:hu	Cukrászda
+rdfs:label:sv	Godisbutik
+rdfs:label:gl	Pastelaría
+rdfs:label:da	Slikbutik
+rdfs:label:zh-Hans	糖果店
+rdfs:label:nl	Snoepverkooppunt
+rdfs:label:sk	Cukráreň
+rdfs:label:vi	Tiệm Kẹo
+rdfs:label:ka	საკონდიტრო
+rdfs:label:sl	Trgovina sladkarij
+rdfs:label:it	Pasticceria
+rdfs:label:ru	Кондитерская
+rdfs:label:es	Dulcería
+rdfs:label:de	Konditorei
+rdfs:label:tl	Tindahan ng Kendi
+rdfs:label:arz	متجر الحلويات
+rdfs:label:ar	متجر الحلويات
+rdfs:label:cs	Cukrárna
+rdfs:label:mk	Слаткарница
+rdfs:label:ia	Confecteria
+rdfs:label:br	Koñfizerezh
+rdfs:label:ca	Confiteria botiga
+rdfs:label:aln	Shop pasticerie
+rdfs:label:pl	Cukiernia
+rdfs:label:eu	Gozotegi
+rdfs:label:no	Konditori
+url	http://linkedgeodata.org/ontology/Confectionery
+label	Confectionery

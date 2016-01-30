@@ -1,0 +1,60 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/PostOffice/key/amenity/value/post_office
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:is	Pósthúsið
+rdfs:label:nl	Postkantoor
+rdfs:label:eu	Postetxe
+rdfs:label:dsb	Post
+rdfs:label:sl	Pošta
+rdfs:label:hr	Pošta
+rdfs:label:sk	Pošta
+rdfs:label:sr-EL	Pošta
+rdfs:label:cs	Pošta
+rdfs:label:en-GB	Post Office
+rdfs:label:zh-Hant	郵局
+rdfs:label:ru	Почтовое отделение
+rdfs:label:lb	Postbüro
+rdfs:label:fa	اداره پست
+rdfs:label:he	סניף דואר
+rdfs:label:af	Poskantoor
+rdfs:label:el	Ταχυδρομείο
+rdfs:label:ms	Pejabat Pos
+rdfs:label:lt	Paštas
+rdfs:label:hu	Posta
+rdfs:label:gl	Oficina de correos
+rdfs:label:es	Oficina de correos
+rdfs:label:ast	Oficina de correos
+rdfs:label:rue	Пошта
+rdfs:label:fur	Pueste
+rdfs:label:sr-EC	Пошта
+rdfs:label:mk	Пошта
+rdfs:label:uk	Пошта
+rdfs:label:vi	Bưu điện
+rdfs:label:ka	ფოსტა
+rdfs:label:br	Ti-post
+rdfs:label:pt-BR	Agência de Correios
+rdfs:label:pl	Poczta
+rdfs:label:bn	ডাকঘর
+rdfs:label:hsb	Póstowy zarjad
+rdfs:label:fi	Postitoimisto
+rdfs:label:ja	郵便局
+rdfs:label:myv	Почта
+rdfs:label:da	Postkontor
+rdfs:label:no	Postkontor
+rdfs:label:lv	Pasts
+rdfs:label:sv	Postkontor
+rdfs:label:et	Postkontor
+rdfs:label:ar	مكتب بريد
+rdfs:label:arz	مكتب بريد
+rdfs:label:ca	Oficina de correus
+rdfs:label:be-tarask	Паштовае аддзяленьне
+rdfs:label:it	Ufficio postale
+rdfs:label:zh-Hans	邮局
+rdfs:label:tr	Postane
+rdfs:label:ia	Officio postal
+rdfs:label:tl	Tanggapan ng Sulat
+rdfs:label:nds	Postamt
+rdfs:label:de	Postamt
+rdfs:label:aln	Zyra Postare
+rdfs:label:fr	Bureau de poste
+url	http://linkedgeodata.org/ontology/PostOffice
+label	PostOffice

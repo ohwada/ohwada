@@ -1,0 +1,3 @@
+lgdm:sourceKey	place
+url	http://linkedgeodata.org/ontology/Place
+label	Place

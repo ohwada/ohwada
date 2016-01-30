@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CompanyOffice/key/office/value/company
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Office
+url	http://linkedgeodata.org/ontology/CompanyOffice
+label	CompanyOffice

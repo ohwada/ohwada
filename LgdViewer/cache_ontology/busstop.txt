@@ -1,0 +1,56 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BusStop/key/highway/value/bus_stop
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ka	ავტობუსის გაჩერება
+rdfs:label:en-GB	Bus Stop
+rdfs:label:de	Bushaltestelle
+rdfs:label:aln	Stacion i autobusave
+rdfs:label:vi	Chỗ Đậu Xe buýt
+rdfs:label:af	Bushalte
+rdfs:label:nl	Bushalte
+rdfs:label:cs	Autobusová zastávka
+rdfs:label:ps	تمځای
+rdfs:label:sr-EC	Аутобуска станица
+rdfs:label:uk	Автобусна зупинка
+rdfs:label:sk	Zastávka autobusu
+rdfs:label:ar	موقف حافلات
+rdfs:label:gl	Parada de autobús
+rdfs:label:he	תחנת אוטובוס
+rdfs:label:lv	Autobusa pietura
+rdfs:label:tr	Otobüs durağı
+rdfs:label:eu	Autobus-geraleku
+rdfs:label:hsb	Busowe zastanišćo
+rdfs:label:dsb	Busowe zastanišćo
+rdfs:label:tl	Hintuan ng Bus
+rdfs:label:zh-Hans	公交停靠站
+rdfs:label:sl	Avtobusna postaja
+rdfs:label:sv	Busshållplats
+rdfs:label:fr	Arrêt de bus
+rdfs:label:it	Fermata autobus
+rdfs:label:no	Busstopp
+rdfs:label:nds	Busstopp
+rdfs:label:fa	ایستگاه اتوبوس
+rdfs:label:myv	Бузонь лотксема тарка
+rdfs:label:ia	Halto de autobus
+rdfs:label:pl	Przystanek autobusowy
+rdfs:label:da	Busstoppested
+rdfs:label:et	Bussipeatus
+rdfs:label:mk	Автобуска постојка
+rdfs:label:sr-EL	Autobuska stanica
+rdfs:label:be-tarask	Аўтобусны прыпынак
+rdfs:label:ms	Perhentian Bas
+rdfs:label:el	Στάση Λεωφορείου
+rdfs:label:es	Parada de autobuses
+rdfs:label:pt-BR	Ponto de ônibus
+rdfs:label:ast	Parada d'autobús
+rdfs:label:ca	Parada d'autobús
+rdfs:label:fur	Fermade autobus
+rdfs:label:lt	Autobusų stotelė
+rdfs:label:fi	Bussipysäkki
+rdfs:label:br	Arsav bus
+rdfs:label:arz	موقف نزول/صعود من/إلى حافلات
+rdfs:label:ru	Автобусная остановка
+rdfs:label:hu	Buszmegálló
+rdfs:label:ja	バス停
+rdfs:label:hr	Autobusno stajalište
+url	http://linkedgeodata.org/ontology/BusStop
+label	BusStop

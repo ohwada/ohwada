@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ 	<PreferenceCategory 
+		android:title="@string/pref_category_bt"
+		>
+
+		<CheckBoxPreference
+    		android:key="bt_show_debug"
+        	android:title="@string/pref_bt_show_debug_title"
+        	android:summaryOn="@string/pref_bt_show_debug_on"
+        	android:summaryOff="@string/pref_bt_show_debug_off"
+        	android:defaultValue="@string/pref_bt_show_debug_default"
+        	/>
+
+ 	</PreferenceCategory>
+ 			 	
+</PreferenceScreen>

@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/SportsCentre/key/leisure/value/sports_centre
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ca	Centre esportiu
+rdfs:label:zh-Hans	体育馆
+rdfs:label:sr-EL	Sportski centar
+rdfs:label:hr	Sportski centar
+rdfs:label:pl	Centrum sportowe
+rdfs:label:br	Kreizenn sport
+rdfs:label:vi	Trung tâm Thể thao
+rdfs:label:aln	Qendër Sportive
+rdfs:label:ms	Pusat Sukan
+rdfs:label:fr	Centre sportif
+rdfs:label:af	Sport-sentrum
+rdfs:label:et	Spordikeskus
+rdfs:label:pt-BR	Centro Esportivo
+rdfs:label:mk	Спортски центар
+rdfs:label:sr-EC	Спортски центар
+rdfs:label:en-GB	Sports Centre
+rdfs:label:ru	Спортивный центр
+rdfs:label:fi	Urheilukeskus
+rdfs:label:sk	Športové stredisko
+rdfs:label:arz	مركز رياضي
+rdfs:label:ar	مركز رياضي
+rdfs:label:sv	Sporthall
+rdfs:label:no	Sportssenter
+rdfs:label:cs	Sportovní centrum
+rdfs:label:de	Sportzentrum
+rdfs:label:nds	Sportzentrum
+rdfs:label:it	Centro sportivo
+rdfs:label:hu	Sportközpont
+rdfs:label:tl	Lunduyang Pampalakasan
+rdfs:label:ia	Centro sportive
+rdfs:label:pt	Centro Desportivo
+rdfs:label:ka	სპორტული ცენტრი
+rdfs:label:lt	Sporto centras
+rdfs:label:sl	Športni center
+rdfs:label:hsb	Sportowy centrum
+rdfs:label:dsb	Sportowy centrum
+rdfs:label:uk	Спортивний центр
+rdfs:label:is	Íþróttamiðstöðin
+rdfs:label:gl	Centro deportivo
+rdfs:label:es	Centro deportivo
+rdfs:label:lv	Sporta centrs
+rdfs:label:be-tarask	Спартовы цэнтар
+rdfs:label:tr	Spor Merkezi
+rdfs:label:eu	Kiroldegi
+rdfs:label:ast	Centru deportivu
+rdfs:label:nl	Sportcentrum
+rdfs:label:da	Sportscenter
+rdfs:label:el	Αθλητικό Κέντρο
+rdfs:label:ja	スポーツセンター
+rdfs:label:fur	Centri sportîf
+url	http://linkedgeodata.org/ontology/SportsCentre
+label	SportsCentre

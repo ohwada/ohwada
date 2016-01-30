@@ -1,0 +1,48 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Viewpoint/key/tourism/value/viewpoint
+rdfs:subClassOf	http://linkedgeodata.org/ontology/TourismThing
+rdfs:label:ru	Смотровая площадка
+rdfs:label:lb	Aussiichtspunkt
+rdfs:label:cs	Místo s dobrým výhledem
+rdfs:label:en-GB	Viewpoint
+rdfs:label:nl	Bijzonder uitzicht
+rdfs:label:ca	Mirador
+rdfs:label:es	Mirador
+rdfs:label:ast	Mirador
+rdfs:label:pt-BR	Mirador
+rdfs:label:af	Uitkykpunt
+rdfs:label:uk	Оглядовий майданчик
+rdfs:label:sl	Razgledna točka
+rdfs:label:zh-Hans	景点
+rdfs:label:eu	Behatoki
+rdfs:label:ia	Puncto de vista
+rdfs:label:pl	Punkt widokowy
+rdfs:label:fr	Point de vue
+rdfs:label:tl	Tuldok ng pananaw
+rdfs:label:sk	Rozhľadňa, výhliadka
+rdfs:label:mk	Видиковец
+rdfs:label:he	נקודת תצפית
+rdfs:label:no	Utsiktspunkt
+rdfs:label:sv	Utsiktspunkt
+rdfs:label:lv	Skatu punkts
+rdfs:label:arz	موقع كاشف
+rdfs:label:ar	موقع كاشف
+rdfs:label:lt	Apžvalgos aikštelė
+rdfs:label:de	Aussichtspunkt
+rdfs:label:vi	Thắng cảnh
+rdfs:label:dsb	Rozglědanišćo
+rdfs:label:hr	Vidikovac
+rdfs:label:sr-EL	Vidikovac
+rdfs:label:fur	Pont panoramic
+rdfs:label:br	Gwelva
+rdfs:label:da	Udsigtspunkt
+rdfs:label:gl	Miradoiro
+rdfs:label:be-tarask	Аглядальная пляцоўка
+rdfs:label:fi	Näköalapaikka
+rdfs:label:sr-EC	Видиковац
+rdfs:label:it	Punto panoramico
+rdfs:label:hu	Kilátó
+rdfs:label:tr	Panoramik view
+rdfs:label:hsb	Wuhladnišćo
+rdfs:label:aln	Pike shikimi
+url	http://linkedgeodata.org/ontology/Viewpoint
+label	Viewpoint

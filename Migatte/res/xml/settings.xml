@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditTextPreference
+            android:key="debug_month"
+            android:title="@string/debug_month_title"
+            android:summary="@string/debug_month_summary"
+            android:defaultValue="01" />
+        <EditTextPreference
+            android:key="debug_day"
+            android:title="@string/debug_day_title"
+            android:summary="@string/debug_day_summary"
+            android:defaultValue="01" />
+</PreferenceScreen>

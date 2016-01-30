@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/ArchitectOffice/key/office/value/architect
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Office
+url	http://linkedgeodata.org/ontology/ArchitectOffice
+label	ArchitectOffice

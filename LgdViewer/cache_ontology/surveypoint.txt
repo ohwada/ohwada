@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/SurveyPoint/key/man_made/value/survey_point
+rdfs:subClassOf	http://linkedgeodata.org/ontology/ManMadeThing
+url	http://linkedgeodata.org/ontology/SurveyPoint
+label	SurveyPoint

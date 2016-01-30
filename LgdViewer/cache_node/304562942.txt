@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node304562942
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PlaceOfWorship
+rdfs:label:en	Kantei-byo
+rdfs:label:ja	関帝廟
+rdfs:label	関帝廟 Kantei-byo
+dc:modified	2010-12-12T09:50:12+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442356&long=139.64523#point
+geo:long	139.645
+geo:lat	35.4424
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node304562942
+lgdo:changeset	6633225
+lgdo:version	4
+type:url	http://linkedgeodata.org/ontology/PlaceOfWorship
+type:label	PlaceOfWorship
+type:label:ja	神社仏閣

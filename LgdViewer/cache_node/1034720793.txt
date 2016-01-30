@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1034720793
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Bank
+rdfs:label	日本銀行　横浜支店
+dc:modified	2013-04-19T15:32:01+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445854&long=139.64108#point
+geo:long	139.641
+geo:lat	35.4459
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1034720793
+lgdo:changeset	15785558
+lgdo:version	3
+lgdo:atm	1
+type:url	http://linkedgeodata.org/ontology/Bank
+type:label	Bank
+type:label:ja	銀行

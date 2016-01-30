@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node602391194
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/HistoricThing
+rdf:type:3	http://linkedgeodata.org/ontology/Monument
+rdfs:label	山手イタリア山
+dc:modified	2010-01-01T03:44:03+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.436813&long=139.64354#point
+geo:long	139.644
+geo:lat	35.4368
+dc:contributor	http://linkedgeodata.org/triplify/user213778
+geom:geometry	http://linkedgeodata.org/geometry/node602391194
+lgdo:changeset	3505102
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Monument
+type:label	Monument
+type:label:ja	記念碑

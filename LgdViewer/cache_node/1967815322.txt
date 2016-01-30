@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1967815322
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Cafe
+rdfs:label	Cafe Veloce
+dc:modified	2012-10-16T05:35:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445362&long=139.63974#point
+geo:long	139.64
+geo:lat	35.4454
+dc:contributor	http://linkedgeodata.org/triplify/user162590
+geom:geometry	http://linkedgeodata.org/geometry/node1967815322
+lgdo:changeset	13513711
+lgdo:version	1
+lgdo:wheelchair	http://linkedgeodata.org/ontology/wheelchair_no
+type:url	http://linkedgeodata.org/ontology/Cafe
+type:label	Cafe
+type:label:ja	喫茶店

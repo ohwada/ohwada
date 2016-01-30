@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Spa/key/amenity/value/spa
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+url	http://linkedgeodata.org/ontology/Spa
+label	Spa

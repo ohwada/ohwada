@@ -1,0 +1,56 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FuelStation/key/amenity/value/fuel
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:dsb	Tankownja
+rdfs:label:hsb	Tankownja
+rdfs:label:is	Bensínstöð
+rdfs:label:ia	Carburante
+rdfs:label:br	Trelosk
+rdfs:label:fi	Polttoaine
+rdfs:label:sk	Benzínová pumpa
+rdfs:label:uk	Пальне
+rdfs:label:fur	Stazion di riforniment
+rdfs:label:de	Tankstelle
+rdfs:label:it	Stazione di rifornimento
+rdfs:label:mk	Гориво
+rdfs:label:tl	Panggatong
+rdfs:label:gl	Combustible
+rdfs:label:ast	Combustible
+rdfs:label:nds	Tanksteed
+rdfs:label:vi	Cây xăng
+rdfs:label:et	Kütus
+rdfs:label:tr	Petrol ofisi
+rdfs:label:sv	Bränsle
+rdfs:label:sl	Bencinska črpalka
+rdfs:label:cs	Čerpací stanice
+rdfs:label:te	ఇంధనం
+rdfs:label:lt	Degalinė
+rdfs:label:da	Benzinstation
+rdfs:label:be-tarask	Запраўка
+rdfs:label:sr-EL	Benzinska pumpa
+rdfs:label:ms	Minyak
+rdfs:label:sr-EC	Бензинска пумпа
+rdfs:label:ru	Заправка
+rdfs:label:fa	پمپ بنزین
+rdfs:label:aln	Lëndë djegëse
+rdfs:label:nl	Brandstof
+rdfs:label:af	Brandstof
+rdfs:label:pl	Stacja benzynowa
+rdfs:label:fr	Carburant
+rdfs:label:pt-BR	Combustível
+rdfs:label:pt	Combustível
+rdfs:label:ka	საწვავი
+rdfs:label:ca	Gasolinera
+rdfs:label:es	Gasolinera
+rdfs:label:hr	Benzinska
+rdfs:label:hu	Benzinkút
+rdfs:label:el	Καύσιμα
+rdfs:label:arz	وقود
+rdfs:label:ja	燃料
+rdfs:label:zh-Hans	燃料
+rdfs:label:ar	وقود
+rdfs:label:en-GB	Fuel
+rdfs:label:no	Drivstoff
+rdfs:label:lv	Degviela
+rdfs:label:he	דלק
+url	http://linkedgeodata.org/ontology/FuelStation
+label	FuelStation

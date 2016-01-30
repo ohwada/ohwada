@@ -1,0 +1,45 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Hardware/key/shop/value/hardware
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:hu	Szerelési bolt
+rdfs:label:zh-Hans	五金店
+rdfs:label:it	Ferramenta
+rdfs:label:br	Stal urzhiataerezh
+rdfs:label:uk	Хозтовари
+rdfs:label:ca	Botiga de maquinari
+rdfs:label:ia	Quincalieria
+rdfs:label:vi	Tiệm Ngũ kim
+rdfs:label:sl	Železnina
+rdfs:label:da	Byggemarked
+rdfs:label:sv	Järnhandel
+rdfs:label:hr	Željezar
+rdfs:label:sr-EL	Gvožđara
+rdfs:label:ru	Хозяйственные магазины
+rdfs:label:sr-EC	Гвожђара
+rdfs:label:is	Verkfærabúðin
+rdfs:label:af	Hardwarewinkel
+rdfs:label:nl	Gereedschappenwinkel
+rdfs:label:pl	Sklep ze sprzętem
+rdfs:label:pt-BR	Material/Equipamentos de construção
+rdfs:label:he	חנות חומרי בניין
+rdfs:label:aln	dyqan mjet
+rdfs:label:mk	Алат и опрема
+rdfs:label:en-GB	Hardware Store
+rdfs:label:no	Jernvarehandel
+rdfs:label:ar	متجر عتاد
+rdfs:label:arz	متجر عتاد
+rdfs:label:gl	Ferraxaría
+rdfs:label:es	Ferretería
+rdfs:label:ast	Ferretería
+rdfs:label:cs	Železářství
+rdfs:label:tr	Hırdavatçı
+rdfs:label:lt	Aparatūros parduotuvė
+rdfs:label:tl	Tindahan ng Hardwer
+rdfs:label:fi	Rautakauppa
+rdfs:label:fr	Quincaillerie
+rdfs:label:de	Eisenwarenhändler
+rdfs:label:sk	Železiarstvo
+rdfs:label:hsb	Twarske wiki
+rdfs:label:dsb	Twarski mark
+rdfs:label:be-tarask	Гаспадарчыя тавары
+url	http://linkedgeodata.org/ontology/Hardware
+label	Hardware

@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Playground/key/amenity/value/playground
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:br	Tachenn c'hoari
+rdfs:label:uk	Дитячий майданчик
+rdfs:label:da	Legeplads
+rdfs:label:cs	Dětské hřiště
+rdfs:label:ms	Taman Permainan
+rdfs:label:ka	სათამაშო მოედანი
+rdfs:label:sk	Detské ihrisko
+rdfs:label:ar	ملعب
+rdfs:label:arz	ملعب
+rdfs:label:tl	Palaruan
+rdfs:label:ru	Детская игровая площадка
+rdfs:label:es	Área de juegos
+rdfs:label:vi	Sân chơi
+rdfs:label:ia	Area de jocos
+rdfs:label:et	Mänguväljak
+rdfs:label:ca	Parc infantil
+rdfs:label:be-tarask	Дзіцячая пляцоўка
+rdfs:label:zh-Hans	游乐场
+rdfs:label:aln	Shesh lojnash
+rdfs:label:lv	Spēļu laukums
+rdfs:label:lb	Spillplaz
+rdfs:label:pl	Plac zabaw
+rdfs:label:no	Lekeplass
+rdfs:label:de	Spielplatz
+rdfs:label:pt-BR	Playground
+rdfs:label:en-GB	Playground
+rdfs:label:sr-EC	Игралиште
+rdfs:label:mk	Детско игралиште
+rdfs:label:sr-EL	Igralište
+rdfs:label:el	Παιδική Χαρά
+rdfs:label:hr	Igralište
+rdfs:label:nl	Speelplaats
+rdfs:label:gl	Patio de recreo
+rdfs:label:eu	Jolastoki
+rdfs:label:ja	遊び場
+rdfs:label:nds	Speelplatz
+rdfs:label:lt	Žaidimų aikštelė
+rdfs:label:pt	Parque
+rdfs:label:hsb	Hrajkanišćo
+rdfs:label:is	Leikvöllurinn
+rdfs:label:fi	Leikkikenttä
+rdfs:label:sl	Otroško igrišče
+rdfs:label:ast	Xuegos infantiles
+rdfs:label:af	Speelgrond
+rdfs:label:fr	Aire de jeux
+rdfs:label:it	Parco giochi
+rdfs:label:hu	Játszótér
+rdfs:label:tr	Çocuk parkı
+rdfs:label:sv	Lekplats
+rdfs:label:dsb	Grajkanišćo
+url	http://linkedgeodata.org/ontology/Playground
+label	Playground

@@ -1,0 +1,57 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/GraveYard/key/amenity/value/grave_yard
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:da	Kirkegård
+rdfs:label:gl	Cemiterio
+rdfs:label:it	Cimitero
+rdfs:label:el	Νεκροταφείο
+rdfs:label:hu	Kis temető
+rdfs:label:aln	Varrezë
+rdfs:label:ms	Perkuburan
+rdfs:label:nds	Karkhoff
+rdfs:label:sr-EC	Гробље
+rdfs:label:arz	مقبرة
+rdfs:label:ar	مقبرة
+rdfs:label:tr	Mezarlık
+rdfs:label:hsb	Kěrchow
+rdfs:label:es	Cementerio
+rdfs:label:bn	কবরস্থান
+rdfs:label:en-GB	Grave Yard
+rdfs:label:fr	Cimetière
+rdfs:label:fi	Hautausmaa
+rdfs:label:ru	Место захоронения
+rdfs:label:et	Surnuaed
+rdfs:label:dsb	Kjarchob
+rdfs:label:vi	Nghĩa địa
+rdfs:label:eu	Hilerri
+rdfs:label:sk	Cintorín
+rdfs:label:mk	Гробишта
+rdfs:label:ia	Cemeterio
+rdfs:label:no	Gravlund
+rdfs:label:zh-Hans	墓地
+rdfs:label:ja	墓地
+rdfs:label:zh-Hant	墓地
+rdfs:label:pl	Mniejszy cmentarz
+rdfs:label:tl	Sementeryo
+rdfs:label:ast	Cementeriu
+rdfs:label:ca	Cementiri
+rdfs:label:myv	Калмозэрь
+rdfs:label:de	Friedhof
+rdfs:label:lt	Kapinės
+rdfs:label:cs	Hřbitov
+rdfs:label:sv	Begravningsplats
+rdfs:label:hr	Groblje
+rdfs:label:sr-EL	Groblje
+rdfs:label:be-tarask	Могілкі
+rdfs:label:sl	Pokopališče
+rdfs:label:af	Begraafplaas
+rdfs:label:pt-BR	Cemitério
+rdfs:label:pt	Cemitério
+rdfs:label:nl	Begraafplaats
+rdfs:label:ps	هديره
+rdfs:label:br	Bered
+rdfs:label:lv	Kapsēta
+rdfs:label:he	בית קברות
+rdfs:label:ka	საფლავი
+rdfs:label:uk	Цвинтар
+url	http://linkedgeodata.org/ontology/GraveYard
+label	GraveYard

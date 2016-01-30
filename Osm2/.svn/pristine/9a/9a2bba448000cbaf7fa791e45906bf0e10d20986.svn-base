@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<!--
+	<include layout="@layout/progressbar_loading" /> 	
+-->
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		android:orientation="horizontal">
+ 	
+ 		<Button android:id="@+id/main_button_option" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+ 			android:layout_weight="1"
+ 			android:text="@string/button_option" />
+
+ 		<Button android:id="@+id/main_button_get" 
+ 			android:layout_width="0dp" 
+ 			android:layout_height="wrap_content"
+ 			android:layout_weight="1"
+ 			android:text="@string/button_get" />
+ 			 			
+	</LinearLayout>
+				
+ 	<!-- MapView -->
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+		android:apiKey="@string/map_api_key"
+		/>
+
+</LinearLayout>

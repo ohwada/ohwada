@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Artwork/key/tourism/value/artwork
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:br	Oberenn arz
+rdfs:label:gl	Obra de arte
+rdfs:label:es	Obra de arte
+rdfs:label:af	Kunswerk
+rdfs:label:hu	Műalkotás
+rdfs:label:lb	Konschtwierk
+rdfs:label:fa	آثار هنری
+rdfs:label:ru	Произведения искусства
+rdfs:label:ar	عمل فني
+rdfs:label:arz	عمل فني
+rdfs:label:vi	Tác phẩm Nghệ thuật
+rdfs:label:no	Kunstverk
+rdfs:label:sr-EL	Galerija
+rdfs:label:tr	Sanat eseri
+rdfs:label:tl	Likhang Sining
+rdfs:label:ast	Obra d'arte
+rdfs:label:de	Kunstwerk
+rdfs:label:mk	Уметничко дело
+rdfs:label:uk	Образотворче мистецтво
+rdfs:label:sr-EC	Галерија
+rdfs:label:nds	Kunst
+rdfs:label:da	Kunst
+rdfs:label:pl	Sztuka
+rdfs:label:nl	Kunst
+rdfs:label:pt-BR	Ilustração
+rdfs:label:fr	Œuvre d’art
+rdfs:label:is	Listaverk
+rdfs:label:fi	Taideteos
+rdfs:label:aln	Puna artistike
+rdfs:label:sq	Puna artistike
+rdfs:label:sv	Konstverk
+rdfs:label:it	Opera d'arte
+rdfs:label:cs	Umělecké dílo
+rdfs:label:be-tarask	Твор мастацтва
+rdfs:label:sk	Umelecké dielo
+rdfs:label:he	יצירת אמנות
+rdfs:label:zh-Hant	美工
+rdfs:label:ja	芸術作品
+rdfs:label:hr	Umjetničko djelo
+rdfs:label:hsb	Wuměłska twórba
+rdfs:label:dsb	Wuměłska twórba
+rdfs:label:lv	Mākslas darbs
+rdfs:label:sl	Umetnina
+rdfs:label:ca	Il·lustració
+rdfs:label:zh-Hans	艺术品
+rdfs:label:en-GB	Artwork
+rdfs:label:ia	Obra de arte
+url	http://linkedgeodata.org/ontology/Artwork
+label	Artwork

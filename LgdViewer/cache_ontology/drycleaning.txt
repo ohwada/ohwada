@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/DryCleaning/key/shop/value/dry_cleaning
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:ja	クリーニング
+rdfs:label:es	Tintorería
+rdfs:label:ast	Tintorería
+rdfs:label:zh-Hant	乾洗
+rdfs:label:cs	Chemická čistírna
+rdfs:label:sr-EL	Hemijsko čišćenje
+rdfs:label:af	Droogskoonmaker
+rdfs:label:tr	Kuru Temizleme
+rdfs:label:ca	Tintoreria
+rdfs:label:vi	Hấp tẩy
+rdfs:label:et	Keemiline puhastus
+rdfs:label:ia	Lavanderia a sic
+rdfs:label:da	Renseri
+rdfs:label:no	Renseri
+rdfs:label:pl	Pralnia chemiczna
+rdfs:label:he	ניקוי יבש
+rdfs:label:lb	Botzerei
+rdfs:label:hsb	Čisćernja
+rdfs:label:de	Textilreinigung
+rdfs:label:en-GB	Dry Cleaning
+rdfs:label:zh-Hans	干洗
+rdfs:label:gl	Limpeza en seco
+rdfs:label:hu	Ruhatisztító
+rdfs:label:lt	Sausasis valymas
+rdfs:label:arz	تنظيف جاف
+rdfs:label:ar	تنظيف جاف
+rdfs:label:sr-EC	Хемијско чишћење
+rdfs:label:sl	Čistilnica
+rdfs:label:aln	Pastrimi kimik
+rdfs:label:sv	Kemtvätt
+rdfs:label:sk	Chemická čistiareň
+rdfs:label:br	Naetaat ent sec'h
+rdfs:label:nl	Stomerij
+rdfs:label:fr	Nettoyage à sec
+rdfs:label:it	Lavasecco
+rdfs:label:tl	Paglilinis na Tuyo
+rdfs:label:hr	Kemijska čistionica
+rdfs:label:ru	Химчистка
+rdfs:label:uk	Хімчистка
+rdfs:label:el	Στεγνό Καθάρισμα
+rdfs:label:fi	Kuivapesula
+rdfs:label:pt-BR	Lavagem a seco
+rdfs:label:be-tarask	Хімчыстка
+rdfs:label:dsb	Cysćarnja
+rdfs:label:lv	Ķīmiskā tīrīšana
+rdfs:label:mk	Хемиско чистење
+url	http://linkedgeodata.org/ontology/DryCleaning
+label	DryCleaning

@@ -1,0 +1,3 @@
+lgdm:sourceKey	public_transport
+url	http://linkedgeodata.org/ontology/PublicTransportThing
+label	PublicTransportThing

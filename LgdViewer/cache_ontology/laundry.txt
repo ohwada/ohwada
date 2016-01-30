@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Laundry/key/shop/value/laundry
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:dsb	Pałkarnja
+rdfs:label:cs	Prádelna
+rdfs:label:mk	Пералница
+rdfs:label:lt	Skalbykla
+rdfs:label:nds	Wäscheree
+rdfs:label:gl	Lavandaría
+rdfs:label:ia	Lavanderia
+rdfs:label:it	Lavanderia
+rdfs:label:pt-BR	Lavanderia
+rdfs:label:sr-EC	Перионица рубља
+rdfs:label:ka	სამრეცხაო
+rdfs:label:eu	Garbitegi
+rdfs:label:tr	Çamaşırhane
+rdfs:label:uk	Пральня
+rdfs:label:be-tarask	Пральня
+rdfs:label:te	చాకలి
+rdfs:label:arz	مصبغة
+rdfs:label:ar	مصبغة
+rdfs:label:en-GB	Laundry
+rdfs:label:af	Wassery
+rdfs:label:hsb	Myjernja
+rdfs:label:ja	クリーニング店
+rdfs:label:lb	Botzerei
+rdfs:label:pt	Lavandaria
+rdfs:label:sr-EL	Perionica rublja
+rdfs:label:br	Kanndi
+rdfs:label:de	Wäscherei
+rdfs:label:ru	Прачечная
+rdfs:label:fa	خشکشویی
+rdfs:label:sv	Tvättservice
+rdfs:label:lv	Veļas mazgātava
+rdfs:label:hu	Mosoda
+rdfs:label:tl	Labahan
+rdfs:label:he	מכבסה
+rdfs:label:sl	Pralnica
+rdfs:label:aln	Lavanderi
+rdfs:label:ca	Bugaderia
+rdfs:label:sk	Práčovňa
+rdfs:label:pl	Pralnia
+rdfs:label:vi	Tiệm Giặt Quần áo
+rdfs:label:ast	Llavandería
+rdfs:label:hr	Praonica rublja
+rdfs:label:es	Lavandería
+rdfs:label:nl	Wasserij
+rdfs:label:fur	Lavandarie
+rdfs:label:zh-Hant	洗衣房
+rdfs:label:zh-Hans	洗衣房
+rdfs:label:fr	Blanchisserie
+rdfs:label:no	Vaskeri
+rdfs:label:da	Vaskeri
+rdfs:label:fi	Pesula
+url	http://linkedgeodata.org/ontology/Laundry
+label	Laundry

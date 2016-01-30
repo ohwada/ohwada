@@ -1,0 +1,60 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Taxi/key/amenity/value/taxi
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:da	Taxa
+rdfs:label:zh-Hans	出租车
+rdfs:label:pl	Postój taksówek
+rdfs:label:he	מונית
+rdfs:label:arz	سياره أجرة
+rdfs:label:hsb	Taksijowe zastanišćo
+rdfs:label:pt-BR	Táxi
+rdfs:label:pt	Táxi
+rdfs:label:el	Ταξί
+rdfs:label:et	Takso
+rdfs:label:fi	Taksi
+rdfs:label:lt	Taksi
+rdfs:label:br	Taksi
+rdfs:label:sr-EL	Taksi
+rdfs:label:tr	Taksi
+rdfs:label:sl	Taksi
+rdfs:label:tl	Taksi
+rdfs:label:ka	ტაქსი
+rdfs:label:hu	Taxi
+rdfs:label:aln	Taxi
+rdfs:label:ca	Taxi
+rdfs:label:it	Taxi
+rdfs:label:is	Leigubílastöð
+rdfs:label:gl	Taxi
+rdfs:label:ast	Taxi
+rdfs:label:fr	Taxi
+rdfs:label:en-GB	Taxi
+rdfs:label:ms	Teksi
+rdfs:label:sk	Taxi
+rdfs:label:nds	Taxi
+rdfs:label:vi	Taxi
+rdfs:label:fur	Taxi
+rdfs:label:es	Taxi
+rdfs:label:nl	Taxi
+rdfs:label:hr	Taxi
+rdfs:label:de	Taxi
+rdfs:label:ja	タクシー乗り場
+rdfs:label:lb	Taxi
+rdfs:label:cs	Taxi
+rdfs:label:af	Taxi
+rdfs:label:sv	Taxi
+rdfs:label:eu	Taxi
+rdfs:label:ia	Taxi
+rdfs:label:zh-Hant	出租車
+rdfs:label:lv	Taksometrs
+rdfs:label:no	Drosje
+rdfs:label:dsb	Taksijowe městno
+rdfs:label:mk	Такси
+rdfs:label:myv	Такси
+rdfs:label:sr-EC	Такси
+rdfs:label:ru	Такси
+rdfs:label:fa	تاکسی
+rdfs:label:uk	Таксі
+rdfs:label:be-tarask	Таксі
+rdfs:label:ps	ټېکسي
+rdfs:label:ar	سيارة أجرة
+url	http://linkedgeodata.org/ontology/Taxi
+label	Taxi

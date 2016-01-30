@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Nightclub/key/amenity/value/nightclub
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:no	Nattklubb
+rdfs:label:sv	Nattklubb
+rdfs:label:pt-BR	Casa noturna/Boate
+rdfs:label:vi	Câu lạc bộ Đêm
+rdfs:label:pl	Klub nocny
+rdfs:label:eu	Gau-klub
+rdfs:label:nl	Nachtclub
+rdfs:label:nds	Nachtclub
+rdfs:label:ja	ナイトクラブ
+rdfs:label:uk	Нічний клуб
+rdfs:label:ka	ღამის კლუბი
+rdfs:label:gl	Club nocturno
+rdfs:label:es	Club nocturno
+rdfs:label:it	Locale notturno
+rdfs:label:hr	Noćni klub
+rdfs:label:sr-EL	Noćni klub
+rdfs:label:zh-Hant	夜總會
+rdfs:label:af	Nagklub
+rdfs:label:tr	Gece Kulübü
+rdfs:label:sl	Nočni klub
+rdfs:label:mk	Ноќен клуб
+rdfs:label:sr-EC	Ноћни клуб
+rdfs:label:hu	Éjszakai bár
+rdfs:label:ar	نادي ليلي
+rdfs:label:hsb	Nócny klub
+rdfs:label:et	Ööklubi
+rdfs:label:zh-Hans	夜总会
+rdfs:label:fi	Yökerho
+rdfs:label:sk	Nočný klub
+rdfs:label:br	Klub-noz
+rdfs:label:ms	Kelab Malam
+rdfs:label:lv	Naktsklubs
+rdfs:label:ru	ночной клуб
+rdfs:label:ast	Sala de fiestes
+rdfs:label:da	Natklub
+rdfs:label:dsb	Nocny klub
+rdfs:label:de	Nachtklub
+rdfs:label:tl	Alibangbang
+rdfs:label:ca	Club nocturn
+rdfs:label:cs	Noční klub
+rdfs:label:fr	Boîte de nuit
+rdfs:label:en-GB	Night Club
+rdfs:label:aln	Night Club
+rdfs:label:el	Night Club
+rdfs:label:ia	Club nocturne
+rdfs:label:arz	نادى ليلي
+rdfs:label:lt	Naktinis klubas
+rdfs:label:is	Næturklúbbur
+rdfs:label:be-tarask	Начны клюб
+url	http://linkedgeodata.org/ontology/Nightclub
+label	Nightclub

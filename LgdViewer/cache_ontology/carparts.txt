@@ -1,0 +1,49 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CarParts/key/shop/value/car_parts
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:br	Pezhioù evit ar c'hirri
+rdfs:label:he	חלקי רכב
+rdfs:label:ka	ავტონაწილები
+rdfs:label:sr-EL	Auto-delovi
+rdfs:label:be-tarask	Крама аўтамабільных запчастак
+rdfs:label:hu	Autóalkatrészbolt
+rdfs:label:sv	Bildelar
+rdfs:label:vi	Phụ tùng Xe hơi
+rdfs:label:sk	Mototechna
+rdfs:label:cs	Prodej autodílů
+rdfs:label:hsb	Awtowe narunanki
+rdfs:label:tl	Mga Bahagi ng Kotse
+rdfs:label:tr	Araba Parçası Dükkanı
+rdfs:label:lt	Automobilių dalys
+rdfs:label:pt-BR	Autopeças
+rdfs:label:ru	Автомагазин
+rdfs:label:arz	قطع غيار سيارات
+rdfs:label:ar	قطع غيار سيارات
+rdfs:label:ca	Peces de cotxes
+rdfs:label:en-GB	Car Parts
+rdfs:label:fr	Pièces d'automobile
+rdfs:label:no	Bildeler
+rdfs:label:fi	Auton osia
+rdfs:label:nl	Autoonderdelen
+rdfs:label:sr-EC	Ауто-делови
+rdfs:label:hr	Autodijelovi
+rdfs:label:lv	Automašīnu rezerves daļas
+rdfs:label:gl	Recambios de automóbil
+rdfs:label:zh-Hans	汽车零件
+rdfs:label:ja	自動車部品販売店
+rdfs:label:ia	Partes de automobiles
+rdfs:label:sl	Avtomobilski deli
+rdfs:label:zh-Hant	汽車零件
+rdfs:label:es	Repuestos automotrices
+rdfs:label:de	Autoteilehändler
+rdfs:label:da	Bilreservedele
+rdfs:label:pl	Sklep z częściami samochodowymi
+rdfs:label:it	Autoricambi
+rdfs:label:mk	Автоделови
+rdfs:label:el	Εξαρτήματα Αυτοκινήτου
+rdfs:label:dsb	Awtowe narownanki
+rdfs:label:ast	Repuestos d'automóvil
+rdfs:label:uk	Автозапчастини
+rdfs:label:aln	pjesë makinash
+rdfs:label:af	Motoronderdele
+url	http://linkedgeodata.org/ontology/CarParts
+label	CarParts

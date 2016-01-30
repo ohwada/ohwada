@@ -1,0 +1,47 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Greengrocer/key/shop/value/greengrocer
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:hsb	Wobchod za zeleniny
+rdfs:label:ast	Frutería
+rdfs:label:es	Frutería
+rdfs:label:hu	Zöldséges
+rdfs:label:tr	Manav
+rdfs:label:lv	Dārzeņu tirgotājs
+rdfs:label:ar	محل خضروات
+rdfs:label:sl	Sadje in zelenjava
+rdfs:label:vi	Tiệm Rau
+rdfs:label:be-tarask	Садавіна, гародніна
+rdfs:label:ia	Verdurero
+rdfs:label:gl	Froitaría
+rdfs:label:cs	Ovoce–zelenina
+rdfs:label:pl	Warzywniak
+rdfs:label:he	ירקן
+rdfs:label:en-GB	Greengrocer
+rdfs:label:ca	Greengrocer
+rdfs:label:da	Grønthandler
+rdfs:label:fr	Marchand de fruits et légumes
+rdfs:label:zh-Hans	蔬菜水果店
+rdfs:label:ja	八百屋
+rdfs:label:sr-EC	Пиљарница
+rdfs:label:nds	Gröönhöker
+rdfs:label:el	Μανάβης
+rdfs:label:fa	سبزی فروش
+rdfs:label:br	Gwerzher frouezh ha legumaj
+rdfs:label:lt	Daržovių ir vaisių pardavėjas
+rdfs:label:aln	Shitës frutash
+rdfs:label:ru	Овощной магазин
+rdfs:label:eu	Barazki-saltzaile
+rdfs:label:sr-EL	Piljarnica
+rdfs:label:uk	Овочі, фрукти
+rdfs:label:sv	Grönsakshandlare
+rdfs:label:no	Grønnsakshandel
+rdfs:label:it	Fruttivendolo
+rdfs:label:dsb	Zeleninarski wobchod
+rdfs:label:hr	Voćarna
+rdfs:label:nl	Groenteboer
+rdfs:label:pt-BR	Sacolão/Hortifrutti
+rdfs:label:de	Obst- und Gemüsehändler
+rdfs:label:mk	Пиљара
+rdfs:label:sk	Obchod so zeleninou
+rdfs:label:tl	Tagapagtinda ng Prutas at Gulay
+url	http://linkedgeodata.org/ontology/Greengrocer
+label	Greengrocer

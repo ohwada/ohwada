@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Hamlet/key/place/value/hamlet
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Place
+rdfs:label:el	Χωριουδάκι
+rdfs:label:lv	Ciems
+rdfs:label:no	Grend
+rdfs:label:br	Pennkêr
+rdfs:label:pt-BR	Aldeia
+rdfs:label:pt	Aldeia
+rdfs:label:da	Bebyggelse
+rdfs:label:tl	Maliit na Nayon
+rdfs:label:hr	Zaseok
+rdfs:label:ru	Посёлок
+rdfs:label:nds	Drubbel
+rdfs:label:fur	Frazion
+rdfs:label:myv	Церковавтомо веле
+rdfs:label:af	Gehug
+rdfs:label:lt	Kaimelis (Vienkiemis)
+rdfs:label:sv	By
+rdfs:label:fr	Hameau
+rdfs:label:vi	Xóm
+rdfs:label:he	כפר
+rdfs:label:sr-EL	Zaselak
+rdfs:label:mk	Селце
+rdfs:label:sl	Zaselek
+rdfs:label:arz	كفر
+rdfs:label:ar	كفر
+rdfs:label:it	Gruppo di case
+rdfs:label:ia	Vico
+rdfs:label:de	Weiler
+rdfs:label:en-GB	Hamlet
+rdfs:label:hsb	Wjeska
+rdfs:label:hu	Község
+rdfs:label:tr	Mezra
+rdfs:label:eu	Herrixka
+rdfs:label:nl	Gehucht
+rdfs:label:cs	Osada
+rdfs:label:aln	Katundth
+rdfs:label:uk	Хутір
+rdfs:label:pl	Osada
+rdfs:label:gl	Aldea
+rdfs:label:es	Aldea
+rdfs:label:ca	Aldea
+rdfs:label:ast	Aldea
+rdfs:label:dsb	Wjaska
+rdfs:label:fi	Pieni kylä
+rdfs:label:be-tarask	Хутар
+rdfs:label:ja	村
+rdfs:label:sk	Osada do 200
+rdfs:label:zh-Hans	村庄
+rdfs:label:sr-EC	Заселак
+url	http://linkedgeodata.org/ontology/Hamlet
+label	Hamlet

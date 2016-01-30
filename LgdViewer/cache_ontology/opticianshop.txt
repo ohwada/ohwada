@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/OpticianShop/key/shop/value/optician
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:ia	Optico
+rdfs:label:zh-Hans	配镜
+rdfs:label:gl	Oftalmólogo
+rdfs:label:tl	Optiko
+rdfs:label:cs	Oční optika
+rdfs:label:uk	Оптика
+rdfs:label:pl	Optyk
+rdfs:label:eu	Optika
+rdfs:label:fur	Otic
+rdfs:label:hr	Optičar
+rdfs:label:sr-EL	Optičar
+rdfs:label:es	Óptica
+rdfs:label:ast	Óptica
+rdfs:label:vi	Tiệm Kính mắt
+rdfs:label:dsb	Optikaŕ
+rdfs:label:ar	نظاراتي
+rdfs:label:arz	نظاراتي
+rdfs:label:sk	Očná optika
+rdfs:label:be-tarask	Оптыка
+rdfs:label:ru	оптика
+rdfs:label:fi	Optikko
+rdfs:label:ca	Òptica
+rdfs:label:ja	メガネ店
+rdfs:label:af	Oogkundige
+rdfs:label:fr	Opticien
+rdfs:label:nl	Opticien
+rdfs:label:tr	Gözlükçü
+rdfs:label:pt-BR	Ótica / Oculista
+rdfs:label:lt	Optikas
+rdfs:label:aln	Syzabërës
+rdfs:label:ka	ოპტიკა
+rdfs:label:hu	Látszerész
+rdfs:label:br	Luneder
+rdfs:label:sl	Optik
+rdfs:label:sr-EC	Оптичар
+rdfs:label:mk	Оптичар
+rdfs:label:it	Ottico
+rdfs:label:da	Optiker
+rdfs:label:lb	Optiker
+rdfs:label:de	Optiker
+rdfs:label:no	Optiker
+rdfs:label:sv	Optiker
+rdfs:label:nds	Optiker
+rdfs:label:hsb	Optikar
+rdfs:label:en-GB	Optician
+rdfs:label:lv	Optikas veikals
+rdfs:label:he	אופטיקאי
+url	http://linkedgeodata.org/ontology/OpticianShop
+label	OpticianShop

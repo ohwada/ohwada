@@ -1,0 +1,56 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Doctors/key/amenity/value/doctors
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:fur	Dotôrs
+rdfs:label:fr	Docteurs
+rdfs:label:da	Læger
+rdfs:label:it	Medici
+rdfs:label:ja	医師
+rdfs:label:de	Arzt
+rdfs:label:zh-Hans	医生
+rdfs:label:dsb	Gójce
+rdfs:label:el	Ιατροί
+rdfs:label:vi	Bác sĩ
+rdfs:label:lt	Gydytojai
+rdfs:label:lb	Dokteren
+rdfs:label:ps	رنځورګران
+rdfs:label:af	Dokters
+rdfs:label:hr	Doktor
+rdfs:label:sr-EL	Doktor
+rdfs:label:ms	Doktor
+rdfs:label:gl	Médicos
+rdfs:label:pt	Médicos
+rdfs:label:hsb	Lěkarjo
+rdfs:label:ar	أطباء
+rdfs:label:arz	أطباء
+rdfs:label:sr-EC	Доктор
+rdfs:label:cs	Lékař
+rdfs:label:ca	Metges
+rdfs:label:fi	Lääkäreitä
+rdfs:label:ia	Medicos
+rdfs:label:eu	Medikuak
+rdfs:label:uk	Лікарі
+rdfs:label:br	Mezeien
+rdfs:label:ast	Ambulatoriu
+rdfs:label:sl	Zdravniki
+rdfs:label:pl	Lekarze
+rdfs:label:ru	Врач
+rdfs:label:en-GB	Doctors
+rdfs:label:es	Consultorio médico
+rdfs:label:tl	Mga manggagamot
+rdfs:label:pt-BR	Consultórios
+rdfs:label:lv	Ārsti
+rdfs:label:be-tarask	Дактары
+rdfs:label:sv	Läkare
+rdfs:label:sk	Lekár
+rdfs:label:ka	ექიმი
+rdfs:label:he	רופאים
+rdfs:label:aln	Mjekët
+rdfs:label:nds	Dokter
+rdfs:label:nl	Dokter
+rdfs:label:myv	Рачт
+rdfs:label:hu	Orvosi rendelő
+rdfs:label:no	Leger
+rdfs:label:tr	Doktorlar
+rdfs:label:mk	Доктори
+url	http://linkedgeodata.org/ontology/Doctors
+label	Doctors

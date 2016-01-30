@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Shoes/key/shop/value/shoes
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:ms	Kedai Kasut
+rdfs:label:aln	dyqan këpucësh
+rdfs:label:sr-EL	Prodavnica obuće
+rdfs:label:fi	Kenkäkauppa
+rdfs:label:de	Schuhgeschäft
+rdfs:label:eu	Zapatadenda
+rdfs:label:hsb	Wobchod črijow
+rdfs:label:es	Zapatería
+rdfs:label:ast	Zapatería
+rdfs:label:he	חנות נעליים
+rdfs:label:is	Skóbúð
+rdfs:label:br	Stal voteier
+rdfs:label:tl	Tindahan ng Sapatos
+rdfs:label:lv	Apavu veikals
+rdfs:label:ja	靴屋
+rdfs:label:lt	Batų parduotuvė
+rdfs:label:sk	Obuva
+rdfs:label:ia	Scarperia
+rdfs:label:et	Kingapood
+rdfs:label:cs	Obuvnictví
+rdfs:label:en-GB	Shoe Shop
+rdfs:label:hu	Cipőbolt
+rdfs:label:it	Negozio di calzature
+rdfs:label:no	Skobutikk
+rdfs:label:vi	Tiệm Giày
+rdfs:label:fr	Magasin de chaussures
+rdfs:label:pt-BR	Sapataria
+rdfs:label:arz	متجر أحذية
+rdfs:label:ar	متجر أحذية
+rdfs:label:zh-Hans	鞋店
+rdfs:label:zh-Hant	鞋店
+rdfs:label:nl	Schoenenzaak
+rdfs:label:mk	Обувки
+rdfs:label:tr	Ayakkabı Dükkanı
+rdfs:label:af	Skoenwinkel
+rdfs:label:uk	Взуття
+rdfs:label:sl	Trgovina s čevlji
+rdfs:label:gl	Zapataría
+rdfs:label:fur	Buteghe di scarpis
+rdfs:label:be-tarask	Крама абутку
+rdfs:label:ru	Обувной магазин
+rdfs:label:lb	Schonggeschäft
+rdfs:label:pl	Sklep obuwniczy
+rdfs:label:da	Skobutik
+rdfs:label:sr-EC	Продавница обуће
+rdfs:label:hr	Trgovina obućom
+rdfs:label:ca	Sabateria
+rdfs:label:nds	Schohladen
+rdfs:label:sv	Skoaffär
+rdfs:label:dsb	Wobchod za crjeje
+url	http://linkedgeodata.org/ontology/Shoes
+label	Shoes

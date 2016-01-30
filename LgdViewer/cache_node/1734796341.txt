@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1734796341
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	たちのみ じぇんとるまん 関内店
+dc:modified	2013-04-19T15:44:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.447891&long=139.63725#point
+geo:long	139.637
+geo:lat	35.4479
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1734796341
+lgdo:changeset	15785691
+lgdo:source	survey; Bing
+lgdo:version	3
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="4dp" >
+    
+	<ScrollView  
+		android:id="@+id/scrollview" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" >
+
+	<LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+    
+<!-- word list -->		
+		<TextView
+    		android:id="@+id/textview_forward"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" 
+			android:layout_gravity="center"
+			android:gravity="center" />
+
+		<LinearLayout
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" >
+   	 
+			<TextView
+    			android:id="@+id/textview_left"
+    			android:layout_width="0dp"
+    			android:layout_height="wrap_content"
+				android:layout_weight="1" 
+				android:layout_gravity="center"
+				android:gravity="center" />
+
+			<ImageView
+    			android:id="@+id/imageview_mic"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+				android:layout_margin="5dp"
+				android:layout_gravity="center"
+				android:gravity="center"
+    			android:src="@drawable/mic" />
+    	    
+    		<TextView
+    			android:id="@+id/textview_right"
+    			android:layout_width="0dp"
+    			android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:gravity="center" />
+
+		</LinearLayout>
+    
+    	<TextView
+    		android:id="@+id/textview_back"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center" />
+<!-- word list end -->
+
+		<include layout="@layout/seekbar_power" />         
+		<include layout="@layout/bt_button" /> 
+
+		<TextView
+    		android:id="@+id/textview_result"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"/>
+
+		<TextView 
+			android:id="@+id/textview_debug"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+		
+		<include layout="@layout/button_back" /> 
+
+	</LinearLayout>
+	</ScrollView>  			       
+</LinearLayout>

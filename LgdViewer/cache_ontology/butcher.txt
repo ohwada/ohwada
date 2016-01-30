@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Butcher/key/shop/value/butcher
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:is	Slátrarinn
+rdfs:label:fur	Becjarie
+rdfs:label:ru	Мясная лавка
+rdfs:label:ja	肉屋
+rdfs:label:lt	Mėsininkas
+rdfs:label:hr	Mesnica
+rdfs:label:mk	Месарница
+rdfs:label:fr	Boucher
+rdfs:label:vi	Tiệm Thịt
+rdfs:label:eu	Harategi
+rdfs:label:pl	Rzeźnik
+rdfs:label:he	קצב
+rdfs:label:nl	Slagerij
+rdfs:label:en-GB	Butcher
+rdfs:label:sl	Mesar
+rdfs:label:br	Kiger
+rdfs:label:et	Lihunik
+rdfs:label:cs	Řeznictví
+rdfs:label:ca	Carnisseria
+rdfs:label:nds	Slachter
+rdfs:label:ka	საყასბო
+rdfs:label:fa	قصاب
+rdfs:label:pt-BR	Açougue
+rdfs:label:no	Slakter
+rdfs:label:sk	Mäsiarstvo
+rdfs:label:el	Κρεοπωλείο
+rdfs:label:da	Slagter
+rdfs:label:hu	Hentesbolt
+rdfs:label:af	Slagter
+rdfs:label:lv	Miesnieks
+rdfs:label:zh-Hans	屠宰
+rdfs:label:ast	Carnicería
+rdfs:label:es	Carnicería
+rdfs:label:fi	Lihakauppa
+rdfs:label:uk	М’ясо
+rdfs:label:tr	Kasap
+rdfs:label:aln	Kasap
+rdfs:label:sr-EL	Mesara
+rdfs:label:gl	Carnizaría
+rdfs:label:de	Metzgerei
+rdfs:label:ms	Kedai Daging
+rdfs:label:ar	جزار
+rdfs:label:arz	جزار
+rdfs:label:sr-EC	Месара
+rdfs:label:ia	Macelleria
+rdfs:label:hsb	Rěznik
+rdfs:label:tl	Mangangatay
+rdfs:label:dsb	Rěznik
+rdfs:label:be-tarask	Мясная крама
+rdfs:label:sv	Slaktare
+rdfs:label:it	Macellaio
+url	http://linkedgeodata.org/ontology/Butcher
+label	Butcher

@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Kiosk/key/shop/value/kiosk
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:lt	Kioskas
+rdfs:label:tl	Tindahan ng Kubol
+rdfs:label:fa	کیوسک
+rdfs:label:ca	Quiosc botiga
+rdfs:label:eu	Kiosko
+rdfs:label:es	Kiosko
+rdfs:label:mzn	تلفون خِنِه
+rdfs:label:arz	كشك
+rdfs:label:ar	كشك
+rdfs:label:be-tarask	Шапік
+rdfs:label:lv	Kiosks
+rdfs:label:uk	Кіоск
+rdfs:label:gl	Quiosco
+rdfs:label:cs	Kiosek
+rdfs:label:fr	Kiosque
+rdfs:label:ia	Kiosque
+rdfs:label:it	Edicola
+rdfs:label:ja	キオスク
+rdfs:label:ka	ჯიხური
+rdfs:label:zh-Hans	礼品店
+rdfs:label:sr-EC	Киоск
+rdfs:label:ru	Киоск
+rdfs:label:sl	Kiosk prodajalna
+rdfs:label:ast	Quioscu
+rdfs:label:he	קיוסק
+rdfs:label:en-GB	Kiosk Shop
+rdfs:label:sk	Novinový stánok
+rdfs:label:af	Kioskwinkel
+rdfs:label:nl	Kioskwinkel
+rdfs:label:mk	Трафика
+rdfs:label:el	Περίπτερο
+rdfs:label:fi	Kioski
+rdfs:label:is	Söluturninn
+rdfs:label:dsb	Kiosk
+rdfs:label:pl	Kiosk
+rdfs:label:hr	Kiosk
+rdfs:label:nds	Kiosk
+rdfs:label:hsb	Kiosk
+rdfs:label:de	Kiosk
+rdfs:label:da	Kiosk
+rdfs:label:sr-EL	Kiosk
+rdfs:label:pt-BR	Quiosque
+rdfs:label:br	Kiosk
+rdfs:label:sv	Kiosk
+rdfs:label:no	Kiosk
+rdfs:label:et	Kiosk
+rdfs:label:aln	kiosk
+rdfs:label:hu	Trafik
+url	http://linkedgeodata.org/ontology/Kiosk
+label	Kiosk

@@ -1,0 +1,46 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Video/key/shop/value/video
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:be-tarask	Відэакрама
+rdfs:label:dsb	Wideowobchod
+rdfs:label:da	Videoforretning
+rdfs:label:ia	Magazin de video
+rdfs:label:cs	Videopůjčovna, prodej DVD
+rdfs:label:is	Videoleigan
+rdfs:label:af	Video-winkel
+rdfs:label:aln	dyqan video
+rdfs:label:zh-Hans	影视店
+rdfs:label:ms	Kedai Video
+rdfs:label:vi	Tiệm Phim
+rdfs:label:sv	Videobutik
+rdfs:label:pl	Sklep filmowy
+rdfs:label:lt	Video parduotuvė
+rdfs:label:sr-EC	Видеотека
+rdfs:label:mk	Видеотека
+rdfs:label:tl	Tindahan ng Bidyo
+rdfs:label:ka	ვიდეო მაღაზია
+rdfs:label:pt-BR	Loja de vídeo
+rdfs:label:hr	Videoteka
+rdfs:label:sr-EL	Videoteka
+rdfs:label:sl	Videoteka
+rdfs:label:ca	Video de la botiga
+rdfs:label:tr	Video-CD Dükkanı
+rdfs:label:uk	Відео
+rdfs:label:en-GB	Video Shop
+rdfs:label:ast	Videu club
+rdfs:label:no	Videobutikk
+rdfs:label:ru	Магазин видеозаписей
+rdfs:label:hu	Videókölcsönző
+rdfs:label:it	Videoteca
+rdfs:label:arz	متجر فيديو
+rdfs:label:ar	متجر فيديو
+rdfs:label:es	Videotienda
+rdfs:label:gl	Tenda de vídeos
+rdfs:label:br	Stal videoioù
+rdfs:label:nl	Videotheek
+rdfs:label:fr	Magasin de vidéos
+rdfs:label:ja	ビデオショップ
+rdfs:label:fi	Videokauppa
+rdfs:label:de	Videoshop
+rdfs:label:hsb	Widejowobchod
+url	http://linkedgeodata.org/ontology/Video
+label	Video

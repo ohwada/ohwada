@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FloristShop/key/shop/value/florist
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:cs	Květinářství
+rdfs:label:ca	Floristeria
+rdfs:label:da	Blomsterhandler
+rdfs:label:no	Blomsterbutikk
+rdfs:label:sl	Cvetličarna
+rdfs:label:pl	Kwiaciarnia
+rdfs:label:eu	Loradenda
+rdfs:label:ru	Цветочный магазин
+rdfs:label:hsb	Kwětkarnja
+rdfs:label:dsb	Kwětkarnja
+rdfs:label:ja	花屋
+rdfs:label:el	Ανθοκομείο
+rdfs:label:sr-EC	Цвећара
+rdfs:label:is	Blómabúðin
+rdfs:label:aln	Luleshitës
+rdfs:label:sr-EL	Cvećara
+rdfs:label:af	Bloemiste
+rdfs:label:zh-Hans	鲜花
+rdfs:label:he	חנות פרחים
+rdfs:label:nds	Blomenladen
+rdfs:label:vi	Tiệm Hoa
+rdfs:label:sv	Blommor
+rdfs:label:br	Bokedour
+rdfs:label:it	Fioraio
+rdfs:label:nl	Bloemist
+rdfs:label:en-GB	Florist
+rdfs:label:et	Lillepood
+rdfs:label:arz	بائع زهور
+rdfs:label:ar	بائع زهور
+rdfs:label:pt	Florista
+rdfs:label:fr	Fleuriste
+rdfs:label:ia	Florista
+rdfs:label:pt-BR	Florista
+rdfs:label:sk	Kvetinárstvo
+rdfs:label:lb	Fleurist
+rdfs:label:de	Blumenladen
+rdfs:label:hu	Virágárus
+rdfs:label:tl	Nagtitinda ng Bulaklak
+rdfs:label:gl	Floraría
+rdfs:label:lv	Florists
+rdfs:label:lt	Gėlininkas
+rdfs:label:tr	Çiçekçi
+rdfs:label:es	Floristería
+rdfs:label:ast	Floristería
+rdfs:label:uk	Квіти
+rdfs:label:mk	Цвеќара
+rdfs:label:be-tarask	Кветкавая крама
+rdfs:label:fi	Kukkakauppa
+rdfs:label:ms	Kedai Bunga
+rdfs:label:hr	Cvjećarnica
+url	http://linkedgeodata.org/ontology/FloristShop
+label	FloristShop

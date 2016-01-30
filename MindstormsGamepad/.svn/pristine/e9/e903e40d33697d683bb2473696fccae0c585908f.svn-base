@@ -1,0 +1,109 @@
+<resources>
+
+<!-- AndroidManifest -->
+    <string name="app_name">LEGO NXT</string>
+	<string name="activity_touch">NXT タッチパネル</string>
+	<string name="activity_orientation">NXT 傾きセンサ</string>
+	<string name="activity_voice">NXT 音声認識</string>   
+	<string name="activity_joystick">NXT ジョイステック</string> 
+	<string name="activity_two_joystick">NXT ２本ジョイステック</string> 
+	<string name="activity_gamepad">NXT ゲームパッド</string> 
+    <string name="activity_sound">NXT サウンド</string>
+    <string name="activity_report">NXT レポート</string>
+    <string name="activity_program">NXT プログラム</string>
+	<string name="activity_bt_list">NXT BT機器一覧</string>  
+	<string name="activity_settings">NXT 設定</string> 
+
+<!--  Main Activity -->
+    <string name="button_go_orientation">傾きセンサ</string>
+	<string name="button_go_voice">音声認識</string>
+	<string name="button_go_joystick">ジョイステック</string> 
+	<string name="button_go_two_joystick">２本 ジョイステック</string> 
+	<string name="button_go_gamepad">ゲームパッド</string> 
+    <string name="button_go_sound">NXT サウンド</string>
+    <string name="button_go_report">NXT レポート</string>
+    <string name="button_go_program">NXT プログラムリスト</string>
+             
+ <!--  Voice Activity -->
+	<string name="title_voice">音声認識</string>
+    <string name="title_power">パワー制御</string>
+    <string name="voice_prompt">音声認識</string>
+    <string name="voice_activity_not_found">音声認識が見つからない</string>
+
+<!-- Sound Activity --> 
+	<string name="button_sound">サウンドファイルを取得する</string> 
+    <string name="button_tone_1">鳴らす トーン 1</string>
+	<string name="button_tone_2">鳴らす トーン 2</string> 
+	<string name="button_tone_3">鳴らす トーン 3</string> 
+    <string name="sound_dialog_title">サウンドファイルを再生する</string>  
+    		 
+<!--  Report Activity -->
+    <string name="report_firmware">Firmware:</string>
+    <string name="report_battery">Battery:</string>
+    <string name="report_device">Device Info:</string>    
+    <string name="firmware_version_error">FirmwareVersion が取得できない</string>
+    <string name="button_report">NXTの情報を取得する</string>  
+    
+<!-- Program Activity -->
+    <string name="button_program">プログラムファイルを取得する</string>
+    <string name="no_programs_found">プログラムファイルが見つからない</string>    
+    <string name="file_dialog_title_1">プログラムを実行・停止する</string>    
+    <string name="file_dialog_title_2">プログラムを実行する</string>    
+ 
+<!--  Bluetooth layout -->
+    <string name="bt_button_connect">BT機器に接続する</string>
+    
+<!--  Bluetooth activty -->    
+    <string name="bt_title_connecting">BT 接続中...</string>
+    <string name="bt_title_connected">BT =</string>
+    <string name="bt_title_not_connected">BT 未接続</string>
+	<string name="bt_connected">接続した</string>
+	<string name="bt_not_available">ブルートゥースは使用できない</string>
+    <string name="bt_not_enabled">ブルートゥースを有効にできない</string>
+    <string name="bt_write_failed">BT機器に送信できない</string>
+    <string name="bt_connection_failed">BT機器に接続できない</string>
+    <string name="bt_connection_lost">BT機器との通信が切断した</string>
+
+<!-- Bluetooth DeviceList layout -->
+    <string name="list_title_paired_devices">ペアリングされたBT機器</string>
+    <string name="list_title_other_devices">使用可能なBT機器</string>
+    <string name="list_button_scan">BT機器を検索する</string>
+
+<!-- Bluetooth DeviceList activty -->
+    <string name="list_scanning">BT機器を検索中 ...</string>
+    <string name="list_select_device">接続するBT機器を選択する</string>
+    <string name="list_none_paired">ペアリングされたBT機器はありません</string>
+    <string name="list_none_found">周辺にBT機器が見つかりません</string>
+
+ <!-- button -->
+    <string name="button_back">戻る</string>
+    <string name="button_save">保存</string>
+    <string name="button_cancel">キャンセル</string>
+     
+<!-- menu -->
+	<string name="menu_about">このアプリについて</string>
+	<string name="menu_usage">使い方</string>
+	<string name="menu_setting">一般設定</string>
+	<string name="menu_gamepad">ゲームパッドの設定</string>
+	<string name="menu_joystick">ジョイステックの設定</string>
+	<string name="menu_two_joystick">２本ジョイステックの設定</string>
+    <string name="menu_bt_connect">BT機器に接続する</string>
+    <string name="menu_bt_disconnect">BT機器と切断する</string>
+    <string name="menu_bt_clear">BTアドレスをクリアする</string>
+
+<!-- setting -->
+     <string name="pref_category_bt">ブルートゥース</string>
+
+     <string name="pref_bt_show_debug_title">BT機器との通信内容を表示する</string>
+     <string name="pref_bt_show_debug_summary">BT機器との通信内容を表示する</string>
+     <string name="pref_bt_show_debug_on">表示</string>
+     <string name="pref_bt_show_debug_off">非表示</string>
+     <string name="pref_bt_show_debug_default">false</string>
+ 
+<!-- dialog about -->
+ 	<string name="dialog_about_title">このアプリについて</string>   
+	<string name="dialog_about_main">このアプリは LOGO Mindstorms NXT を操縦するコントローラです。 \nタッチパネル、傾きセンサ、音声認識などで操縦できます。および、ジョイステックやゲームパッドなどでも操縦できます。</string>
+	<string name="dialog_about_credit">作者: 大和田健一</string>
+	<string name="dialog_button_close">閉じる</string>
+	     
+</resources>

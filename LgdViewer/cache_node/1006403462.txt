@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1006403462
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Theatre
+rdfs:label	神奈川県立県民ホール
+dc:modified	2010-11-27T10:59:12+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.44614&long=139.64709#point
+geo:long	139.647
+geo:lat	35.4461
+dc:contributor	http://linkedgeodata.org/triplify/user69966
+geom:geometry	http://linkedgeodata.org/geometry/node1006403462
+lgdo:changeset	6468114
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Theatre
+type:label	Theatre
+type:label:ja	劇場

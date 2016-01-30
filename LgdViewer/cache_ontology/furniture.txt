@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Furniture/key/shop/value/furniture
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:gl	Mobiliario
+rdfs:label:lb	Miwwelgeschäft
+rdfs:label:ia	Magazin de mobiles
+rdfs:label:hu	Bútorbolt
+rdfs:label:pl	Sklep meblowy
+rdfs:label:lv	Mēbeles
+rdfs:label:no	Møbler
+rdfs:label:da	Møbler
+rdfs:label:arz	أثاث
+rdfs:label:ar	أثاث
+rdfs:label:ms	Perabot
+rdfs:label:cs	Prodej nábytku
+rdfs:label:zh-Hans	家具
+rdfs:label:is	Húsgagnaverslunin
+rdfs:label:de	Möbelgeschäft
+rdfs:label:pt-BR	Móveis
+rdfs:label:sk	Nábytok
+rdfs:label:vi	Tiệm Đồ đạc
+rdfs:label:ast	Muebles
+rdfs:label:lt	Baldai
+rdfs:label:ku-Latn	Mobîlya
+rdfs:label:br	Stal arrebeuri
+rdfs:label:sv	Möbler
+rdfs:label:et	Mööbel
+rdfs:label:hr	Namještaj
+rdfs:label:ka	ავეჯი
+rdfs:label:tl	Muwebles
+rdfs:label:nds	Möbelladen
+rdfs:label:be-tarask	Мэбля
+rdfs:label:ja	家具店
+rdfs:label:he	רהיטים
+rdfs:label:aln	Mobilje
+rdfs:label:dsb	Meblowy wobchod
+rdfs:label:eu	Altzari
+rdfs:label:ru	Мебель
+rdfs:label:ca	Mobles
+rdfs:label:en-GB	Furniture
+rdfs:label:sl	Pohištvo
+rdfs:label:it	Arredamenti
+rdfs:label:zh-Hant	傢俬
+rdfs:label:nl	Meubelzaak
+rdfs:label:uk	Меблі
+rdfs:label:fr	Ameublement
+rdfs:label:hsb	Meble
+rdfs:label:fi	Huonekaluliike
+rdfs:label:af	Meubels
+rdfs:label:sr-EC	Намештај
+rdfs:label:tr	Mobilya
+rdfs:label:mk	Мебел
+rdfs:label:sr-EL	Nameštaj
+rdfs:label:es	Tienda de muebles
+url	http://linkedgeodata.org/ontology/Furniture
+label	Furniture

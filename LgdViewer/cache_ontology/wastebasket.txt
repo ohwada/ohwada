@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/WasteBasket/key/amenity/value/waste_basket
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:ru	Мусорка
+rdfs:label:be-tarask	Сьметніца
+rdfs:label:sv	Papperskorg
+rdfs:label:no	Søppelkasse
+rdfs:label:br	Pod-lastez
+rdfs:label:af	Asblik
+rdfs:label:lv	Atkritumu grozs
+rdfs:label:da	Skraldespand
+rdfs:label:fa	سطل اشغال
+rdfs:label:ia	Corbe a papiro
+rdfs:label:he	פח אשפה
+rdfs:label:ka	ნაგვის ურნა
+rdfs:label:et	Prügikast
+rdfs:label:en-GB	Waste Basket
+rdfs:label:ms	Bakul Sampah
+rdfs:label:vi	Thùng rác
+rdfs:label:pt-BR	Lata de lixo
+rdfs:label:zh-Hans	废纸篓
+rdfs:label:aln	Mbeturinat Shporta
+rdfs:label:arz	سله نفايات
+rdfs:label:sk	Odpadkový kôš
+rdfs:label:lt	Atliekų krepšelis
+rdfs:label:tr	Çöp sepeti
+rdfs:label:cs	Odpadkový koš
+rdfs:label:ast	Papelera
+rdfs:label:es	Papelera
+rdfs:label:it	Cestino rifiuti
+rdfs:label:nl	Prullenbak
+rdfs:label:ar	سلة نفايات
+rdfs:label:hr	Kanta za otpatke
+rdfs:label:mzn	آشخال‌دون
+rdfs:label:sr-EL	Korpa za otpatke
+rdfs:label:gl	Cesto do lixo
+rdfs:label:mk	Корпа за отпадоци
+rdfs:label:fr	Corbeille
+rdfs:label:hsb	Wotpadkowe sudobjo
+rdfs:label:pl	Kosz na śmieci
+rdfs:label:hu	Szemétgyűjtő kosár
+rdfs:label:fi	Roskakori
+rdfs:label:sr-EC	Корпа за отпатке
+rdfs:label:sl	Koš za odpadke
+rdfs:label:ca	Cistella de Residus
+rdfs:label:tl	Basurahan
+rdfs:label:dsb	Sudobje za wótpadanki
+rdfs:label:de	Mülleimer
+rdfs:label:uk	Контейнер для сміття
+url	http://linkedgeodata.org/ontology/WasteBasket
+label	WasteBasket

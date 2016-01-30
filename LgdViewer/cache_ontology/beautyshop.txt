@@ -1,0 +1,47 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/BeautyShop/key/shop/value/beauty
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:de	Parfümerie
+rdfs:label:da	Skønhedssalon
+rdfs:label:sr-EL	Parfimerija
+rdfs:label:dsb	Parfimerija
+rdfs:label:be-tarask	Салён прыгажосьці
+rdfs:label:nl	Schoonheidssalon
+rdfs:label:vi	Tiệm Mỹ phẩm
+rdfs:label:uk	Салон краси
+rdfs:label:hr	Parfumerija
+rdfs:label:he	סלון יופי
+rdfs:label:es	Tienda de productos de belleza
+rdfs:label:ru	Салон красоты
+rdfs:label:hsb	Kosmetikowy salon
+rdfs:label:sl	Salon lepote
+rdfs:label:no	Skjønnhetssalong
+rdfs:label:tl	Tindahan ng Pampaganda
+rdfs:label:gl	Tenda de produtos de beleza
+rdfs:label:aln	Bukuri Shop
+rdfs:label:fr	Magasin de produits de beauté
+rdfs:label:zh-Hant	美容店
+rdfs:label:zh-Hans	美容店
+rdfs:label:br	Stal produioù kened
+rdfs:label:ia	Salon de beltate
+rdfs:label:tr	Güzellik Salonu
+rdfs:label:lv	Kosmētiskais salons
+rdfs:label:ast	Cuidaos corporales
+rdfs:label:hu	Szépészeti bolt
+rdfs:label:lt	Grožio salonas
+rdfs:label:ka	სილამაზის სალონი
+rdfs:label:en-GB	Beauty Shop
+rdfs:label:pl	Salon kosmetyczny
+rdfs:label:ja	美容室
+rdfs:label:it	Prodotti cosmetici
+rdfs:label:mk	Козметика
+rdfs:label:af	Skoonheidssalon
+rdfs:label:pt-BR	Salão de Beleza
+rdfs:label:sk	Salón krásy
+rdfs:label:cs	Salón krásy
+rdfs:label:ar	صالون تجميل
+rdfs:label:arz	صالون تجميل
+rdfs:label:sr-EC	Парфимерија
+rdfs:label:sv	Skönhetssalong
+rdfs:label:ca	Saló de bellesa
+url	http://linkedgeodata.org/ontology/BeautyShop
+label	BeautyShop

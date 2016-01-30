@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CommunityCentre/key/amenity/value/community_centre
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:lv	Sabiedriskais centrs
+rdfs:label:ru	Общественный центр
+rdfs:label:vi	Trung tâm Cộng đồng
+rdfs:label:uk	Громадський центр
+rdfs:label:lt	Bendruomenės centras
+rdfs:label:it	Centro civico
+rdfs:label:arz	مركز اجتماع
+rdfs:label:ar	مركز اجتماع
+rdfs:label:fur	Centri civic
+rdfs:label:ms	Pusat Komuniti
+rdfs:label:no	Samfunnshus
+rdfs:label:zh-Hans	社区中心
+rdfs:label:fi	Yhteisökeskus
+rdfs:label:ja	コミュニティセンター
+rdfs:label:tl	Lunduyan ng Pamayanan
+rdfs:label:hr	Društveni centar
+rdfs:label:sr-EL	Društveni centar
+rdfs:label:da	Fællesskabscenter
+rdfs:label:pt-BR	Centro comunitário
+rdfs:label:hsb	Zhromadny centrum
+rdfs:label:be-tarask	Грамадзкі цэнтар
+rdfs:label:aln	ndërtimin e qendrës së komunitetit
+rdfs:label:ia	Centro communitari
+rdfs:label:ka	საზოგადოებრივი ცენტრი
+rdfs:label:hu	Művelődési központ
+rdfs:label:bn	কমিউনিটি সেন্টার
+rdfs:label:eu	Komunitate Zentroa
+rdfs:label:sl	Center skupnosti
+rdfs:label:sk	Kultúrne stredisko
+rdfs:label:sr-EC	Друштвени центар
+rdfs:label:nl	Gemeenschapscentrum
+rdfs:label:zh-Hant	社區中心
+rdfs:label:mk	Центар на заедница
+rdfs:label:ast	Centru comunitariu
+rdfs:label:gl	Centro comunitario
+rdfs:label:es	Centro comunitario
+rdfs:label:dsb	Komunikaciski centrum
+rdfs:label:af	Gemeenskap-sentrum
+rdfs:label:pl	Centrum społeczności
+rdfs:label:he	מרכז קהילתי
+rdfs:label:ca	Centre Comunitari / Centre Cívic
+rdfs:label:de	Gemeindezentrum
+rdfs:label:cs	Komunitní centrum
+rdfs:label:fr	Salle polyvalente
+rdfs:label:br	Sal liezimplij
+rdfs:label:en-GB	Community Centre
+url	http://linkedgeodata.org/ontology/CommunityCentre
+label	CommunityCentre

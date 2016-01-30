@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2993794275
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Leisure
+rdf:type:3	http://linkedgeodata.org/ontology/SportsCentre
+rdfs:label	剣道 秀武館
+dc:modified	2014-08-03T14:57:13+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2993794275
+geo:lat	35.4426
+geo:long	139.626
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	24515301
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.442646&long=139.62631#point
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Leisure
+type:label	Leisure
+type:label:ja	

@@ -1,0 +1,46 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/DepartmentStore/key/shop/value/department_store
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:sl	Trgovska hiša
+rdfs:label:pt-BR	Loja de departamentos
+rdfs:label:tl	Tindahang Kagawaran
+rdfs:label:sr-EC	Робна кућа
+rdfs:label:aln	Departamenti Shitore
+rdfs:label:nl	Warenhuis
+rdfs:label:gl	Gran almacén
+rdfs:label:it	Grande magazzino
+rdfs:label:ia	Grande magazin
+rdfs:label:be-tarask	Унівэрсальная крама
+rdfs:label:cs	Obchodní dům
+rdfs:label:hu	Áruház
+rdfs:label:zh-Hant	百貨商店
+rdfs:label:vi	Cửa hàng Bách hóa
+rdfs:label:ca	Department Store
+rdfs:label:en-GB	Department Store
+rdfs:label:lv	Universālveikals
+rdfs:label:mk	Стоковна куќа
+rdfs:label:ast	Grandes almacenes
+rdfs:label:es	Grandes almacenes
+rdfs:label:zh-Hans	百货商店
+rdfs:label:fr	Grand magasin
+rdfs:label:dsb	Kupnica
+rdfs:label:hsb	Kupnica
+rdfs:label:pl	Dom towarowy
+rdfs:label:de	Kaufhaus
+rdfs:label:ja	デパート
+rdfs:label:uk	Універмаг
+rdfs:label:sk	Obchodný dom
+rdfs:label:sr-EL	Robna kuća
+rdfs:label:he	כלבו
+rdfs:label:hr	Robna kuća
+rdfs:label:lt	Universalinė parduotuvė
+rdfs:label:no	Varehus
+rdfs:label:da	Varehus
+rdfs:label:sv	Varuhus
+rdfs:label:br	Gourstal
+rdfs:label:fi	Tavaratalo
+rdfs:label:ru	Универсам
+rdfs:label:ms	Gedung Serbaneka
+rdfs:label:arz	متجر متعدد الأقسام
+rdfs:label:ar	متجر متعدد الأقسام
+url	http://linkedgeodata.org/ontology/DepartmentStore
+label	DepartmentStore

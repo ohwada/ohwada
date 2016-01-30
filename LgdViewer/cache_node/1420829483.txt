@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420829483
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PostOffice
+rdfs:label	石川町駅前郵便局
+dc:modified	2011-09-02T12:29:57+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.438072&long=139.64395#point
+geo:long	139.644
+geo:lat	35.4381
+dc:contributor	http://linkedgeodata.org/triplify/user393606
+geom:geometry	http://linkedgeodata.org/geometry/node1420829483
+lgdo:changeset	9191805
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	1
+lgdo:KSJ2%3AADS	石川町2-76
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	その他
+type:url	http://linkedgeodata.org/ontology/PostOffice
+type:label	PostOffice
+type:label:ja	郵便局

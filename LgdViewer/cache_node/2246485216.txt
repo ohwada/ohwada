@@ -1,0 +1,21 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246485216
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label:en	Kentucky Fried Chicken
+rdfs:label	ケンタッキーフライドチキン
+rdfs:label:ja	ケンタッキーフライドチキン
+dc:modified	2014-04-19T02:51:44+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246485216
+geo:lat	35.4459
+geo:long	139.627
+dc:contributor	http://linkedgeodata.org/triplify/user171028
+lgdo:changeset	21788087
+lgdo:cuisine	chicken
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.44595&long=139.62727#point
+lgdo:version	3
+lgdo:brand	KFC
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

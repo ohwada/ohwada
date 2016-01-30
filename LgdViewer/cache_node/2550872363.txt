@@ -1,0 +1,31 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2550872363
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/RailwayThing
+rdf:type:3	http://linkedgeodata.org/ontology/PublicTransportThing
+rdf:type:4	http://linkedgeodata.org/ontology/RailwayStation
+rdf:type:5	http://linkedgeodata.org/ontology/Station
+rdfs:label:en	Hinodecho
+rdfs:label	日ノ出町
+rdfs:label:ja	日ノ出町
+dc:modified	2014-03-24T07:40:56+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2550872363
+geo:lat	35.4456
+geo:long	139.627
+dc:contributor	http://linkedgeodata.org/triplify/user638409
+lgdo:changeset	21278700
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445614&long=139.62668#point
+lgdo:operator	京浜急行電鉄
+lgdo:source	Bing
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-N02-v1_1.html
+lgdo:version	4
+lgdo:note	National-Land Numerical Information (Railway) 2007, MLIT Japan
+lgdo:ref	KK39
+lgdo:wikipedia	ja:日ノ出町駅
+lgdo:KSJ2%3ALIN	本線
+lgdo:note%3Aja	国土数値情報（鉄道データ）平成19年　国土交通省
+lgdo:operator%3Aja	京浜急行電鉄
+lgdo:operator%3Aen	Keikyu Corporation
+type:url	http://linkedgeodata.org/ontology/RailwayStation
+type:label	RailwayStation
+type:label:ja	鉄道駅

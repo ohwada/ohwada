@@ -1,0 +1,11 @@
+概要
+「OSM Node Viewer 2」は、 Open Street Map に登録されているノードの情報を地図に表示するアプリケーションです。
+
+関連するブログ 
+http://android.ohwada.jp/osm-node-viewer-2
+
+ソースコード
+Apacheライセンスで公開しています。
+http://code.google.com/p/ohwada/source/browse/#svn%2FOsm2
+
+スクリーンショット

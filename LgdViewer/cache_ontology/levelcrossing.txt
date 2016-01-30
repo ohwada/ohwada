@@ -1,0 +1,46 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/LevelCrossing/key/railway/value/level_crossing
+rdfs:subClassOf	http://linkedgeodata.org/ontology/RailwayThing
+rdfs:label:cs	Železniční přejezd
+rdfs:label:arz	تقاطع سكك حديدية
+rdfs:label:ar	تقاطع سكك حديدية
+rdfs:label:ca	Pas a nivell
+rdfs:label:it	Passaggio a livello
+rdfs:label:ja	踏切
+rdfs:label:fur	Passaç a nivel
+rdfs:label:da	Jernbaneoverskæring
+rdfs:label:af	Gelykvloerse kruising
+rdfs:label:et	Raudtee ülesõidukoht
+rdfs:label:tl	Patag na Tawiran
+rdfs:label:ast	Pasu a nivel
+rdfs:label:sl	Prehod
+rdfs:label:nl	Spoorwegovergang
+rdfs:label:sr-EC	Пружни прелаз
+rdfs:label:tr	Demiryolu Geçidi
+rdfs:label:lt	Pervaža
+rdfs:label:he	מפגש מסילת ברזל וכביש
+rdfs:label:no	Planovergang
+rdfs:label:fr	Passage à niveau
+rdfs:label:de	Eisenbahnkreuzung
+rdfs:label:uk	Залізничний переїзд
+rdfs:label:fi	Tasoristeys
+rdfs:label:pt-BR	Passagem em nível
+rdfs:label:ia	Passage a nivello
+rdfs:label:mk	Надвозник
+rdfs:label:en-GB	Level Crossing
+rdfs:label:pl	Przejazd kolejowy
+rdfs:label:sr-EL	Pružni prelaz
+rdfs:label:br	Treuzenn hent-houarn
+rdfs:label:es	Paso a nivel
+rdfs:label:gl	Paso a nivel
+rdfs:label:zh-Hans	平交道口
+rdfs:label:vi	Điểm giao Đường sắt
+rdfs:label:hr	Pružni prijelaz
+rdfs:label:hsb	Železniski přechod
+rdfs:label:be-tarask	Чыгуначны пераезд
+rdfs:label:ru	Железнодорожный переезд
+rdfs:label:hu	Vasúti átjáró
+rdfs:label:dsb	Zeleznicowy pśechod
+rdfs:label:sk	Železničný prejazd
+rdfs:label:aln	Kalim në nivel
+url	http://linkedgeodata.org/ontology/LevelCrossing
+label	LevelCrossing

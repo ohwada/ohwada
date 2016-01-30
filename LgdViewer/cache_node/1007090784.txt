@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1007090784
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	花菱
+dc:modified	2013-04-19T15:37:17+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.449528&long=139.64023#point
+geo:long	139.64
+geo:lat	35.4495
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node1007090784
+lgdo:changeset	15785608
+lgdo:version	4
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

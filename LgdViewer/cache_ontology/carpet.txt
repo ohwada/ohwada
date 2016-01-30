@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Carpet/key/shop/value/carpet
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:sl	Prodajalna preprog
+rdfs:label:sr-EC	Продавница тепиха
+rdfs:label:ast	Alfombres
+rdfs:label:be-tarask	Дывановая крама
+rdfs:label:ru	Ковры
+rdfs:label:sr-EL	Prodavnica tepiha
+rdfs:label:pt-BR	Loja de tapetes
+rdfs:label:tr	Halı Dükkanı
+rdfs:label:lt	Kilimų parduotuvė
+rdfs:label:cs	Obchod s koberci
+rdfs:label:fi	Mattokauppa
+rdfs:label:sv	Mattaffär
+rdfs:label:it	Tappeti
+rdfs:label:af	Mat-/tapytwinkel
+rdfs:label:fur	Buteghe di tapêts
+rdfs:label:ca	Botiga de catifes
+rdfs:label:fr	Magasin de tapis
+rdfs:label:no	Teppebutikk
+rdfs:label:es	Tienda de alfombras
+rdfs:label:ja	カーペットショップ
+rdfs:label:mk	Дуќан за теписи
+rdfs:label:en-GB	Carpet Shop
+rdfs:label:uk	Килими
+rdfs:label:de	Teppichladen
+rdfs:label:ka	ხალიჩების მაღაზია
+rdfs:label:br	Stal pallennoù
+rdfs:label:vi	Tiệm Thảm
+rdfs:label:aln	dyqan qilim
+rdfs:label:hsb	Přestrjencowy wobchod
+rdfs:label:lv	Paklāju veikals
+rdfs:label:gl	Tenda de alfombras
+rdfs:label:nl	Tapijtzaak
+rdfs:label:he	חנות שטיחים
+rdfs:label:is	Teppabúðin
+rdfs:label:et	Vaibakauplus
+rdfs:label:ia	Magazin de tapetes
+rdfs:label:pl	Sklep z dywanami
+rdfs:label:sk	Obchod s kobercami
+rdfs:label:tl	Tindahan ng Karpet
+rdfs:label:hr	Trgovina tepisima
+rdfs:label:zh-Hans	地毯店
+rdfs:label:hu	Szőnyegbolt
+rdfs:label:da	Tæppebutik
+rdfs:label:dsb	Tepichowy wobchod
+rdfs:label:ar	معرض سجاد
+rdfs:label:arz	معرض سجاد
+url	http://linkedgeodata.org/ontology/Carpet
+label	Carpet

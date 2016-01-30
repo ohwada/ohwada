@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246452876
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	野毛ゴールデン
+dc:modified	2013-04-19T15:37:18+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.447681&long=139.62881#point
+geo:long	139.629
+geo:lat	35.4477
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2246452876
+lgdo:changeset	15785608
+lgdo:version	4
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

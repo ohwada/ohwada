@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2190826519
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label	別亭 空海
+dc:modified	2013-04-19T15:44:14+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.447697&long=139.6382#point
+geo:long	139.638
+foaf:phone	045-664-5440
+geo:lat	35.4477
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2190826519
+lgdo:changeset	15785691
+lgdo:version	3
+lgdo:cuisine	japanese
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン

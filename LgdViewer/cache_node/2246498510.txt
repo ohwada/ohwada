@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246498510
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	ホルモン焼 寅次
+dc:modified	2013-04-03T16:16:50+02:00
+geom:geometry	http://linkedgeodata.org/geometry/node2246498510
+geo:lat	35.4445
+geo:long	139.627
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+lgdo:changeset	15595378
+lgdo:cuisine	barbecue
+lgdo:gadmSameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.444527&long=139.62686#point
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

@@ -1,0 +1,44 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FuneralDirectors/key/shop/value/funeral_directors
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:en-GB	Funeral Directors
+rdfs:label:ia	Directores de pompas funebre
+rdfs:label:de	Bestattungsunternehmen
+rdfs:label:vi	Nhà tang lễ
+rdfs:label:aln	drejtor funeral
+rdfs:label:he	בית לוויות
+rdfs:label:ca	Funeral d'administració
+rdfs:label:hu	Temetkezési vállalkozó
+rdfs:label:uk	Ритуальні послуги
+rdfs:label:mk	Погребална служба
+rdfs:label:br	Kañvlidoù
+rdfs:label:es	Funeraria
+rdfs:label:be-tarask	Паслугі па пахаваньні
+rdfs:label:ast	Servicios funerarios
+rdfs:label:hr	Pogrebno poduzeće
+rdfs:label:sr-EL	Pogrebno preduzeće
+rdfs:label:pt-BR	Capela Mortuária
+rdfs:label:hsb	Pochowanski wustaw
+rdfs:label:zh-Hans	丧葬
+rdfs:label:cs	Pohřební služba
+rdfs:label:sv	Begravningsbyrå
+rdfs:label:zh-Hant	殮葬服務
+rdfs:label:nl	Uitvaartcentrum
+rdfs:label:af	Begrafnisondernemer
+rdfs:label:fi	Hautausurakoitsija
+rdfs:label:ar	وكلاء ترتيبات جنازة
+rdfs:label:arz	وكلاء ترتيبات جنازة
+rdfs:label:tl	Mga Direktor ng Punerarya
+rdfs:label:ru	Похоронное бюро
+rdfs:label:fr	Pompes funèbres
+rdfs:label:sk	Pohrebníctvo
+rdfs:label:it	Agenzia funebre
+rdfs:label:da	Begravelsesforretning
+rdfs:label:no	Begravelsesforretning
+rdfs:label:sl	Pogrebni zavod
+rdfs:label:dsb	Zakopowański institut
+rdfs:label:lv	Apbedīšanas birojs
+rdfs:label:sr-EC	Погребно предузеће
+rdfs:label:pl	Zakłady pogrzebowe
+rdfs:label:gl	Tanatorio
+url	http://linkedgeodata.org/ontology/FuneralDirectors
+label	FuneralDirectors

@@ -1,0 +1,3 @@
+lgdm:sourceKey	leisure
+url	http://linkedgeodata.org/ontology/Leisure
+label	Leisure

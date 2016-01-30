@@ -1,0 +1,38 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/AlcoholShop/key/shop/value/alcohol
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:it	Alcolici
+rdfs:label:zh-Hans	无许可证
+rdfs:label:sk	Mimo povolenia
+rdfs:label:uk	Спритні напої
+rdfs:label:ast	Venta de bébores
+rdfs:label:nl	Slijterij
+rdfs:label:dsb	Wobchod za spirituoze
+rdfs:label:ca	De llicència
+rdfs:label:sr-EL	Trgovina pićem
+rdfs:label:hr	Trgovina pićem
+rdfs:label:hsb	Wobchod za spirituozy
+rdfs:label:es	Licorería
+rdfs:label:da	Spiritusforretning
+rdfs:label:ar	متجر كحول للبيع الخارجي
+rdfs:label:br	Gwezher alkool
+rdfs:label:sr-EC	Трговина пићем
+rdfs:label:tr	Tekel bayii
+rdfs:label:mk	Алкохол на црно
+rdfs:label:fr	Magasin officiel d'alcool
+rdfs:label:pt-BR	Loja de bebidas alcoolicas
+rdfs:label:hu	Alkoholos italbolt
+rdfs:label:cs	Prodej alkoholu
+rdfs:label:ia	Magazin de bibitas alcoholic
+rdfs:label:ru	Винный магазин
+rdfs:label:aln	kiosk
+rdfs:label:gl	Tenda de licores
+rdfs:label:vi	Tiệm Rượu
+rdfs:label:en-GB	Off License
+rdfs:label:sl	Trgovina alkoholnih pijač
+rdfs:label:no	Utenfor lisens
+rdfs:label:de	Spirituosenladen
+rdfs:label:tl	Wala sa Lisensiya
+rdfs:label:pl	Sklep monopolowy
+rdfs:label:be-tarask	Алькагольная крама
+url	http://linkedgeodata.org/ontology/AlcoholShop
+label	AlcoholShop

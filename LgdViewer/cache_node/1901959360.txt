@@ -1,0 +1,19 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1901959360
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PlaceOfWorship
+rdfs:label	蓮光寺
+rdfs:label:ja	蓮光寺
+dc:modified	2012-09-06T11:59:19+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.435551&long=139.64201#point
+geo:long	139.642
+geo:lat	35.4356
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1901959360
+lgdo:changeset	13007887
+lgdo:source	image;Bing 2010
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/PlaceOfWorship
+type:label	PlaceOfWorship
+type:label:ja	神社仏閣

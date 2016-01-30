@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2087984866
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Shop
+rdf:type:3	http://linkedgeodata.org/ontology/Electronics
+rdfs:label	ノジマ
+dc:modified	2012-12-30T03:03:02+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.483028&long=138.80072#point
+geo:long	138.801
+geo:lat	35.483
+dc:contributor	http://linkedgeodata.org/triplify/user621319
+geom:geometry	http://linkedgeodata.org/geometry/node2087984866
+lgdo:changeset	14458957
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Electronics
+type:label	Electronics
+type:label:ja	電気製品販売店

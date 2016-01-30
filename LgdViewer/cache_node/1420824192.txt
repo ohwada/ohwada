@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420824192
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FireStation
+rdfs:label	横浜市安全管理局中消防署山下町消防出張所
+dc:modified	2011-09-02T12:25:30+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.445404&long=139.64462#point
+geo:long	139.645
+geo:lat	35.4454
+dc:contributor	http://linkedgeodata.org/triplify/user393606
+geom:geometry	http://linkedgeodata.org/geometry/node1420824192
+lgdo:changeset	9191805
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	1
+lgdo:KSJ2%3AADS	山下町72-1
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	市区町村
+type:url	http://linkedgeodata.org/ontology/FireStation
+type:label	FireStation
+type:label:ja	消防署

@@ -1,0 +1,48 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Chemist/key/shop/value/chemist
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:ar	صيدلي
+rdfs:label:arz	صيدلي
+rdfs:label:af	Apteek
+rdfs:label:tr	Eczacı
+rdfs:label:sr-EL	Apotekar
+rdfs:label:fr	Magasin de produits d'hygiène
+rdfs:label:es	Droguería
+rdfs:label:ast	Droguería
+rdfs:label:sr-EC	Апотекар
+rdfs:label:ps	کيمياګر
+rdfs:label:dsb	Aptejka
+rdfs:label:sv	Apotek
+rdfs:label:da	Apotek
+rdfs:label:tl	Kimiko
+rdfs:label:eu	Farmazia
+rdfs:label:pt-BR	Farmacêutico
+rdfs:label:he	בית מרקחת
+rdfs:label:ia	Pharmacia
+rdfs:label:be-tarask	Крама бытавой хіміі
+rdfs:label:nds	Avtheek
+rdfs:label:no	Kjemiker
+rdfs:label:hr	Ljekarna
+rdfs:label:lt	Chemikas
+rdfs:label:nl	Apotheek
+rdfs:label:aln	Farmacist
+rdfs:label:gl	Farmacia
+rdfs:label:it	Farmacia
+rdfs:label:fi	Apteekki
+rdfs:label:lb	Apdikt
+rdfs:label:en-GB	Chemist
+rdfs:label:zh-Hans	化学品店
+rdfs:label:sl	Kemična trgovina
+rdfs:label:ru	м-н бытовой химии
+rdfs:label:hsb	Lěkarnja
+rdfs:label:ca	Farmàcia
+rdfs:label:vi	Nhà thuốc
+rdfs:label:hu	Vegyipari bolt
+rdfs:label:uk	Хімтовари
+rdfs:label:mk	Аптека
+rdfs:label:br	Stal produioù yec'hederezh
+rdfs:label:pl	Drogeria
+rdfs:label:cs	Drogerie
+rdfs:label:de	Apotheke
+rdfs:label:sk	Lekáreň
+url	http://linkedgeodata.org/ontology/Chemist
+label	Chemist

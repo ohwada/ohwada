@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="4dp" >
+        
+	<ScrollView  
+		android:id="@+id/scrollview" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  >
+
+	<LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+
+		<include layout="@layout/nine_buttons" /> 
+		<include layout="@layout/seekbar_power" /> 
+		<include layout="@layout/bt_button" /> 
+
+		<TextView 
+			android:id="@+id/textview_debug"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+			
+<!-- button other activity -->
+		<LinearLayout 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="5dp"
+   			android:layout_marginRight="5dp" >
+    
+    		<Button 
+				android:id="@+id/button_go_orientation"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_orientation" />
+		
+			<Button 
+				android:id="@+id/button_go_voice"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_voice" />
+
+		</LinearLayout>
+
+		<LinearLayout 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="5dp"
+   			android:layout_marginRight="5dp" >
+    
+			<Button 
+				android:id="@+id/button_go_joystick"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_joystick" />
+
+			<Button 
+				android:id="@+id/button_go_two_joystick"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_two_joystick" />
+				
+			<Button 
+				android:id="@+id/button_go_gamepad"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_gamepad" />
+						
+		</LinearLayout>
+
+		<LinearLayout 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="5dp"
+   			android:layout_marginRight="5dp" >
+
+			<Button 
+				android:id="@+id/button_go_sound"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_sound" />
+
+			<Button 
+				android:id="@+id/button_go_report"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_report" />
+
+			<Button 
+				android:id="@+id/button_go_program"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/button_go_program" />
+						
+		</LinearLayout>	
+<!-- button other activity end -->
+
+	</LinearLayout>
+	</ScrollView>  	    
+</LinearLayout>

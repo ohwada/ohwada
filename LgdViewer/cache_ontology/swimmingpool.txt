@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/SwimmingPool/key/amenity/value/swimming_pool
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Leisure
+rdfs:label:fi	Uima-allas
+rdfs:label:vi	Hồ Bơi
+rdfs:label:et	Ujula
+rdfs:label:ar	بركة سباحة
+rdfs:label:hu	Uszoda
+rdfs:label:ja	水泳用プール
+rdfs:label:tl	Palanguyan
+rdfs:label:ast	Piscina
+rdfs:label:hsb	Swimmingpool
+rdfs:label:dsb	Swimmingpool
+rdfs:label:pt	Piscina
+rdfs:label:ia	Piscina
+rdfs:label:gl	Piscina
+rdfs:label:es	Piscina
+rdfs:label:pt-BR	Piscina
+rdfs:label:ca	Piscina
+rdfs:label:it	Piscina
+rdfs:label:aln	Bazen
+rdfs:label:sr-EL	Bazen
+rdfs:label:sl	Bazen
+rdfs:label:uk	Басейн
+rdfs:label:hr	Bazen
+rdfs:label:lt	Plaukiojimo baseinas
+rdfs:label:be-tarask	Басэйн
+rdfs:label:is	Sundlaugin
+rdfs:label:eu	Igerilekua
+rdfs:label:br	Poull-neuial
+rdfs:label:sv	Simbassäng
+rdfs:label:fr	Piscine
+rdfs:label:lv	Peldbaseins
+rdfs:label:lb	Schwëmm
+rdfs:label:fur	Pissine
+rdfs:label:no	Svømmebaseng
+rdfs:label:pl	Basen
+rdfs:label:ru	Бассейн
+rdfs:label:nl	Zwembad
+rdfs:label:da	Svømmebasin
+rdfs:label:sr-EC	Базен
+rdfs:label:mk	Базен
+rdfs:label:ka	საცურაო აუზი
+rdfs:label:sk	Plaváreň
+rdfs:label:de	Schwimmbad
+rdfs:label:el	Πισίνα
+rdfs:label:cs	Bazén
+rdfs:label:zh-Hans	游泳池
+rdfs:label:af	Swembad
+rdfs:label:en-GB	Swimming Pool
+rdfs:label:ms	Kolam Renang
+rdfs:label:tr	Yüzme Havuzu
+rdfs:label:fa	استخر شنا
+rdfs:label:arz	بركه سباحة
+url	http://linkedgeodata.org/ontology/SwimmingPool
+label	SwimmingPool

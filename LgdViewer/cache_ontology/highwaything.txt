@@ -1,0 +1,3 @@
+lgdm:sourceKey	highway
+url	http://linkedgeodata.org/ontology/HighwayThing
+label	HighwayThing

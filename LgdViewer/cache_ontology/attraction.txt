@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Attraction/key/tourism/value/attraction
+rdfs:subClassOf	http://linkedgeodata.org/ontology/TourismThing
+rdfs:label:hu	Látnivaló
+rdfs:label:ja	アトラクション
+rdfs:label:pt-BR	Atração
+rdfs:label:af	Attraksie
+rdfs:label:pl	Atrakcja turystyczna
+rdfs:label:gl	Atracción
+rdfs:label:es	Atracción
+rdfs:label:eu	Atrakzio
+rdfs:label:zh-Hans	景点
+rdfs:label:ast	Interés turísticu
+rdfs:label:ca	Atracció
+rdfs:label:tl	Pang-akit
+rdfs:label:lt	Lankytina vieta
+rdfs:label:tr	Gezelim görelim yeri
+rdfs:label:nl	Attractie
+rdfs:label:fi	Nähtävyys
+rdfs:label:be-tarask	Славутасьць
+rdfs:label:da	Seværdighed
+rdfs:label:sl	Zanimivost
+rdfs:label:cs	Turistická atrakce
+rdfs:label:uk	Цікаві місця
+rdfs:label:pt	Atracção
+rdfs:label:fa	جاذبه
+rdfs:label:de	Attraktion
+rdfs:label:sv	Attraktion
+rdfs:label:lb	Attraktioun
+rdfs:label:no	Attraksjon
+rdfs:label:et	Turismiatraktsioon
+rdfs:label:sr-EC	Атракција
+rdfs:label:ka	ატრაქციონი
+rdfs:label:mk	Атракција
+rdfs:label:arz	معلم سياحي
+rdfs:label:ar	معلم سياحي
+rdfs:label:br	Tra zedennus
+rdfs:label:ru	Аттракцион
+rdfs:label:fr	Attraction
+rdfs:label:ia	Attraction
+rdfs:label:en-GB	Attraction
+rdfs:label:vi	Nơi Du lịch
+rdfs:label:sr-EL	Atrakcija
+rdfs:label:lv	Atrakcija
+rdfs:label:dsb	Atrakcija
+rdfs:label:hr	Atrakcija
+rdfs:label:hsb	Atrakcija
+rdfs:label:sk	Atrakcia
+rdfs:label:aln	Qef
+rdfs:label:he	אתר בעל עניין
+rdfs:label:it	Attrazione turistica
+url	http://linkedgeodata.org/ontology/Attraction
+label	Attraction

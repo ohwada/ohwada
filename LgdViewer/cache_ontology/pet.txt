@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Pet/key/shop/value/pet
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:da	Dyrehandel
+rdfs:label:ca	Botiga d'animals
+rdfs:label:sl	Trgovina za male živali
+rdfs:label:ja	ペットショップ
+rdfs:label:tl	Tindahan ng Alagang Hayop
+rdfs:label:pt-BR	Pet Shop
+rdfs:label:en-GB	Pet Shop
+rdfs:label:hsb	Coowobchod
+rdfs:label:zh-Hans	宠物店
+rdfs:label:pl	Sklep ze zwierzętami
+rdfs:label:aln	Shitore e kafshëve
+rdfs:label:fi	Eläinkauppa
+rdfs:label:et	Lemmikloomapood
+rdfs:label:be-tarask	Зоалягічная крама
+rdfs:label:lv	Zooveikals
+rdfs:label:ast	Paxarería
+rdfs:label:nl	Dierenwinkel
+rdfs:label:fr	Magasin d'animaux
+rdfs:label:sv	Djuraffär
+rdfs:label:vi	Tiệm Vật nuôi
+rdfs:label:af	Dierewinkel
+rdfs:label:zh-Hant	寵物店
+rdfs:label:de	Tierhandlung
+rdfs:label:eu	Animalia-denda
+rdfs:label:sr-EC	Продавница кућних љубимаца
+rdfs:label:br	Stal loened
+rdfs:label:ru	Зоомагазин
+rdfs:label:uk	Зоомагазин
+rdfs:label:ar	متجر حيوانات أليفة
+rdfs:label:arz	متجر حيوانات أليفة
+rdfs:label:ia	Boteca de animales
+rdfs:label:lt	Naminių gyvūnėlių parduotuvė
+rdfs:label:he	חנות חיות מחמד
+rdfs:label:tr	Hayvan Mağazası
+rdfs:label:dsb	Coologiska pśedawarnja
+rdfs:label:hr	Trgovina za kućne ljubimce
+rdfs:label:cs	Prodejna pro chovatele
+rdfs:label:pt	Loja de animais
+rdfs:label:it	Negozio animali
+rdfs:label:no	Dyrebutikk
+rdfs:label:fur	Buteghe di animâi
+rdfs:label:hu	Állatkereskedés
+rdfs:label:es	Tienda de mascotas
+rdfs:label:is	Gæludýrabúðin
+rdfs:label:sr-EL	Prodavnica kućnih ljubimaca
+rdfs:label:sk	Chovprodukt
+rdfs:label:mk	Домашни миленици
+rdfs:label:gl	Tenda de mascotas
+rdfs:label:ka	ზოომაღაზია
+url	http://linkedgeodata.org/ontology/Pet
+label	Pet

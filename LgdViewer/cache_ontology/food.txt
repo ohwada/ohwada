@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Food/key/shop/value/food
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:cs	Potraviny
+rdfs:label:hu	Élelmiszerbolt
+rdfs:label:no	Matbutikk
+rdfs:label:ia	Magazin de alimentation
+rdfs:label:br	Stal voued
+rdfs:label:he	מכולת
+rdfs:label:ru	Продукты
+rdfs:label:is	Matbúðin
+rdfs:label:es	Tienda de alimentación
+rdfs:label:aln	Shitore Ushqimore
+rdfs:label:eu	Janari-denda
+rdfs:label:ast	Comestibles
+rdfs:label:uk	Продовольчі товари
+rdfs:label:nl	Etenswarenwinkel
+rdfs:label:lt	Maisto parduotuvė
+rdfs:label:vi	Tiệm Thực phẩm
+rdfs:label:zh-Hant	食品店
+rdfs:label:zh-Hans	食品店
+rdfs:label:gl	Tenda de alimentación
+rdfs:label:de	Lebensmittelladen
+rdfs:label:ar	دكان مأكولات
+rdfs:label:arz	دكان مأكولات
+rdfs:label:fr	Magasin d'alimentation
+rdfs:label:sr-EL	Bakalnica
+rdfs:label:hsb	Wobchod za žiwidła
+rdfs:label:dsb	Wobchod za žywidła
+rdfs:label:sr-EC	Бакалница
+rdfs:label:en-GB	Food Shop
+rdfs:label:da	Fødevarehandel
+rdfs:label:ca	Botiga de menjar
+rdfs:label:ms	Kedai Makanan
+rdfs:label:ja	食品販売店
+rdfs:label:tl	Tindahan ng Pagkain
+rdfs:label:it	Alimentari
+rdfs:label:sv	Mataffär
+rdfs:label:pt-BR	Loja de alimentação
+rdfs:label:fi	Ruokakauppa
+rdfs:label:mk	Продавница за храна
+rdfs:label:lv	Pārtikas veikals
+rdfs:label:pl	Sklep spożywczy
+rdfs:label:et	Toidupood
+rdfs:label:sl	Prehrambena trgovina
+rdfs:label:tr	Yiyecek Dükkanı
+rdfs:label:be-tarask	Харчовая крама
+rdfs:label:hr	Trgovina prehranom
+rdfs:label:af	Koswinkel
+rdfs:label:sk	Obchod s potravinami
+url	http://linkedgeodata.org/ontology/Food
+label	Food

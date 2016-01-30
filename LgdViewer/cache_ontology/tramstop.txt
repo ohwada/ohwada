@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/TramStop/key/railway/value/tram_stop
+rdfs:subClassOf	http://linkedgeodata.org/ontology/RailwayThing
+rdfs:label:sl	Tramvajska postaja
+rdfs:label:dsb	Zastanišćo elektriskeje
+rdfs:label:af	Tramhalte
+rdfs:label:nl	Tramhalte
+rdfs:label:nds	Stratenbahn-Stopp
+rdfs:label:ka	ტრამვაის გაჩერება
+rdfs:label:sk	Zastávka električky
+rdfs:label:da	Sporvognsstoppested
+rdfs:label:he	תחנת חשמלית
+rdfs:label:de	Straßenbahn-Haltestelle
+rdfs:label:ia	Halto de tram
+rdfs:label:mk	Трамвајска постојка
+rdfs:label:sr-EL	Tramvajsko stajalište
+rdfs:label:tl	Hintuan ng Trambya
+rdfs:label:hsb	Tramwajkowe zastanišćo
+rdfs:label:uk	Трамвайна зупинка
+rdfs:label:sv	Spårvagnshållplats
+rdfs:label:cs	Tramvajová zastávka
+rdfs:label:lv	Tramvaja pietura
+rdfs:label:fr	Arrêt de tram
+rdfs:label:gl	Parada de tranvías
+rdfs:label:sr-EC	Трамвајско стајалиште
+rdfs:label:zh-Hant	電車站
+rdfs:label:hu	Villamosmegálló
+rdfs:label:tr	Tramvay Durağı
+rdfs:label:vi	Ga Xép Điện
+rdfs:label:it	Fermata del tram
+rdfs:label:ar	موقف ترام
+rdfs:label:arz	موقف ترام
+rdfs:label:aln	Tramvaj Stop
+rdfs:label:ru	Трамвайная остановка
+rdfs:label:be-tarask	Трамвайны прыпынак
+rdfs:label:es	Parada de tranvía
+rdfs:label:ast	Parada de tranvía
+rdfs:label:zh-Hans	有轨电车停靠站
+rdfs:label:ja	トラム停留所
+rdfs:label:el	Στάση Τραμ
+rdfs:label:en-GB	Tram Stop
+rdfs:label:lt	Tramvajaus stotelė
+rdfs:label:ca	Parada de tramvia
+rdfs:label:pl	Przystanek tramwajowy
+rdfs:label:eu	Tranbia geltoki
+rdfs:label:fi	Raitiovaunupysäkki
+rdfs:label:no	Trikkestopp
+rdfs:label:fur	Fermade dal tram
+rdfs:label:pt-BR	Parada de bonde
+rdfs:label:et	Trammipeatus
+rdfs:label:br	Arsav tramgarr
+rdfs:label:hr	Tramvajska stanica
+url	http://linkedgeodata.org/ontology/TramStop
+label	TramStop

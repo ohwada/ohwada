@@ -1,0 +1,27 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1791639823
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/FastFood
+rdfs:label:en	SUKIYA
+rdfs:label:ja-rm	Sukiya
+rdfs:label:ja	すき家
+rdfs:label	すき家 (SUKIYA)
+dc:modified	2012-06-30T22:57:38+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.480457&long=138.80342#point
+geo:long	138.803
+geo:lat	35.4805
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1791639823
+lgdo:changeset	12070015
+lgdo:opening_hours	24/7
+lgdo:operator	ゼンショー
+lgdo:source	Bing 2007
+lgdo:version	3
+lgdo:cuisine	beef_bowl
+lgdo:brand	すき家
+lgdo:branch	富士吉田赤富士通り店
+lgdo:cuisine%3Aja	牛丼
+type:url	http://linkedgeodata.org/ontology/FastFood
+type:label	FastFood
+type:label:ja	ファストフード

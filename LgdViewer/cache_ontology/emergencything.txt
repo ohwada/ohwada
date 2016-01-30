@@ -1,0 +1,3 @@
+lgdm:sourceKey	emergency
+url	http://linkedgeodata.org/ontology/EmergencyThing
+label	EmergencyThing

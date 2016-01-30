@@ -1,0 +1,18 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2264066857
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Bar
+rdfs:label	Paradee
+dc:modified	2013-04-19T15:44:13+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.448921&long=139.63074#point
+geo:long	139.631
+geo:lat	35.4489
+dc:contributor	http://linkedgeodata.org/triplify/user378532
+geom:geometry	http://linkedgeodata.org/geometry/node2264066857
+lgdo:changeset	15785691
+lgdo:version	3
+lgdo:wifi	no
+type:url	http://linkedgeodata.org/ontology/Bar
+type:label	Bar
+type:label:ja	バー (立ち飲み屋)

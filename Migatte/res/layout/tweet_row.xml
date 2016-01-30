@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal">
+		
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+			<ImageView android:id="@+id/tweetRow_imageView_image"
+				android:layout_width="72dp"
+				android:layout_height="72dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="5dp"
+				android:layout_marginBottom="5dp"
+				/>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_marginRight="5dp"
+			android:orientation="vertical">
+			
+			<TextView android:id="@+id/tweetRow_textView_id"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#333333"/>	
+
+			<TextView android:id="@+id/tweetRow_textView_text"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#333333"/>		
+
+				<TextView android:id="@+id/tweetRow_textView_date"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="aaaaa"
+					android:textColor="#333333"
+					android:gravity="right"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/FastFood/key/amenity/value/fast_food
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:da	Fastfood
+rdfs:label:hu	Gyorsétterem
+rdfs:label:sk	Rýchle občerstvenie
+rdfs:label:vi	Nhà hàng Ăn nhanh
+rdfs:label:arz	وجبات سريعة
+rdfs:label:ar	وجبات سريعة
+rdfs:label:zh-Hant	快餐
+rdfs:label:zh-Hans	快餐
+rdfs:label:tr	Büfe / Fast Food
+rdfs:label:sr-EL	Brza hrana
+rdfs:label:ru	Палатка с едой
+rdfs:label:uk	Забігайлівка
+rdfs:label:fi	Pikaruoka
+rdfs:label:et	Kiirtoit
+rdfs:label:hsb	Přikuski
+rdfs:label:sv	Snabbmat
+rdfs:label:de	Schnellimbiss
+rdfs:label:cs	Rychlé občerstvení
+rdfs:label:ca	Menjar ràpid
+rdfs:label:ast	Comida rápida
+rdfs:label:gl	Comida rápida
+rdfs:label:es	Comida rápida
+rdfs:label:be-tarask	Забягайлаўка
+rdfs:label:pt-BR	Fast Food
+rdfs:label:mk	Брза храна
+rdfs:label:sr-EC	Брза храна
+rdfs:label:nds	Fast Food
+rdfs:label:ms	Makanan Segera
+rdfs:label:en-GB	Fast Food
+rdfs:label:it	Fast Food
+rdfs:label:lt	Greitas maistas
+rdfs:label:pt	Fast Food
+rdfs:label:br	Fast Food
+rdfs:label:pl	Fast Food
+rdfs:label:dsb	Pójědankarnja
+rdfs:label:aln	Ushqim I shpejtë
+rdfs:label:nl	Fast food
+rdfs:label:ia	Fast food
+rdfs:label:sl	Hitra hrana
+rdfs:label:no	Hurtigmat
+rdfs:label:fr	Restauration rapide
+rdfs:label:hr	Fast food
+rdfs:label:ja	ファストフード
+rdfs:label:he	מזון מהיר
+rdfs:label:af	Wegneemetes
+rdfs:label:is	Skyndibitastaðurinn
+rdfs:label:el	Ταχυφαγείο
+rdfs:label:lv	Bistro
+rdfs:label:eu	Janari Azkarra
+rdfs:label:ka	სწრაფი კვება
+rdfs:label:tl	Kainang Pangmabilisan
+url	http://linkedgeodata.org/ontology/FastFood
+label	FastFood

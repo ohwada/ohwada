@@ -1,0 +1,27 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1914343223
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Cafe
+rdfs:label	エクセルシオール カフェ (EXCELSIOR CAFFE)
+rdfs:label:en	EXCELSIOR CAFFE
+rdfs:label:ja-rm	Ekuserusiohru Kafe
+rdfs:label:ja	エクセルシオール カフェ
+dc:modified	2012-09-14T20:28:35+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.439159&long=139.64615#point
+geo:long	139.646
+foaf:phone	+81-45-222-3651
+geo:lat	35.4392
+dc:contributor	http://linkedgeodata.org/triplify/user651065
+geom:geometry	http://linkedgeodata.org/geometry/node1914343223
+lgdo:changeset	13110535
+lgdo:opening_hours	Mo-Su 08:00-20:00
+lgdo:operator	ドトールコーヒー
+lgdo:source	(URL)
+lgdo:version	1
+lgdo:cuisine	coffee_shop
+lgdo:brand	EXCELSIOR CAFFE
+lgdo:branch	横浜元町通り店
+type:url	http://linkedgeodata.org/ontology/Cafe
+type:label	Cafe
+type:label:ja	喫茶店

@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1712493811
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Shop
+rdf:type:3	http://linkedgeodata.org/ontology/Supermarket
+rdfs:label	AEON Kurihama
+dc:modified	2012-04-12T11:49:56+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.228935&long=139.70415#point
+geo:long	139.704
+geo:lat	35.2289
+dc:contributor	http://linkedgeodata.org/triplify/user657421
+geom:geometry	http://linkedgeodata.org/geometry/node1712493811
+lgdo:changeset	11274266
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Shop
+type:label	Shop
+type:label:ja	店舗

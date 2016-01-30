@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CarWash/key/amenity/value/car_wash
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:zh-Hans	洗车
+rdfs:label:el	Πλύσιμο Αυτοκινήτων
+rdfs:label:aln	Autolarje
+rdfs:label:es	Autolavado
+rdfs:label:br	Gwalc'hiñ kirri
+rdfs:label:ja	洗車
+rdfs:label:vi	Tiệm Rửa Xe
+rdfs:label:en-GB	Car Wash
+rdfs:label:is	Bílaþvottastöðin
+rdfs:label:it	Autolavaggio
+rdfs:label:tr	Oto Yıkama
+rdfs:label:lt	Automobilių plovykla
+rdfs:label:da	Bilvask
+rdfs:label:no	Bilvask
+rdfs:label:sr-EC	Ауто-перионица
+rdfs:label:af	Karwas
+rdfs:label:ca	Rentat de cotxes
+rdfs:label:nl	Autowasstraat
+rdfs:label:hu	Autómosó
+rdfs:label:pt-BR	Lava-Carros
+rdfs:label:ms	Cuci Kereta
+rdfs:label:sl	Avtopralnica
+rdfs:label:sr-EL	Auto-perionica
+rdfs:label:de	Autowaschanlage
+rdfs:label:uk	Автомийка
+rdfs:label:ka	ავტოსამრეცხაო
+rdfs:label:hr	Autopraonica
+rdfs:label:lv	Automazgātava
+rdfs:label:sk	Autoumývareň
+rdfs:label:fr	Lavage de voiture
+rdfs:label:eu	Auto Garbiketa
+rdfs:label:ast	Llaváu de coches
+rdfs:label:cs	Automyčka
+rdfs:label:tl	Paliguan ng Kotse
+rdfs:label:gl	Lavadoiro de coches
+rdfs:label:sv	Biltvätt
+rdfs:label:dsb	Awtomyjarnja
+rdfs:label:he	שטיפת מכוניות
+rdfs:label:hsb	Awtomyjernja
+rdfs:label:ru	Автомойка
+rdfs:label:be-tarask	Аўтамабільная мыйка
+rdfs:label:ia	Lavage de automobiles
+rdfs:label:et	Autopesu
+rdfs:label:fi	Autopesu
+rdfs:label:nds	Autowaschstraat
+rdfs:label:fur	Lavaç machinis
+rdfs:label:mk	Автоперална
+rdfs:label:ar	غسيل سيارات
+rdfs:label:arz	غسيل سيارات
+rdfs:label:pl	Myjnia samochodowa
+url	http://linkedgeodata.org/ontology/CarWash
+label	CarWash

@@ -1,0 +1,207 @@
+2015-02-09 00:11:55 no result: 35.218177 140.039512
+2015-02-13 09:30:30 no ontology http://linkedgeodata.org/ontology/Leisure
+2015-02-13 09:30:31 no ontology http://linkedgeodata.org/ontology/SportsCentre
+2015-02-13 09:30:32 no ontology http://linkedgeodata.org/ontology/Leisure
+2015-02-13 14:47:08 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-02-13 14:47:09 no ontology http://linkedgeodata.org/ontology/Gate
+2015-02-13 14:47:11 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-02-13 14:47:12 no ontology http://linkedgeodata.org/ontology/Monument
+2015-02-13 14:47:13 no ontology http://linkedgeodata.org/ontology/ManMadeThing
+2015-02-13 14:47:14 no ontology http://linkedgeodata.org/ontology/Tower
+2015-02-13 14:47:15 no ontology http://linkedgeodata.org/ontology/ManMadeThing
+2015-02-13 14:47:16 no ontology http://linkedgeodata.org/ontology/Tower
+2015-02-13 14:47:18 no ontology http://linkedgeodata.org/ontology/Memorial
+2015-02-13 14:47:18 no ontology http://linkedgeodata.org/ontology/Memorial
+2015-02-13 14:47:19 no ontology http://linkedgeodata.org/ontology/Memorial
+2015-02-13 14:47:20 no ontology http://linkedgeodata.org/ontology/Memorial
+2015-02-13 14:47:20 no ontology http://linkedgeodata.org/ontology/Monument
+2015-02-13 14:47:22 no ontology http://linkedgeodata.org/ontology/Office
+2015-02-13 14:47:22 no ontology http://linkedgeodata.org/ontology/Office
+2015-02-13 14:47:24 no ontology http://linkedgeodata.org/ontology/RailwayThing
+2015-02-13 14:47:25 no ontology http://linkedgeodata.org/ontology/PublicTransportThing
+2015-02-13 14:47:25 no ontology http://linkedgeodata.org/ontology/RailwayStation
+2015-02-13 14:47:27 no ontology http://linkedgeodata.org/ontology/HighwayThing
+2015-02-13 14:47:28 no ontology http://linkedgeodata.org/ontology/PublicTransportThing
+2015-02-13 14:47:29 no ontology http://linkedgeodata.org/ontology/RailwayStation
+2015-02-13 14:47:29 no ontology http://linkedgeodata.org/ontology/PublicTransportThing
+2015-02-13 14:47:31 no ontology http://linkedgeodata.org/ontology/PublicTransportThing
+2015-02-13 14:47:31 no ontology http://linkedgeodata.org/ontology/PublicTransportThing
+2015-02-13 14:47:32 no ontology http://linkedgeodata.org/ontology/Convenience
+2015-02-13 14:47:34 no ontology http://linkedgeodata.org/ontology/Convenience
+2015-02-13 14:47:35 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-02-13 14:47:36 no ontology http://linkedgeodata.org/ontology/MobilePhone
+2015-02-13 14:47:36 no ontology http://linkedgeodata.org/ontology/Convenience
+2015-02-13 14:47:37 no ontology http://linkedgeodata.org/ontology/Photo
+2015-02-13 14:47:38 no ontology http://linkedgeodata.org/ontology/FloristShop
+2015-02-13 14:47:39 no ontology http://linkedgeodata.org/ontology/CarShop
+2015-02-13 14:47:40 no ontology http://linkedgeodata.org/ontology/Boutique
+2015-02-13 14:47:42 no ontology http://linkedgeodata.org/ontology/HairdresserShop
+2015-02-13 14:47:42 no ontology http://linkedgeodata.org/ontology/BookShop
+2015-02-13 14:47:43 no ontology http://linkedgeodata.org/ontology/BooksShop
+2015-02-13 14:47:43 no ontology http://linkedgeodata.org/ontology/Supermarket
+2015-02-13 14:47:47 no ontology http://linkedgeodata.org/ontology/BookShop
+2015-02-13 14:47:48 no ontology http://linkedgeodata.org/ontology/AlcoholShop
+2015-02-13 14:47:48 no ontology http://linkedgeodata.org/ontology/MassageShop
+2015-02-13 14:47:49 no ontology http://linkedgeodata.org/ontology/Sports
+2015-02-13 14:47:51 no ontology http://linkedgeodata.org/ontology/BookShop
+2015-02-13 14:47:52 no ontology http://linkedgeodata.org/ontology/Artwork
+2015-02-13 14:47:53 no ontology http://linkedgeodata.org/ontology/Artwork
+2015-02-13 14:47:54 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-02-13 14:47:55 no ontology http://linkedgeodata.org/ontology/Amenity
+2015-02-13 14:47:56 no ontology http://linkedgeodata.org/ontology/Amenity
+2015-02-13 14:47:57 no ontology http://linkedgeodata.org/ontology/Pharmacy
+2015-02-13 14:47:57 no ontology http://linkedgeodata.org/ontology/Amenity
+2015-02-13 14:47:59 no ontology http://linkedgeodata.org/ontology/Pharmacy
+2015-02-13 14:48:00 no ontology http://linkedgeodata.org/ontology/Pub
+2015-02-13 14:48:00 no ontology http://linkedgeodata.org/ontology/Pub
+2015-02-13 14:48:01 no ontology http://linkedgeodata.org/ontology/Cafe
+2015-02-13 14:48:02 no ontology http://linkedgeodata.org/ontology/Cafe
+2015-02-13 14:48:02 no ontology http://linkedgeodata.org/ontology/Cafe
+2015-02-13 14:48:04 no ontology http://linkedgeodata.org/ontology/Parking
+2015-02-13 14:48:05 no ontology http://linkedgeodata.org/ontology/Parking
+2015-02-13 14:48:06 no ontology http://linkedgeodata.org/ontology/Townhall
+2015-02-13 14:48:07 no ontology http://linkedgeodata.org/ontology/PublicBuilding
+2015-02-13 14:48:08 no ontology http://linkedgeodata.org/ontology/School
+2015-02-13 14:48:09 no ontology http://linkedgeodata.org/ontology/Hospital
+2015-02-13 14:48:09 no ontology http://linkedgeodata.org/ontology/PublicBuilding
+2015-02-13 14:48:12 no ontology http://linkedgeodata.org/ontology/FireStation
+2015-02-13 14:48:12 no ontology http://linkedgeodata.org/ontology/FireStation
+2015-02-13 14:48:14 no ontology http://linkedgeodata.org/ontology/Pub
+2015-02-13 14:48:14 no ontology http://linkedgeodata.org/ontology/Cafe
+2015-02-13 14:48:17 no ontology http://linkedgeodata.org/ontology/VendingMachine
+2015-02-13 14:48:18 no ontology http://linkedgeodata.org/ontology/Pharmacy
+2015-02-13 14:48:19 no ontology http://linkedgeodata.org/ontology/MassageShop
+2015-02-13 14:48:20 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-02-13 14:48:20 no ontology http://linkedgeodata.org/ontology/HairdresserShop
+2015-02-13 14:48:22 no ontology http://linkedgeodata.org/ontology/Pharmacy
+2015-02-13 14:48:23 no ontology http://linkedgeodata.org/ontology/CommunityCentre
+2015-02-13 14:48:24 no ontology http://linkedgeodata.org/ontology/PowerThing
+2015-02-13 14:48:25 no ontology http://linkedgeodata.org/ontology/Fountain
+2015-02-13 14:48:26 no ontology http://linkedgeodata.org/ontology/Taxi
+2015-02-13 14:48:27 no ontology http://linkedgeodata.org/ontology/Pharmacy
+2015-02-13 14:48:28 no ontology http://linkedgeodata.org/ontology/Atm
+2015-02-14 04:09:41 no ontology http://linkedgeodata.org/ontology/Monument
+2015-02-14 04:09:45 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-02-14 04:09:46 no ontology http://linkedgeodata.org/ontology/MobilePhone
+2015-02-14 04:09:47 no ontology http://linkedgeodata.org/ontology/Photo
+2015-02-14 04:09:51 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-02-14 04:09:55 no ontology http://linkedgeodata.org/ontology/VendingMachine
+2015-02-14 04:09:56 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-02-14 04:09:56 no ontology http://linkedgeodata.org/ontology/CommunityCentre
+2015-02-14 04:09:58 no ontology http://linkedgeodata.org/ontology/Taxi
+2015-02-14 14:47:41 no ontology http://linkedgeodata.org/ontology/VendingMachine
+2015-02-16 00:32:22 no ontology http://linkedgeodata.org/ontology/VendingMachine
+2015-03-12 05:58:37 no result: 35.443233 139.637134
+2015-04-06 08:14:24 no result: 50.600783 119.317004
+2015-04-10 22:39:31 no result: 35.443233 139.637134
+2015-04-11 16:25:09 no result: 35.443233 139.637134
+2015-04-14 07:01:31 no result: 35.443233 139.637134
+2015-04-14 07:02:12 no result: 36.752886 3.042048
+2015-04-14 15:01:48 illegal url: http://linkedgeodata.org/triplify/node1710654124
+2015-04-21 09:12:02 no result: 35.443233 139.637134
+2015-04-21 09:12:09 no result: 35.443233 139.637134
+2015-04-21 09:12:27 no result: 35.443233 139.637134
+2015-04-21 09:13:06 no result: 35.443233 139.637134
+2015-04-21 09:14:21 no result: 35.443233 139.637134
+2015-04-22 00:49:05 no ontology http://linkedgeodata.org/ontology/SportsCentre
+2015-04-22 00:49:06 no ontology http://linkedgeodata.org/ontology/Leisure
+2015-04-22 00:49:07 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:07 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:08 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:08 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:09 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:09 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:10 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:11 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:11 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:12 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:12 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-04-22 00:49:13 no ontology http://linkedgeodata.org/ontology/Monument
+2015-04-22 00:49:13 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-04-22 00:49:14 no ontology http://linkedgeodata.org/ontology/ManMadeThing
+2015-04-22 00:49:15 no ontology http://linkedgeodata.org/ontology/Tower
+2015-04-22 00:49:16 no ontology http://linkedgeodata.org/ontology/HistoricPointOfInterest
+2015-04-22 00:49:16 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-04-22 00:49:17 no ontology http://linkedgeodata.org/ontology/ManMadeThing
+2015-04-22 00:49:17 no ontology http://linkedgeodata.org/ontology/Tower
+2015-04-22 00:49:18 no ontology http://linkedgeodata.org/ontology/HistoricPointOfInterest
+2015-04-22 00:49:19 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-04-22 00:49:19 no ontology http://linkedgeodata.org/ontology/ManMadeThing
+2015-04-22 00:49:20 no ontology http://linkedgeodata.org/ontology/Tower
+2015-04-22 00:49:20 no ontology http://linkedgeodata.org/ontology/HistoricPointOfInterest
+2015-04-22 00:49:21 no ontology http://linkedgeodata.org/ontology/Memorial
+2015-04-22 00:49:21 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-04-22 00:49:22 no ontology http://linkedgeodata.org/ontology/Memorial
+2015-04-22 00:49:23 no ontology http://linkedgeodata.org/ontology/HistoricThing
+2015-04-22 00:49:36 no ontology http://linkedgeodata.org/ontology/SportsCentre
+2015-04-22 00:49:37 no ontology http://linkedgeodata.org/ontology/Leisure
+2015-04-22 00:49:37 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:38 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:38 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:39 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:42 no ontology http://linkedgeodata.org/ontology/SportsCentre
+2015-04-22 00:49:43 no ontology http://linkedgeodata.org/ontology/Leisure
+2015-04-22 00:49:43 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:44 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 00:49:45 no ontology http://linkedgeodata.org/ontology/BarrierThing
+2015-04-22 00:49:45 no ontology http://linkedgeodata.org/ontology/Gate
+2015-04-22 14:49:07 no result: 35.443233 139.637134
+2015-05-03 01:05:27 no ontology http://linkedgeodata.org/ontology/EstateAgentOffice
+2015-05-03 17:53:47 no result: 35.443233 139.637134
+2015-05-03 17:53:47 no result: 35.443233 139.637134
+2015-05-03 17:53:47 no result: 35.443233 139.637134
+2015-05-03 17:53:47 no result: 35.443233 139.637134
+2015-05-03 17:55:42 no result: 35.443233 139.637134
+2015-05-03 17:55:56 no result: 35.443233 139.637134
+2015-05-03 17:56:04 no result: 35.443233 139.637134
+2015-05-03 17:56:11 no result: 2.294598 48.858399
+2015-05-03 17:57:44 no result: 2.294598 48.858399
+2015-05-03 17:58:00 no result: 2.294598 48.858399
+2015-05-06 08:55:39 no result: 35.443233 139.637134
+2015-05-07 06:17:13 no result: 35.443233 139.637134
+2015-05-11 06:26:42 no result: 35.443233 139.637134
+2015-05-13 06:32:02 illegal url: http://linkedgeodata.org/triplify/node2246485216
+2015-05-13 06:32:49 illegal url: http://linkedgeodata.org/triplify/node2246487179
+2015-05-13 06:33:20 illegal url: http://linkedgeodata.org/triplify/node2246488240
+2015-05-13 06:35:02 illegal url: http://linkedgeodata.org/triplify/node2246492798
+2015-05-13 06:35:13 illegal url: http://linkedgeodata.org/triplify/node2246488964
+2015-05-13 06:35:31 illegal url: http://linkedgeodata.org/triplify/node2246490596
+2015-05-13 06:35:32 illegal url: http://linkedgeodata.org/triplify/node2246497085
+2015-05-13 06:36:16 illegal url: http://linkedgeodata.org/triplify/node2246500206
+2015-05-13 06:37:14 illegal url: http://linkedgeodata.org/triplify/node2246502264
+2015-05-13 06:38:17 illegal url: http://linkedgeodata.org/triplify/node2282709211
+2015-05-29 07:55:45 illegal url: http://linkedgeodata.org/triplify/node2246497085
+2015-05-29 07:57:19 illegal url: http://linkedgeodata.org/triplify/node2282709211
+2015-06-04 07:40:46 no result: 35.443233 139.637134
+2015-07-01 03:02:21 no result: 35.443233 139.637134
+2015-07-13 22:40:46 no result: 35.443233 139.637134
+2015-07-13 22:51:52 no result: 35.443233 139.637134
+2015-07-14 10:16:28 no result: 35.443233 139.637134
+2015-07-14 10:17:29 no result: 35.443233 139.637134
+2015-07-29 20:05:18 no result: 35.273973 139.557184
+2015-08-08 10:05:03 no ontology http://linkedgeodata.org/ontology/ManMadeThing
+2015-08-08 10:05:08 no ontology http://linkedgeodata.org/ontology/Office
+2015-08-08 10:05:10 no ontology http://linkedgeodata.org/ontology/RailwayThing
+2015-08-08 10:05:15 no ontology http://linkedgeodata.org/ontology/Shop
+2015-08-08 10:05:17 no ontology http://linkedgeodata.org/ontology/Clothes
+2015-08-08 10:05:24 no ontology http://linkedgeodata.org/ontology/Supermarket
+2015-08-08 10:05:35 no ontology http://linkedgeodata.org/ontology/Cafe
+2015-08-08 10:05:37 no ontology http://linkedgeodata.org/ontology/Restaurant
+2015-08-08 10:05:49 no ontology http://linkedgeodata.org/ontology/Fountain
+2015-08-08 10:05:53 no ontology http://linkedgeodata.org/ontology/Doctors
+2015-08-08 10:16:57 no ontology http://linkedgeodata.org/ontology/Fountain
+2015-08-08 10:19:09 no result: 42.221438 140.286186
+2015-08-08 10:19:33 no result: 42.221438 140.286186
+2015-08-26 01:13:15 no ontology http://linkedgeodata.org/ontology/Tobacco
+2015-08-30 19:20:17 no result: 5.69454 100.839259
+2015-08-30 19:22:15 no result: 5.700604 100.838077
+2015-09-09 03:21:45 no result: 34.709669 10.724084
+2015-09-09 03:22:03 no result: 34.709668 10.724084
+2015-09-16 23:44:29 no result: 35.321104 139.566624
+2015-09-16 23:45:06 no ontology http://linkedgeodata.org/ontology/Place
+2015-09-16 23:45:06 no ontology http://linkedgeodata.org/ontology/City
+2015-09-16 23:45:07 no ontology http://linkedgeodata.org/ontology/Library
+2015-09-16 23:47:27 no ontology http://linkedgeodata.org/ontology/Place
+2015-09-16 23:47:28 no ontology http://linkedgeodata.org/ontology/City
+2015-09-16 23:47:28 no ontology http://linkedgeodata.org/ontology/Library
+2015-09-18 09:03:42 no result: 35.443233 139.637134

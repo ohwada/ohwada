@@ -1,0 +1,55 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Suburb/key/place/value/suburb
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Place
+rdfs:label:ast	Barriu
+rdfs:label:fur	Cuartîr
+rdfs:label:hr	Predgrađe
+rdfs:label:sr-EL	Predgrađe
+rdfs:label:fa	محله
+rdfs:label:cs	Městská část
+rdfs:label:fr	Quartier
+rdfs:label:uk	Передмістя
+rdfs:label:be-tarask	Прадмесьце
+rdfs:label:lv	Piepilsēta
+rdfs:label:nl	Buitenwijk
+rdfs:label:sk	Mestský obvod
+rdfs:label:tl	Kanugnog ng lungsod
+rdfs:label:gl	Barrio
+rdfs:label:ja	郊外
+rdfs:label:hsb	Předměsto
+rdfs:label:tr	Mahalle / Banliyö
+rdfs:label:sv	Förort
+rdfs:label:pl	Osiedle
+rdfs:label:mk	Населба
+rdfs:label:ia	Suburbio
+rdfs:label:es	Suburbio
+rdfs:label:pt	Subúrbio
+rdfs:label:ka	გარეუბანი
+rdfs:label:el	Προάστιο
+rdfs:label:ms	Subbandar
+rdfs:label:nds	Vöroort
+rdfs:label:hu	Városrész
+rdfs:label:pt-BR	Bairro
+rdfs:label:eu	Aldiri
+rdfs:label:ca	Suburbi
+rdfs:label:de	Stadtteil
+rdfs:label:br	Karter
+rdfs:label:he	פרוור
+rdfs:label:arz	ضاحية
+rdfs:label:ar	ضاحية
+rdfs:label:zh-Hans	郊区
+rdfs:label:fi	Lähiö
+rdfs:label:it	Quartiere
+rdfs:label:ru	Пригород
+rdfs:label:vi	Ngoại ô
+rdfs:label:dsb	Pśedměsto
+rdfs:label:da	Forstad
+rdfs:label:no	Forstad
+rdfs:label:is	Hverfið
+rdfs:label:af	Voorstad
+rdfs:label:en-GB	Suburb
+rdfs:label:aln	Periferi
+rdfs:label:sr-EC	Предграђе
+rdfs:label:sl	Predmestje
+rdfs:label:lt	Priemiestis
+url	http://linkedgeodata.org/ontology/Suburb
+label	Suburb

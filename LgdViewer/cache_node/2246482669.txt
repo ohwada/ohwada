@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node2246482669
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Pub
+rdfs:label	Restaurant bar APRENDO
+dc:modified	2013-04-03T16:08:36+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.446518&long=139.62767#point
+geo:long	139.628
+geo:lat	35.4465
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+geom:geometry	http://linkedgeodata.org/geometry/node2246482669
+lgdo:changeset	15595280
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Pub
+type:label	Pub
+type:label:ja	パブ（立ち吞み屋）

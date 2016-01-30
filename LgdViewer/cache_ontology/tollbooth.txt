@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/TollBooth/key/barrier/value/toll_booth
+rdfs:subClassOf	http://linkedgeodata.org/ontology/BarrierThing
+url	http://linkedgeodata.org/ontology/TollBooth
+label	TollBooth

@@ -1,0 +1,52 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Clothes/key/shop/value/clothes
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:he	חנות בגדים
+rdfs:label:uk	Одяг
+rdfs:label:fr	Magasin de vêtements
+rdfs:label:no	Klesbutikk
+rdfs:label:pt-BR	Loja de roupas
+rdfs:label:hsb	Drastowy wobchod
+rdfs:label:sr-EL	Butik
+rdfs:label:hr	Butik
+rdfs:label:ka	ტანსაცმლის მაღაზია
+rdfs:label:et	Riidepood
+rdfs:label:zh-Hans	服装店
+rdfs:label:lv	Apģērbu veikals
+rdfs:label:ia	Magazin de vestimentos
+rdfs:label:lt	Drabužių parduotuvė
+rdfs:label:sk	Obchod s konfekciou
+rdfs:label:vi	Tiệm Quần áo
+rdfs:label:cs	Prodej oděvů
+rdfs:label:is	Fatabúðin
+rdfs:label:gl	Tenda de roupa
+rdfs:label:br	Stal dilhad
+rdfs:label:sl	Trgovina z oblekami
+rdfs:label:de	Bekleidungsgeschäft
+rdfs:label:tl	Tindahan ng mga Damit
+rdfs:label:tr	Giysi Dükkanı
+rdfs:label:sr-EC	Бутик
+rdfs:label:nl	Kledingwinkel
+rdfs:label:en-GB	Clothes Shop
+rdfs:label:da	Tøjbutik
+rdfs:label:mk	Дуќан за облека
+rdfs:label:af	Klerewinkel
+rdfs:label:ja	洋服店
+rdfs:label:lb	Kleedergeschäft
+rdfs:label:hu	Ruházati bolt
+rdfs:label:eu	Arropa denda
+rdfs:label:dsb	Woblekarnja
+rdfs:label:pl	Sklep odzieżowy
+rdfs:label:be-tarask	Крама адзеньня
+rdfs:label:ru	Магазин одежды
+rdfs:label:es	Tienda de ropa
+rdfs:label:ast	Tienda de ropa
+rdfs:label:ca	Botiga de roba
+rdfs:label:sv	Klädbutik
+rdfs:label:fi	Vaatekauppa
+rdfs:label:arz	متجر ألبسة
+rdfs:label:ar	متجر ألبسة
+rdfs:label:ms	Kedai Pakaian
+rdfs:label:it	Negozio di abbigliamento
+rdfs:label:aln	Shitore e Teshave
+url	http://linkedgeodata.org/ontology/Clothes
+label	Clothes

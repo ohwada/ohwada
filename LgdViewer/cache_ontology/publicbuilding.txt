@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/PublicBuilding/key/amenity/value/public_building
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:he	מבנה ציבור
+rdfs:label:en-GB	Public Building
+rdfs:label:aln	Publike Ndërtimi
+rdfs:label:tl	Pangmadlang Gusali
+rdfs:label:be-tarask	Грамадзкі будынак
+rdfs:label:ms	Bangunan Awam
+rdfs:label:ast	Edificiu públicu
+rdfs:label:hu	Középület
+rdfs:label:fur	Edifici public
+rdfs:label:fi	Julkinen rakennus
+rdfs:label:da	Offentlig bygning
+rdfs:label:no	Offentlig bygning
+rdfs:label:nl	Openbaar gebouw
+rdfs:label:ka	საჯარო შენობა
+rdfs:label:vi	Tòa nhà Công cộng
+rdfs:label:ia	Edificio public
+rdfs:label:sv	Offentlig byggnad
+rdfs:label:pt-BR	Edifício público
+rdfs:label:arz	مبنى عام
+rdfs:label:ar	مبنى عام
+rdfs:label:br	Savadur foran
+rdfs:label:af	Openbare gebou
+rdfs:label:zh-Hans	公共建筑
+rdfs:label:cs	Veřejná budova
+rdfs:label:sl	Javne zgradba
+rdfs:label:es	Edificio público
+rdfs:label:gl	Edificio público
+rdfs:label:tr	Kamu Binası
+rdfs:label:sr-EL	Ustanova
+rdfs:label:hr	Ustanova
+rdfs:label:pl	Budynek publiczny
+rdfs:label:de	Öffentliches Gebäude
+rdfs:label:sr-EC	Установа
+rdfs:label:lv	Sabiedriskā ēka
+rdfs:label:ja	公共建築物
+rdfs:label:mk	Јавен објект
+rdfs:label:fr	Bâtiment public
+rdfs:label:ca	Edifici públic
+rdfs:label:it	Edificio pubblico
+rdfs:label:eu	Eraikin publiko
+rdfs:label:ru	общественное здание
+rdfs:label:sk	Verejná budova
+rdfs:label:lt	Visuomeninis pastatas
+rdfs:label:hsb	Zjawne twarjenje
+rdfs:label:dsb	Zjawne twarjenje
+rdfs:label:uk	Громадський заклад
+url	http://linkedgeodata.org/ontology/PublicBuilding
+label	PublicBuilding

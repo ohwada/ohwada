@@ -1,0 +1,53 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/GuestHouse/key/tourism/value/guest_house
+rdfs:subClassOf	http://linkedgeodata.org/ontology/TourismThing
+rdfs:label:ca	Alberg
+rdfs:label:da	Guesthouse (hotel)
+rdfs:label:lv	Viesu nams
+rdfs:label:arz	بيت ضيافة
+rdfs:label:ar	بيت ضيافة
+rdfs:label:hsb	Hóstny dom
+rdfs:label:be-tarask	Домік для гасьцей
+rdfs:label:nds	Gasthuus
+rdfs:label:ja	民宿
+rdfs:label:lt	Svečių namai
+rdfs:label:af	Gastehuis
+rdfs:label:vi	Nhà khách
+rdfs:label:he	בית הארחה
+rdfs:label:tr	Konuk Evi
+rdfs:label:eu	Aterpe
+rdfs:label:ia	Albergo
+rdfs:label:no	Gjestehus
+rdfs:label:it	Guest House
+rdfs:label:en-GB	Guest House
+rdfs:label:sl	Penzion
+rdfs:label:cs	Penzion
+rdfs:label:gl	Albergue
+rdfs:label:zh-Hans	宾馆
+rdfs:label:es	Albergue
+rdfs:label:pt-BR	Albergue
+rdfs:label:ka	სასტუმრო სახლი
+rdfs:label:hu	Vendégház
+rdfs:label:nl	Gastenverblijf
+rdfs:label:ast	Agospiamientu
+rdfs:label:pl	Pensjonat
+rdfs:label:is	Gesthús
+rdfs:label:dsb	Góstny dom
+rdfs:label:mk	Пансион
+rdfs:label:hr	Apartman
+rdfs:label:sr-EC	Гостинска кућа
+rdfs:label:et	külalistemaja
+rdfs:label:de	Gasthaus
+rdfs:label:tl	Bahay na Pampanauhin
+rdfs:label:br	Ti herberc'h
+rdfs:label:sk	Penzión
+rdfs:label:sr-EL	Gostinska kuća
+rdfs:label:sv	Gäststuga
+rdfs:label:rue	Пензіон
+rdfs:label:ru	Домик для гостей
+rdfs:label:zh-Hant	賓館
+rdfs:label:uk	Гостьовий будинок
+rdfs:label:ps	مېلمستون
+rdfs:label:aln	Shpi e musafirve
+rdfs:label:fr	Maison d'hôte
+url	http://linkedgeodata.org/ontology/GuestHouse
+label	GuestHouse

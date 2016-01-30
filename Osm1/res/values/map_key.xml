@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- https://developers.google.com/maps/documentation/android/v1/maps-api-signup -->
+    <string name="map_api_key"></string>
+
+</resources>

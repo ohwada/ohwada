@@ -1,0 +1,24 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1420830115
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/PublicBuilding
+rdfs:label	神奈川労働局(横浜第二合同庁舎)
+dc:modified	2013-04-27T09:51:47+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.450787&long=139.63754#point
+geo:long	139.638
+geo:lat	35.4508
+dc:contributor	http://linkedgeodata.org/triplify/user610947
+geom:geometry	http://linkedgeodata.org/geometry/node1420830115
+lgdo:changeset	15880325
+lgdo:note	National-Land Numerical Information (Public Facility) 2006, MLIT Japan
+lgdo:note%3Aja	国土数値情報（公共施設データ）平成19年　国土交通省
+lgdo:source	KSJ2
+lgdo:source_ref	http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-P02-v2_0.html
+lgdo:version	4
+lgdo:KSJ2%3AADS	北仲通り5-57（横浜第二合同庁舎）
+lgdo:KSJ2%3AAdminArea	神奈川県横浜市中区
+lgdo:KSJ2%3APubFacAdmin	国
+type:url	http://linkedgeodata.org/ontology/PublicBuilding
+type:label	PublicBuilding
+type:label:ja	公共建築物

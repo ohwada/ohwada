@@ -1,0 +1,16 @@
+概要
+Android 端末と NFC タグを使ったゲームです。
+ルールはトランプと神経衰弱と同じです。
+
+関連するブログ 
+http://android.ohwada.jp/nfc_concentration
+
+ゲームの説明
+遊び方 http://android.ohwada.jp/archives/1634
+
+準備 http://android.ohwada.jp/archives/1660
+
+ソースコード
+https://code.google.com/p/ohwada/source/browse/#svn%2FNfcCon
+
+スクリーンショット

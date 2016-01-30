@@ -1,0 +1,56 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Atm/key/amenity/value/atm
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:af	OTM
+rdfs:label:ka	ბანკომატი
+rdfs:label:ast	Caxeru automáticu
+rdfs:label:fa	عابر بانک
+rdfs:label:fur	Bancomat
+rdfs:label:br	Bilhedaouer
+rdfs:label:ar	صراف آلي
+rdfs:label:arz	صراف آلي
+rdfs:label:lv	Bankomāts
+rdfs:label:zh-Hans	自动取款机(ATM)
+rdfs:label:is	Hraðbankinn
+rdfs:label:ca	Caixer automàtic
+rdfs:label:dsb	Pjenjezny awtomat
+rdfs:label:vi	Máy Rút tiền Tự động
+rdfs:label:ms	ATM
+rdfs:label:zh-Hant	ATM
+rdfs:label:en-GB	ATM
+rdfs:label:lt	Bankomatas
+rdfs:label:tl	ATM
+rdfs:label:az	ATM
+rdfs:label:ja	ATM
+rdfs:label:nl	Geldautomaat
+rdfs:label:nds	Geldautomaat
+rdfs:label:fr	Distributeur automatique de billets
+rdfs:label:fi	Pankkiautomaatti
+rdfs:label:hr	Bankomat
+rdfs:label:pl	Bankomat
+rdfs:label:sl	Bankomat
+rdfs:label:sv	Bankomat
+rdfs:label:cs	Bankomat
+rdfs:label:aln	Bankomat
+rdfs:label:hsb	Bankomat
+rdfs:label:sr-EL	Bankomat
+rdfs:label:sk	Bankomat
+rdfs:label:pt-BR	Caixa automático
+rdfs:label:gl	Caixeiro automático
+rdfs:label:et	Pangaautomaat
+rdfs:label:mzn	شه‌پیل‌ده
+rdfs:label:it	Cassa automatica
+rdfs:label:mk	Банкомат
+rdfs:label:hu	Bankautomata
+rdfs:label:ru	Банкомат
+rdfs:label:he	כספומט
+rdfs:label:de	Geldautomat
+rdfs:label:uk	Банкомат
+rdfs:label:sr-EC	Банкомат
+rdfs:label:no	Minibank
+rdfs:label:es	Cajero automático
+rdfs:label:ia	Cassa automatic
+rdfs:label:tr	Bankamatik
+rdfs:label:be-tarask	Банкамат
+rdfs:label:da	Pengeautomat
+url	http://linkedgeodata.org/ontology/Atm
+label	Atm

@@ -1,0 +1,3 @@
+lgdm:sourceKey	sport
+url	http://linkedgeodata.org/ontology/SportThing
+label	SportThing

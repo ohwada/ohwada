@@ -1,0 +1,50 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/ArchaeologicalSite/key/historic/value/archaeological_site
+rdfs:subClassOf	http://linkedgeodata.org/ontology/HistoricThing
+rdfs:label:dsb	Archeologiske wukopowanišćo
+rdfs:label:aln	Arkeologjik Faqes
+rdfs:label:be-tarask	Археалягічныя раскопкі
+rdfs:label:sr-EC	Археолошко налазиште
+rdfs:label:fr	Site archéologique
+rdfs:label:gl	Xacemento arqueolóxico
+rdfs:label:lt	Archeologinė vieta
+rdfs:label:no	Arkeologisk plass
+rdfs:label:vi	Khu vực Khảo cổ
+rdfs:label:uk	Археологічні дослідження
+rdfs:label:ia	Sito archeologic
+rdfs:label:af	Argeologiese vindplaas
+rdfs:label:lb	Archeologesche Site
+rdfs:label:ms	Tapak Kaji Purba
+rdfs:label:fi	Arkeologinen kohde
+rdfs:label:eu	Aztarnategi arkeologiko
+rdfs:label:en-GB	Archaeological Site
+rdfs:label:es	Yacimiento arqueológico
+rdfs:label:ca	Lloc arqueològic
+rdfs:label:lv	Arheoloģisku izrakumu vieta
+rdfs:label:nl	Archeologische vindplaats
+rdfs:label:mk	Археолошки локалитет
+rdfs:label:br	Lec'hienn henoniel
+rdfs:label:el	Αρχαιολογικός Χώρος
+rdfs:label:hr	Arheološko nalazište
+rdfs:label:cs	Archeologické naleziště
+rdfs:label:sr-EL	Arheološko nalazište
+rdfs:label:ar	موقع أثري
+rdfs:label:arz	موقع أثري
+rdfs:label:it	Sito archeologico
+rdfs:label:zh-Hans	遗址
+rdfs:label:sk	Archeologické nálezisko
+rdfs:label:de	Ausgrabungsstätte
+rdfs:label:tl	Pook na Pang-arkeolohiya
+rdfs:label:pl	Wykopaliska archeologiczne
+rdfs:label:ast	Llugar arqueolóxicu
+rdfs:label:sv	Arkeologisk plats
+rdfs:label:fur	Sît archeologic
+rdfs:label:tr	Arkeolojik Alan
+rdfs:label:pt-BR	Sítio arqueológico
+rdfs:label:da	Arkæologisk sted
+rdfs:label:ru	Раскопки
+rdfs:label:sl	Arheološko najdbišče
+rdfs:label:hsb	Archeologiske wurywanišćo
+rdfs:label:he	אתר ארכיאולוגי
+rdfs:label:hu	Régészeti lelőhely
+url	http://linkedgeodata.org/ontology/ArchaeologicalSite
+label	ArchaeologicalSite

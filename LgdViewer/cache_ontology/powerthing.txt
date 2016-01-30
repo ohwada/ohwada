@@ -1,0 +1,3 @@
+lgdm:sourceKey	power
+url	http://linkedgeodata.org/ontology/PowerThing
+label	PowerThing

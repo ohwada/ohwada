@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/ParkingSpace/key/amenity/value/parking_space
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+url	http://linkedgeodata.org/ontology/ParkingSpace
+label	ParkingSpace

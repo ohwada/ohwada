@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1712823603
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Shop
+rdf:type:3	http://linkedgeodata.org/ontology/Supermarket
+rdfs:label	Wingクリハマ
+dc:modified	2012-04-12T17:36:07+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.230782&long=139.70245#point
+geo:long	139.702
+geo:lat	35.2308
+dc:contributor	http://linkedgeodata.org/triplify/user657421
+geom:geometry	http://linkedgeodata.org/geometry/node1712823603
+lgdo:changeset	11277733
+lgdo:version	2
+type:url	http://linkedgeodata.org/ontology/Shop
+type:label	Shop
+type:label:ja	店舗

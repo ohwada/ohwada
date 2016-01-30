@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    >
+
+	<TextView android:id="@+id/place_header_textview_sub"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		/>
+		
+	<TextView android:id="@+id/place_header_textview_address"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		/>
+			   	
+    <TextView android:id="@+id/place_header_textview_telephone"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		/>
+
+    <TextView 
+    	android:id="@+id/place_header_textview_count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+		/>
+ 		                        
+</LinearLayout>

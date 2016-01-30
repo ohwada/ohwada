@@ -1,0 +1,4 @@
+lgdm:sourceKey	amenity
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Amenity/key/amenity/value/leisure
+url	http://linkedgeodata.org/ontology/Amenity
+label	Amenity

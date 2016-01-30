@@ -1,0 +1,57 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Jewelry/key/shop/value/jewelry
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:hsb	Debjenkowy wobchod
+rdfs:label:aln	Bizhuteri Shop
+rdfs:label:et	Juveelipood
+rdfs:label:tr	Kuyumcu
+rdfs:label:sv	Guldsmed
+rdfs:label:da	Guldsmed
+rdfs:label:sr-EL	Zlatara
+rdfs:label:mk	Јувелир
+rdfs:label:sk	Zlatníctvo
+rdfs:label:ms	Kedai Barang Kemas
+rdfs:label:dsb	Pyšnotkowy wobchod
+rdfs:label:pt-BR	Joalheria
+rdfs:label:lb	Bijouterie
+rdfs:label:fr	Bijouterie
+rdfs:label:pt	Joalharia
+rdfs:label:arz	متجر مجوهرات
+rdfs:label:ar	متجر مجوهرات
+rdfs:label:pl	Sklep z biżuterią
+rdfs:label:en-GB	Jewelry Shop
+rdfs:label:ast	Xoyería
+rdfs:label:ia	Joieleria
+rdfs:label:ru	Ювелирный магазин
+rdfs:label:it	Gioielleria
+rdfs:label:ka	საიუველირო მაღაზია
+rdfs:label:gl	Xoiaría
+rdfs:label:eu	Bitxi-denda
+rdfs:label:lv	Juvelierizstrādājumu veikals
+rdfs:label:tl	Tindahan ng Alahas
+rdfs:label:vi	Tiệm Kim hoàn
+rdfs:label:hu	Ékszerbolt
+rdfs:label:sl	Draguljarna
+rdfs:label:fur	Buteghe dal oresin
+rdfs:label:af	Juwelierswinkel
+rdfs:label:uk	Ювелірний магазин
+rdfs:label:br	Bravigerezh
+rdfs:label:ca	Joieria
+rdfs:label:lt	Juvelyrikos parduotuvė
+rdfs:label:cs	Klenotnictví
+rdfs:label:es	Joyería
+rdfs:label:zh-Hans	珠宝店
+rdfs:label:el	Κοσμηματοπωλείο
+rdfs:label:ja	宝石店
+rdfs:label:he	חנות תכשיטים
+rdfs:label:no	Gullsmed
+rdfs:label:fi	Korukauppa
+rdfs:label:hr	Zlatarna
+rdfs:label:zh-Hant	珠寶店
+rdfs:label:sr-EC	Златара
+rdfs:label:be-tarask	Ювэлірная крама
+rdfs:label:ps	زرګري
+rdfs:label:nl	Juwelier
+rdfs:label:de	Juwelier
+rdfs:label:nds	Juwelier
+url	http://linkedgeodata.org/ontology/Jewelry
+label	Jewelry

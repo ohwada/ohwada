@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/HairdresserShop/key/shop/value/hairdresser
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Shop
+rdfs:label:ast	Peluquería
+rdfs:label:es	Peluquería
+rdfs:label:lv	Frizētava
+rdfs:label:he	מעצב שער
+rdfs:label:el	Κομμωτήριο
+rdfs:label:ca	Perruqueria o barberia
+rdfs:label:lb	Coiffeur
+rdfs:label:fr	Coiffeur
+rdfs:label:fur	Piruchîr o barbîr
+rdfs:label:et	Juuksur
+rdfs:label:sk	Kaderníctvo,holičstvo
+rdfs:label:it	Parrucchiere
+rdfs:label:lt	Kirpykla
+rdfs:label:eu	Ile-apaindegi
+rdfs:label:ar	مزين/مصفف شعر
+rdfs:label:arz	مزين/مصفف شعر
+rdfs:label:tl	Tagapag-ayos ng Buhok
+rdfs:label:sr-EC	Фризерски салон
+rdfs:label:de	Frisörsalon
+rdfs:label:ia	Perruccheria
+rdfs:label:tr	Kuaför
+rdfs:label:pt-BR	Cabelereiro
+rdfs:label:sv	Frisör
+rdfs:label:hr	Frizer
+rdfs:label:vi	Tiệm Làm tóc
+rdfs:label:cs	Kadeřnictví
+rdfs:label:be-tarask	Цырульня
+rdfs:label:no	Frisør
+rdfs:label:da	Frisør
+rdfs:label:en-GB	Hairdresser
+rdfs:label:br	Perukenner
+rdfs:label:nds	Putzbüdel
+rdfs:label:pl	Fryzjernia
+rdfs:label:hu	Fodrászat
+rdfs:label:ru	Парикмахерская
+rdfs:label:fi	Kampaamo
+rdfs:label:zh-Hans	理发店
+rdfs:label:mk	Фризер
+rdfs:label:aln	Floktar
+rdfs:label:nl	Kapper
+rdfs:label:af	Haarkapper
+rdfs:label:gl	Perrucaría
+rdfs:label:uk	Перукар
+rdfs:label:hsb	Frizerski salon
+rdfs:label:sr-EL	Frizerski salon
+rdfs:label:dsb	Frizerski salon
+rdfs:label:sl	Frizerski salon
+url	http://linkedgeodata.org/ontology/HairdresserShop
+label	HairdresserShop

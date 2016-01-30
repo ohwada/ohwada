@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<EditText android:id="@+id/map_edittext_address"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:singleLine = "true" />
+			
+		<Button android:id="@+id/map_button_search"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/map_search"/>
+
+	</LinearLayout>
+
+	<com.google.android.maps.MapView
+		android:id="@+id/map_mapview"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:enabled="true"
+		android:clickable="true"
+		android:apiKey="@string/map_api_key" />
+
+	<Button android:id="@+id/map_button_next"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/map_next"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/Locality/key/place/value/locality
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Place
+rdfs:label:sr-EC	Локалитет
+rdfs:label:fi	Paikkakunta
+rdfs:label:he	איזור מקומי
+rdfs:label:sv	Läge
+rdfs:label:uk	Населений пункт
+rdfs:label:fur	Localitât
+rdfs:label:af	Ligging
+rdfs:label:ca	Localitat
+rdfs:label:ja	地域
+rdfs:label:pt-BR	Localidade
+rdfs:label:gl	Localidade
+rdfs:label:pt	Localidade
+rdfs:label:aln	Lokalitet
+rdfs:label:hr	Lokalitet
+rdfs:label:sr-EL	Lokalitet
+rdfs:label:zh-Hans	地区
+rdfs:label:it	Località (luogo con nome, non popolato)
+rdfs:label:pl	Rejon
+rdfs:label:da	Sted
+rdfs:label:br	Kêr
+rdfs:label:vi	Địa phương
+rdfs:label:tr	Yer/mevkii
+rdfs:label:en-GB	Locality
+rdfs:label:dsb	Sedlišćo
+rdfs:label:fr	Localité
+rdfs:label:lt	Vietovė
+rdfs:label:ru	Населённый пункт
+rdfs:label:cs	Oblast
+rdfs:label:mk	Месност
+rdfs:label:el	Τοποθεσία
+rdfs:label:ia	Localitate
+rdfs:label:arz	محلة
+rdfs:label:ar	محلة
+rdfs:label:sl	Krajevno ime
+rdfs:label:fa	محل
+rdfs:label:be-tarask	Населены пункт
+rdfs:label:nl	Plaats
+rdfs:label:hu	Hely
+rdfs:label:lv	Vieta
+rdfs:label:sk	Oblasť
+rdfs:label:eu	Lokalitate
+rdfs:label:es	Localidad
+rdfs:label:tl	Lokalidad
+rdfs:label:ast	Llocalidá
+rdfs:label:no	Plass
+rdfs:label:hsb	Sydlišćo
+rdfs:label:de	Ortschaft
+url	http://linkedgeodata.org/ontology/Locality
+label	Locality

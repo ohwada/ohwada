@@ -1,0 +1,54 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/CarRental/key/amenity/value/car_rental
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:fur	Nauli di machinis
+rdfs:label:zh-Hans	租车服务
+rdfs:label:it	Autonoleggio
+rdfs:label:ja	レンタカー
+rdfs:label:pt-BR	Aluguel de veículos
+rdfs:label:ru	Аренда автомобилей
+rdfs:label:hu	Autókölcsönző
+rdfs:label:vi	Chỗ Mướn Xe
+rdfs:label:no	Bilutleie
+rdfs:label:cs	Půjčovna aut
+rdfs:label:sr-EC	Изнајмљивање аутомобила
+rdfs:label:be-tarask	Арэнда аўтамабіляў
+rdfs:label:ca	Lloguer de cotxes
+rdfs:label:pl	Wynajem samochodów
+rdfs:label:is	Bílaleigan
+rdfs:label:ms	Sewa Kereta
+rdfs:label:he	השכרת רכב
+rdfs:label:ar	تأجير سيارات
+rdfs:label:arz	تأجير سيارات
+rdfs:label:fr	Location de voiture
+rdfs:label:es	Alquiler de vehículos
+rdfs:label:ka	მანქანის გაქირავება
+rdfs:label:mk	Рент-а-кар
+rdfs:label:fi	Autovuokraamo
+rdfs:label:ia	Location de automobiles
+rdfs:label:nl	Autoverhuur
+rdfs:label:tl	Arkilahan ng Kotse
+rdfs:label:lv	Autonoma
+rdfs:label:br	Feurmiñ kirri
+rdfs:label:lt	Mašinų nuoma
+rdfs:label:sk	Požičovňa áut
+rdfs:label:eu	Ibilgailu-alokairu
+rdfs:label:af	Motorverhuring
+rdfs:label:en-GB	Car Rental
+rdfs:label:uk	Прокат автомобілів
+rdfs:label:et	Autorent
+rdfs:label:hr	Rent-a-car
+rdfs:label:sl	Rent-a-car
+rdfs:label:nds	Auto-Utlehner
+rdfs:label:da	Biludlejning
+rdfs:label:aln	marrje makinë me qira
+rdfs:label:ast	Alquiler de coches
+rdfs:label:dsb	Pśenajmjeśe awtow
+rdfs:label:el	Ενοικίαση αυτοκινήτου
+rdfs:label:sv	Biluthyrning
+rdfs:label:de	Autovermietung
+rdfs:label:sr-EL	Iznajmljivanje automobila
+rdfs:label:tr	Araba Kiralama
+rdfs:label:gl	Aluguer de automóbiles
+rdfs:label:hsb	Awtowa přenajimarnja
+url	http://linkedgeodata.org/ontology/CarRental
+label	CarRental

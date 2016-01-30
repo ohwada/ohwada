@@ -1,0 +1,51 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/VendingMachine/key/amenity/value/vending_machine
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Amenity
+rdfs:label:nl	Automaat
+rdfs:label:ka	სავაჭრო ავტომატი
+rdfs:label:arz	آله بيع
+rdfs:label:zh-Hans	自动售货机
+rdfs:label:br	Ingaler emgefre
+rdfs:label:ca	Màquina expenedora
+rdfs:label:fur	Distributôr automatic
+rdfs:label:ar	آلة بيع
+rdfs:label:sr-EC	Аутомат
+rdfs:label:dsb	Awtomat
+rdfs:label:hsb	Awtomat
+rdfs:label:sk	Predajný automat
+rdfs:label:lv	Tirdzniecības automāts
+rdfs:label:mk	Вендинг-машина
+rdfs:label:tl	Makinang Nagbebenta
+rdfs:label:uk	Торговий автомат
+rdfs:label:fi	Myyntiautomaatti
+rdfs:label:ru	торговый автомат
+rdfs:label:it	Distributore automatico
+rdfs:label:aln	Automat me monedhë
+rdfs:label:hu	Árusító automata
+rdfs:label:he	מכונת מכירה
+rdfs:label:lt	Vendingas
+rdfs:label:tr	Satış makinesi
+rdfs:label:no	Vareautomat
+rdfs:label:ja	自動販売機
+rdfs:label:sr-EL	Automat
+rdfs:label:hr	Automat
+rdfs:label:da	Automat
+rdfs:label:de	Selbstbedienungsautomat
+rdfs:label:cs	Prodejní automat
+rdfs:label:es	Máquina expendedora
+rdfs:label:gl	Máquina expendedora
+rdfs:label:sl	Avtomat
+rdfs:label:pt-BR	Máquina de venda automática
+rdfs:label:ast	Venta automática
+rdfs:label:lb	Verkaafsautomat
+rdfs:label:fr	Distributeur automatique
+rdfs:label:eu	Salmenta automatiko
+rdfs:label:en-GB	Vending Machine
+rdfs:label:sv	Varumaskin
+rdfs:label:pl	Automat do sprzedaży
+rdfs:label:ms	Mesin Layan Diri
+rdfs:label:is	Sjálfsali
+rdfs:label:vi	Máy Bán hàng
+rdfs:label:ia	Distributor automatic
+rdfs:label:be-tarask	Гандлёвы аўтамат
+url	http://linkedgeodata.org/ontology/VendingMachine
+label	VendingMachine

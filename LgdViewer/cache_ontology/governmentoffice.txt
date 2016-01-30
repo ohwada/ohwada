@@ -1,0 +1,4 @@
+lgdm:sourceTag	http://linkedgeodata.org/ontology/GovernmentOffice/key/office/value/government
+rdfs:subClassOf	http://linkedgeodata.org/ontology/Office
+url	http://linkedgeodata.org/ontology/GovernmentOffice
+label	GovernmentOffice

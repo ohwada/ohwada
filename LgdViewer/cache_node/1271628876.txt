@@ -1,0 +1,17 @@
+lgdm:Node	http://linkedgeodata.org/triplify/node1271628876
+rdf:type:0	http://geovocab.org/spatial#Feature
+rdf:type:1	http://linkedgeodata.org/meta/Node
+rdf:type:2	http://linkedgeodata.org/ontology/Amenity
+rdf:type:3	http://linkedgeodata.org/ontology/Restaurant
+rdfs:label	ジョナサン
+dc:modified	2011-05-04T02:29:31+02:00
+owl:sameAs	http://gadm.geovocab.org/services/withinRegion?lat=35.447353&long=139.64539#point
+geo:long	139.645
+geo:lat	35.4474
+dc:contributor	http://linkedgeodata.org/triplify/user192905
+geom:geometry	http://linkedgeodata.org/geometry/node1271628876
+lgdo:changeset	8045019
+lgdo:version	1
+type:url	http://linkedgeodata.org/ontology/Restaurant
+type:label	Restaurant
+type:label:ja	レストラン
